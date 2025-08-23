@@ -1,0 +1,289 @@
+import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Palette, Server, BrainCircuit, Cpu, Lightbulb, CheckCircle, Calendar, Tag } from 'lucide-react';
+import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiStackoverflow } from 'react-icons/si';
+import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran } from 'react-icons/fa';
+import { BsGrid3x3 } from 'react-icons/bs';
+
+export const navLinks = [
+  { id: 'home', title: 'الرئيسية', icon: Home },
+  { id: 'about', title: 'من أنا', icon: User },
+  { id: 'videos', title: 'فيديوهات', icon: Youtube },
+  { id: 'programming', title: 'برمجة', icon: Code },
+  { id: 'apps', title: 'تطبيقاتي', icon: AppWindow },
+  { id: 'fun', title: 'تسلية', icon: Gamepad2 },
+  { id: 'bots', title: 'بوتات', icon: Bot },
+  { id: 'tools', title: 'مواقع مفيدة', icon: Wrench },
+  { id: 'gaza', title: 'مقالات', icon: Newspaper },
+  { id: 'chat', title: 'دردشة', icon: MessageSquare },
+];
+
+export const socialLinks = [
+    { name: 'فيسبوك', url: 'https://www.facebook.com/6kqzuj3y4e', IconComponent: SiFacebook },
+    { name: 'يوتيوب', url: 'https://www.youtube.com/@Hamzaamirni01', IconComponent: SiYoutube },
+    { name: 'إنستغرام', url: 'https://instagram.com/hamza_amirni_01', IconComponent: SiInstagram },
+    { name: 'واتساب', url: 'https://wa.me/+212624855939', IconComponent: SiWhatsapp },
+    { name: 'تيليجرام', url: 'https://t.me/hamzaamirni', IconComponent: SiTelegram },
+];
+
+export const myApps = [
+    {
+        IconComponent: FaGraduationCap,
+        title: 'تطبيق التعليم الذكي BAC',
+        description: 'تطبيق تعليمي شامل لطلاب البكالوريا يحتوي على دروس، تمارين، واختبارات',
+        url: 'https://www.mediafire.com/file/z4dr352cdqb6bd2/smart_education_BAC_1.0.apk/file',
+        buttonClass: 'bg-gradient-to-r from-primary to-secondary'
+    },
+    {
+        IconComponent: FaMosque,
+        title: 'تطبيق ولنـا فـي اللّه ظـن لا يخيب',
+        description: 'تطبيق إسلامي للدعاء والذكر والصلوات اليومية',
+        url: 'https://www.mediafire.com/file/v5v8kofvmuczs4m/%25D9%2588%25D9%2584%25D9%2580%25D9%2586%25D8%25A7_%25D9%2581%25D9%2580%25D9%258A_%25D8%25A7%25D9%2584%25D9%2591%25D9%2580%25D9%2585_%25D8%25B8%25D9%2580%25D9%2586_%25D9%2584%25D8%25A7_%25D9%258A%25D8%25AE%25D9%2580%25D8%25A8_...__%25F0%259F%258F%25BB%25F0%259F%25A4%258D_1.0.apk/file',
+        buttonClass: 'bg-gradient-to-r from-green-500 to-emerald-500'
+    }
+];
+
+export const whatsappChannels = [
+    { name: 'قناة واتساب التقنية', url: 'https://whatsapp.com/channel/0029ValXRoHCnA7yKopcrn1p', IconComponent: SiWhatsapp },
+    { name: 'قناة واتساب الدينية', url: 'https://whatsapp.com/channel/0029VaDbxoYJpe8byewMhd3s', IconComponent: FaQuran }
+];
+
+export const aboutContent = {
+    name: 'حمزة اعمرني',
+    role: '🚀 مبرمج وصانع محتوى تقني',
+    description: `مرحباً! أنا حمزة اعمرني، مبرمج وصانع محتوى تقني مغربي شغوف بتبسيط علوم البرمجة والتقنية وتقديمها بأسلوب عصري وسهل للجميع. 🎯<br/><br/>
+    أشارك خبراتي وشغفي في تطوير الذات والتعليم الذاتي من خلال فيديوهات تعليمية، تطبيقات مفيدة، ودروس مبسطة للمبتدئين والمحترفين.<br/><br/>
+    هدفي هو جعل المعرفة التقنية متاحة للجميع، وأؤمن أن كل شخص يمكنه تعلم البرمجة وتطوير مهاراته مهما كان مستواه. أقدم عبر منصتي الإلكترونية مصادر تعليمية، نصائح عملية، وألعاب ترفيهية لتنمية المهارات الذهنية.<br/><br/>
+    إذا كان لديك أي سؤال أو اقتراح، لا تتردد في التواصل معي عبر وسائل التواصل الاجتماعي أو الدردشة المباشرة في الموقع. 💬`,
+    skills: [
+        { name: 'HTML, CSS, JS', level: 95, icon: Code },
+        { name: 'PHP, Python', level: 90, icon: Server },
+        { name: 'UI/UX Design', level: 85, icon: Palette },
+        { name: 'Problem Solving', level: 92, icon: BrainCircuit },
+        { name: 'Hardware & Software', level: 88, icon: Cpu },
+    ],
+    journey: [
+        'بدأت تعلم البرمجة في سن 15 سنة عبر الإنترنت.',
+        'أنجزت أول تطبيقي أندرويد في 2019.',
+        'شاركت في مسابقات برمجة محلية وعالمية.',
+        'أحب تبسيط المفاهيم التقنية للمبتدئين.',
+    ],
+    philosophy: {
+        title: '📜 فلسفتي',
+        points: [
+            {
+                icon: Lightbulb,
+                title: 'التعلم المستمر',
+                description: 'أؤمن بأن عالم التقنية يتطور بسرعة، والسبيل الوحيد للنجاح هو البقاء في حالة تعلم دائم وشغف لاكتشاف كل ما هو جديد.'
+            },
+            {
+                icon: CheckCircle,
+                title: 'تبسيط المعرفة',
+                description: 'أسعى جاهداً لكسر حاجز التعقيد في البرمجة، وتقديم المفاهيم بأسلوب بسيط ومباشر يمكن للجميع فهمه وتطبيقه.'
+            },
+            {
+                icon: Palette,
+                title: 'الجودة فوق الكمية',
+                description: 'أركز على بناء حلول برمجية متقنة ومدروسة، فكود نظيف وتصميم مدروس يصنعان تجربة مستخدم لا تُنسى.'
+            }
+        ]
+    }
+};
+
+export const videosContent = [
+    {
+        title: 'دليلك لتعلم البرمجة من الصفر',
+        videoId: '1hHMwLxN6EM'
+    },
+    {
+        title: 'أساسيات HTML وCSS للمبتدئين',
+        videoId: '8cm1x4bC610'
+    },
+    {
+        title: 'تعلم جافاسكريبت خطوة بخطوة',
+        videoId: 'PkZNo7MFNFg'
+    },
+    {
+        title: 'مشروع عملي: بناء موقع شخصي',
+        videoId: '3PHXvlpOkf4'
+    }
+];
+
+export const programmingContent = {
+    title: '💻 ما هي البرمجة؟',
+    description: 'البرمجة هي عملية كتابة تعليمات وأوامر للحاسوب ليقوم بتنفيذ مهام معينة. تعتبر البرمجة من أهم المهارات في العصر الحديث، فهي لغة المستقبل وأساس كل تطور تقني نراه حولنا. 🚀',
+    benefitsTitle: '🚀 فوائد تعلم البرمجة',
+    benefits: [
+        'تفتح لك فرص عمل واسعة في مجالات متعددة.',
+        'تساعدك على التفكير المنطقي وحل المشكلات.',
+        'تمكنك من بناء تطبيقاتك وأفكارك الخاصة.',
+        'تمنحك القدرة على فهم التكنولوجيا من حولك.',
+    ],
+    exampleTitle: '💡 مثال عملي: كود جافاسكريبت لطباعة الأرقام الزوجية من 1 إلى 10',
+    codeSnippet: `for(let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}`,
+    codeOutput: 'الناتج: 2 4 6 8 10'
+};
+
+export const funContent = {
+    title: '🎮 ألعاب تسلية',
+    description: 'ما الألعاب التي تريد إضافتها في الموقع؟ تواصل معي واقترح لعبتك المفضلة!',
+    games: [
+        { title: 'ألعاب رياضية', url: 'https://www.coolmathgames.com/', IconComponent: Gamepad2, color: 'primary' },
+        { title: 'شطرنج أونلاين', url: 'https://www.chess.com/play/computer', IconComponent: FaChess, color: 'success' },
+        { title: 'سودوكو', url: 'https://www.sudoku.com/', IconComponent: BsGrid3x3, color: 'warning' },
+        { title: 'تدريب الكتابة', url: 'https://www.typingclub.com/', IconComponent: FaKeyboard, color: 'danger' },
+    ]
+};
+
+export const botsContent = {
+    title: '🤖 بوتات التواصل',
+    description: 'تعرّف على بوتات الذكاء الاصطناعي المفيدة وتواصل معنا عبرها.',
+    bots: [
+        { title: 'بوت واتساب الخاص بي', description: 'تواصل معي مباشرة عبر بوت واتساب للحصول على مساعدة فورية', url: 'https://wa.me/212708869993', buttonText: 'تواصل', IconComponent: SiWhatsapp, color: 'success' },
+        { title: 'ChatGPT Bot', description: 'استخدم بوت ChatGPT للحصول على إجابات ذكية ومفيدة', url: 'https://wa.me/18002428478', buttonText: 'اتصال', IconComponent: SiOpenai, color: 'primary' },
+        { title: 'Copilot Bot', description: 'مساعد برمجي ذكي لمساعدتك في كتابة الأكواد', url: 'https://wa.me/18772241042', buttonText: 'اتصال', IconComponent: SiGithubcopilot, color: 'warning' },
+        { title: 'Perplexity Bot', description: 'محرك بحث ذكي للحصول على معلومات دقيقة', url: 'https://wa.me/18334363285', buttonText: 'اتصال', IconComponent: SiPerplexity, color: 'danger' },
+    ]
+};
+
+export const toolsContent = {
+    title: '🌐 مواقع مفيدة',
+    description: 'استكشف مجموعة من الأدوات والمواقع التي قد تفيدك في مجالات مختلفة.',
+    tools: [
+        { title: 'Google Docs', description: 'محرر مستندات مجاني من جوجل لإنشاء وتحرير النصوص أونلاين', url: 'https://docs.google.com/', IconComponent: SiGoogledocs, tags: ['مستندات', 'محرر'] },
+        { title: 'ChatGPT', description: 'مساعد ذكاء اصطناعي للإجابة على الأسئلة وكتابة النصوص', url: 'https://chat.openai.com/', IconComponent: SiOpenai, tags: ['ذكاء اصطناعي', 'كتابة'] },
+        { title: 'Coursera', description: 'كورسات مجانية ومدفوعة من أفضل الجامعات العالمية', url: 'https://www.coursera.org/', IconComponent: SiCoursera, tags: ['كورسات', 'تعليم'] },
+        { title: 'Canva', description: 'تصميم صور وبوسترات احترافية بسهولة وسرعة', url: 'https://www.canva.com/', IconComponent: SiCanva, tags: ['تصميم', 'صور'] },
+        { title: 'GitHub', description: 'استضافة ومشاركة مشاريعك البرمجية', url: 'https://github.com/', IconComponent: SiGithub, tags: ['برمجة', 'كود'] },
+        { title: 'Stack Overflow', description: 'أكبر مجتمع للأسئلة والأجوبة البرمجية', url: 'https://stackoverflow.com/', IconComponent: SiStackoverflow, tags: ['برمجة', 'مساعدة'] },
+    ]
+};
+
+export const articlesContent = {
+    title: '📰 مقالات تقنية وتنموية',
+    description: 'في هذا القسم ستجد مجموعة من المقالات الحصرية حول البرمجة، التقنية، تطوير الذات، وأهم النصائح العملية للنجاح في العصر الرقمي.',
+    articles: [
+        { 
+            id: 'unban-whatsapp',
+            category: 'نصائح تقنية',
+            title: 'طرق إرسال طلب لشركة واتساب لفك حظر الرقم', 
+            summary: 'يُعد حظر الأرقام على واتساب من أكثر المشكلات التي تواجه المستخدمين. في هذا المقال، سنتعرف على أهم الطرق لإرسال طلب لفريق دعم واتساب بشكل صحيح لزيادة فرص استعادة الرقم.',
+            author: 'حمزة اعمرني',
+            date: '28 يوليو 2025',
+            color: 'success',
+            image: 'https://i.imgur.com/gY5p3T8.png',
+            tags: ['واتساب', 'حظر', 'دعم فني', 'نصائح'],
+            content: `
+                <h2>رسالة حظر واتساب - الرقم محظور</h2>
+                <p>يُعد حظر الأرقام على واتساب من أكثر المشكلات التي تواجه المستخدمين، خاصة إذا كان الرقم مرتبطًا بأعمالهم أو تواصلهم الشخصي. في كثير من الحالات، يتم الحظر بسبب مخالفة سياسات واتساب أو بسبب نشاط غير معتاد على الحساب. لكن لحسن الحظ، يتيح واتساب للمستخدمين إمكانية إرسال طلب رسمي لاستعادة أرقامهم وفك الحظر عنها.</p>
+                <p>في هذا المقال، سنتعرف على أهم الطرق لإرسال طلب لفريق دعم واتساب بشكل صحيح لزيادة فرص استعادة الرقم.</p>
+                
+                <h2>أهم الطرق لإرسال الطلب</h2>
+                <ol class="list-decimal list-inside space-y-6 my-6">
+                    <li>
+                        <strong>التواصل عبر التطبيق مباشرة:</strong> إذا كان حسابك محظورًا، فعند محاولة فتح واتساب ستظهر لك رسالة تُفيد بأن الرقم قد تم حظره. يمكنك استغلال هذه الرسالة لإرسال طلب بالضغط على خيار "الدعم" أو "Support".
+                        <img src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x300/25D366/ffffff.png?text=%D8%B4%D8%A7%D8%B4%D8%A9+%D8%A7%D9%84%D8%AF%D8%B9%D9%85+%D9%81%D9%8A+%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8" alt="شاشة الدعم في واتساب" class="my-4 rounded-lg shadow-md">
+                    </li>
+                    <li>
+                        <strong>التواصل عبر البريد الإلكتروني:</strong> يمكنك أيضًا مراسلة فريق الدعم مباشرة عبر البريد الرسمي لواتساب: <code>support@whatsapp.com</code>. تأكد من تضمين رقم هاتفك مع رمز الدولة.
+                        <img src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x300/4f46e5/ffffff.png?text=%D8%A5%D8%B1%D8%B3%D8%A7%D9%84+%D8%A8%D8%B1%D9%8A%D8%AF+%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" alt="إرسال بريد إلكتروني للدعم" class="my-4 rounded-lg shadow-md">
+                    </li>
+                    <li>
+                        <strong>استخدام نموذج الدعم من الموقع الرسمي:</strong> يوفر واتساب نموذجًا خاصًا للتواصل مع فريق الدعم عبر موقعه الرسمي. ادخل إلى صفحة الدعم، املأ الحقول المطلوبة، وصف مشكلتك بوضوح.
+                        <img src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x300/128C7E/ffffff.png?text=%D9%86%D9%85%D9%88%D8%B0%D8%AC+%D8%A7%D9%84%D8%AF%D8%B9%D9%85+%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A" alt="نموذج الدعم الرسمي لواتساب" class="my-4 rounded-lg shadow-md">
+                    </li>
+                </ol>
+
+                <h2>📝 نموذج رسالة رسمية</h2>
+                <p>يمكنك استخدام هذا النموذج عند مراسلة الدعم عبر البريد الإلكتروني:</p>
+                <pre class="bg-dark-color text-white p-6 rounded-lg overflow-x-auto text-left dir-ltr font-mono text-sm my-4"><code>Subject: Request to Unban WhatsApp Number
+
+Hello WhatsApp Support Team,
+
+I am writing regarding my phone number: +212XXXXXXXXX, which has recently been banned.
+I would like to clarify that I have not engaged in any activity that violates WhatsApp's policies, and I believe this ban may have been a mistake.
+Kindly review my account and lift the ban as soon as possible, as I use this number for personal and work-related communication.
+
+Thank you for your support and assistance.
+
+Name: [Your Name]
+Email: [Your Email]</code></pre>
+
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  💡 <strong>نصيحة:</strong> كن صبورًا واتبع الإرشادات بدقة لزيادة فرص نجاح طلبك! احرص دائمًا على الالتزام بسياسات واتساب لتفادي أي حظر مستقبلي.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'start-programming',
+            category: 'أساسيات البرمجة',
+            title: 'بوابتك لعالم البرمجة: كيف تبدأ رحلتك من الصفر؟', 
+            summary: 'هل تحلم ببناء تطبيقات ومواقع تغير العالم لكن لا تعرف من أين تبدأ؟ هذا الدليل هو خطوتك الأولى نحو تحقيق حلمك، حيث نكسر حاجز الخوف ونبسط لك المفاهيم الأساسية.',
+            author: 'حمزة اعمرني',
+            date: '15 يوليو 2025',
+            color: 'primary',
+            image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80',
+            tags: ['برمجة', 'مبتدئين', 'تعليم'],
+            content: `
+                <h2>لماذا البرمجة هي لغة المستقبل؟</h2>
+                <p>في عصر يتسارع فيه التحول الرقمي، أصبحت البرمجة ليست مجرد مهارة للمختصين، بل لغة أساسية تمكنك من التفكير بشكل منطقي وحل المشكلات بطرق إبداعية. إنها تفتح لك أبواباً لفرص عمل لا حصر لها وتمكنك من تحويل أفكارك إلى واقع ملموس.</p>
+                
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  "الجميع في هذا البلد يجب أن يتعلموا كيف يبرمجون جهاز كمبيوتر... لأنها تعلمك كيف تفكر." - ستيف جوبز
+                </blockquote>
+
+                <h2>خارطة طريق للمبتدئين</h2>
+                <ol class="list-decimal list-inside space-y-4 my-6">
+                    <li><strong>اختر مسارك، لا لغتك فقط:</strong> بدلاً من السؤال "أي لغة أتعلم؟"، اسأل "ماذا أريد أن أبني؟". هل هو تطوير الويب؟ تطبيقات الجوال؟ أم الذكاء الاصطناعي؟ إجابتك ستحدد اللغة الأنسب لك (مثل JavaScript للويب، أو Python للذكاء الاصطناعي).</li>
+                    <li><strong>إتقان الأساسيات هو المفتاح:</strong> لا تقفز مباشرة إلى الأطر المعقدة. امنح نفسك وقتاً كافياً لفهم المتغيرات، الحلقات، الشروط، والدوال. هذه هي اللبنات الأساسية التي ستبني عليها كل شيء.</li>
+                    <li><strong>الممارسة، ثم الممارسة:</strong> البرمجة مهارة عملية. خصص وقتاً يومياً لكتابة الكود، حتى لو كان بسيطاً. حل التحديات على مواقع مثل <a href="https://www.codewars.com" target="_blank">CodeWars</a> أو <a href="https://leetcode.com" target="_blank">LeetCode</a>.</li>
+                    <li><strong>ابنِ مشاريع حقيقية:</strong> هذا هو الجزء الأكثر متعة وأهمية. ابدأ بمشاريع صغيرة مثل آلة حاسبة، ثم تطبيق قائمة مهام، ثم حاول استنساخ جزء من موقعك المفضل. كل مشروع يضيف سطراً مهماً في سيرتك الذاتية.</li>
+                </ol>
+
+                <p class="font-bold text-center text-primary text-xl mt-8">تذكر دائماً: كل مبرمج محترف كان يوماً ما مبتدئاً لا يعرف من أين يبدأ. الاستمرارية هي سر النجاح.</p>
+            `
+        },
+        { 
+            id: 'future-skills',
+            category: 'التطوير المهني',
+            title: 'وظائف المستقبل بين يديك: أهم المهارات لسوق العمل الرقمي', 
+            summary: 'سوق العمل يتغير بسرعة، والوظائف التقليدية تتلاشى. اكتشف المهارات التي تضمن لك مكاناً في المستقبل وتجعلك مطلوباً في أي شركة.',
+            author: 'حمزة اعمرني',
+            date: '22 يوليو 2025',
+            color: 'danger',
+            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
+            tags: ['مهارات', 'مستقبل', 'وظائف'],
+            content: `
+                <h2>هل وظيفتك في أمان؟</h2>
+                <p>لم يعد التخصص في مجال واحد كافياً. سوق العمل الحديث يبحث عن "المواهب متعددة القدرات" (T-shaped talents) - أشخاص يمتلكون خبرة عميقة في مجال معين، ومعرفة واسعة في مجالات أخرى. هذا المزيج يجعلك قادراً على حل المشكلات المعقدة والتعاون بفعالية.</p>
+                
+                <h2>المهارات الذهبية للعصر الرقمي</h2>
+                <ul class="list-none space-y-4 my-6">
+                    <li class="flex items-start gap-3"><strong class="bg-red-100 text-red-700 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">1</strong> <div><strong>الذكاء الاصطناعي وتعلم الآلة:</strong> ليس فقط للمهندسين، بل فهم أساسياته يساعدك على اتخاذ قرارات أفضل في أي مجال، من التسويق إلى المالية.</div></li>
+                    <li class="flex items-start gap-3"><strong class="bg-red-100 text-red-700 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</strong> <div><strong>تحليل البيانات:</strong> القدرة على قراءة البيانات، فهمها، واستخلاص رؤى منها هي مهارة لا تقدر بثمن. البيانات هي نفط المستقبل.</div></li>
+                    <li class="flex items-start gap-3"><strong class="bg-red-100 text-red-700 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</strong> <div><strong>التفكير النقدي وحل المشكلات:</strong> في عالم مليء بالمعلومات، القدرة على التمييز بين الحقيقة والرأي، وتفكيك المشاكل المعقدة إلى أجزاء صغيرة هي مهارة قيادية.</div></li>
+                    <li class="flex items-start gap-3"><strong class="bg-red-100 text-red-700 font-bold rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">4</strong> <div><strong>الذكاء العاطفي والتواصل:</strong> مهما تطورت التكنولوجيا، يبقى العنصر البشري هو الأساس. القدرة على فهم مشاعر الآخرين والتواصل بوضوح وفعالية هي ما يميز القادة الحقيقيين.</div></li>
+                </ul>
+
+                <p class="font-bold text-center text-red-600 text-xl mt-8">استثمر في نفسك اليوم، فالتطوير الذاتي لم يعد خياراً، بل ضرورة للبقاء والمنافسة في المستقبل.</p>
+            `
+        },
+    ]
+};
+
+export const chatContent = {
+    title: '💬 دردشة مباشرة',
+    description: 'يمكنك التواصل معي مباشرة عبر المنصات التالية، أو استخدام النموذج أدناه لإرسال رسالة.',
+    methods: [
+        { IconComponent: SiWhatsapp, title: 'واتساب مباشر', description: 'تواصل معي مباشرة عبر واتساب للحصول على مساعدة فورية', url: 'https://wa.me/+212624855939', buttonText: 'واتساب', color: 'success' },
+        { IconComponent: SiFacebook, title: 'فيسبوك', description: 'تواصل معي عبر صفحتي على فيسبوك', url: 'https://www.facebook.com/6kqzuj3y4e', buttonText: 'فيسبوك', color: 'primary' },
+        { IconComponent: SiInstagram, title: 'إنستغرام', description: 'تابعني وتواصل معي على إنستغرام', url: 'https://instagram.com/hamza_amirni_01', buttonText: 'إنستغرام', color: 'danger' },
+        { IconComponent: SiTelegram, title: 'تيليجرام مباشر', description: 'تواصل معي مباشرة عبر تيليجرام للحصول على مساعدة فورية', url: 'https://t.me/hamzaamirni', buttonText: 'تيليجرام', color: 'primary' },
+    ],
+    formTitle: '📝 اترك رسالة هنا',
+    formDescription: 'سأرد عليك في أقرب وقت ممكن!',
+    requestTypes: ['استفسار عام', 'دعم فني', 'اقتراح', 'تعاون'],
+    priorities: ['عادي', 'مهم']
+};
