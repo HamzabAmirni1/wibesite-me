@@ -183,15 +183,15 @@ export const articlesContent = {
                 <ol class="list-decimal list-inside space-y-6 my-6">
                     <li>
                         <strong>التواصل عبر التطبيق مباشرة:</strong> إذا كان حسابك محظورًا، فعند محاولة فتح واتساب ستظهر لك رسالة تُفيد بأن الرقم قد تم حظره. يمكنك استغلال هذه الرسالة لإرسال طلب بالضغط على خيار "الدعم" أو "Support".
-                        <img src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x300/25D366/ffffff.png?text=%D8%B4%D8%A7%D8%B4%D8%A9+%D8%A7%D9%84%D8%AF%D8%B9%D9%85+%D9%81%D9%8A+%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8" alt="شاشة الدعم في واتساب" class="my-4 rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" alt="شاشة الدعم في واتساب" class="my-4 rounded-lg shadow-md">
                     </li>
                     <li>
                         <strong>التواصل عبر البريد الإلكتروني:</strong> يمكنك أيضًا مراسلة فريق الدعم مباشرة عبر البريد الرسمي لواتساب: <code>support@whatsapp.com</code>. تأكد من تضمين رقم هاتفك مع رمز الدولة.
-                        <img src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x300/4f46e5/ffffff.png?text=%D8%A5%D8%B1%D8%B3%D8%A7%D9%84+%D8%A8%D8%B1%D9%8A%D8%AF+%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A" alt="إرسال بريد إلكتروني للدعم" class="my-4 rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="إرسال بريد إلكتروني للدعم" class="my-4 rounded-lg shadow-md">
                     </li>
                     <li>
                         <strong>استخدام نموذج الدعم من الموقع الرسمي:</strong> يوفر واتساب نموذجًا خاصًا للتواصل مع فريق الدعم عبر موقعه الرسمي. ادخل إلى صفحة الدعم، املأ الحقول المطلوبة، وصف مشكلتك بوضوح.
-                        <img src="https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://img-wrapper.vercel.app/image?url=https://placehold.co/600x300/128C7E/ffffff.png?text=%D9%86%D9%85%D9%88%D8%B0%D8%AC+%D8%A7%D9%84%D8%AF%D8%B9%D9%85+%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A" alt="نموذج الدعم الرسمي لواتساب" class="my-4 rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=80" alt="نموذج الدعم الرسمي لواتساب" class="my-4 rounded-lg shadow-md">
                     </li>
                 </ol>
 
