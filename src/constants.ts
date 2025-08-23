@@ -1,7 +1,6 @@
 import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Palette, Server, BrainCircuit, Cpu, Lightbulb, CheckCircle, Calendar, Tag } from 'lucide-react';
 import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiStackoverflow } from 'react-icons/si';
-import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran } from 'react-icons/fa';
-import { BsGrid3x3 } from 'react-icons/bs';
+import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
 export const navLinks = [
   { id: 'home', title: 'الرئيسية', icon: Home },
@@ -132,7 +131,7 @@ export const funContent = {
     games: [
         { title: 'ألعاب رياضية', url: 'https://www.coolmathgames.com/', IconComponent: Gamepad2, color: 'primary' },
         { title: 'شطرنج أونلاين', url: 'https://www.chess.com/play/computer', IconComponent: FaChess, color: 'success' },
-        { title: 'سودوكو', url: 'https://www.sudoku.com/', IconComponent: BsGrid3x3, color: 'warning' },
+    { title: 'سودوكو', url: 'https://www.sudoku.com/', IconComponent: FaTh, color: 'warning' },
         { title: 'تدريب الكتابة', url: 'https://www.typingclub.com/', IconComponent: FaKeyboard, color: 'danger' },
     ]
 };
