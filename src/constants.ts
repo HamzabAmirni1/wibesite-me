@@ -1,4 +1,4 @@
-import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Palette, Server, BrainCircuit, Cpu, Lightbulb, CheckCircle, Calendar, Tag } from 'lucide-react';
+import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle } from 'lucide-react';
 import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiStackoverflow } from 'react-icons/si';
 import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
@@ -1079,7 +1079,7 @@ class CounterWidget extends StatelessWidget {
       builder: (context, counter, child) {
         return Column(
           children: [
-            Text('العدد: ${counter.count}'),
+            Text('العدد: \${counter.count}'),
             ElevatedButton(
               onPressed: counter.increment,
               child: Text('زيادة'),
