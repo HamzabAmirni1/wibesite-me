@@ -7,7 +7,10 @@ import { Search } from 'lucide-react';
 import ArticleCard from '../components/ArticleCard';
 import ArticleDetail from '../components/ArticleDetail';
 import CallToAction from '../components/CallToAction';
+<<<<<<< HEAD
 import GoogleAdSense from '../components/GoogleAdSense';
+=======
+>>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
 
 const Articles: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -62,6 +65,7 @@ const Articles: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<<<<<<< HEAD
               {filteredArticles.map((article, index) => (
                 <React.Fragment key={article.id}>
                   <ArticleCard article={article} onReadMore={() => setSelectedArticleId(article.id)} />
@@ -76,6 +80,10 @@ const Articles: React.FC = () => {
                     </div>
                   )}
                 </React.Fragment>
+=======
+              {filteredArticles.map((article) => (
+                <ArticleCard key={article.id} article={article} onReadMore={() => setSelectedArticleId(article.id)} />
+>>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
               ))}
             </div>
             

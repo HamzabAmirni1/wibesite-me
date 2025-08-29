@@ -122,7 +122,11 @@ const Terms: React.FC = () => {
             للاستفسارات حول هذه الشروط، يمكنك التواصل معنا عبر:
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+<<<<<<< HEAD
             <li>البريد الإلكتروني: hamzaamirni451@gmail.com</li>
+=======
+            <li>البريد الإلكتروني: terms@hamzaamirni.com</li>
+>>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
             <li>واتساب: من خلال الروابط المتاحة في الموقع</li>
           </ul>
 

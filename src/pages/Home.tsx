@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import ProfileSection from '../components/ProfileSection';
 import SkillsCard from '../components/SkillsCard';
 import Timeline from '../components/Timeline';
@@ -7,6 +8,12 @@ import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import GoogleAdSense from '../components/GoogleAdSense';
 import Card from '../components/Card';
+=======
+import Card from '../components/Card';
+import ProfileSection from '../components/ProfileSection';
+import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
+import CallToAction from '../components/CallToAction';
+>>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
 import AdContainer from '../components/ads/AdContainer';
 
 const containerVariants = {
