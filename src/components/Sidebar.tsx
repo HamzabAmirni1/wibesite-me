@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { navLinks } from '../constants';
 import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
+import AdContainer from './ads/AdContainer';
 
 interface SidebarProps {
   activeSection: string;
@@ -50,6 +51,53 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
             </motion.a>
           ))}
         </nav>
+        
+        {/* Sidebar Ads */}
+        <div className="p-6 pt-0">
+          <AdContainer type="sidebar" maxAds={2} />
+        </div>
+
+        {/* Footer Links */}
+        <div className="p-6 pt-0 border-t border-white/20">
+          <div className="text-xs text-white/60 space-y-2">
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button 
+                onClick={() => setActiveSection('privacy')}
+                className="hover:text-white transition-colors"
+              >
+                سياسة الخصوصية
+              </button>
+              <button 
+                onClick={() => setActiveSection('terms')}
+                className="hover:text-white transition-colors"
+              >
+                شروط الاستخدام
+              </button>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button 
+                onClick={() => setActiveSection('contact')}
+                className="hover:text-white transition-colors"
+              >
+                اتصل بنا
+              </button>
+              <button 
+                onClick={() => setActiveSection('disclaimer')}
+                className="hover:text-white transition-colors"
+              >
+                إخلاء المسؤولية
+              </button>
+            </div>
+            <div className="flex justify-center mt-3">
+              <button 
+                onClick={() => setActiveSection('admanager')}
+                className="text-yellow-300 hover:text-yellow-100 transition-colors text-xs"
+              >
+                إدارة الإعلانات
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </aside>
   );

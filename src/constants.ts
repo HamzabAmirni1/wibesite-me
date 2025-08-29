@@ -12,7 +12,7 @@ export const navLinks = [
   { id: 'bots', title: 'بوتات', icon: Bot },
   { id: 'tools', title: 'مواقع مفيدة', icon: Wrench },
   { id: 'gaza', title: 'مقالات', icon: Newspaper },
-  { id: 'chat', title: 'دردشة', icon: MessageSquare },
+  { id: 'chat', title: 'اتصل بنا', icon: MessageSquare },
 ];
 
 export const socialLinks = [
@@ -269,6 +269,279 @@ Email: [Your Email]</code></pre>
                 <p class="font-bold text-center text-red-600 text-xl mt-8">استثمر في نفسك اليوم، فالتطوير الذاتي لم يعد خياراً، بل ضرورة للبقاء والمنافسة في المستقبل.</p>
             `
         },
+        { 
+            id: 'react-hooks',
+            category: 'أساسيات البرمجة',
+            title: 'React Hooks: ثورة في تطوير واجهات المستخدم', 
+            summary: 'اكتشف قوة React Hooks وكيف غيرت طريقة كتابة المكونات في React. دليل شامل للمبتدئين والمحترفين.',
+            author: 'حمزة اعمرني',
+            date: '30 يوليو 2025',
+            color: 'primary',
+            image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
+            tags: ['React', 'Hooks', 'JavaScript'],
+            content: `
+                <h2>ما هي React Hooks؟</h2>
+                <p>React Hooks هي وظائف خاصة تسمح لك باستخدام state وميزات React الأخرى في المكونات الوظيفية. تم تقديمها في React 16.8 وأحدثت ثورة حقيقية في طريقة كتابة التطبيقات.</p>
+                
+                <h2>أهم الـ Hooks الأساسية</h2>
+                <ol class="list-decimal list-inside space-y-4 my-6">
+                    <li><strong>useState:</strong> لإدارة الحالة المحلية للمكون</li>
+                    <li><strong>useEffect:</strong> للتعامل مع الآثار الجانبية</li>
+                    <li><strong>useContext:</strong> لاستهلاك React Context</li>
+                    <li><strong>useReducer:</strong> لإدارة الحالة المعقدة</li>
+                </ol>
+
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  💡 <strong>نصيحة:</strong> ابدأ بفهم useState و useEffect جيداً قبل الانتقال للـ Hooks المتقدمة.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'python-ai',
+            category: 'ذكاء اصطناعي',
+            title: 'Python والذكاء الاصطناعي: رحلة نحو المستقبل', 
+            summary: 'لماذا تعتبر Python اللغة الأولى في مجال الذكاء الاصطناعي؟ تعرف على المكتبات والأدوات الأساسية.',
+            author: 'حمزة اعمرني',
+            date: '25 يوليو 2025',
+            color: 'success',
+            image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80',
+            tags: ['Python', 'AI', 'Machine Learning'],
+            content: `
+                <h2>لماذا Python في الذكاء الاصطناعي؟</h2>
+                <p>Python تتميز ببساطة الصيغة، مكتبات قوية، ومجتمع نشط. هذا يجعلها الخيار الأمثل للباحثين والمطورين في مجال الذكاء الاصطناعي.</p>
+                
+                <h2>أهم المكتبات</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><strong>NumPy:</strong> للحوسبة العلمية</li>
+                    <li><strong>Pandas:</strong> لتحليل البيانات</li>
+                    <li><strong>TensorFlow:</strong> للتعلم العميق</li>
+                    <li><strong>Scikit-learn:</strong> للتعلم الآلي</li>
+                </ul>
+            `
+        },
+        { 
+            id: 'web-security',
+            category: 'أمان المواقع',
+            title: 'أمان المواقع الإلكترونية: دليل المطور الشامل', 
+            summary: 'تعلم كيفية حماية موقعك من الثغرات الأمنية الشائعة وأفضل الممارسات في الأمان السيبراني.',
+            author: 'حمزة اعمرني',
+            date: '20 يوليو 2025',
+            color: 'danger',
+            image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
+            tags: ['أمان', 'مواقع', 'حماية'],
+            content: `
+                <h2>أهم التهديدات الأمنية</h2>
+                <ol class="list-decimal list-inside space-y-4 my-6">
+                    <li><strong>SQL Injection:</strong> حقن أوامر SQL ضارة</li>
+                    <li><strong>XSS:</strong> تنفيذ سكريبت ضار في المتصفح</li>
+                    <li><strong>CSRF:</strong> تزوير طلبات عبر المواقع</li>
+                </ol>
+
+                <h2>أفضل الممارسات</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li>استخدم HTTPS دائماً</li>
+                    <li>تحقق من المدخلات وطهرها</li>
+                    <li>استخدم أدوات الحماية المناسبة</li>
+                </ul>
+            `
+        },
+        { 
+            id: 'mobile-development',
+            category: 'تطوير التطبيقات',
+            title: 'تطوير التطبيقات المحمولة: Native vs Cross-Platform', 
+            summary: 'مقارنة شاملة بين تطوير التطبيقات الأصلية والمتعددة المنصات. أيهما الأنسب لمشروعك؟',
+            author: 'حمزة اعمرني',
+            date: '18 يوليو 2025',
+            color: 'warning',
+            image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
+            tags: ['تطبيقات', 'موبايل', 'تطوير'],
+            content: `
+                <h2>التطوير الأصلي (Native)</h2>
+                <p><strong>المزايا:</strong> أداء عالي، وصول كامل لميزات النظام، تجربة مستخدم مثلى</p>
+                <p><strong>العيوب:</strong> تكلفة أعلى، وقت تطوير أطول، فريق متخصص لكل منصة</p>
+                
+                <h2>التطوير متعدد المنصات</h2>
+                <p><strong>المزايا:</strong> كود واحد لعدة منصات، تكلفة أقل، سرعة في التطوير</p>
+                <p><strong>العيوب:</strong> قيود في الأداء، وصول محدود لبعض الميزات</p>
+
+                <blockquote class="border-r-4 border-warning bg-warning/10 p-4 my-6">
+                  ⚡ <strong>نصيحة:</strong> اختر بناءً على متطلبات مشروعك وميزانيتك.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'database-design',
+            category: 'قواعد البيانات',
+            title: 'تصميم قواعد البيانات: من النظرية إلى التطبيق', 
+            summary: 'تعلم أساسيات تصميم قواعد البيانات الفعالة والمعايير التي يجب اتباعها لضمان الأداء الأمثل.',
+            author: 'حمزة اعمرني',
+            date: '15 يوليو 2025',
+            color: 'info',
+            image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80',
+            tags: ['قواعد البيانات', 'SQL', 'تصميم'],
+            content: `
+                <h2>مبادئ التصميم الأساسية</h2>
+                <ol class="list-decimal list-inside space-y-4 my-6">
+                    <li><strong>التطبيع (Normalization):</strong> تقليل التكرار وضمان سلامة البيانات</li>
+                    <li><strong>العلاقات:</strong> تحديد الروابط بين الجداول بوضوح</li>
+                    <li><strong>الفهرسة:</strong> تحسين سرعة الاستعلامات</li>
+                </ol>
+
+                <h2>أنواع العلاقات</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><strong>واحد إلى واحد (1:1)</strong></li>
+                    <li><strong>واحد إلى متعدد (1:N)</strong></li>
+                    <li><strong>متعدد إلى متعدد (M:N)</strong></li>
+                </ul>
+            `
+        },
+        { 
+            id: 'git-workflow',
+            category: 'أدوات التطوير',
+            title: 'إتقان Git: سير العمل الاحترافي للمطورين', 
+            summary: 'دليل شامل لاستخدام Git بطريقة احترافية، من الأوامر الأساسية إلى استراتيجيات التفرع المتقدمة.',
+            author: 'حمزة اعمرني',
+            date: '12 يوليو 2025',
+            color: 'dark',
+            image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=800&q=80',
+            tags: ['Git', 'Version Control', 'أدوات'],
+            content: `
+                <h2>أساسيات Git</h2>
+                <p>Git هو نظام إدارة الإصدارات الأكثر شيوعاً في العالم. يساعد المطورين على تتبع التغييرات والتعاون بفعالية.</p>
+                
+                <h2>الأوامر الأساسية</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><code>git init</code> - إنشاء مستودع جديد</li>
+                    <li><code>git add</code> - إضافة ملفات للمرحلة</li>
+                    <li><code>git commit</code> - حفظ التغييرات</li>
+                    <li><code>git push</code> - رفع التغييرات للمستودع البعيد</li>
+                </ul>
+
+                <h2>استراتيجيات التفرع</h2>
+                <p><strong>Git Flow:</strong> نموذج تفرع شائع للمشاريع الكبيرة</p>
+                <p><strong>GitHub Flow:</strong> نموذج مبسط للمشاريع السريعة</p>
+            `
+        },
+        { 
+            id: 'api-design',
+            category: 'تطوير الخلفية',
+            title: 'تصميم APIs فعالة: دليل RESTful وGraphQL', 
+            summary: 'تعلم كيفية تصميم واجهات برمجة التطبيقات القوية والقابلة للصيانة باستخدام أفضل الممارسات.',
+            author: 'حمزة اعمرني',
+            date: '10 يوليو 2025',
+            color: 'success',
+            image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+            tags: ['API', 'REST', 'GraphQL'],
+            content: `
+                <h2>مبادئ REST</h2>
+                <ol class="list-decimal list-inside space-y-4 my-6">
+                    <li><strong>Stateless:</strong> كل طلب مستقل</li>
+                    <li><strong>HTTP Methods:</strong> استخدام GET, POST, PUT, DELETE</li>
+                    <li><strong>Resource-based:</strong> كل URL يمثل مورد</li>
+                </ol>
+
+                <h2>GraphQL vs REST</h2>
+                <p><strong>REST:</strong> بساطة في التطبيق، معايير واضحة</p>
+                <p><strong>GraphQL:</strong> مرونة في الاستعلامات، تقليل عدد الطلبات</p>
+
+                <blockquote class="border-r-4 border-success bg-success/10 p-4 my-6">
+                  🚀 <strong>نصيحة:</strong> ابدأ بـ REST ثم انتقل لـ GraphQL عند الحاجة.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'css-grid-flexbox',
+            category: 'تصميم الواجهات',
+            title: 'CSS Grid و Flexbox: إتقان تخطيط الصفحات الحديث', 
+            summary: 'دليل شامل لاستخدام CSS Grid و Flexbox في إنشاء تخطيطات مرنة ومتجاوبة.',
+            author: 'حمزة اعمرني',
+            date: '8 يوليو 2025',
+            color: 'info',
+            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+            tags: ['CSS', 'Grid', 'Flexbox'],
+            content: `
+                <h2>متى نستخدم كلاً منهما؟</h2>
+                <p><strong>Flexbox:</strong> مثالي للتخطيطات أحادية البعد (صف أو عمود)</p>
+                <p><strong>CSS Grid:</strong> الأفضل للتخطيطات ثنائية البعد (صفوف وأعمدة)</p>
+                
+                <h2>خصائص Flexbox الأساسية</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><code>display: flex</code></li>
+                    <li><code>justify-content</code> - المحاذاة الأفقية</li>
+                    <li><code>align-items</code> - المحاذاة العمودية</li>
+                    <li><code>flex-direction</code> - اتجاه العناصر</li>
+                </ul>
+
+                <h2>خصائص Grid الأساسية</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><code>display: grid</code></li>
+                    <li><code>grid-template-columns</code></li>
+                    <li><code>grid-template-rows</code></li>
+                    <li><code>grid-gap</code></li>
+                </ul>
+            `
+        },
+        { 
+            id: 'performance-optimization',
+            category: 'تحسين الأداء',
+            title: 'تحسين أداء المواقع: تقنيات متقدمة للسرعة القصوى', 
+            summary: 'اكتشف أحدث تقنيات تحسين أداء المواقع وكيفية تحقيق أسرع أوقات تحميل ممكنة.',
+            author: 'حمزة اعمرني',
+            date: '5 يوليو 2025',
+            color: 'warning',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+            tags: ['أداء', 'تحسين', 'سرعة'],
+            content: `
+                <h2>مقاييس الأداء المهمة</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><strong>FCP:</strong> First Contentful Paint</li>
+                    <li><strong>LCP:</strong> Largest Contentful Paint</li>
+                    <li><strong>CLS:</strong> Cumulative Layout Shift</li>
+                    <li><strong>FID:</strong> First Input Delay</li>
+                </ul>
+
+                <h2>تقنيات التحسين</h2>
+                <ol class="list-decimal list-inside space-y-4 my-6">
+                    <li><strong>ضغط الملفات:</strong> Gzip, Brotli</li>
+                    <li><strong>تحسين الصور:</strong> WebP, lazy loading</li>
+                    <li><strong>التخزين المؤقت:</strong> Browser cache, CDN</li>
+                    <li><strong>تقليل HTTP requests</strong></li>
+                </ol>
+
+                <blockquote class="border-r-4 border-warning bg-warning/10 p-4 my-6">
+                  ⚡ <strong>هام:</strong> كل ثانية تأخير تقلل التحويلات بنسبة 7%.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'microservices-architecture',
+            category: 'هندسة البرمجيات',
+            title: 'معمارية الخدمات المصغرة: بناء أنظمة قابلة للتوسع', 
+            summary: 'فهم عميق لمعمارية الخدمات المصغرة ومتى وكيف تطبقها في مشاريعك الكبيرة.',
+            author: 'حمزة اعمرني',
+            date: '2 يوليو 2025',
+            color: 'primary',
+            image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=800&q=80',
+            tags: ['معمارية', 'microservices', 'أنظمة'],
+            content: `
+                <h2>ما هي الخدمات المصغرة؟</h2>
+                <p>نهج في تطوير البرمجيات يقسم التطبيق الكبير إلى خدمات صغيرة مستقلة، كل منها تؤدي وظيفة محددة.</p>
+                
+                <h2>المزايا</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li><strong>قابلية التوسع:</strong> توسيع خدمات محددة حسب الحاجة</li>
+                    <li><strong>المرونة:</strong> تقنيات مختلفة لكل خدمة</li>
+                    <li><strong>الموثوقية:</strong> فشل خدمة لا يؤثر على الباقي</li>
+                </ul>
+
+                <h2>التحديات</h2>
+                <ul class="list-disc list-inside space-y-2 my-6">
+                    <li>تعقيد الشبكة والتواصل</li>
+                    <li>إدارة البيانات الموزعة</li>
+                    <li>مراقبة وتتبع الأخطاء</li>
+                </ul>
+            `
+        }
     ]
 };
 

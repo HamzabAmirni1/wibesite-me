@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
 import { NavigationContext } from './contexts/NavigationContext';
+import { AdProvider } from './contexts/AdContext';
 import FloatingSocials from './components/FloatingSocials';
 import IntroAnimation from './components/IntroAnimation';
 
@@ -19,6 +20,11 @@ const Bots = lazy(() => import('./pages/Bots.tsx'));
 const Tools = lazy(() => import('./pages/Tools.tsx'));
 const Articles = lazy(() => import('./pages/Articles.tsx'));
 const Chat = lazy(() => import('./pages/Chat.tsx'));
+const Privacy = lazy(() => import('./pages/Privacy.tsx'));
+const Terms = lazy(() => import('./pages/Terms.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const Disclaimer = lazy(() => import('./pages/Disclaimer.tsx'));
+const AdManager = lazy(() => import('./pages/AdManager.tsx'));
 
 const sectionComponents: { [key: string]: React.LazyExoticComponent<React.FC<{}>> } = {
   home: Home,
@@ -30,7 +36,12 @@ const sectionComponents: { [key: string]: React.LazyExoticComponent<React.FC<{}>
   bots: Bots,
   tools: Tools,
   gaza: Articles, // 'gaza' id maps to Articles page
-  chat: Chat,
+  chat: Contact,
+  privacy: Privacy,
+  terms: Terms,
+  contact: Contact,
+  disclaimer: Disclaimer,
+  admanager: AdManager,
 };
 
 const App: React.FC = () => {
@@ -100,10 +111,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <NavigationContext.Provider value={navigationContextValue}>
-        <AnimatePresence>
-          {showIntro && <IntroAnimation onAnimationComplete={handleIntroComplete} />}
-        </AnimatePresence>
+    <AdProvider>
+      <NavigationContext.Provider value={navigationContextValue}>
+          <AnimatePresence>
+            {showIntro && <IntroAnimation onAnimationComplete={handleIntroComplete} />}
+          </AnimatePresence>
 
         <motion.div 
           className="flex min-h-screen bg-light-color-dark/30"
@@ -167,7 +179,8 @@ const App: React.FC = () => {
             )}
           </AnimatePresence>
         </motion.div>
-    </NavigationContext.Provider>
+      </NavigationContext.Provider>
+    </AdProvider>
   );
 };
 

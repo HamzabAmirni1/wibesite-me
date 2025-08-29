@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import ProfileSection from '../components/ProfileSection';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import CallToAction from '../components/CallToAction';
+import AdContainer from '../components/ads/AdContainer';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,6 +38,11 @@ const Home: React.FC = () => {
       <motion.div variants={itemVariants}>
         <ProfileSection />
       </motion.div>
+
+      {/* Banner Ad */}
+      <motion.div variants={itemVariants}>
+        <AdContainer type="banner" size="medium" />
+      </motion.div>
       
       <motion.div variants={itemVariants}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,6 +63,11 @@ const Home: React.FC = () => {
               <li>لعبة XO (تيك تاك تو) على الويب</li>
           </ul>
         </Card>
+      </motion.div>
+
+      {/* Inline Ad */}
+      <motion.div variants={itemVariants}>
+        <AdContainer type="inline" variant="card" />
       </motion.div>
       
       <motion.div variants={itemVariants}>

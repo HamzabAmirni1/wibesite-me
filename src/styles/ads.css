@@ -1,0 +1,112 @@
+/* Ad Container Styles */
+.ad-container {
+  @apply w-full;
+}
+
+/* Ad Banner Animations */
+@keyframes adPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.ad-banner:hover {
+  animation: adPulse 2s infinite;
+}
+
+/* Ad Hover Effects */
+.ad-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ad-hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ad Label Styles */
+.ad-label {
+  @apply absolute bottom-2 left-2 bg-gray-600/90 text-white text-xs px-2 py-1 rounded-full;
+  font-size: 10px;
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive Ad Styles */
+@media (max-width: 640px) {
+  .ad-banner {
+    @apply h-16 text-xs;
+  }
+  
+  .ad-inline {
+    @apply flex-col text-center;
+  }
+  
+  .ad-sidebar {
+    @apply w-full;
+  }
+}
+
+/* Ad Loading Animation */
+.ad-loading {
+  @apply animate-pulse bg-gray-200;
+}
+
+.ad-loading::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Ad Close Button */
+.ad-close-btn {
+  @apply absolute top-2 right-2 z-10 bg-white/90 hover:bg-white rounded-full p-1 text-gray-400 hover:text-gray-600 transition-colors shadow-sm;
+}
+
+.ad-close-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Ad Click Tracking */
+.ad-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.ad-clickable:active {
+  transform: scale(0.98);
+}
+
+/* Custom Scrollbar for Sidebar Ads */
+.sidebar-ads-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.sidebar-ads-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-ads-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-ads-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.sidebar-ads-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

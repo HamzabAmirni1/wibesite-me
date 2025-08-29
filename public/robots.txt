@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hamzaamirni.com/sitemap.xml
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow crawling of admin or sensitive areas (if any in the future)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow crawling of important pages
+Allow: /about
+Allow: /articles
+Allow: /programming
+Allow: /apps
+Allow: /videos
+Allow: /tools
+Allow: /bots
+Allow: /fun
+Allow: /chat
+Allow: /privacy
+Allow: /terms
+Allow: /contact
+Allow: /disclaimer
+
+# Crawl delay (optional - helps prevent overloading the server)
+Crawl-delay: 1
