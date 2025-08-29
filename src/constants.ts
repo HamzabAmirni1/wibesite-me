@@ -172,7 +172,7 @@ export const articlesContent = {
             author: 'حمزة اعمرني',
             date: '28 يوليو 2025',
             color: 'success',
-            image: 'https://i.imgur.com/gY5p3T8.png',
+            image: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=800&q=80',
             tags: ['واتساب', 'حظر', 'دعم فني', 'نصائح'],
             content: `
                 <h2>رسالة حظر واتساب - الرقم محظور</h2>
@@ -540,6 +540,760 @@ Email: [Your Email]</code></pre>
                     <li>إدارة البيانات الموزعة</li>
                     <li>مراقبة وتتبع الأخطاء</li>
                 </ul>
+            `
+        },
+        { 
+            id: 'react-hooks-guide',
+            category: 'برمجة',
+            title: 'دليل شامل لـ React Hooks وأفضل الممارسات', 
+            summary: 'تعلم كيفية استخدام React Hooks بفعالية لبناء تطبيقات React حديثة ومتقدمة. سنغطي useState، useEffect، useContext وغيرها مع أمثلة عملية.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'primary',
+            image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
+            tags: ['React', 'Hooks', 'JavaScript', 'تطوير ويب'],
+            content: `
+                <h2>مقدمة عن React Hooks</h2>
+                <p>React Hooks هي ميزة قوية تم إدخالها في React 16.8 تسمح لك باستخدام الحالة وميزات React الأخرى دون كتابة فئة (class). تجعل Hooks الكود أكثر قابلية للقراءة والفهم.</p>
+                
+                <h2>أهم React Hooks</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li><strong>useState:</strong> لإدارة الحالة المحلية</li>
+                    <li><strong>useEffect:</strong> للتعامل مع التأثيرات الجانبية</li>
+                    <li><strong>useContext:</strong> لاستهلاك Context</li>
+                    <li><strong>useReducer:</strong> لإدارة الحالة المعقدة</li>
+                    <li><strong>useMemo:</strong> لتحسين الأداء</li>
+                </ul>
+
+                <h2>مثال عملي - useState</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  return (
+    &lt;div&gt;
+      &lt;p&gt;العدد: {count}&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;
+        زيادة
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+                </code></pre>
+
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  💡 <strong>نصيحة:</strong> استخدم useState للحالات البسيطة و useReducer للحالات المعقدة التي تتطلب منطق معقد.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'nodejs-performance',
+            category: 'تطوير خلفي',
+            title: 'تحسين أداء تطبيقات Node.js للإنتاج', 
+            summary: 'تعرف على أفضل الطرق لتحسين أداء تطبيقات Node.js وجعلها جاهزة للإنتاج مع تقنيات التخزين المؤقت والتحسين.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'success',
+            image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=800&q=80',
+            tags: ['Node.js', 'أداء', 'تحسين', 'خادم'],
+            content: `
+                <h2>أهمية تحسين الأداء</h2>
+                <p>تحسين أداء تطبيقات Node.js أمر بالغ الأهمية لضمان تجربة مستخدم سلسة وتقليل تكاليف الخادم. سنتعلم التقنيات الأساسية للتحسين.</p>
+                
+                <h2>تقنيات التحسين الأساسية</h2>
+                <ol class="list-decimal list-inside space-y-3 my-6">
+                    <li><strong>استخدام التخزين المؤقت (Caching):</strong> Redis أو Memcached لتخزين البيانات المتكررة</li>
+                    <li><strong>ضغط الاستجابات:</strong> استخدام gzip لتقليل حجم البيانات</li>
+                    <li><strong>تحسين قاعدة البيانات:</strong> فهرسة الاستعلامات وتحسين الطلبات</li>
+                    <li><strong>Load Balancing:</strong> توزيع الحمولة على عدة خوادم</li>
+                </ol>
+
+                <h2>مثال - تطبيق التخزين المؤقت</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+const redis = require('redis');
+const client = redis.createClient();
+
+// تخزين البيانات
+app.get('/api/data', async (req, res) => {
+  const cacheKey = 'user_data';
+  
+  // البحث في التخزين المؤقت أولاً
+  const cached = await client.get(cacheKey);
+  if (cached) {
+    return res.json(JSON.parse(cached));
+  }
+  
+  // جلب البيانات من قاعدة البيانات
+  const data = await fetchFromDatabase();
+  
+  // حفظ في التخزين المؤقت لمدة ساعة
+  await client.setex(cacheKey, 3600, JSON.stringify(data));
+  
+  res.json(data);
+});
+                </code></pre>
+            `
+        },
+        { 
+            id: 'css-grid-flexbox',
+            category: 'تصميم ويب',
+            title: 'CSS Grid vs Flexbox: متى تستخدم كل منهما؟', 
+            summary: 'دليل شامل للفرق بين CSS Grid و Flexbox ومتى يجب استخدام كل منهما لإنشاء تخطيطات ويب متجاوبة وحديثة.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'warning',
+            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+            tags: ['CSS', 'Grid', 'Flexbox', 'تخطيط'],
+            content: `
+                <h2>الفرق بين Grid و Flexbox</h2>
+                <p>CSS Grid و Flexbox كلاهما أدوات قوية لإنشاء التخطيطات، لكن لكل منهما استخدامات مختلفة. Grid للتخطيطات ثنائية الأبعاد، و Flexbox للتخطيطات أحادية البعد.</p>
+                
+                <h2>متى تستخدم Flexbox؟</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li>ترتيب العناصر في صف أو عمود واحد</li>
+                    <li>توزيع المساحة بين العناصر</li>
+                    <li>محاذاة العناصر عمودياً أو أفقياً</li>
+                    <li>إنشاء شريط تنقل أو أزرار</li>
+                </ul>
+
+                <h2>متى تستخدم CSS Grid؟</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li>إنشاء تخطيطات معقدة ثنائية الأبعاد</li>
+                    <li>تقسيم الصفحة إلى مناطق محددة</li>
+                    <li>إنشاء شبكات من البطاقات أو الصور</li>
+                    <li>التحكم الدقيق في موضع العناصر</li>
+                </ul>
+
+                <h2>مثال Flexbox</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+                </code></pre>
+
+                <h2>مثال CSS Grid</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+.layout {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "sidebar main aside"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.aside { grid-area: aside; }
+.footer { grid-area: footer; }
+                </code></pre>
+            `
+        },
+        { 
+            id: 'python-automation',
+            category: 'أتمتة',
+            title: 'أتمتة المهام اليومية باستخدام Python', 
+            summary: 'تعلم كيفية استخدام Python لأتمتة المهام المتكررة مثل إدارة الملفات، إرسال الإيميلات، وجمع البيانات من الويب.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'danger',
+            image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80',
+            tags: ['Python', 'أتمتة', 'سكريبت', 'إنتاجية'],
+            content: `
+                <h2>فوائد الأتمتة</h2>
+                <p>أتمتة المهام المتكررة توفر الوقت والجهد وتقلل من الأخطاء البشرية. Python هي اللغة المثالية للأتمتة بفضل مكتباتها الغنية وسهولة استخدامها.</p>
+                
+                <h2>أمثلة على المهام القابلة للأتمتة</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li>تنظيم وترتيب الملفات</li>
+                    <li>إرسال التقارير عبر البريد الإلكتروني</li>
+                    <li>جمع البيانات من المواقع</li>
+                    <li>إنشاء النسخ الاحتياطية</li>
+                    <li>مراقبة النظام والخوادم</li>
+                </ul>
+
+                <h2>مثال - تنظيم الملفات حسب النوع</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+import os
+import shutil
+from pathlib import Path
+
+def organize_files(directory):
+    # إنشاء مجلدات حسب نوع الملف
+    file_types = {
+        'images': ['.jpg', '.jpeg', '.png', '.gif'],
+        'documents': ['.pdf', '.docx', '.txt'],
+        'videos': ['.mp4', '.avi', '.mkv'],
+        'audio': ['.mp3', '.wav', '.flac']
+    }
+    
+    for folder in file_types.keys():
+        os.makedirs(os.path.join(directory, folder), exist_ok=True)
+    
+    # نقل الملفات إلى المجلدات المناسبة
+    for file in os.listdir(directory):
+        file_path = os.path.join(directory, file)
+        if os.path.isfile(file_path):
+            file_ext = Path(file).suffix.lower()
+            
+            for folder, extensions in file_types.items():
+                if file_ext in extensions:
+                    shutil.move(file_path, os.path.join(directory, folder, file))
+                    break
+
+# استخدام الدالة
+organize_files('/path/to/downloads')
+                </code></pre>
+
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  ⚡ <strong>نصيحة:</strong> ابدأ بأتمتة المهام البسيطة ثم انتقل تدريجياً للمهام الأكثر تعقيداً.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'mongodb-best-practices',
+            category: 'قواعد البيانات',
+            title: 'أفضل الممارسات في MongoDB للمشاريع الكبيرة', 
+            summary: 'تعرف على أفضل الممارسات لتصميم وإدارة قواعد بيانات MongoDB في المشاريع الكبيرة مع التركيز على الأداء والأمان.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'success',
+            image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80',
+            tags: ['MongoDB', 'قواعد البيانات', 'NoSQL', 'أداء'],
+            content: `
+                <h2>لماذا MongoDB؟</h2>
+                <p>MongoDB هي قاعدة بيانات NoSQL مرنة وقابلة للتوسع، مثالية للتطبيقات الحديثة التي تتطلب سرعة في التطوير ومرونة في هيكل البيانات.</p>
+                
+                <h2>أفضل الممارسات</h2>
+                <ol class="list-decimal list-inside space-y-3 my-6">
+                    <li><strong>تصميم المخطط (Schema Design):</strong> فكر في كيفية استعلام البيانات قبل التصميم</li>
+                    <li><strong>الفهرسة (Indexing):</strong> أنشئ فهارس للحقول المستخدمة في الاستعلامات</li>
+                    <li><strong>التجميع (Aggregation):</strong> استخدم pipeline للمعالجة المعقدة</li>
+                    <li><strong>الأمان:</strong> فعّل المصادقة وتشفير البيانات</li>
+                </ol>
+
+                <h2>مثال - إنشاء فهرس مركب</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// إنشاء فهرس مركب للبحث السريع
+db.users.createIndex({ 
+  "email": 1, 
+  "status": 1, 
+  "createdAt": -1 
+});
+
+// استعلام محسن
+db.users.find({
+  "email": "user@example.com",
+  "status": "active"
+}).sort({ "createdAt": -1 });
+                </code></pre>
+
+                <h2>تحسين الاستعلامات</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// استخدام projection لتقليل البيانات المنقولة
+db.products.find(
+  { "category": "electronics" },
+  { "name": 1, "price": 1, "_id": 0 }
+);
+
+// استخدام limit للحد من النتائج
+db.orders.find({ "status": "pending" })
+  .limit(10)
+  .sort({ "createdAt": -1 });
+                </code></pre>
+            `
+        },
+        { 
+            id: 'docker-kubernetes-guide',
+            category: 'DevOps',
+            title: 'دليل شامل لـ Docker و Kubernetes للمطورين', 
+            summary: 'تعلم كيفية استخدام Docker و Kubernetes لتطوير ونشر التطبيقات بكفاءة. من الأساسيات إلى التطبيقات المتقدمة في بيئة الإنتاج.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'primary',
+            image: 'https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=800&q=80',
+            tags: ['Docker', 'Kubernetes', 'DevOps', 'حاويات'],
+            content: `
+                <h2>ما هو Docker؟</h2>
+                <p>Docker هي منصة لتطوير ونشر وتشغيل التطبيقات باستخدام تقنية الحاويات (Containers). تسمح بتعبئة التطبيق مع جميع متطلباته في حاوية واحدة قابلة للنقل.</p>
+                
+                <h2>فوائد استخدام Docker</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li><strong>قابلية النقل:</strong> يعمل في أي بيئة تدعم Docker</li>
+                    <li><strong>عزل التطبيقات:</strong> كل تطبيق في بيئة منفصلة</li>
+                    <li><strong>سرعة النشر:</strong> بدء سريع للتطبيقات</li>
+                    <li><strong>كفاءة الموارد:</strong> استهلاك أقل من الآلات الافتراضية</li>
+                </ul>
+
+                <h2>مثال - إنشاء Dockerfile</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+# استخدام Node.js كصورة أساسية
+FROM node:18-alpine
+
+# تعيين مجلد العمل
+WORKDIR /app
+
+# نسخ ملفات package
+COPY package*.json ./
+
+# تثبيت التبعيات
+RUN npm ci --only=production
+
+# نسخ الكود المصدري
+COPY . .
+
+# تعريض المنفذ
+EXPOSE 3000
+
+# تشغيل التطبيق
+CMD ["npm", "start"]
+                </code></pre>
+
+                <h2>مقدمة عن Kubernetes</h2>
+                <p>Kubernetes هو نظام لإدارة الحاويات على نطاق واسع، يوفر أتمتة النشر والتوسع وإدارة التطبيقات المحتواة.</p>
+
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  🚀 <strong>نصيحة:</strong> ابدأ بـ Docker أولاً، ثم انتقل إلى Kubernetes عندما تحتاج لإدارة تطبيقات متعددة.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'vue-composition-api',
+            category: 'برمجة',
+            title: 'Vue 3 Composition API: دليل المطور الشامل', 
+            summary: 'اكتشف قوة Vue 3 Composition API وكيفية بناء تطبيقات أكثر تنظيماً وقابلية للصيانة مع الأمثلة العملية والمقارنات.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'success',
+            image: 'https://images.unsplash.com/photo-1621839673705-6617adf9e890?auto=format&fit=crop&w=800&q=80',
+            tags: ['Vue.js', 'JavaScript', 'Composition API', 'تطوير ويب'],
+            content: `
+                <h2>لماذا Composition API؟</h2>
+                <p>Vue 3 Composition API يوفر طريقة أكثر مرونة لتنظيم منطق المكونات، خاصة في التطبيقات الكبيرة والمعقدة.</p>
+                
+                <h2>الفوائد الرئيسية</h2>
+                <ol class="list-decimal list-inside space-y-3 my-6">
+                    <li><strong>تنظيم أفضل للكود:</strong> تجميع المنطق المترابط</li>
+                    <li><strong>إعادة الاستخدام:</strong> مشاركة المنطق بين المكونات</li>
+                    <li><strong>TypeScript Support:</strong> دعم أفضل للأنواع</li>
+                    <li><strong>أداء محسن:</strong> تحسينات في الذاكرة والسرعة</li>
+                </ol>
+
+                <h2>مثال - مكون بسيط</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;العداد: {{ count }}&lt;/h2&gt;
+    &lt;button @click="increment"&gt;زيادة&lt;/button&gt;
+    &lt;button @click="decrement"&gt;تقليل&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+// الحالة التفاعلية
+const count = ref(0)
+
+// الدوال
+const increment = () => count.value++
+const decrement = () => count.value--
+
+// الخصائص المحسوبة
+const doubleCount = computed(() => count.value * 2)
+&lt;/script&gt;
+                </code></pre>
+
+                <h2>استخدام Composables</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// composables/useCounter.js
+import { ref } from 'vue'
+
+export function useCounter(initialValue = 0) {
+  const count = ref(initialValue)
+  
+  const increment = () => count.value++
+  const decrement = () => count.value--
+  const reset = () => count.value = initialValue
+  
+  return {
+    count,
+    increment,
+    decrement,
+    reset
+  }
+}
+                </code></pre>
+            `
+        },
+        { 
+            id: 'api-security-best-practices',
+            category: 'أمان',
+            title: 'أمان APIs: أفضل الممارسات والحماية الشاملة', 
+            summary: 'دليل شامل لحماية APIs من التهديدات الأمنية مع التركيز على المصادقة، التشفير، ومنع الهجمات الشائعة.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'danger',
+            image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
+            tags: ['أمان', 'API', 'حماية', 'مصادقة'],
+            content: `
+                <h2>أهمية أمان APIs</h2>
+                <p>APIs هي نقاط الدخول الرئيسية للتطبيقات الحديثة، مما يجعلها أهدافاً رئيسية للمهاجمين. حماية APIs أمر بالغ الأهمية لضمان أمان البيانات والخدمات.</p>
+                
+                <h2>التهديدات الشائعة</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li><strong>Injection Attacks:</strong> حقن SQL أو NoSQL</li>
+                    <li><strong>Broken Authentication:</strong> ضعف في المصادقة</li>
+                    <li><strong>Rate Limiting:</strong> عدم تحديد معدل الطلبات</li>
+                    <li><strong>Data Exposure:</strong> تسريب البيانات الحساسة</li>
+                </ul>
+
+                <h2>أفضل الممارسات</h2>
+                <ol class="list-decimal list-inside space-y-3 my-6">
+                    <li><strong>استخدام HTTPS:</strong> تشفير جميع الاتصالات</li>
+                    <li><strong>المصادقة القوية:</strong> JWT أو OAuth 2.0</li>
+                    <li><strong>التحقق من المدخلات:</strong> فلترة وتنظيف البيانات</li>
+                    <li><strong>Rate Limiting:</strong> تحديد عدد الطلبات</li>
+                    <li><strong>مراقبة الأنشطة:</strong> تسجيل ومراقبة الطلبات</li>
+                </ol>
+
+                <h2>مثال - تطبيق Rate Limiting</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+const rateLimit = require('express-rate-limit');
+
+// تحديد 100 طلب في الساعة لكل IP
+const limiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // ساعة واحدة
+  max: 100, // الحد الأقصى للطلبات
+  message: {
+    error: 'تم تجاوز الحد المسموح من الطلبات'
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use('/api/', limiter);
+                </code></pre>
+
+                <h2>تطبيق JWT للمصادقة</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+const jwt = require('jsonwebtoken');
+
+// إنشاء التوكن
+function generateToken(user) {
+  return jwt.sign(
+    { 
+      userId: user.id, 
+      email: user.email 
+    },
+    process.env.JWT_SECRET,
+    { expiresIn: '24h' }
+  );
+}
+
+// التحقق من التوكن
+function verifyToken(req, res, next) {
+  const token = req.headers.authorization?.split(' ')[1];
+  
+  if (!token) {
+    return res.status(401).json({ error: 'مطلوب توكن المصادقة' });
+  }
+  
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (error) {
+    res.status(401).json({ error: 'توكن غير صالح' });
+  }
+}
+                </code></pre>
+            `
+        },
+        { 
+            id: 'flutter-state-management',
+            category: 'تطبيقات محمولة',
+            title: 'إدارة الحالة في Flutter: من Provider إلى Riverpod', 
+            summary: 'مقارنة شاملة لحلول إدارة الحالة في Flutter مع أمثلة عملية وتوضيح متى تستخدم كل حل.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'warning',
+            image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
+            tags: ['Flutter', 'Dart', 'إدارة الحالة', 'تطبيقات محمولة'],
+            content: `
+                <h2>أهمية إدارة الحالة</h2>
+                <p>إدارة الحالة هي جوهر أي تطبيق Flutter. الاختيار الصحيح لحل إدارة الحالة يؤثر على أداء التطبيق وسهولة صيانته.</p>
+                
+                <h2>الحلول المتاحة</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li><strong>setState:</strong> للحالات البسيطة المحلية</li>
+                    <li><strong>Provider:</strong> الحل الرسمي المُوصى به</li>
+                    <li><strong>Riverpod:</strong> تطوير Provider مع مزايا إضافية</li>
+                    <li><strong>BLoC:</strong> للتطبيقات المعقدة والكبيرة</li>
+                    <li><strong>GetX:</strong> حل شامل مع إدارة التوجيه</li>
+                </ul>
+
+                <h2>مثال - استخدام Provider</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// نموذج البيانات
+class Counter extends ChangeNotifier {
+  int _count = 0;
+  
+  int get count => _count;
+  
+  void increment() {
+    _count++;
+    notifyListeners();
+  }
+}
+
+// في main.dart
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Counter(),
+      child: MyApp(),
+    ),
+  );
+}
+
+// في الواجهة
+class CounterWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Consumer&lt;Counter&gt;(
+      builder: (context, counter, child) {
+        return Column(
+          children: [
+            Text('العدد: ${counter.count}'),
+            ElevatedButton(
+              onPressed: counter.increment,
+              child: Text('زيادة'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+                </code></pre>
+
+                <h2>مثال - استخدام Riverpod</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// تعريف Provider
+final counterProvider = StateNotifierProvider&lt;CounterNotifier, int&gt;(
+  (ref) => CounterNotifier(),
+);
+
+class CounterNotifier extends StateNotifier&lt;int&gt; {
+  CounterNotifier() : super(0);
+  
+  void increment() => state++;
+  void decrement() => state--;
+}
+
+// في الواجهة
+class CounterWidget extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final count = ref.watch(counterProvider);
+    
+    return Column(
+      children: [
+        Text('العدد: $count'),
+        ElevatedButton(
+          onPressed: () => ref.read(counterProvider.notifier).increment(),
+          child: Text('زيادة'),
+        ),
+      ],
+    );
+  }
+}
+                </code></pre>
+            `
+        },
+        { 
+            id: 'machine-learning-python',
+            category: 'ذكاء اصطناعي',
+            title: 'بداية رحلتك في تعلم الآلة مع Python', 
+            summary: 'دليل شامل للمبتدئين في تعلم الآلة باستخدام Python مع التركيز على المكتبات الأساسية والمشاريع العملية.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'primary',
+            image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80',
+            tags: ['Python', 'تعلم الآلة', 'ذكاء اصطناعي', 'علم البيانات'],
+            content: `
+                <h2>ما هو تعلم الآلة؟</h2>
+                <p>تعلم الآلة هو فرع من الذكاء الاصطناعي يمكّن الحاسوب من التعلم واتخاذ القرارات من البيانات دون برمجة صريحة لكل حالة.</p>
+                
+                <h2>أنواع تعلم الآلة</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li><strong>التعلم المُشرف عليه:</strong> التدريب على بيانات مُصنفة</li>
+                    <li><strong>التعلم غير المُشرف عليه:</strong> اكتشاف الأنماط في البيانات</li>
+                    <li><strong>التعلم المُعزز:</strong> التعلم من خلال المكافآت والعقوبات</li>
+                </ul>
+
+                <h2>المكتبات الأساسية</h2>
+                <ol class="list-decimal list-inside space-y-3 my-6">
+                    <li><strong>NumPy:</strong> العمليات الرياضية والمصفوفات</li>
+                    <li><strong>Pandas:</strong> معالجة وتحليل البيانات</li>
+                    <li><strong>Scikit-learn:</strong> خوارزميات تعلم الآلة</li>
+                    <li><strong>Matplotlib/Seaborn:</strong> تصور البيانات</li>
+                </ol>
+
+                <h2>مثال - تصنيف بسيط</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# تحميل البيانات
+data = pd.read_csv('dataset.csv')
+
+# فصل المتغيرات والهدف
+X = data.drop('target', axis=1)
+y = data['target']
+
+# تقسيم البيانات
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# إنشاء وتدريب النموذج
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# التنبؤ والتقييم
+predictions = model.predict(X_test)
+accuracy = accuracy_score(y_test, predictions)
+
+print(f'دقة النموذج: {accuracy:.2f}')
+                </code></pre>
+
+                <blockquote class="border-r-4 border-primary bg-primary/10 p-4 my-6">
+                  🧠 <strong>نصيحة:</strong> ابدأ بمشاريع بسيطة وتدرج نحو المشاريع المعقدة. فهم البيانات أهم من اختيار الخوارزمية.
+                </blockquote>
+            `
+        },
+        { 
+            id: 'nextjs-performance-optimization',
+            category: 'تطوير ويب',
+            title: 'تحسين أداء تطبيقات Next.js للإنتاج', 
+            summary: 'تقنيات متقدمة لتحسين أداء تطبيقات Next.js مع التركيز على السرعة، SEO، وتجربة المستخدم المثلى.',
+            author: 'حمزة اعمرني',
+            date: '29 أغسطس 2025',
+            color: 'success',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+            tags: ['Next.js', 'React', 'أداء', 'تحسين'],
+            content: `
+                <h2>لماذا Next.js؟</h2>
+                <p>Next.js يوفر العديد من الميزات المدمجة لتحسين الأداء مثل Server-Side Rendering، Static Generation، وتحسين الصور التلقائي.</p>
+                
+                <h2>تقنيات التحسين الأساسية</h2>
+                <ul class="list-disc list-inside space-y-2 my-4">
+                    <li><strong>Static Generation (SSG):</strong> إنشاء الصفحات مسبقاً</li>
+                    <li><strong>Incremental Static Regeneration:</strong> تحديث المحتوى تدريجياً</li>
+                    <li><strong>Image Optimization:</strong> تحسين الصور التلقائي</li>
+                    <li><strong>Code Splitting:</strong> تقسيم الكود التلقائي</li>
+                </ul>
+
+                <h2>مثال - تطبيق SSG</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// pages/blog/[slug].js
+export async function getStaticPaths() {
+  // جلب قائمة المقالات
+  const posts = await fetchAllPosts();
+  
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug }
+  }));
+  
+  return {
+    paths,
+    fallback: 'blocking' // ISR للصفحات الجديدة
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const post = await fetchPost(params.slug);
+  
+  return {
+    props: { post },
+    revalidate: 3600 // إعادة إنشاء كل ساعة
+  };
+}
+
+export default function BlogPost({ post }) {
+  return (
+    &lt;article&gt;
+      &lt;h1&gt;{post.title}&lt;/h1&gt;
+      &lt;div dangerouslySetInnerHTML={{ __html: post.content }} /&gt;
+    &lt;/article&gt;
+  );
+}
+                </code></pre>
+
+                <h2>تحسين الصور</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+import Image from 'next/image';
+
+function OptimizedImage() {
+  return (
+    &lt;Image
+      src="/hero-image.jpg"
+      alt="صورة البطل"
+      width={800}
+      height={600}
+      priority // للصور المهمة
+      placeholder="blur" // تأثير ضبابي أثناء التحميل
+      blurDataURL="data:image/jpeg;base64,..." // صورة مصغرة
+    /&gt;
+  );
+}
+                </code></pre>
+
+                <h2>تحسين Bundle Size</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// next.config.js
+module.exports = {
+  // تحليل حجم Bundle
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
+    return config;
+  },
+  
+  // ضغط الصور
+  images: {
+    formats: ['image/webp'],
+    minimumCacheTTL: 31536000,
+  },
+  
+  // تفعيل SWC Minifier
+  swcMinify: true,
+  
+  // إزالة console.log في الإنتاج
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  }
+};
+                </code></pre>
             `
         }
     ]
