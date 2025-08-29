@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Card from '../components/Card';
 import ProfileSection from '../components/ProfileSection';
-import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
+import SkillsCard from '../components/SkillsCard';
+import Timeline from '../components/Timeline';
 import CallToAction from '../components/CallToAction';
+import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
+import GoogleAdSense from '../components/GoogleAdSense';
+import Card from '../components/Card';
 import AdContainer from '../components/ads/AdContainer';
 
 const containerVariants = {

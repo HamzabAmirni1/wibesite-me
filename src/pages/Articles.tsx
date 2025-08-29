@@ -7,6 +7,7 @@ import { Search } from 'lucide-react';
 import ArticleCard from '../components/ArticleCard';
 import ArticleDetail from '../components/ArticleDetail';
 import CallToAction from '../components/CallToAction';
+import GoogleAdSense from '../components/GoogleAdSense';
 
 const Articles: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -61,8 +62,20 @@ const Articles: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              {filteredArticles.map((article) => (
-                <ArticleCard key={article.id} article={article} onReadMore={() => setSelectedArticleId(article.id)} />
+              {filteredArticles.map((article, index) => (
+                <React.Fragment key={article.id}>
+                  <ArticleCard article={article} onReadMore={() => setSelectedArticleId(article.id)} />
+                  {/* Add AdSense ad after every 4th article */}
+                  {(index + 1) % 4 === 0 && (
+                    <div className="col-span-1 md:col-span-2 my-6">
+                      <GoogleAdSense 
+                        adSlot="1234567890"
+                        className="w-full"
+                        style={{ display: 'block', minHeight: '250px' }}
+                      />
+                    </div>
+                  )}
+                </React.Fragment>
               ))}
             </div>
             

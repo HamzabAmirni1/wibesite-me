@@ -1,4 +1,4 @@
-import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Palette, Server, BrainCircuit, Cpu, Lightbulb, CheckCircle, Calendar, Tag } from 'lucide-react';
+import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle } from 'lucide-react';
 import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiStackoverflow } from 'react-icons/si';
 import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
@@ -1079,7 +1079,7 @@ class CounterWidget extends StatelessWidget {
       builder: (context, counter, child) {
         return Column(
           children: [
-            Text('العدد: ${counter.count}'),
+            Text('العدد: \${counter.count}'),
             ElevatedButton(
               onPressed: counter.increment,
               child: Text('زيادة'),
@@ -1298,6 +1298,977 @@ module.exports = {
         }
     ]
 };
+
+// المجموعة الثالثة من المقالات (9 مقالات)
+export const additionalArticles = [
+  {
+    id: 'blockchain-basics',
+    title: 'مقدمة في تقنية البلوك تشين',
+    excerpt: 'تعرف على أساسيات تقنية البلوك تشين وكيفية عملها وتطبيقاتها المختلفة',
+    content: `
+      <h1>مقدمة في تقنية البلوك تشين</h1>
+      
+      <p>تقنية البلوك تشين هي إحدى أهم الابتكارات التقنية في العقد الماضي. تعتمد هذه التقنية على مفهوم السجل الموزع الذي يحفظ المعاملات بطريقة آمنة وشفافة.</p>
+      
+      <h2>ما هو البلوك تشين؟</h2>
+      <p>البلوك تشين هو قاعدة بيانات موزعة تحتوي على سجل متنامٍ من السجلات، تسمى الكتل، والتي ترتبط وتؤمن باستخدام التشفير.</p>
+      
+      <h2>المميزات الرئيسية</h2>
+      <ul>
+        <li><strong>اللامركزية:</strong> لا توجد سلطة مركزية واحدة</li>
+        <li><strong>الشفافية:</strong> جميع المعاملات مرئية للجميع</li>
+        <li><strong>الأمان:</strong> استخدام التشفير المتقدم</li>
+        <li><strong>عدم القابلية للتغيير:</strong> صعوبة تعديل البيانات المسجلة</li>
+      </ul>
+      
+      <h2>التطبيقات العملية</h2>
+      <p>تستخدم تقنية البلوك تشين في:</p>
+      <ul>
+        <li>العملات الرقمية مثل البيتكوين</li>
+        <li>العقود الذكية</li>
+        <li>إدارة سلسلة التوريد</li>
+        <li>التصويت الإلكتروني</li>
+        <li>الهوية الرقمية</li>
+      </ul>
+      
+      <h2>مثال بسيط على البلوك</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+{
+  "index": 1,
+  "timestamp": "2024-01-01T00:00:00Z",
+  "data": "معاملة من أحمد إلى محمد: 100 وحدة",
+  "previousHash": "0000000000000000",
+  "hash": "a1b2c3d4e5f6..."
+}
+      </code></pre>
+      
+      <h2>الخلاصة</h2>
+      <p>تقنية البلوك تشين تمثل ثورة في طريقة تخزين ونقل البيانات. فهمها أصبح ضرورياً لكل مطور يريد مواكبة التطورات التقنية الحديثة.</p>
+    `,
+    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop',
+    tags: ['بلوك تشين', 'تقنية', 'أمان', 'عملات رقمية'],
+    readTime: '8 دقائق',
+    publishDate: '2024-01-15'
+  },
+  {
+    id: 'cybersecurity-basics',
+    title: 'أساسيات الأمن السيبراني للمطورين',
+    excerpt: 'دليل شامل لحماية التطبيقات والبيانات من التهديدات السيبرانية',
+    content: `
+      <h1>أساسيات الأمن السيبراني للمطورين</h1>
+      
+      <p>الأمن السيبراني أصبح أولوية قصوى في عالم التطوير. كل مطور يجب أن يفهم المبادئ الأساسية لحماية التطبيقات والبيانات.</p>
+      
+      <h2>المبادئ الأساسية</h2>
+      <ul>
+        <li><strong>السرية (Confidentiality):</strong> حماية البيانات من الوصول غير المصرح</li>
+        <li><strong>التكامل (Integrity):</strong> ضمان عدم تعديل البيانات</li>
+        <li><strong>التوفر (Availability):</strong> ضمان وصول المستخدمين للخدمة</li>
+      </ul>
+      
+      <h2>التهديدات الشائعة</h2>
+      <h3>1. حقن SQL</h3>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// مثال خطير - لا تفعل هذا
+const query = "SELECT * FROM users WHERE id = " + userId;
+
+// الطريقة الآمنة
+const query = "SELECT * FROM users WHERE id = ?";
+db.query(query, [userId]);
+      </code></pre>
+      
+      <h3>2. Cross-Site Scripting (XSS)</h3>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// تنظيف المدخلات
+function sanitizeInput(input) {
+  return input
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+      </code></pre>
+      
+      <h2>أفضل الممارسات</h2>
+      <ul>
+        <li>استخدام HTTPS دائماً</li>
+        <li>تشفير كلمات المرور</li>
+        <li>التحقق من صحة جميع المدخلات</li>
+        <li>تحديث التبعيات بانتظام</li>
+        <li>استخدام المصادقة الثنائية</li>
+      </ul>
+      
+      <h2>أدوات الأمان</h2>
+      <ul>
+        <li><strong>OWASP ZAP:</strong> فحص الثغرات الأمنية</li>
+        <li><strong>Snyk:</strong> فحص التبعيات</li>
+        <li><strong>SonarQube:</strong> تحليل جودة الكود</li>
+      </ul>
+    `,
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop',
+    tags: ['أمان', 'حماية', 'تطوير آمن', 'OWASP'],
+    readTime: '10 دقائق',
+    publishDate: '2024-01-16'
+  },
+  {
+    id: 'progressive-web-apps',
+    title: 'تطوير تطبيقات الويب التقدمية PWA',
+    excerpt: 'تعلم كيفية بناء تطبيقات ويب تعمل مثل التطبيقات الأصلية',
+    content: `
+      <h1>تطوير تطبيقات الويب التقدمية PWA</h1>
+      
+      <p>تطبيقات الويب التقدمية (PWA) تجمع بين أفضل ما في تطبيقات الويب والتطبيقات الأصلية، مما يوفر تجربة مستخدم متميزة.</p>
+      
+      <h2>ما هي PWA؟</h2>
+      <p>PWA هي تطبيقات ويب تستخدم تقنيات حديثة لتوفير تجربة تشبه التطبيقات الأصلية، مع إمكانية العمل دون اتصال بالإنترنت.</p>
+      
+      <h2>المميزات الرئيسية</h2>
+      <ul>
+        <li><strong>متجاوبة:</strong> تعمل على جميع الأجهزة</li>
+        <li><strong>تعمل دون اتصال:</strong> باستخدام Service Workers</li>
+        <li><strong>قابلة للتثبيت:</strong> يمكن إضافتها للشاشة الرئيسية</li>
+        <li><strong>آمنة:</strong> تعمل عبر HTTPS</li>
+        <li><strong>محدثة:</strong> تحديث تلقائي للمحتوى</li>
+      </ul>
+      
+      <h2>المكونات الأساسية</h2>
+      
+      <h3>1. Web App Manifest</h3>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+{
+  "name": "تطبيق حمزة اعمرني",
+  "short_name": "حمزة اعمرني",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+      </code></pre>
+      
+      <h3>2. Service Worker</h3>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// تسجيل Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(registration => {
+      console.log('SW registered: ', registration);
+    })
+    .catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+}
+
+// في ملف sw.js
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('v1').then(cache => {
+      return cache.addAll([
+        '/',
+        '/styles.css',
+        '/script.js'
+      ]);
+    })
+  );
+});
+      </code></pre>
+      
+      <h2>أدوات التطوير</h2>
+      <ul>
+        <li><strong>Workbox:</strong> مكتبة لإدارة Service Workers</li>
+        <li><strong>PWA Builder:</strong> أداة Microsoft لبناء PWA</li>
+        <li><strong>Lighthouse:</strong> فحص جودة PWA</li>
+      </ul>
+      
+      <h2>نصائح للتطوير</h2>
+      <ul>
+        <li>ابدأ بتطبيق ويب متجاوب</li>
+        <li>أضف Web App Manifest</li>
+        <li>طبق Service Worker للعمل دون اتصال</li>
+        <li>اختبر على أجهزة مختلفة</li>
+      </ul>
+    `,
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop',
+    tags: ['PWA', 'تطبيقات ويب', 'Service Worker', 'موبايل'],
+    readTime: '12 دقيقة',
+    publishDate: '2024-01-17'
+  },
+  {
+    id: 'microservices-architecture',
+    title: 'بناء تطبيقات بمعمارية الخدمات المصغرة',
+    excerpt: 'تعلم كيفية تصميم وبناء تطبيقات قابلة للتوسع باستخدام معمارية الخدمات المصغرة',
+    content: `
+      <h1>بناء تطبيقات بمعمارية الخدمات المصغرة</h1>
+      
+      <p>معمارية الخدمات المصغرة (Microservices) هي نهج في تطوير البرمجيات يقسم التطبيق الكبير إلى خدمات صغيرة مستقلة.</p>
+      
+      <h2>المبادئ الأساسية</h2>
+      <ul>
+        <li><strong>الاستقلالية:</strong> كل خدمة تعمل بشكل مستقل</li>
+        <li><strong>التخصص:</strong> كل خدمة تركز على مهمة واحدة</li>
+        <li><strong>اللامركزية:</strong> إدارة البيانات والمنطق منفصلة</li>
+        <li><strong>المرونة:</strong> سهولة التطوير والنشر</li>
+      </ul>
+      
+      <h2>مثال على بنية الخدمات</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// خدمة المستخدمين
+const userService = {
+  port: 3001,
+  endpoints: ['/users', '/auth'],
+  database: 'users_db'
+};
+
+// خدمة المنتجات
+const productService = {
+  port: 3002,
+  endpoints: ['/products', '/inventory'],
+  database: 'products_db'
+};
+
+// خدمة الطلبات
+const orderService = {
+  port: 3003,
+  endpoints: ['/orders', '/payments'],
+  database: 'orders_db'
+};
+      </code></pre>
+      
+      <h2>أدوات التطوير</h2>
+      <ul>
+        <li><strong>Docker:</strong> لحاويات الخدمات</li>
+        <li><strong>Kubernetes:</strong> لإدارة الحاويات</li>
+        <li><strong>API Gateway:</strong> لتوجيه الطلبات</li>
+        <li><strong>Service Mesh:</strong> للتواصل بين الخدمات</li>
+      </ul>
+    `,
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop',
+    tags: ['معمارية', 'خدمات مصغرة', 'Docker', 'Kubernetes'],
+    readTime: '15 دقيقة',
+    publishDate: '2024-01-18'
+  },
+  {
+    id: 'graphql-vs-rest',
+    title: 'مقارنة بين GraphQL و REST API',
+    excerpt: 'فهم الاختلافات والمميزات بين GraphQL و REST لاختيار الأنسب لمشروعك',
+    content: `
+      <h1>مقارنة بين GraphQL و REST API</h1>
+      
+      <p>GraphQL و REST هما نهجان مختلفان لبناء APIs. كل منهما له مميزاته وعيوبه.</p>
+      
+      <h2>REST API</h2>
+      <h3>المميزات:</h3>
+      <ul>
+        <li>بساطة في التطبيق</li>
+        <li>دعم واسع من المتصفحات</li>
+        <li>سهولة التخزين المؤقت</li>
+        <li>معايير واضحة</li>
+      </ul>
+      
+      <h3>مثال REST:</h3>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+GET /api/users/123
+{
+  "id": 123,
+  "name": "أحمد محمد",
+  "email": "ahmed@example.com",
+  "posts": [...]
+}
+
+GET /api/users/123/posts
+[
+  {"id": 1, "title": "مقال أول"},
+  {"id": 2, "title": "مقال ثاني"}
+]
+      </code></pre>
+      
+      <h2>GraphQL</h2>
+      <h3>المميزات:</h3>
+      <ul>
+        <li>طلب البيانات المطلوبة فقط</li>
+        <li>نقطة دخول واحدة</li>
+        <li>نظام أنواع قوي</li>
+        <li>أدوات تطوير ممتازة</li>
+      </ul>
+      
+      <h3>مثال GraphQL:</h3>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+query {
+  user(id: 123) {
+    name
+    email
+    posts {
+      title
+      publishDate
+    }
+  }
+}
+
+// النتيجة
+{
+  "data": {
+    "user": {
+      "name": "أحمد محمد",
+      "email": "ahmed@example.com",
+      "posts": [
+        {"title": "مقال أول", "publishDate": "2024-01-01"},
+        {"title": "مقال ثاني", "publishDate": "2024-01-02"}
+      ]
+    }
+  }
+}
+      </code></pre>
+      
+      <h2>متى تستخدم كل منهما؟</h2>
+      <h3>استخدم REST عندما:</h3>
+      <ul>
+        <li>التطبيق بسيط</li>
+        <li>تحتاج للتخزين المؤقت</li>
+        <li>الفريق مبتدئ</li>
+      </ul>
+      
+      <h3>استخدم GraphQL عندما:</h3>
+      <ul>
+        <li>تحتاج مرونة في البيانات</li>
+        <li>عدة عملاء مختلفين</li>
+        <li>تطبيقات معقدة</li>
+      </ul>
+    `,
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop',
+    tags: ['GraphQL', 'REST', 'API', 'تطوير ويب'],
+    readTime: '10 دقائق',
+    publishDate: '2024-01-19'
+  },
+  {
+    id: 'cloud-computing-aws',
+    title: 'مقدمة في الحوسبة السحابية مع AWS',
+    excerpt: 'تعلم أساسيات الحوسبة السحابية وكيفية استخدام خدمات Amazon Web Services',
+    content: `
+      <h1>مقدمة في الحوسبة السحابية مع AWS</h1>
+      
+      <p>الحوسبة السحابية ثورة في عالم التقنية. AWS تقدم مجموعة واسعة من الخدمات السحابية.</p>
+      
+      <h2>الخدمات الأساسية</h2>
+      <ul>
+        <li><strong>EC2:</strong> خوادم افتراضية</li>
+        <li><strong>S3:</strong> تخزين الملفات</li>
+        <li><strong>RDS:</strong> قواعد البيانات</li>
+        <li><strong>Lambda:</strong> الحوسبة بدون خوادم</li>
+      </ul>
+      
+      <h2>مثال على نشر تطبيق</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// نشر تطبيق Node.js على EC2
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('مرحباً من AWS!');
+});
+
+app.listen(3000, () => {
+  console.log('التطبيق يعمل على المنفذ 3000');
+});
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop',
+    tags: ['AWS', 'حوسبة سحابية', 'نشر', 'خوادم'],
+    readTime: '8 دقائق',
+    publishDate: '2024-01-20'
+  },
+  {
+    id: 'testing-strategies',
+    title: 'استراتيجيات الاختبار في التطوير',
+    excerpt: 'دليل شامل لأنواع الاختبارات المختلفة وكيفية تطبيقها في مشاريعك',
+    content: `
+      <h1>استراتيجيات الاختبار في التطوير</h1>
+      
+      <p>الاختبار جزء أساسي من عملية التطوير. يضمن جودة الكود وموثوقية التطبيق.</p>
+      
+      <h2>أنواع الاختبارات</h2>
+      <ul>
+        <li><strong>Unit Tests:</strong> اختبار الوحدات الفردية</li>
+        <li><strong>Integration Tests:</strong> اختبار التكامل</li>
+        <li><strong>E2E Tests:</strong> اختبار شامل للتطبيق</li>
+      </ul>
+      
+      <h2>مثال اختبار وحدة</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// دالة للاختبار
+function add(a, b) {
+  return a + b;
+}
+
+// اختبار الدالة
+test('جمع رقمين', () => {
+  expect(add(2, 3)).toBe(5);
+  expect(add(-1, 1)).toBe(0);
+});
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop',
+    tags: ['اختبار', 'جودة كود', 'Jest', 'TDD'],
+    readTime: '7 دقائق',
+    publishDate: '2024-01-21'
+  },
+  {
+    id: 'performance-optimization',
+    title: 'تحسين أداء تطبيقات الويب',
+    excerpt: 'تقنيات وأدوات لتحسين سرعة وأداء تطبيقات الويب الحديثة',
+    content: `
+      <h1>تحسين أداء تطبيقات الويب</h1>
+      
+      <p>الأداء عامل حاسم في نجاح أي تطبيق ويب. المستخدمون يتوقعون تحميل سريع وتفاعل سلس.</p>
+      
+      <h2>تقنيات التحسين</h2>
+      <ul>
+        <li><strong>تحسين الصور:</strong> ضغط وتنسيقات حديثة</li>
+        <li><strong>تقسيم الكود:</strong> Code Splitting</li>
+        <li><strong>التحميل الكسول:</strong> Lazy Loading</li>
+        <li><strong>التخزين المؤقت:</strong> Caching</li>
+      </ul>
+      
+      <h2>مثال تحسين React</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+import { lazy, Suspense } from 'react';
+
+// تحميل كسول للمكون
+const LazyComponent = lazy(() => import('./HeavyComponent'));
+
+function App() {
+  return (
+    <Suspense fallback={<div>جاري التحميل...</div>}>
+      <LazyComponent />
+    </Suspense>
+  );
+}
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
+    tags: ['أداء', 'تحسين', 'React', 'سرعة'],
+    readTime: '9 دقائق',
+    publishDate: '2024-01-22'
+  },
+  {
+    id: 'devops-fundamentals',
+    title: 'أساسيات DevOps للمطورين',
+    excerpt: 'فهم مبادئ DevOps وكيفية تطبيقها لتحسين عملية التطوير والنشر',
+    content: `
+      <h1>أساسيات DevOps للمطورين</h1>
+      
+      <p>DevOps يجمع بين التطوير والعمليات لتسريع دورة حياة التطوير وتحسين جودة المنتج.</p>
+      
+      <h2>المبادئ الأساسية</h2>
+      <ul>
+        <li><strong>التكامل المستمر:</strong> CI/CD</li>
+        <li><strong>الأتمتة:</strong> تقليل التدخل اليدوي</li>
+        <li><strong>المراقبة:</strong> تتبع الأداء والأخطاء</li>
+        <li><strong>التعاون:</strong> بين فرق التطوير والعمليات</li>
+      </ul>
+      
+      <h2>مثال GitHub Actions</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Run tests
+      run: npm test
+    
+    - name: Build
+      run: npm run build
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=400&fit=crop',
+    tags: ['DevOps', 'CI/CD', 'أتمتة', 'GitHub Actions'],
+    readTime: '11 دقيقة',
+    publishDate: '2024-01-23'
+  },
+  {
+    id: 'mobile-app-development',
+    title: 'تطوير تطبيقات الجوال الحديثة',
+    excerpt: 'دليل شامل لتطوير تطبيقات الجوال باستخدام أحدث التقنيات والأدوات',
+    content: `
+      <h1>تطوير تطبيقات الجوال الحديثة</h1>
+      
+      <p>تطوير تطبيقات الجوال أصبح مجالاً واسعاً ومتنوعاً. هناك عدة طرق لبناء تطبيقات عالية الجودة.</p>
+      
+      <h2>منصات التطوير</h2>
+      <ul>
+        <li><strong>Native:</strong> Android Studio و Xcode</li>
+        <li><strong>Cross-platform:</strong> Flutter و React Native</li>
+        <li><strong>Hybrid:</strong> Ionic و Cordova</li>
+        <li><strong>Progressive Web Apps:</strong> PWA</li>
+      </ul>
+      
+      <h2>مثال Flutter</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'تطبيقي الأول',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('مرحباً بالعالم'),
+        ),
+        body: Center(
+          child: Text('أهلاً وسهلاً!'),
+        ),
+      ),
+    );
+  }
+}
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop',
+    tags: ['تطبيقات جوال', 'Flutter', 'React Native', 'تطوير'],
+    readTime: '12 دقيقة',
+    publishDate: '2024-01-24'
+  },
+  {
+    id: 'database-design-principles',
+    title: 'مبادئ تصميم قواعد البيانات',
+    excerpt: 'تعلم أساسيات تصميم قواعد البيانات الفعالة والمحسنة للأداء',
+    content: `
+      <h1>مبادئ تصميم قواعد البيانات</h1>
+      
+      <p>تصميم قاعدة البيانات الجيد أساس أي تطبيق ناجح. يجب مراعاة عدة مبادئ مهمة.</p>
+      
+      <h2>المبادئ الأساسية</h2>
+      <ul>
+        <li><strong>التطبيع:</strong> تجنب التكرار</li>
+        <li><strong>الفهرسة:</strong> تحسين الاستعلامات</li>
+        <li><strong>العلاقات:</strong> ربط الجداول بشكل صحيح</li>
+        <li><strong>القيود:</strong> ضمان سلامة البيانات</li>
+      </ul>
+      
+      <h2>مثال SQL</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE posts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    title VARCHAR(200) NOT NULL,
+    content TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=400&fit=crop',
+    tags: ['قواعد بيانات', 'SQL', 'تصميم', 'MySQL'],
+    readTime: '10 دقائق',
+    publishDate: '2024-01-25'
+  },
+  {
+    id: 'web-security-best-practices',
+    title: 'أفضل ممارسات أمان الويب',
+    excerpt: 'دليل شامل لحماية تطبيقات الويب من التهديدات الأمنية الشائعة',
+    content: `
+      <h1>أفضل ممارسات أمان الويب</h1>
+      
+      <p>أمان تطبيقات الويب أولوية قصوى. هناك تهديدات متعددة يجب الحماية منها.</p>
+      
+      <h2>التهديدات الشائعة</h2>
+      <ul>
+        <li><strong>SQL Injection:</strong> حقن قواعد البيانات</li>
+        <li><strong>XSS:</strong> البرمجة النصية المتقاطعة</li>
+        <li><strong>CSRF:</strong> تزوير الطلبات</li>
+        <li><strong>Authentication:</strong> ضعف المصادقة</li>
+      </ul>
+      
+      <h2>مثال حماية من XSS</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// تنظيف المدخلات
+function sanitizeInput(input) {
+  return input
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+// استخدام HTTPS
+app.use((req, res, next) => {
+  if (req.header('x-forwarded-proto') !== 'https') {
+    res.redirect(\`https://\${req.header('host')}\${req.url}\`);
+  } else {
+    next();
+  }
+});
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop',
+    tags: ['أمان', 'حماية', 'XSS', 'SQL Injection'],
+    readTime: '15 دقيقة',
+    publishDate: '2024-01-26'
+  },
+  {
+    id: 'api-documentation-tools',
+    title: 'أدوات توثيق APIs الحديثة',
+    excerpt: 'مراجعة شاملة لأفضل أدوات توثيق واجهات البرمجة التطبيقية',
+    content: `
+      <h1>أدوات توثيق APIs الحديثة</h1>
+      
+      <p>التوثيق الجيد لـ APIs ضروري لنجاح أي مشروع. هناك أدوات متعددة تساعد في هذا.</p>
+      
+      <h2>أدوات التوثيق</h2>
+      <ul>
+        <li><strong>Swagger/OpenAPI:</strong> معيار صناعي</li>
+        <li><strong>Postman:</strong> اختبار وتوثيق</li>
+        <li><strong>Insomnia:</strong> بديل لـ Postman</li>
+        <li><strong>GitBook:</strong> توثيق تفاعلي</li>
+      </ul>
+      
+      <h2>مثال OpenAPI</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+openapi: 3.0.0
+info:
+  title: User API
+  version: 1.0.0
+  description: API لإدارة المستخدمين
+
+paths:
+  /users:
+    get:
+      summary: جلب جميع المستخدمين
+      responses:
+        '200':
+          description: قائمة المستخدمين
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
+    tags: ['API', 'توثيق', 'Swagger', 'OpenAPI'],
+    readTime: '8 دقائق',
+    publishDate: '2024-01-27'
+  },
+  {
+    id: 'responsive-design-techniques',
+    title: 'تقنيات التصميم المتجاوب المتقدمة',
+    excerpt: 'إتقان فن التصميم المتجاوب باستخدام CSS Grid وFlexbox وMedia Queries',
+    content: `
+      <h1>تقنيات التصميم المتجاوب المتقدمة</h1>
+      
+      <p>التصميم المتجاوب ضروري في عصر تعدد الأجهزة. تعلم التقنيات المتقدمة لإنشاء تجارب مثالية.</p>
+      
+      <h2>التقنيات الأساسية</h2>
+      <ul>
+        <li><strong>CSS Grid:</strong> تخطيطات معقدة</li>
+        <li><strong>Flexbox:</strong> ترتيب مرن</li>
+        <li><strong>Media Queries:</strong> استعلامات الوسائط</li>
+        <li><strong>Container Queries:</strong> استعلامات الحاوية</li>
+      </ul>
+      
+      <h2>مثال CSS Grid</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=400&fit=crop',
+    tags: ['CSS', 'تصميم متجاوب', 'Grid', 'Flexbox'],
+    readTime: '11 دقيقة',
+    publishDate: '2024-01-28'
+  },
+  {
+    id: 'version-control-git',
+    title: 'إتقان Git لإدارة الإصدارات',
+    excerpt: 'دليل متقدم لاستخدام Git في إدارة المشاريع البرمجية بفعالية',
+    content: `
+      <h1>إتقان Git لإدارة الإصدارات</h1>
+      
+      <p>Git أداة أساسية لكل مطور. إتقانها يحسن من سير العمل والتعاون في الفريق.</p>
+      
+      <h2>المفاهيم المتقدمة</h2>
+      <ul>
+        <li><strong>Branching:</strong> إدارة الفروع</li>
+        <li><strong>Merging:</strong> دمج التغييرات</li>
+        <li><strong>Rebasing:</strong> إعادة كتابة التاريخ</li>
+        <li><strong>Cherry-picking:</strong> انتقاء التغييرات</li>
+      </ul>
+      
+      <h2>أوامر Git المفيدة</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+# إنشاء فرع جديد والانتقال إليه
+git checkout -b feature/new-feature
+
+# دمج الفرع مع التاريخ النظيف
+git rebase main
+
+# حفظ التغييرات مؤقتاً
+git stash push -m "تغييرات مؤقتة"
+
+# استعادة التغييرات
+git stash pop
+
+# عرض تاريخ الكوميتس بشكل مرئي
+git log --oneline --graph --all
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=400&fit=crop',
+    tags: ['Git', 'إدارة إصدارات', 'GitHub', 'تطوير'],
+    readTime: '13 دقيقة',
+    publishDate: '2024-01-29'
+  },
+  {
+    id: 'machine-learning-basics',
+    title: 'أساسيات تعلم الآلة للمطورين',
+    excerpt: 'مقدمة شاملة لتعلم الآلة وتطبيقاته في تطوير البرمجيات',
+    content: `
+      <h1>أساسيات تعلم الآلة للمطورين</h1>
+      
+      <p>تعلم الآلة يغير وجه التقنية. كمطور، فهم الأساسيات يفتح آفاقاً جديدة.</p>
+      
+      <h2>أنواع التعلم</h2>
+      <ul>
+        <li><strong>Supervised Learning:</strong> التعلم المُشرف</li>
+        <li><strong>Unsupervised Learning:</strong> التعلم غير المُشرف</li>
+        <li><strong>Reinforcement Learning:</strong> التعلم المعزز</li>
+        <li><strong>Deep Learning:</strong> التعلم العميق</li>
+      </ul>
+      
+      <h2>مثال Python مع scikit-learn</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import pandas as pd
+
+# تحميل البيانات
+data = pd.read_csv('data.csv')
+X = data[['feature1', 'feature2']]
+y = data['target']
+
+# تقسيم البيانات
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# تدريب النموذج
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# التنبؤ والتقييم
+predictions = model.predict(X_test)
+mse = mean_squared_error(y_test, predictions)
+print(f'Mean Squared Error: {mse}')
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop',
+    tags: ['تعلم آلة', 'Python', 'AI', 'scikit-learn'],
+    readTime: '14 دقيقة',
+    publishDate: '2024-01-30'
+  },
+  {
+    id: 'serverless-architecture',
+    title: 'العمارة بدون خوادم (Serverless)',
+    excerpt: 'فهم مفهوم Serverless وكيفية بناء تطبيقات قابلة للتوسع',
+    content: `
+      <h1>العمارة بدون خوادم (Serverless)</h1>
+      
+      <p>Serverless ثورة في تطوير التطبيقات. يتيح التركيز على الكود دون القلق بشأن البنية التحتية.</p>
+      
+      <h2>مزايا Serverless</h2>
+      <ul>
+        <li><strong>التوسع التلقائي:</strong> يتكيف مع الحمولة</li>
+        <li><strong>الدفع حسب الاستخدام:</strong> توفير التكاليف</li>
+        <li><strong>إدارة أقل:</strong> لا حاجة لإدارة الخوادم</li>
+        <li><strong>سرعة التطوير:</strong> نشر أسرع</li>
+      </ul>
+      
+      <h2>مثال AWS Lambda</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+exports.handler = async (event) => {
+    // معالجة البيانات الواردة
+    const { name, email } = JSON.parse(event.body);
+    
+    // التحقق من صحة البيانات
+    if (!name || !email) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({
+                error: 'الاسم والبريد الإلكتروني مطلوبان'
+            })
+        };
+    }
+    
+    // حفظ في قاعدة البيانات
+    // await saveUser({ name, email });
+    
+    return {
+        statusCode: 200,
+        body: JSON.stringify({
+            message: 'تم إنشاء المستخدم بنجاح',
+            user: { name, email }
+        })
+    };
+};
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop',
+    tags: ['Serverless', 'AWS Lambda', 'Cloud', 'Functions'],
+    readTime: '9 دقائق',
+    publishDate: '2024-01-31'
+  },
+  {
+    id: 'progressive-web-apps',
+    title: 'تطوير تطبيقات الويب التقدمية PWA',
+    excerpt: 'بناء تطبيقات ويب تعمل مثل التطبيقات الأصلية باستخدام PWA',
+    content: `
+      <h1>تطوير تطبيقات الويب التقدمية PWA</h1>
+      
+      <p>PWA تجمع بين أفضل ما في الويب والتطبيقات الأصلية. تقدم تجربة مستخدم متميزة.</p>
+      
+      <h2>مميزات PWA</h2>
+      <ul>
+        <li><strong>العمل دون اتصال:</strong> Service Workers</li>
+        <li><strong>قابلية التثبيت:</strong> يمكن إضافتها للشاشة الرئيسية</li>
+        <li><strong>الإشعارات:</strong> Push Notifications</li>
+        <li><strong>التجاوب:</strong> تعمل على جميع الأجهزة</li>
+      </ul>
+      
+      <h2>مثال Service Worker</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+// sw.js
+const CACHE_NAME = 'my-app-v1';
+const urlsToCache = [
+  '/',
+  '/styles/main.css',
+  '/scripts/main.js',
+  '/images/logo.png'
+];
+
+// تثبيت Service Worker
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+// اعتراض الطلبات
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        return response || fetch(event.request);
+      })
+  );
+});
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop',
+    tags: ['PWA', 'Service Worker', 'تطبيقات ويب', 'Offline'],
+    readTime: '12 دقيقة',
+    publishDate: '2024-02-01'
+  },
+  {
+    id: 'code-review-best-practices',
+    title: 'أفضل ممارسات مراجعة الكود',
+    excerpt: 'دليل شامل لإجراء مراجعات كود فعالة تحسن من جودة المشروع',
+    content: `
+      <h1>أفضل ممارسات مراجعة الكود</h1>
+      
+      <p>مراجعة الكود عملية حيوية لضمان جودة البرمجيات. تحسن من الكود وتنقل المعرفة بين الفريق.</p>
+      
+      <h2>مبادئ المراجعة</h2>
+      <ul>
+        <li><strong>البناءة:</strong> تقديم ملاحظات مفيدة</li>
+        <li><strong>الشمولية:</strong> فحص جميع الجوانب</li>
+        <li><strong>السرعة:</strong> مراجعة سريعة</li>
+        <li><strong>التعلم:</strong> فرصة لتبادل المعرفة</li>
+      </ul>
+      
+      <h2>قائمة مراجعة</h2>
+      <pre class="bg-gray-100 p-4 rounded-lg my-4"><code>
+✅ هل الكود يحل المشكلة المطلوبة؟
+✅ هل الكود قابل للقراءة والفهم؟
+✅ هل توجد اختبارات كافية؟
+✅ هل يتبع الكود معايير المشروع؟
+✅ هل توجد مشاكل أمنية محتملة؟
+✅ هل الأداء مقبول؟
+✅ هل التوثيق محدث؟
+✅ هل يمكن تحسين التصميم؟
+
+// مثال على تعليق بناء
+// بدلاً من: "هذا الكود سيء"
+// اكتب: "يمكن تحسين الأداء باستخدام Map بدلاً من Array.find"
+      </code></pre>
+    `,
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop',
+    tags: ['مراجعة كود', 'جودة', 'فريق عمل', 'أفضل ممارسات'],
+    readTime: '10 دقائق',
+    publishDate: '2024-02-02'
+  }
+];
 
 export const chatContent = {
     title: '💬 دردشة مباشرة',
