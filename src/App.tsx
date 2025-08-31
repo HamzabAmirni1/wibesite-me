@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Sidebar from './components/Sidebar';
@@ -6,22 +5,9 @@ import BottomNav from './components/BottomNav';
 import FloatingSocials from './components/FloatingSocials';
 import IntroAnimation from './components/IntroAnimation';
 import CookieConsent from './components/CookieConsent';
-import { AdProvider } from './contexts/AdContext';
 import { NavigationContext } from './contexts/NavigationContext';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
-=======
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import Sidebar from './components/Sidebar';
-import BottomNav from './components/BottomNav';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X, ArrowUp } from 'lucide-react';
-import { cn } from './lib/utils';
-import { NavigationContext } from './contexts/NavigationContext';
-import { AdProvider } from './contexts/AdContext';
-import FloatingSocials from './components/FloatingSocials';
-import IntroAnimation from './components/IntroAnimation';
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home.tsx'));
@@ -38,8 +24,6 @@ const Privacy = lazy(() => import('./pages/Privacy.tsx'));
 const Terms = lazy(() => import('./pages/Terms.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
 const Disclaimer = lazy(() => import('./pages/Disclaimer.tsx'));
-const AdManager = lazy(() => import('./pages/AdManager.tsx'));
-
 const sectionComponents: { [key: string]: React.LazyExoticComponent<React.FC<{}>> } = {
   home: Home,
   about: About,
@@ -55,7 +39,6 @@ const sectionComponents: { [key: string]: React.LazyExoticComponent<React.FC<{}>
   terms: Terms,
   contact: Contact,
   disclaimer: Disclaimer,
-  admanager: AdManager,
 };
 
 const App: React.FC = () => {
@@ -125,7 +108,6 @@ const App: React.FC = () => {
   };
 
   return (
-    <AdProvider>
       <NavigationContext.Provider value={navigationContextValue}>
           <AnimatePresence>
             {showIntro && <IntroAnimation onAnimationComplete={handleIntroComplete} />}
@@ -181,21 +163,6 @@ const App: React.FC = () => {
           <AnimatePresence>
             {showToTop && (
               <motion.button
-<<<<<<< HEAD
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
-                onClick={scrollToTop}
-                className="fixed bottom-20 left-4 z-40 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
-              >
-                <ArrowUp size={20} />
-              </motion.button>
-            )}
-          </AnimatePresence>
-
-          {/* Cookie Consent */}
-          <CookieConsent />
-=======
                 onClick={scrollToTop}
                 className="fixed bottom-24 lg:bottom-6 left-6 z-50 bg-gradient-to-br from-primary to-secondary text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center"
                 initial={{ scale: 0, opacity: 0 }}
@@ -207,10 +174,11 @@ const App: React.FC = () => {
               </motion.button>
             )}
           </AnimatePresence>
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
+
+          {/* Cookie Consent */}
+          <CookieConsent />
         </motion.div>
       </NavigationContext.Provider>
-    </AdProvider>
   );
 };
 
