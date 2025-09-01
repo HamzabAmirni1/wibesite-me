@@ -5,6 +5,7 @@ import BottomNav from './components/BottomNav';
 import FloatingSocials from './components/FloatingSocials';
 import IntroAnimation from './components/IntroAnimation';
 import CookieConsent from './components/CookieConsent';
+import NetworkStatus from './components/NetworkStatus';
 import { NavigationContext } from './contexts/NavigationContext';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
@@ -177,6 +178,9 @@ const App: React.FC = () => {
 
           {/* Cookie Consent */}
           <CookieConsent />
+          
+          {/* Network Status */}
+          <NetworkStatus />
         </motion.div>
       </NavigationContext.Provider>
   );

@@ -28,17 +28,6 @@ const sampleAds: AdData[] = [
     impressions: 0
   },
   {
-    id: 'ad-2',
-    title: 'خدمات التصميم الاحترافية',
-    description: 'نقدم خدمات التصميم الجرافيكي وتصميم المواقع بأعلى جودة وأفضل الأسعار.',
-    imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=200&fit=crop',
-    linkUrl: 'https://example.com/design-services',
-    type: 'sidebar',
-    isActive: true,
-    clickCount: 0,
-    impressions: 0
-  },
-  {
     id: 'ad-3',
     title: 'أدوات التطوير المتقدمة',
     description: 'اكتشف أحدث أدوات التطوير والبرمجة التي ستساعدك في إنجاز مشاريعك بسرعة وكفاءة عالية.',
