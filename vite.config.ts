@@ -1,22 +1,33 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          animations: ['framer-motion'],
+          icons: ['lucide-react', 'react-icons'],
+          utils: ['clsx', 'tailwind-merge']
+        }
+      }
+    },
+    target: 'esnext',
+    minify: 'terser',
+    cssMinify: true
   },
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  plugins: [react()],
   
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['lucide-react']
   },
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
+  
+  server: {
+    hmr: {
+      overlay: false
+    }
+  }
 });

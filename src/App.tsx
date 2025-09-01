@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
+import React, { Suspense, lazy, useState, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Sidebar from './components/Sidebar';
 import BottomNav from './components/BottomNav';
@@ -7,6 +7,7 @@ import IntroAnimation from './components/IntroAnimation';
 import CookieConsent from './components/CookieConsent';
 import NetworkStatus from './components/NetworkStatus';
 import { NavigationContext } from './contexts/NavigationContext';
+import { usePerformance } from './hooks/usePerformance';
 import { Menu, X, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
 
@@ -50,6 +51,9 @@ const App: React.FC = () => {
   const [showIntro, setShowIntro] = useState(!isIntroFinished);
 
   const mainContentRef = React.useRef<HTMLDivElement>(null);
+  
+  // Initialize performance optimizations
+  usePerformance();
 
   useEffect(() => {
     if (window.innerWidth >= 1024) {
