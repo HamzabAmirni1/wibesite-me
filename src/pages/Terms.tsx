@@ -78,7 +78,7 @@ const Terms: React.FC = () => {
 
           <h2 className="text-2xl font-bold text-primary mb-4">7. الإعلانات</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            قد يحتوي الموقع على إعلانات من Google AdSense أو شركاء آخرين. 
+            قد يحتوي الموقع على إعلانات من شركاء إعلانات معتمدين. 
             نحن غير مسؤولين عن محتوى هذه الإعلانات أو المواقع التي تؤدي إليها.
           </p>
 
@@ -122,11 +122,7 @@ const Terms: React.FC = () => {
             للاستفسارات حول هذه الشروط، يمكنك التواصل معنا عبر:
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-<<<<<<< HEAD
-            <li>البريد الإلكتروني: hamzaamirni451@gmail.com</li>
-=======
             <li>البريد الإلكتروني: terms@hamzaamirni.com</li>
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
             <li>واتساب: من خلال الروابط المتاحة في الموقع</li>
           </ul>
 

@@ -100,7 +100,7 @@ const CookieConsent: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-600 text-xs">
-                      تُستخدم لعرض إعلانات مخصصة وذات صلة بك من خلال Google AdSense
+                      تُستخدم لعرض إعلانات مخصصة وذات صلة بك
                     </p>
                   </div>
                 </motion.div>

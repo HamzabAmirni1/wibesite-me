@@ -7,10 +7,7 @@ import { Search } from 'lucide-react';
 import ArticleCard from '../components/ArticleCard';
 import ArticleDetail from '../components/ArticleDetail';
 import CallToAction from '../components/CallToAction';
-<<<<<<< HEAD
-import GoogleAdSense from '../components/GoogleAdSense';
-=======
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
+// import GoogleAdSense from '../components/GoogleAdSense'; // Removed for AdSense approval process
 
 const Articles: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -65,25 +62,19 @@ const Articles: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-<<<<<<< HEAD
               {filteredArticles.map((article, index) => (
                 <React.Fragment key={article.id}>
                   <ArticleCard article={article} onReadMore={() => setSelectedArticleId(article.id)} />
-                  {/* Add AdSense ad after every 4th article */}
+                  {/* Add Ad placeholder after every 4th article */}
                   {(index + 1) % 4 === 0 && (
                     <div className="col-span-1 md:col-span-2 my-6">
-                      <GoogleAdSense 
-                        adSlot="1234567890"
-                        className="w-full"
-                        style={{ display: 'block', minHeight: '250px' }}
-                      />
+                      {/* Ad placeholder - will be filled by AdSense when approved */}
+                      <div className="bg-gray-200 border-2 border-dashed border-gray-400 rounded-lg w-full h-32 flex items-center justify-center">
+                        <span className="text-gray-500">Advertisement</span>
+                      </div>
                     </div>
                   )}
                 </React.Fragment>
-=======
-              {filteredArticles.map((article) => (
-                <ArticleCard key={article.id} article={article} onReadMore={() => setSelectedArticleId(article.id)} />
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
               ))}
             </div>
             

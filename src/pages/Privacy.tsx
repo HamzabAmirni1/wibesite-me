@@ -39,7 +39,7 @@ const Privacy: React.FC = () => {
             <li>الرد على استفساراتك وطلبات الدعم</li>
             <li>إرسال تحديثات حول المحتوى الجديد (بموافقتك)</li>
             <li>تحليل استخدام الموقع لتحسين الأداء</li>
-            <li>عرض إعلانات مخصصة عبر Google AdSense</li>
+            <li>عرض إعلانات مخصصة (عند الموافقة)</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-primary mb-4">3. مشاركة المعلومات</h2>
@@ -48,7 +48,7 @@ const Privacy: React.FC = () => {
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
             <li>مقدمي الخدمات الموثوقين الذين يساعدوننا في تشغيل الموقع</li>
-            <li>Google AdSense لعرض الإعلانات المخصصة</li>
+            <li>شركاء الإعلانات المعتمدين لعرض الإعلانات المخصصة</li>
             <li>عندما يتطلب القانون ذلك</li>
           </ul>
 
@@ -58,26 +58,18 @@ const Privacy: React.FC = () => {
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
             <li>تذكر تفضيلاتك وإعداداتك</li>
-<<<<<<< HEAD
-          </ul>
-
-          <p className="text-gray-700 leading-relaxed">
-            يمكنك إدارة تفضيلات ملفات تعريف الارتباط من خلال الرسالة التي تظهر عند زيارة الموقع لأول مرة، 
-            أو من خلال إعدادات متصفحك. لمزيد من المعلومات حول كيفية استخدام Google لملفات تعريف الارتباط، 
-            يرجى زيارة <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">سياسة ملفات تعريف الارتباط الخاصة بـ Google</a>.
-=======
             <li>تحليل حركة المرور على الموقع</li>
-            <li>عرض إعلانات مخصصة عبر Google AdSense</li>
+            <li>عرض إعلانات مخصصة (عند الموافقة)</li>
             <li>تحسين تجربة المستخدم</li>
           </ul>
           <p className="text-gray-700 leading-relaxed mb-6">
             يمكنك إدارة إعدادات ملفات تعريف الارتباط من خلال متصفحك.
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
           </p>
 
-          <h2 className="text-2xl font-bold text-primary mb-4">5. Google AdSense والإعلانات</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">5. الإعلانات</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            نستخدم Google AdSense لعرض الإعلانات على موقعنا. Google قد تستخدم:
+            قد يحتوي الموقع على إعلانات من شركاء إعلانات معتمدين. 
+            نحن غير مسؤولين عن محتوى هذه الإعلانات أو المواقع التي تؤدي إليها.
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
             <li>ملفات تعريف الارتباط لعرض إعلانات مخصصة</li>
@@ -118,11 +110,7 @@ const Privacy: React.FC = () => {
             إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يمكنك التواصل معنا عبر:
           </p>
           <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-<<<<<<< HEAD
-            <li>البريد الإلكتروني: hamzaamirni451@gmail.com</li>
-=======
             <li>البريد الإلكتروني: privacy@hamzaamirni.com</li>
->>>>>>> cd604c7a170b82cea202f053241492dd08e86be1
             <li>واتساب: من خلال الروابط المتاحة في الموقع</li>
           </ul>
 

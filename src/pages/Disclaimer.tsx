@@ -65,11 +65,11 @@ const Disclaimer: React.FC = () => {
           <div className="bg-green-50 p-4 rounded-lg mb-6">
             <div className="flex items-center mb-2">
               <Shield className="w-5 h-5 text-green-600 ml-2" />
-              <h3 className="font-semibold text-green-800">إعلانات Google AdSense</h3>
+              <h3 className="font-semibold text-green-800">الإعلانات</h3>
             </div>
-            <p className="text-green-700 text-sm">
-              يستخدم هذا الموقع Google AdSense لعرض الإعلانات. نحن غير مسؤولين عن محتوى هذه الإعلانات 
-              أو المنتجات والخدمات المُعلن عنها. يرجى توخي الحذر عند التعامل مع الإعلانات.
+            <p className="mb-4">
+              يستخدم هذا الموقع شركاء إعلانات معتمدين لعرض الإعلانات. نحن غير مسؤولين عن محتوى هذه الإعلانات
+              أو الممارسات الخاصة بالخصوصية الخاصة بها.
             </p>
           </div>
 
