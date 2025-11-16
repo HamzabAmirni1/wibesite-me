@@ -1,4 +1,4 @@
-﻿﻿import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle } from 'lucide-react';
+﻿import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle } from 'lucide-react';
 import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiStackoverflow } from 'react-icons/si';
 import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
@@ -1297,8 +1297,7 @@ module.exports = {
             `
         }
     ]
-
-
+};
 
 export const chatContent = {
     title: '­ƒÆ¼ Ï»Ï▒Ï»Ï┤Ï® ┘àÏ¿ÏºÏ┤Ï▒Ï®',
