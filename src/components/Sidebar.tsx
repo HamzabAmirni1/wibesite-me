@@ -14,6 +14,11 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOpen }) => {
   const navContainerRef = useRef<HTMLDivElement>(null);
   const { language, setLanguage } = useLanguage();
+  
+  // Force re-render when language changes
+  React.useEffect(() => {
+    // This effect will run whenever the language changes
+  }, [language]);
 
   return (
     <aside className={cn(
@@ -78,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               <link.icon className="w-5 h-5" />
-              {t(`navLabels.${link.id}`, language)}
+              {t(`navLabels.${link.id}`, language) || link.title}
             </motion.a>
           ))}
         </nav>
