@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemaps
+Sitemap: https://hamzaamirni.netlify.app/sitemap.xml
 
 # Google AdSense Crawler
 User-agent: Mediapartners-Google
@@ -14,3 +17,7 @@ Allow: /
 # Google AdSense Crawler for Shopping
 User-agent: AdsBot-Google
 Allow: /
+
+# Crawl delay - معذرة لمحركات البحث عن كثافة الزحف
+User-agent: *
+Crawl-delay: 1

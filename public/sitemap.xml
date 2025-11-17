@@ -1,53 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- الصفحة الرئيسية -->
   <url>
-    <loc>https://yourdomain.com/</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://hamzaamirni.netlify.app/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- صفحة عني -->
   <url>
-    <loc>https://yourdomain.com/about</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#about</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- البرمجة -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#programming</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- المقالات -->
   <url>
-    <loc>https://yourdomain.com/articles</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#gaza</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- المقالة الأولى: تصميم الويب -->
   <url>
-    <loc>https://yourdomain.com/programming</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#gaza/web-design-tips</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المقالة الثانية: نصائح الإنتاجية -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#gaza/productivity-tips</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المقالة الثالثة: الأذكار -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#gaza/islamic-knowledge</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المقالة الرابعة: حل واتساب -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#gaza/unban-whatsapp</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المقالة الخامسة: البدء في البرمجة -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#gaza/start-programming</loc>
+    <lastmod>2025-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- المقالة السادسة: JavaScript المتقدم -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#gaza/javascript-advanced</loc>
+    <lastmod>2025-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- الفيديوهات -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#videos</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- التطبيقات -->
   <url>
-    <loc>https://yourdomain.com/apps</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#apps</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- الأدوات -->
   <url>
-    <loc>https://yourdomain.com/videos</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#tools</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- التسلية -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#fun</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- البوتات -->
   <url>
-    <loc>https://yourdomain.com/tools</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#bots</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
+
+  <!-- الاتصال -->
   <url>
-    <loc>https://yourdomain.com/bots</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://hamzaamirni.netlify.app/#chat</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- سياسة الخصوصية -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#privacy</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- شروط الاستخدام -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#terms</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- إخلاء المسؤولية -->
+  <url>
+    <loc>https://hamzaamirni.netlify.app/#disclaimer</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
   <url>
     <loc>https://yourdomain.com/fun</loc>
     <lastmod>2024-01-01</lastmod>
