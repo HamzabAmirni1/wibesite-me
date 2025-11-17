@@ -34,7 +34,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSection }
             )}
           >
             <link.icon className="w-6 h-6" />
-            <span className="text-xs font-semibold">{t(`navLabels.${link.id}`, language) || link.title}</span>
+            <span className="text-xs font-semibold">{t(`nav.${link.id}`, language) || link.title}</span>
             {activeSection === link.id && (
               <motion.div 
                 className="absolute bottom-2 w-6 h-1 bg-primary rounded-full"

@@ -83,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               <link.icon className="w-5 h-5" />
-              {t(`navLabels.${link.id}`, language) || link.title}
+              {t(`nav.${link.id}`, language) || link.title}
             </motion.a>
           ))}
         </nav>
@@ -96,13 +96,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
                 onClick={() => setActiveSection('privacy')}
                 className="hover:text-white transition-colors"
               >
-                {t('navLabels.privacy', language)}
+                {t('nav.privacy', language) || 'سياسة الخصوصية'}
               </button>
               <button 
                 onClick={() => setActiveSection('terms')}
                 className="hover:text-white transition-colors"
               >
-                {t('navLabels.terms', language)}
+                {t('nav.terms', language) || 'شروط الاستخدام'}
               </button>
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
