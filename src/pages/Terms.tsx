@@ -23,10 +23,9 @@ const Terms: React.FC = () => {
 
       <Card>
         <div className="prose prose-lg max-w-none text-right">
-          <h2 className="text-2xl font-bold text-primary mb-4">1. قبول الشروط</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">1. {t('termsPageComprehensive.acceptance', language)}</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            باستخدام موقع حمزة اعمرني، فإنك توافق على الالتزام بهذه الشروط والأحكام. 
-            إذا كنت لا توافق على أي من هذه الشروط، يرجى عدم استخدام الموقع.
+            {t('termsPageComprehensive.acceptance', language)}
           </p>
 
           <h2 className="text-2xl font-bold text-primary mb-4">2. وصف الخدمة</h2>

@@ -31,7 +31,7 @@ const Disclaimer: React.FC = () => {
             <div className="flex items-center">
               <Info className="w-5 h-5 text-yellow-600 ml-2" />
               <p className="text-yellow-800 font-semibold">
-                يرجى قراءة هذا الإخلاء بعناية قبل استخدام الموقع
+                {t('disclaimerPageComprehensive.content', language)}
               </p>
             </div>
           </div>

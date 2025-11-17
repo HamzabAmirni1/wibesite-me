@@ -42,12 +42,14 @@ const AppCard: React.FC<typeof myApps[0]> = ({ IconComponent, title, description
             transition={{ type: "spring", stiffness: 300 }}
         >
             <Download size={20} />
-            تحميل التطبيق
+            {t('buttonLabels.download', language)}
         </motion.a>
     </Card>
 );
 
 const Apps: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       variants={containerVariants}
@@ -57,8 +59,8 @@ const Apps: React.FC = () => {
     >
         <motion.div variants={itemVariants}>
             <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-                <h1 className="text-4xl font-bold text-dark-color">📱 تطبيقاتي</h1>
-                <p className="text-lg text-dark-color/70 mt-4">يمكنك تحميل تطبيقاتي الخاصة للأندرويد من الروابط التالية:</p>
+                <h1 className="text-4xl font-bold text-dark-color">📱 {t('appsPageComprehensive.title', language)}</h1>
+                <p className="text-lg text-dark-color/70 mt-4">{t('appsPageComprehensive.description', language)}</p>
             </Card>
         </motion.div>
 
