@@ -414,37 +414,39 @@ export const contentPages = {
 
 // Home page translations
 export const homePage = {
-  exampleProjects: {
-    title: {
-      ar: 'أمثلة على مشاريع برمجية بسيطة',
-      fr: 'Exemples de projets de programmation simples',
-      en: 'Examples of Simple Programming Projects',
+  ar: {
+    exampleProjects: {
+      title: 'أمثلة على مشاريع برمجية بسيطة',
+      projects: {
+        calculator: 'آلة حاسبة بسيطة باستخدام HTML وCSS وJavaScript',
+        portfolio: 'موقع صفحة تعريفية شخصية (Portfolio)',
+        todoList: 'تطبيق قائمة مهام (To-Do List)',
+        currencyConverter: 'برنامج لتحويل العملات',
+        ticTacToe: 'لعبة XO (تيك تاك تو) على الويب',
+      },
     },
-    projects: {
-      calculator: {
-        ar: 'آلة حاسبة بسيطة باستخدام HTML وCSS وJavaScript',
-        fr: 'Calculatrice simple utilisant HTML, CSS et JavaScript',
-        en: 'Simple calculator using HTML, CSS and JavaScript',
+  },
+  fr: {
+    exampleProjects: {
+      title: 'Exemples de projets de programmation simples',
+      projects: {
+        calculator: 'Calculatrice simple utilisant HTML, CSS et JavaScript',
+        portfolio: 'Site de portefeuille personnel',
+        todoList: 'Application de liste de tâches',
+        currencyConverter: 'Programme de conversion de devises',
+        ticTacToe: 'Jeu de Morpion sur le Web',
       },
-      portfolio: {
-        ar: 'موقع صفحة تعريفية شخصية (Portfolio)',
-        fr: 'Site de portefeuille personnel',
-        en: 'Personal portfolio website',
-      },
-      todoList: {
-        ar: 'تطبيق قائمة مهام (To-Do List)',
-        fr: 'Application de liste de tâches',
-        en: 'To-Do List Application',
-      },
-      currencyConverter: {
-        ar: 'برنامج لتحويل العملات',
-        fr: 'Programme de conversion de devises',
-        en: 'Currency Converter Program',
-      },
-      ticTacToe: {
-        ar: 'لعبة XO (تيك تاك تو) على الويب',
-        fr: 'Jeu de Morpion sur le Web',
-        en: 'Tic Tac Toe Game on Web',
+    },
+  },
+  en: {
+    exampleProjects: {
+      title: 'Examples of Simple Programming Projects',
+      projects: {
+        calculator: 'Simple calculator using HTML, CSS and JavaScript',
+        portfolio: 'Personal portfolio website',
+        todoList: 'To-Do List Application',
+        currencyConverter: 'Currency Converter Program',
+        ticTacToe: 'Tic Tac Toe Game on Web',
       },
     },
   },
@@ -452,38 +454,46 @@ export const homePage = {
 
 // Videos page translations
 export const videosPage = {
-  title: {
-    ar: 'أهم الفيديوهات التعليمية',
-    fr: 'Vidéos Éducatives Importantes',
-    en: 'Important Educational Videos',
+  ar: {
+    title: 'أهم الفيديوهات التعليمية',
+    description: 'ستجد هنا أهم الفيديوهات التعليمية في مجال البرمجة والتقنية:',
   },
-  description: {
-    ar: 'ستجد هنا أهم الفيديوهات التعليمية في مجال البرمجة والتقنية:',
-    fr: 'Vous trouverez ici les vidéos éducatives les plus importantes dans le domaine de la programmation et de la technologie:',
-    en: 'Here you will find the most important educational videos in the field of programming and technology:',
+  fr: {
+    title: 'Vidéos Éducatives Importantes',
+    description: 'Vous trouverez ici les vidéos éducatives les plus importantes dans le domaine de la programmation et de la technologie:',
+  },
+  en: {
+    title: 'Important Educational Videos',
+    description: 'Here you will find the most important educational videos in the field of programming and technology:',
   },
 };
 
 // Tools page translations
 export const toolsPage = {
-  noResults: {
-    ar: 'لا توجد نتائج مطابقة لبحثك.',
-    fr: 'Aucun résultat ne correspond à votre recherche.',
-    en: 'No results match your search.',
+  ar: {
+    noResults: 'لا توجد نتائج مطابقة لبحثك.',
+  },
+  fr: {
+    noResults: 'Aucun résultat ne correspond à votre recherche.',
+  },
+  en: {
+    noResults: 'No results match your search.',
   },
 };
 
 // Terms page translations
 export const termsPage = {
-  title: {
-    ar: 'شروط الاستخدام',
-    fr: 'Conditions d\'Utilisation',
-    en: 'Terms of Use',
+  ar: {
+    title: 'شروط الاستخدام',
+    disclaimer: 'الشروط والأحكام التي تحكم استخدام موقع حمزة اعمرني',
   },
-  disclaimer: {
-    ar: 'الشروط والأحكام التي تحكم استخدام موقع حمزة اعمرني',
-    fr: 'Les conditions et avis qui régissent l\'utilisation du site de Hamza Amrni',
-    en: 'The terms and notices that govern the use of Hamza Amrni\'s website',
+  fr: {
+    title: 'Conditions d\'Utilisation',
+    disclaimer: 'Les conditions et avis qui régissent l\'utilisation du site de Hamza Amrni',
+  },
+  en: {
+    title: 'Terms of Use',
+    disclaimer: 'The terms and notices that govern the use of Hamza Amrni\'s website',
   },
 };
 
