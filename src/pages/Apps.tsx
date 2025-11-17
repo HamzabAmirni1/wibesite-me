@@ -26,7 +26,7 @@ const itemVariants = {
   }
 };
 
-const AppCard: React.FC<typeof myApps[0]> = ({ IconComponent, title, description, url, buttonClass }) => (
+const AppCard: React.FC<typeof myApps[0] & { language: string }> = ({ IconComponent, title, description, url, buttonClass, language }) => (
     <Card className="text-center flex flex-col h-full">
         <div className="mb-6 flex justify-center items-center h-20">
             <IconComponent className="text-6xl text-dark-color/80" />
@@ -67,7 +67,7 @@ const Apps: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {myApps.map((app, index) => (
                 <motion.div key={index} variants={itemVariants}>
-                    <AppCard {...app} />
+                    <AppCard {...app} language={language} />
                 </motion.div>
             ))}
         </div>
