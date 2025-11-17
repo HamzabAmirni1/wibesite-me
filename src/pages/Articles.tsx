@@ -7,9 +7,12 @@ import { Search } from 'lucide-react';
 import ArticleCard from '../components/ArticleCard';
 import ArticleDetail from '../components/ArticleDetail';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 // import GoogleAdSense from '../components/GoogleAdSense'; // Removed for AdSense approval process
 
 const Articles: React.FC = () => {
+  const { language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
 

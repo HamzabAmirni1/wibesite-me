@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import Card from '../components/Card';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 import { SiWhatsapp, SiFacebook, SiInstagram, SiYoutube, SiTiktok, SiTelegram } from 'react-icons/si';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const Contact: React.FC = () => {
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',

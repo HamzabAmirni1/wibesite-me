@@ -4,6 +4,8 @@ import Card from '../components/Card';
 import { myApps } from '../constants';
 import { Download } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },

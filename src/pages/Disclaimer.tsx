@@ -2,8 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
 import { AlertTriangle, Info, Shield, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const Disclaimer: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div 
       className="space-y-8"
@@ -15,9 +19,9 @@ const Disclaimer: React.FC = () => {
         <div className="flex items-center justify-center mb-4">
           <AlertTriangle className="w-12 h-12 text-orange-500" />
         </div>
-        <h1 className="text-4xl font-bold text-dark-color mb-4">إخلاء المسؤولية</h1>
+        <h1 className="text-4xl font-bold text-dark-color mb-4">⚠️ {t('disclaimerPage.title', language)}</h1>
         <p className="text-lg text-dark-color/70">
-          معلومات مهمة حول استخدام موقع حمزة اعمرني والمحتوى المقدم
+          {t('disclaimerPage.description', language)}
         </p>
       </Card>
 

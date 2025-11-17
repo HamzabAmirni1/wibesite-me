@@ -5,6 +5,8 @@ import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { programmingContent } from '../constants';
 import { CheckCircle } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -26,6 +28,8 @@ const itemVariants = {
 };
 
 const Programming: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div 
       className="space-y-8"
@@ -35,8 +39,8 @@ const Programming: React.FC = () => {
     >
       <motion.div variants={itemVariants}>
         <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-            <h1 className="text-4xl font-bold text-dark-color">{programmingContent.title}</h1>
-            <p className="text-lg text-dark-color/70 mt-4 max-w-3xl mx-auto">{programmingContent.description}</p>
+            <h1 className="text-4xl font-bold text-dark-color">📚 {t('programmingPage.title', language)}</h1>
+            <p className="text-lg text-dark-color/70 mt-4 max-w-3xl mx-auto">{t('programmingPage.description', language)}</p>
         </Card>
       </motion.div>
 

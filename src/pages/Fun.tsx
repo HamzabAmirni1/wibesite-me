@@ -5,6 +5,8 @@ import { funContent } from '../constants';
 import { cn } from '../lib/utils';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },

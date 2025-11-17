@@ -7,6 +7,8 @@ import { aboutContent } from '../constants';
 import SkillsCard from '../components/SkillsCard';
 import Timeline from '../components/Timeline';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },

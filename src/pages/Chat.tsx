@@ -5,6 +5,8 @@ import { chatContent } from '../constants';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import ContactForm from '../components/ContactForm';
 import { cn } from '../lib/utils';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },
