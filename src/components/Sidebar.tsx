@@ -83,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               <link.icon className="w-5 h-5" />
-              {t(`nav.${link.id}`, language) || link.title}
+              {t(`navLabels.${link.id}`, language) || link.title}
             </motion.a>
           ))}
         </nav>
