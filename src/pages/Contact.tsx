@@ -57,6 +57,7 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="font-semibold text-gray-800">البريد الإلكتروني</h3>
                 <p className="text-gray-600">hamzaamirni451@gmail.com</p>
+                <p className="text-gray-600 text-sm">privacy@hamzaamirni.com</p>
               </div>
             </div>
 
@@ -286,7 +287,7 @@ const Contact: React.FC = () => {
               نحن نحترم خصوصيتك ولن نشارك معلوماتك مع أطراف ثالثة.
             </p>
             <p className="text-green-700 text-sm mt-2">
-              <strong>للرد السريع:</strong> استخدم زر واتساب أعلاه أو راسلنا على: hamzaamirni451@gmail.com
+              <strong>للرد السريع:</strong> استخدم زر واتساب أعلاه أو راسلنا على: hamzaamirni451@gmail.com أو privacy@hamzaamirni.com
             </p>
           </div>
         </Card>
