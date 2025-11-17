@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 import { aboutContent } from '../constants';
 import { LucideProps } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 type Skill = {
     name: string;
@@ -42,9 +44,11 @@ const SkillItem: React.FC<{ skill: Skill, index: number }> = ({ skill, index }) 
 );
 
 const SkillsCard: React.FC<SkillsCardProps> = ({ skills }) => {
+    const { language } = useLanguage();
+
     return (
         <Card>
-            <h3 className="text-2xl font-bold text-primary text-center mb-8">مهاراتي</h3>
+            <h3 className="text-2xl font-bold text-primary text-center mb-8">{t('skillsSection.title', language)}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 {skills.map((skill, index) => (
                     <SkillItem key={skill.name} skill={skill} index={index} />

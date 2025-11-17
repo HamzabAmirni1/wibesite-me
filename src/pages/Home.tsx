@@ -8,6 +8,8 @@ import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import Card from '../components/Card';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
+import { Lightbulb, CheckCircle, Palette } from 'lucide-react';
+import { aboutContent } from '../constants';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -66,15 +68,72 @@ const Home: React.FC = () => {
       </motion.div>
 
       <motion.div variants={itemVariants}>
+        <SkillsCard skills={aboutContent.skills} />
+      </motion.div>
+
+      <motion.div variants={itemVariants}>
         <Card>
-          <h3 className="text-2xl font-bold text-primary text-center mb-6">💡 {t('homePage.exampleProjects.title', language)}</h3>
-          <ul className="text-lg text-dark-color/80 list-disc list-inside space-y-3">
-              <li>{t('homePage.exampleProjects.projects.calculator', language)}</li>
-              <li>{t('homePage.exampleProjects.projects.portfolio', language)}</li>
-              <li>{t('homePage.exampleProjects.projects.todoList', language)}</li>
-              <li>{t('homePage.exampleProjects.projects.currencyConverter', language)}</li>
-              <li>{t('homePage.exampleProjects.projects.ticTacToe', language)}</li>
-          </ul>
+          <h3 className="text-2xl font-bold text-primary text-center mb-8">
+            {t('journeySection.title', language)}
+          </h3>
+          <Timeline items={t('journeySection.items', language) || []} />
+        </Card>
+      </motion.div>
+
+      <motion.div variants={itemVariants}>
+        <Card>
+          <h3 className="text-2xl font-bold text-primary text-center mb-8">
+            {t('philosophySection.title', language)}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Continuous Learning */}
+            <motion.div 
+              className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg"
+              whileHover={{ y: -5 }}
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500 mb-4">
+                <Lightbulb className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-dark-color mb-2">
+                {t('philosophySection.continuousLearning.title', language)}
+              </h4>
+              <p className="text-dark-color/70">
+                {t('philosophySection.continuousLearning.description', language)}
+              </p>
+            </motion.div>
+
+            {/* Quality Delivery */}
+            <motion.div 
+              className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg"
+              whileHover={{ y: -5 }}
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500 mb-4">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-dark-color mb-2">
+                {t('philosophySection.qualityDelivery.title', language)}
+              </h4>
+              <p className="text-dark-color/70">
+                {t('philosophySection.qualityDelivery.description', language)}
+              </p>
+            </motion.div>
+
+            {/* Design & Creativity */}
+            <motion.div 
+              className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg"
+              whileHover={{ y: -5 }}
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-500 mb-4">
+                <Palette className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-dark-color mb-2">
+                {t('philosophySection.designCreativity.title', language)}
+              </h4>
+              <p className="text-dark-color/70">
+                {t('philosophySection.designCreativity.description', language)}
+              </p>
+            </motion.div>
+          </div>
         </Card>
       </motion.div>
 

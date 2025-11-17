@@ -45,6 +45,7 @@ export const whatsappChannels = [
     { name: 'قناة تحديثات القرآنيات', url: 'https://whatsapp.com/channel/0029VaDbxoYJpe8byewMhd3s', IconComponent: FaQuran }
 ];
 
+// NOTE: Use sidebarProfile, skillsSection, journeySection, philosophySection from i18n.ts for translations
 export const aboutContent = {
     name: 'حمزة اعمرني',
     role: '👨 مطور ويب متخصص',
