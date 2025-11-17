@@ -413,9 +413,19 @@ export const contentPages = {
 };
 
 // Helper function to get translated text
-export const t = (key: string, language: Language, params: Record<string, any> = {}): string => {
+export const t = (key: string, language: Language, params: Record<string, any> = {}): string | any => {
   // Split the key by dots to access nested properties
   const keys = key.split('.');
+  
+  // Special handling for navLabels - structure is different
+  if (keys[0] === 'navLabels') {
+    const labelKey = keys[1];
+    const value = (navLabels as any)[language]?.[labelKey];
+    if (typeof value === 'string') {
+      return value;
+    }
+    return key; // Return key as fallback if not found
+  }
   
   // Start with the root translations object
   const translations: any = {
