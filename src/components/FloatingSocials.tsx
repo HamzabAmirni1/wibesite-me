@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { socialLinks } from '../constants';
 
-// Show only the three requested social buttons in the desired order
-const desiredOrder = ['إنستجرام', 'الفيسبوك', 'واتساب'];
+// Show the main social buttons in desired order
+const desiredOrder = ['إنستجرام', 'الفيسبوك', 'واتساب', 'اليوتيوب', 'تيليجرام'];
 const floatingSocials = desiredOrder
   .map(name => socialLinks.find(link => link.name === name))
   .filter(Boolean) as typeof socialLinks;
