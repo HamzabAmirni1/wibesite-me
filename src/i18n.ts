@@ -416,7 +416,9 @@ export const contentPages = {
 export const t = (key: string, language: Language, params: Record<string, any> = {}): string => {
   // Split the key by dots to access nested properties
   const keys = key.split('.');
-  let value: any = {
+  
+  // Start with the root translations object
+  const translations: any = {
     commonTexts,
     navLabels,
     heroContent,
@@ -424,6 +426,8 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     aboutPage,
     contentPages,
   };
+
+  let value: any = translations;
 
   // Traverse the object to get the value
   for (const k of keys) {
