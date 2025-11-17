@@ -510,6 +510,274 @@ export const t = (key: string, language: Language, params: Record<string, any> =
   return key;
 };
 
+// Page translations
+export const programmingPageLabels = {
+  ar: {
+    title: '📚 دليل البرمجة الشامل',
+    description: 'تعلم البرمجة من الصفر واكتشف أساسيات وأفكار برمجية مبتكرة',
+    languages: 'لغات البرمجة',
+    concepts: 'المفاهيم الأساسية',
+    bestPractices: 'أفضل الممارسات',
+    resources: 'موارد تعليمية'
+  },
+  fr: {
+    title: '📚 Guide Complet de la Programmation',
+    description: 'Apprenez la programmation de zéro et découvrez des idées de programmation innovantes',
+    languages: 'Langages de programmation',
+    concepts: 'Concepts fondamentaux',
+    bestPractices: 'Meilleures pratiques',
+    resources: 'Ressources éducatives'
+  },
+  en: {
+    title: '📚 Comprehensive Programming Guide',
+    description: 'Learn programming from scratch and discover innovative programming ideas',
+    languages: 'Programming Languages',
+    concepts: 'Fundamental Concepts',
+    bestPractices: 'Best Practices',
+    resources: 'Educational Resources'
+  }
+};
+
+export const funPageLabels = {
+  ar: {
+    title: '🎮 منطقة المرح والتسلية',
+    description: 'مشاريع برمجية مرحة وألعاب تفاعلية لتطوير مهاراتك بطريقة ممتعة',
+    games: 'الألعاب',
+    projects: 'مشاريع مرحة',
+    challenges: 'تحديات برمجية'
+  },
+  fr: {
+    title: '🎮 Zone de Plaisir et de Divertissement',
+    description: 'Projets amusants et jeux interactifs pour développer vos compétences de manière agréable',
+    games: 'Jeux',
+    projects: 'Projets amusants',
+    challenges: 'Défis de programmation'
+  },
+  en: {
+    title: '🎮 Fun & Entertainment Zone',
+    description: 'Fun projects and interactive games to develop your skills in an enjoyable way',
+    games: 'Games',
+    projects: 'Fun Projects',
+    challenges: 'Programming Challenges'
+  }
+};
+
+export const botsPageLabels = {
+  ar: {
+    title: '🤖 روبوتات وأتمتة',
+    description: 'اكتشف عالم الروبوتات والأتمتة والذكاء الاصطناعي',
+    whatsappBots: 'روبوتات واتس آب',
+    telegramBots: 'روبوتات تيليجرام',
+    discordBots: 'روبوتات ديسكورد',
+    automation: 'أتمتة المهام'
+  },
+  fr: {
+    title: '🤖 Robots et Automatisation',
+    description: 'Découvrez le monde des robots, de l\'automatisation et de l\'IA',
+    whatsappBots: 'Robots WhatsApp',
+    telegramBots: 'Robots Telegram',
+    discordBots: 'Robots Discord',
+    automation: 'Automatisation des tâches'
+  },
+  en: {
+    title: '🤖 Bots & Automation',
+    description: 'Discover the world of bots, automation and artificial intelligence',
+    whatsappBots: 'WhatsApp Bots',
+    telegramBots: 'Telegram Bots',
+    discordBots: 'Discord Bots',
+    automation: 'Task Automation'
+  }
+};
+
+export const articlesPageLabels = {
+  ar: {
+    title: '✍️ المقالات التقنية',
+    description: 'مقالات شاملة عن البرمجة والتقنية والتطوير الشخصي',
+    recent: 'أحدث المقالات',
+    categories: 'التصنيفات',
+    noArticles: 'لا توجد مقالات بعد',
+    readMore: 'اقرأ المزيد'
+  },
+  fr: {
+    title: '✍️ Articles Techniques',
+    description: 'Articles complets sur la programmation, la technologie et le développement personnel',
+    recent: 'Articles récents',
+    categories: 'Catégories',
+    noArticles: 'Aucun article pour le moment',
+    readMore: 'Lire la suite'
+  },
+  en: {
+    title: '✍️ Technical Articles',
+    description: 'Comprehensive articles on programming, technology and personal development',
+    recent: 'Recent Articles',
+    categories: 'Categories',
+    noArticles: 'No articles yet',
+    readMore: 'Read More'
+  }
+};
+
+export const chatPageLabels = {
+  ar: {
+    title: '💬 دردشة معي',
+    description: 'تحدث معي واطرح أسئلتك حول البرمجة والتقنية',
+    sendMessage: 'إرسال الرسالة',
+    messagePlaceholder: 'اكتب رسالتك هنا...',
+    typing: 'يكتب...',
+    online: 'متصل الآن'
+  },
+  fr: {
+    title: '💬 Discuter avec moi',
+    description: 'Parlez-moi et posez vos questions sur la programmation et la technologie',
+    sendMessage: 'Envoyer le message',
+    messagePlaceholder: 'Écrivez votre message ici...',
+    typing: 'Écrit...',
+    online: 'En ligne maintenant'
+  },
+  en: {
+    title: '💬 Chat with Me',
+    description: 'Talk to me and ask your questions about programming and technology',
+    sendMessage: 'Send Message',
+    messagePlaceholder: 'Type your message here...',
+    typing: 'Typing...',
+    online: 'Online Now'
+  }
+};
+
+export const privacyPageLabels = {
+  ar: {
+    title: '🔒 سياسة الخصوصية',
+    description: 'كيف نحافظ على بيانات خصوصيتك',
+    dataCollection: 'جمع البيانات',
+    dataUsage: 'استخدام البيانات',
+    dataSecurity: 'أمان البيانات',
+    contactUsAbout: 'تواصل معنا بشأن الخصوصية'
+  },
+  fr: {
+    title: '🔒 Politique de Confidentialité',
+    description: 'Comment nous protégeons vos données personnelles',
+    dataCollection: 'Collecte de données',
+    dataUsage: 'Utilisation des données',
+    dataSecurity: 'Sécurité des données',
+    contactUsAbout: 'Contactez-nous au sujet de la confidentialité'
+  },
+  en: {
+    title: '🔒 Privacy Policy',
+    description: 'How we protect your personal data',
+    dataCollection: 'Data Collection',
+    dataUsage: 'Data Usage',
+    dataSecurity: 'Data Security',
+    contactUsAbout: 'Contact us about privacy'
+  }
+};
+
+export const disclaimerPageLabels = {
+  ar: {
+    title: '⚠️ إخلاء المسؤولية',
+    description: 'الإخلاء القانوني للموقع',
+    accuracy: 'دقة المعلومات',
+    responsibility: 'المسؤولية',
+    usage: 'الاستخدام'
+  },
+  fr: {
+    title: '⚠️ Clause de non-responsabilité',
+    description: 'Avertissement légal du site',
+    accuracy: 'Exactitude des informations',
+    responsibility: 'Responsabilité',
+    usage: 'Utilisation'
+  },
+  en: {
+    title: '⚠️ Disclaimer',
+    description: 'Legal disclaimer for the website',
+    accuracy: 'Accuracy of Information',
+    responsibility: 'Responsibility',
+    usage: 'Usage'
+  }
+};
+
+export const contactPageLabels = {
+  ar: {
+    title: '📧 تواصل معي',
+    description: 'أرسل لي رسالة واستقبل ردًا في أسرع وقت',
+    name: 'الاسم',
+    email: 'البريد الإلكتروني',
+    message: 'الرسالة',
+    send: 'إرسال',
+    sending: 'جاري الإرسال...',
+    sent: 'تم الإرسال بنجاح!',
+    error: 'حدث خطأ في الإرسال'
+  },
+  fr: {
+    title: '📧 Contactez-moi',
+    description: 'Envoyez-moi un message et recevez une réponse rapidement',
+    name: 'Nom',
+    email: 'Email',
+    message: 'Message',
+    send: 'Envoyer',
+    sending: 'Envoi en cours...',
+    sent: 'Envoyé avec succès!',
+    error: 'Erreur lors de l\'envoi'
+  },
+  en: {
+    title: '📧 Contact Me',
+    description: 'Send me a message and get a quick response',
+    name: 'Name',
+    email: 'Email',
+    message: 'Message',
+    send: 'Send',
+    sending: 'Sending...',
+    sent: 'Sent successfully!',
+    error: 'Error sending message'
+  }
+};
+
+export const termsPageLabels = {
+  ar: {
+    title: 'شروط الاستخدام',
+    acceptanceTitle: '1. قبول الشروط',
+    acceptance: 'باستخدام موقع حمزة اعمرني، فإنك توافق على الالتزام بهذه الشروط والأحكام.',
+    serviceTitle: '2. وصف الخدمة',
+    serviceDesc: 'موقع حمزة اعمرني هو منصة تقنية تقدم محتوى تعليمي ومقالات ودروس تقنية',
+    usageTitle: '3. الاستخدام المقبول',
+    usageDesc: 'يُسمح باستخدام الموقع للاطلاع على المحتوى والتعلم والتواصل',
+    forbiddenTitle: '4. الاستخدام المحظور',
+    forbiddenDesc: 'يُحظر نسخ المحتوى أو استخدام الموقع لأغراض غير قانونية',
+    ipTitle: '5. حقوق الملكية الفكرية',
+    ipDesc: 'جميع المحتويات محمية بحقوق الطبع والنشر',
+    disclaimerTitle: '6. إخلاء المسؤولية',
+    disclaimerDesc: 'الموقع والمحتوى مقدمان "كما هما" دون أي ضمانات'
+  },
+  fr: {
+    title: 'Conditions d\'utilisation',
+    acceptanceTitle: '1. Acceptation des conditions',
+    acceptance: 'En utilisant le site de Hamza Amrni, vous acceptez de respecter ces conditions.',
+    serviceTitle: '2. Description du service',
+    serviceDesc: 'Le site de Hamza Amrni est une plateforme technique qui propose du contenu éducatif.',
+    usageTitle: '3. Utilisation autorisée',
+    usageDesc: 'Vous êtes autorisé à utiliser le site pour consulter le contenu et apprendre.',
+    forbiddenTitle: '4. Utilisation interdite',
+    forbiddenDesc: 'Il est interdit de copier le contenu ou d\'utiliser le site à des fins illégales.',
+    ipTitle: '5. Droits de propriété intellectuelle',
+    ipDesc: 'Tout le contenu est protégé par les droits d\'auteur.',
+    disclaimerTitle: '6. Clause de non-responsabilité',
+    disclaimerDesc: 'Le site et le contenu sont fournis "tels quels" sans garanties.'
+  },
+  en: {
+    title: 'Terms of Use',
+    acceptanceTitle: '1. Acceptance of Terms',
+    acceptance: 'By using Hamza Amrni\'s website, you agree to comply with these terms.',
+    serviceTitle: '2. Service Description',
+    serviceDesc: 'Hamza Amrni\'s website is a technical platform offering educational content.',
+    usageTitle: '3. Acceptable Use',
+    usageDesc: 'You are allowed to use the site to view content and learn.',
+    forbiddenTitle: '4. Forbidden Use',
+    forbiddenDesc: 'It is prohibited to copy the content or use the site for illegal purposes.',
+    ipTitle: '5. Intellectual Property Rights',
+    ipDesc: 'All content is protected by copyright.',
+    disclaimerTitle: '6. Disclaimer',
+    disclaimerDesc: 'The site and content are provided "as is" without warranties.'
+  }
+};
+
 // For backward compatibility
 export const getNavLabel = (language: Language, id: string): string => {
   return t(`navLabels.${id}`, language);

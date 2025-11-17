@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const Terms: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div 
       className="space-y-8"
@@ -11,9 +15,9 @@ const Terms: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-        <h1 className="text-4xl font-bold text-dark-color mb-4">شروط الاستخدام</h1>
+        <h1 className="text-4xl font-bold text-dark-color mb-4">{t('termsPage.title', language)}</h1>
         <p className="text-lg text-dark-color/70">
-          الشروط والأحكام التي تحكم استخدام موقع حمزة اعمرني
+          {t('termsPage.disclaimer', language)}
         </p>
       </Card>
 

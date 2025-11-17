@@ -5,6 +5,8 @@ import { toolsContent } from '../constants';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { Search } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,6 +48,7 @@ const ToolCard: React.FC<typeof toolsContent.tools[0]> = ({ IconComponent, title
 );
 
 const Tools: React.FC = () => {
+  const { language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredTools = useMemo(() => {
@@ -91,7 +94,7 @@ const Tools: React.FC = () => {
         </div>
         
         {filteredTools.length === 0 && (
-            <p className="text-center text-dark-color/70 text-lg">لا توجد نتائج مطابقة لبحثك.</p>
+            <p className="text-center text-dark-color/70 text-lg">{t('toolsPage.noResults', language)}</p>
         )}
 
         <motion.div variants={itemVariants}>

@@ -4,6 +4,8 @@ import Card from '../components/Card';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { videosContent } from '../constants';
 import CallToAction from '../components/CallToAction';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,6 +43,8 @@ const VideoCard: React.FC<{ title: string; videoId: string }> = ({ title, videoI
 );
 
 const Videos: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       className="space-y-8"
@@ -50,8 +54,8 @@ const Videos: React.FC = () => {
     >
         <motion.div variants={itemVariants}>
             <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-                <h1 className="text-4xl font-bold text-dark-color">📹 أهم الفيديوهات التعليمية</h1>
-                <p className="text-lg text-dark-color/70 mt-4">ستجد هنا أهم الفيديوهات التعليمية في مجال البرمجة والتقنية:</p>
+                <h1 className="text-4xl font-bold text-dark-color">📹 {t('videosPage.title', language)}</h1>
+                <p className="text-lg text-dark-color/70 mt-4">{t('videosPage.description', language)}</p>
             </Card>
         </motion.div>
 

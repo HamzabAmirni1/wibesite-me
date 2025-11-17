@@ -6,6 +6,8 @@ import Timeline from '../components/Timeline';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import Card from '../components/Card';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,6 +31,8 @@ const itemVariants = {
 };
 
 const Home: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div 
       className="space-y-8"
@@ -63,13 +67,13 @@ const Home: React.FC = () => {
 
       <motion.div variants={itemVariants}>
         <Card>
-          <h3 className="text-2xl font-bold text-primary text-center mb-6">💡 أمثلة على مشاريع برمجية بسيطة</h3>
+          <h3 className="text-2xl font-bold text-primary text-center mb-6">💡 {t('homePage.exampleProjects.title', language)}</h3>
           <ul className="text-lg text-dark-color/80 list-disc list-inside space-y-3">
-              <li>آلة حاسبة بسيطة باستخدام HTML وCSS وJavaScript</li>
-              <li>موقع صفحة تعريفية شخصية (Portfolio)</li>
-              <li>تطبيق قائمة مهام (To-Do List)</li>
-              <li>برنامج لتحويل العملات</li>
-              <li>لعبة XO (تيك تاك تو) على الويب</li>
+              <li>{t('homePage.exampleProjects.projects.calculator', language)}</li>
+              <li>{t('homePage.exampleProjects.projects.portfolio', language)}</li>
+              <li>{t('homePage.exampleProjects.projects.todoList', language)}</li>
+              <li>{t('homePage.exampleProjects.projects.currencyConverter', language)}</li>
+              <li>{t('homePage.exampleProjects.projects.ticTacToe', language)}</li>
           </ul>
         </Card>
       </motion.div>
