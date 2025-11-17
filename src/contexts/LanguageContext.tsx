@@ -33,6 +33,21 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, [language]);
 
+  // Update document direction and language attributes when language changes
+  useEffect(() => {
+    try {
+      const dir = language === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.lang = language;
+      document.documentElement.dir = dir;
+      // also add a body class for RTL so CSS rules can target it if needed
+      if (typeof document.body !== 'undefined') {
+        document.body.classList.toggle('rtl', language === 'ar');
+      }
+    } catch {
+      // ignore DOM access errors (e.g., during SSR)
+    }
+  }, [language]);
+
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
   };
