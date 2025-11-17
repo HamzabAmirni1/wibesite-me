@@ -189,7 +189,7 @@ export const contactPage = {
       urgent: 'عاجل - يُفضل استخدام واتساب للرد السريع'
     },
     messageLabel: 'تفاصيل الرسالة',
-    messagePlaceholder: 'اكتب تفاصيل رسالتك هنا... كلما كانت التفاصيل أوضح، كان الرد أدق وأسرع.',
+    messagePlaceholder: 'اكتب تفاصيل رسالتك هنا. كلما كانت التفاصيل أوضح، كان الرد أدق وأسرع.',
     sendButton: 'إرسال الرسالة',
     formNote: 'ملاحظة: جميع الحقول المطلوبة مميزة بعلامة (*). نحن نحترم خصوصيتك ولن نشارك معلوماتك مع أطراف ثالثة.',
     quickResponseNote: 'للرد السريع: استخدم زر واتساب أعلاه أو راسلنا على: hamzaamirni451@gmail.com',
@@ -245,7 +245,7 @@ export const contactPage = {
       urgent: 'Urgent - Veuillez utiliser WhatsApp pour une réponse rapide'
     },
     messageLabel: 'Détails du message',
-    messagePlaceholder: 'Écrivez les détails de votre message ici... Plus les détails sont clairs, plus la réponse sera précise et rapide.',
+    messagePlaceholder: 'Écrivez les détails de votre message ici. Plus les informations sont claires, plus la réponse sera précise et rapide.',
     sendButton: 'Envoyer le message',
     formNote: 'Remarque: Tous les champs obligatoires sont marqués d\'une (*). Nous respectons votre vie privée et ne partagerons pas vos données avec des tiers.',
     quickResponseNote: 'Pour une réponse rapide: Utilisez le bouton WhatsApp ci-dessus ou contactez-nous sur: hamzaamirni451@gmail.com',
@@ -301,7 +301,7 @@ export const contactPage = {
       urgent: 'Urgent - Please use WhatsApp for quick response'
     },
     messageLabel: 'Message Details',
-    messagePlaceholder: 'Write your message details here... The clearer the details, the more accurate and faster the response will be.',
+    messagePlaceholder: 'Write your message details here. The clearer the details, the more accurate and faster the response will be.',
     sendButton: 'Send Message',
     formNote: 'Note: All required fields are marked with (*). We respect your privacy and will not share your information with third parties.',
     quickResponseNote: 'For quick response: Use the WhatsApp button above or contact us at: hamzaamirni451@gmail.com',
@@ -335,18 +335,9 @@ export const aboutPage = {
     en: '👨 Professional Web Developer',
   },
   description: {
-    ar: `أهلا وسهلا! أنا حمزة اعمرني، مطور ويب متخصص عندي خبرة كبيرة في مجال البرمجيات والتقنيات. 🙌
-    أعمل في مجالات الويب ديفلوبمنت والتطبيقات والبرمجيات والتقنيات الحديثة.
-    أحب التعلم المستمر وتطوير المهارات في مجالات البرمجة والتصميم والتكنولوجيا.
-    إذا كان لديك أي استفسار أو تريد التعاون معي، فلا تتردد في التواصل. 🔥`,
-    fr: `Bonjour et bienvenue ! Je suis Hamza Amrni, un développeur web spécialisé avec une grande expérience dans le domaine des logiciels et des technologies. 🙌
-    Je travaille dans les domaines du développement web, des applications, des logiciels et des technologies modernes.
-    J'aime l'apprentissage continu et le développement de compétences en programmation, conception et technologie.
-    Si vous avez des questions ou souhaitez collaborer avec moi, n'hésitez pas à me contacter. 🔥`,
-    en: `Hello and welcome! I'm Hamza Amrni, a professional web developer with extensive experience in software and technologies. 🙌
-    I work in web development, applications, software, and modern technologies.
-    I love continuous learning and developing skills in programming, design, and technology.
-    If you have any questions or would like to collaborate, feel free to get in touch. 🔥`,
+    ar: 'أهلاً وسهلاً! أنا حمزة اعمرني، مطور ويب متخصص أمتلك خبرة واسعة في البرمجيات والتقنيات. أعمل في تطوير الويب والتطبيقات والبرمجيات الحديثة. أحب التعلم المستمر وتطوير المهارات في البرمجة والتصميم والتكنولوجيا. إذا كان لديك أي استفسار أو رغبة في التعاون، فلا تتردد في التواصل. 🔥',
+    fr: 'Bonjour et bienvenue ! Je suis Hamza Amrni, développeur web spécialisé avec une solide expérience dans les logiciels et les technologies. Je travaille sur le développement web, les applications et les technologies modernes. J’apprécie l’apprentissage continu et le développement de compétences en programmation, design et technologie. Si vous avez des questions ou souhaitez collaborer, contactez‑moi. 🔥',
+    en: 'Hello and welcome! I’m Hamza Amrni, a professional web developer with extensive experience in software and modern technologies. I work on web development, applications and modern tech. I enjoy continuous learning and improving skills in programming, design and technology. If you have any questions or would like to collaborate, feel free to get in touch. 🔥',
   },
   skills: {
     title: {

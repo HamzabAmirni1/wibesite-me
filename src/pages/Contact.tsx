@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                 className="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors"
               >
                 <SiInstagram className="w-5 h-5" />
-                <span className="text-sm font-medium">إنستغرام</span>
+                <span className="text-sm font-medium">إنستجرام</span>
               </a>
               
               <a 
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                 className="flex items-center gap-3 p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
               >
                 <SiTelegram className="w-5 h-5" />
-                <span className="text-sm font-medium">تلغرام</span>
+                <span className="text-sm font-medium">تيليجرام</span>
               </a>
             </div>
           </div>
