@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { socialLinks } from '../constants';
 
-// Use the exact names from `src/constants.ts` so filtering matches correctly
-const floatingSocials = socialLinks.filter(link =>
-  ['الفيسبوك', 'اليوتيوب', 'إنستجرام', 'واتساب', 'تيليجرام'].includes(link.name)
-);
+// Show only the three requested social buttons in the desired order
+const desiredOrder = ['إنستجرام', 'الفيسبوك', 'واتساب'];
+const floatingSocials = desiredOrder
+  .map(name => socialLinks.find(link => link.name === name))
+  .filter(Boolean) as typeof socialLinks;
 
 const containerVariants = {
   hidden: { opacity: 0 },
