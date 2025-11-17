@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           <h3 className="text-2xl font-bold text-primary text-center mb-8">
             {t('journeySection.title', language)}
           </h3>
-          <Timeline items={t('journeySection.items', language) || []} />
+          <Timeline items={Array.isArray(t('journeySection.items', language)) ? t('journeySection.items', language) : []} />
         </Card>
       </motion.div>
 

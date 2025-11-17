@@ -3,14 +3,17 @@ import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
 interface TimelineProps {
-  items: string[];
+  items: string[] | any;
 }
 
-const Timeline: React.FC<TimelineProps> = ({ items }) => {
+const Timeline: React.FC<TimelineProps> = ({ items = [] }) => {
+  // Ensure items is always an array
+  const itemsArray = Array.isArray(items) ? items : [];
+  
   return (
     <div className="relative pr-8">
       <div className="absolute top-0 bottom-0 right-4 w-0.5 bg-border-color" aria-hidden="true"></div>
-      {items.map((item, index) => (
+      {itemsArray.map((item, index) => (
         <motion.div
           key={index}
           className="relative mb-6"
