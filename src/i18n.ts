@@ -1112,6 +1112,142 @@ export const contactFormLabels = {
   }
 };
 
+// Tools page comprehensive translations
+export const toolsPageComprehensive = {
+  ar: {
+    searchPlaceholder: 'ابحث عن أداة أو موقع...',
+    noResults: 'لا توجد نتائج مطابقة لبحثك.'
+  },
+  fr: {
+    searchPlaceholder: 'Recherchez un outil ou un site...',
+    noResults: 'Aucun résultat ne correspond à votre recherche.'
+  },
+  en: {
+    searchPlaceholder: 'Search for a tool or website...',
+    noResults: 'No results match your search.'
+  }
+};
+
+// Footer and general UI translations
+export const footerTranslations = {
+  ar: {
+    allRightsReserved: 'جميع الحقوق محفوظة',
+    followMe: 'تابعني',
+    quickLinks: 'روابط سريعة',
+    contact: 'اتصل بنا',
+    privacy: 'سياسة الخصوصية',
+    terms: 'شروط الاستخدام',
+    disclaimer: 'إخلاء المسؤولية',
+    madeWith: 'صنع بـ ❤️',
+    byHamza: 'بواسطة حمزة اعمرني'
+  },
+  fr: {
+    allRightsReserved: 'Tous les droits sont réservés',
+    followMe: 'Suivez-moi',
+    quickLinks: 'Liens rapides',
+    contact: 'Nous contacter',
+    privacy: 'Politique de confidentialité',
+    terms: 'Conditions d\'utilisation',
+    disclaimer: 'Avertissement',
+    madeWith: 'Créé avec ❤️',
+    byHamza: 'Par Hamza Amrni'
+  },
+  en: {
+    allRightsReserved: 'All rights reserved',
+    followMe: 'Follow me',
+    quickLinks: 'Quick links',
+    contact: 'Contact us',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Use',
+    disclaimer: 'Disclaimer',
+    madeWith: 'Made with ❤️',
+    byHamza: 'By Hamza Amrni'
+  }
+};
+
+// Error and loading messages
+export const errorMessages = {
+  ar: {
+    pageNotFound: 'الصفحة غير موجودة',
+    notFound404: '404 - لم نتمكن من العثور على هذه الصفحة',
+    goBack: 'العودة إلى الصفحة الرئيسية',
+    errorLoading: 'حدث خطأ في تحميل الصفحة',
+    tryAgain: 'حاول مرة أخرى',
+    networkError: 'خطأ في الاتصال بالإنترنت',
+    checkConnection: 'يرجى التحقق من اتصالك بالإنترنت'
+  },
+  fr: {
+    pageNotFound: 'Page non trouvée',
+    notFound404: '404 - Nous n\'avons pas pu trouver cette page',
+    goBack: 'Retour à la page d\'accueil',
+    errorLoading: 'Erreur lors du chargement de la page',
+    tryAgain: 'Réessayez',
+    networkError: 'Erreur de connexion Internet',
+    checkConnection: 'Veuillez vérifier votre connexion Internet'
+  },
+  en: {
+    pageNotFound: 'Page not found',
+    notFound404: '404 - We couldn\'t find this page',
+    goBack: 'Back to homepage',
+    errorLoading: 'Error loading page',
+    tryAgain: 'Try again',
+    networkError: 'Internet connection error',
+    checkConnection: 'Please check your Internet connection'
+  }
+};
+
+// Buttons and common actions
+export const buttonLabels = {
+  ar: {
+    visit: 'زيارة',
+    download: 'تحميل',
+    demo: 'عرض توضيحي',
+    github: 'GitHub',
+    preview: 'معاينة',
+    learn: 'تعلم المزيد',
+    subscribe: 'اشترك',
+    like: 'إعجاب',
+    share: 'مشاركة',
+    reply: 'رد',
+    expand: 'توسيع',
+    collapse: 'طي',
+    sort: 'ترتيب',
+    filter: 'تصفية'
+  },
+  fr: {
+    visit: 'Visiter',
+    download: 'Télécharger',
+    demo: 'Démo',
+    github: 'GitHub',
+    preview: 'Aperçu',
+    learn: 'En savoir plus',
+    subscribe: 'S\'abonner',
+    like: 'J\'aime',
+    share: 'Partager',
+    reply: 'Répondre',
+    expand: 'Développer',
+    collapse: 'Réduire',
+    sort: 'Trier',
+    filter: 'Filtrer'
+  },
+  en: {
+    visit: 'Visit',
+    download: 'Download',
+    demo: 'Demo',
+    github: 'GitHub',
+    preview: 'Preview',
+    learn: 'Learn more',
+    subscribe: 'Subscribe',
+    like: 'Like',
+    share: 'Share',
+    reply: 'Reply',
+    expand: 'Expand',
+    collapse: 'Collapse',
+    sort: 'Sort',
+    filter: 'Filter'
+  }
+};
+
 // For backward compatibility
 export const getNavLabel = (language: Language, id: string): string => {
   return t(`navLabels.${id}`, language);
