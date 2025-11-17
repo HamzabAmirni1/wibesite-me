@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
 
     const handleSendViaWhatsApp = () => {
         if (!formData.name || !formData.message) {
-            alert('الرجاء ملء حقول الاسم والرسالة على الأقل.');
+            alert('الرجاء إدخال الاسم والرسالة على الأقل');
             return;
         }
 
@@ -74,7 +74,7 @@ ${formData.message}
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
-            <input type="hidden" name="_autoresponse" value="شكراً لتواصلك معنا! سنقوم بالرد عليك في أقرب وقت ممكن." />
+            <input type="hidden" name="_autoresponse" value="شكراً لتواصلك معنا! لقد تلقينا رسالتك وسنقوم بالرد عليك في أقرب فرصة. نقدّر اهتمامك!" />
             <input type="hidden" name="_next" value={window.location.href} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -84,7 +84,7 @@ ${formData.message}
                     <input
                         type="text"
                         name="name"
-                        placeholder="الاسم"
+                        placeholder="الاسم الكامل"
                         required
                         value={formData.name}
                         onChange={handleChange}
@@ -98,7 +98,7 @@ ${formData.message}
                     <input
                         type="email"
                         name="email"
-                        placeholder="البريد الإلكتروني (مطلوب للإرسال عبر البريد)"
+                        placeholder="البريد الإلكتروني (اختياري)"
                         required
                         value={formData.email}
                         onChange={handleChange}
@@ -139,7 +139,7 @@ ${formData.message}
             <div>
                 <textarea
                     name="message"
-                    placeholder="اكتب رسالتك هنا..."
+                    placeholder="اكتب رسالتك هنا بالتفصيل..."
                     rows={6}
                     required
                     value={formData.message}
@@ -157,7 +157,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <Mail size={22} />
-                    إرسال الرسالة
+                    إرسال عبر البريد
                 </motion.button>
                 <motion.button
                     type="button"
@@ -167,7 +167,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <MessageSquare size={22} />
-                    محادثة واتساب
+                    إرسال عبر واتساب
                 </motion.button>
             </div>
         </motion.form>

@@ -4,7 +4,7 @@ import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'r
 
 export const navLinks = [
   { id: 'home', title: 'الصفحة الرئيسية', icon: Home },
-  { id: 'about', title: 'عن وعني', icon: User },
+  { id: 'about', title: 'عني', icon: User },
   { id: 'videos', title: 'الفيديوهات', icon: Youtube },
   { id: 'programming', title: 'البرمجة', icon: Code },
   { id: 'apps', title: 'التطبيقات', icon: AppWindow },

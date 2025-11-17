@@ -78,7 +78,7 @@ export const commonTexts = {
 export const navLabels = {
   ar: {
     home: 'الصفحة الرئيسية',
-    about: 'عن وعني',
+    about: 'عني',
     videos: 'الفيديوهات',
     programming: 'البرمجة',
     apps: 'التطبيقات',
