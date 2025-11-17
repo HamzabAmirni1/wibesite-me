@@ -42,7 +42,7 @@ const FloatingSocials: React.FC = () => {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          title={link.name}
+          title={link.name || ''}
           className={`bg-dark-color/80 backdrop-blur-sm text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-colors duration-300 ${iconColors[link.name] || 'hover:bg-primary'}`}
           variants={itemVariants}
           whileHover={{ scale: 1.1, rotate: 10 }}

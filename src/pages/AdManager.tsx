@@ -158,9 +158,9 @@ const AdManager: React.FC = () => {
                   onChange={(e) => setFormData({ ...formData, type: e.target.value as any })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 >
-                  <option value="banner">بانر</option>
-                  <option value="sidebar">جانبي</option>
-                  <option value="inline">داخل المحتوى</option>
+                  <option value="banner">{t('adManagerTranslations.adTypes.banner', language)}</option>
+                  <option value="sidebar">{t('adManagerTranslations.adTypes.sidebar', language)}</option>
+                  <option value="inline">{t('adManagerTranslations.adTypes.inline', language)}</option>
                 </select>
               </div>
             </div>
@@ -326,21 +326,21 @@ const AdManager: React.FC = () => {
                         className={`p-2 rounded-lg transition-colors ${
                           ad.isActive ? 'text-red-600 hover:bg-red-50' : 'text-green-600 hover:bg-green-50'
                         }`}
-                        title={ad.isActive ? 'إيقاف الإعلان' : 'تفعيل الإعلان'}
+                        title={ad.isActive ? t('adManagerTranslations.disable', language) : t('adManagerTranslations.enable', language)}
                       >
                         {ad.isActive ? <EyeOff size={16} /> : <Eye size={16} />}
                       </button>
                       <button
                         onClick={() => handleEdit(ad)}
                         className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-                        title="تعديل الإعلان"
+                        title={t('adManagerTranslations.editAd', language)}
                       >
                         <Edit size={16} />
                       </button>
                       <button
                         onClick={() => handleDelete(ad.id)}
                         className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                        title="حذف الإعلان"
+                        title={t('adManagerTranslations.deleteAd', language)}
                       >
                         <Trash2 size={16} />
                       </button>
