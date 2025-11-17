@@ -623,6 +623,12 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     philosophySection,
     socialMediaLinks,
     channelNames,
+    programmingPageComprehensive,
+    appsPageComprehensive,
+    funPageComprehensive,
+    disclaimerPageComprehensive,
+    privacyPageComprehensive,
+    termsPageComprehensive,
   };
 
   // Check if first key maps to a language-first structure (like homePage, videosPage, termsPage)
@@ -1613,6 +1619,162 @@ export const channelNames = {
   en: {
     programmingUpdates: 'Programming Updates Channel',
     quranUpdates: 'Quran Updates Channel'
+  }
+};
+
+// Programming page comprehensive translations
+export const programmingPageComprehensive = {
+  ar: {
+    benefitsTitle: 'فوائد تعلم البرمجة',
+    benefits: [
+      'تطوير مهارات حل المشاكل والتفكير المنطقي',
+      'فتح فرص وظيفية جديدة ورواتب عالية',
+      'القدرة على تطوير تطبيقات وحلول تقنية',
+      'فهم أساسيات أنظمة الحاسوب والشبكات',
+      'تحسين القدرة على العمل بفريق والتعاون'
+    ],
+    exampleTitle: 'مثال برمجي بسيط',
+    codeOutput: 'Output: Hello, World!'
+  },
+  fr: {
+    benefitsTitle: 'Avantages de l\'apprentissage de la programmation',
+    benefits: [
+      'Développer des compétences en résolution de problèmes et en pensée logique',
+      'Ouvrir de nouvelles opportunités d\'emploi et des salaires élevés',
+      'Capacité à développer des applications et des solutions techniques',
+      'Comprendre les principes fondamentaux des systèmes informatiques et des réseaux',
+      'Améliorer la capacité à travailler en équipe et à collaborer'
+    ],
+    exampleTitle: 'Exemple de programme simple',
+    codeOutput: 'Output: Hello, World!'
+  },
+  en: {
+    benefitsTitle: 'Benefits of Learning Programming',
+    benefits: [
+      'Develop problem-solving skills and logical thinking',
+      'Open new job opportunities and high salaries',
+      'Ability to develop applications and technical solutions',
+      'Understanding of basic computer systems and networking principles',
+      'Improve teamwork and collaboration skills'
+    ],
+    exampleTitle: 'Simple Programming Example',
+    codeOutput: 'Output: Hello, World!'
+  }
+};
+
+// Apps page comprehensive translations
+export const appsPageComprehensive = {
+  ar: {
+    title: '📱 التطبيقات والبرامج',
+    description: 'مجموعة من التطبيقات والبرامج المفيدة التي طورتها',
+    noApps: 'لا توجد تطبيقات متاحة حالياً',
+    comingSoon: 'قريباً'
+  },
+  fr: {
+    title: '📱 Applications et Programmes',
+    description: 'Collection d\'applications et de programmes utiles que j\'ai développés',
+    noApps: 'Aucune application disponible pour le moment',
+    comingSoon: 'Bientôt disponible'
+  },
+  en: {
+    title: '📱 Apps & Programs',
+    description: 'Collection of useful applications and programs I\'ve developed',
+    noApps: 'No applications available at the moment',
+    comingSoon: 'Coming soon'
+  }
+};
+
+// Fun page comprehensive translations
+export const funPageComprehensive = {
+  ar: {
+    title: '🎮 منطقة المرح والتسلية',
+    description: 'مشاريع برمجية مرحة وألعاب تفاعلية لتطوير مهاراتك بطريقة ممتعة',
+    noContent: 'لا يوجد محتوى متاح حالياً',
+    exploreGames: 'استكشف الألعاب'
+  },
+  fr: {
+    title: '🎮 Zone de Plaisir et de Divertissement',
+    description: 'Projets amusants et jeux interactifs pour développer vos compétences de manière agréable',
+    noContent: 'Aucun contenu disponible pour le moment',
+    exploreGames: 'Explorer les jeux'
+  },
+  en: {
+    title: '🎮 Fun & Entertainment Zone',
+    description: 'Fun projects and interactive games to develop your skills in an enjoyable way',
+    noContent: 'No content available at the moment',
+    exploreGames: 'Explore games'
+  }
+};
+
+// Disclaimer page comprehensive translations
+export const disclaimerPageComprehensive = {
+  ar: {
+    title: 'إخلاء المسؤولية',
+    description: 'إخلاء المسؤولية القانوني لموقع حمزة اعمرني',
+    content: 'جميع المعلومات والمحتوى المقدم على هذا الموقع هو لأغراض تعليمية فقط. لا نتحمل أي مسؤولية عن أي ضرر أو خسارة قد ينجم عن استخدام الموقع أو محتواه.',
+    noWarranty: 'لا توجد ضمانات'
+  },
+  fr: {
+    title: 'Clause de non-responsabilité',
+    description: 'Clause de non-responsabilité légale pour le site de Hamza Amrni',
+    content: 'Toutes les informations et le contenu fourni sur ce site sont à titre éducatif uniquement. Nous n\'assumons aucune responsabilité pour tout dommage ou perte résultant de l\'utilisation du site ou de son contenu.',
+    noWarranty: 'Aucune garantie'
+  },
+  en: {
+    title: 'Disclaimer',
+    description: 'Legal disclaimer for Hamza Amrni\'s website',
+    content: 'All information and content provided on this website is for educational purposes only. We assume no responsibility for any damage or loss resulting from the use of the website or its content.',
+    noWarranty: 'No warranties'
+  }
+};
+
+// Privacy page comprehensive translations
+export const privacyPageComprehensive = {
+  ar: {
+    title: 'سياسة الخصوصية',
+    description: 'كيفية حماية بيانات خصوصيتك',
+    dataCollection: 'جمع البيانات: نحن لا نجمع بيانات شخصية دون موافقتك.',
+    dataUsage: 'استخدام البيانات: البيانات التي نجمعها تُستخدم فقط لتحسين الخدمة.',
+    dataSecurity: 'أمان البيانات: نستخدم أحدث تقنيات التشفير لحماية بيانات المستخدمين.'
+  },
+  fr: {
+    title: 'Politique de Confidentialité',
+    description: 'Comment nous protégeons vos données personnelles',
+    dataCollection: 'Collecte de données: Nous ne collectons pas de données personnelles sans votre consentement.',
+    dataUsage: 'Utilisation des données: Les données que nous collectons sont utilisées uniquement pour améliorer le service.',
+    dataSecurity: 'Sécurité des données: Nous utilisons les dernières technologies de cryptage pour protéger les données des utilisateurs.'
+  },
+  en: {
+    title: 'Privacy Policy',
+    description: 'How we protect your personal data',
+    dataCollection: 'Data Collection: We do not collect personal data without your consent.',
+    dataUsage: 'Data Usage: The data we collect is used only to improve the service.',
+    dataSecurity: 'Data Security: We use the latest encryption technologies to protect user data.'
+  }
+};
+
+// Terms page comprehensive translations
+export const termsPageComprehensive = {
+  ar: {
+    title: 'شروط الاستخدام',
+    description: 'الشروط والأحكام التي تحكم استخدام الموقع',
+    acceptance: 'بقبول هذه الشروط، أنت توافق على استخدام الموقع وفقاً لهذه الأحكام.',
+    restrictions: 'يُحظر استخدام الموقع لأي غرض غير قانوني أو ضار.',
+    intellectual: 'جميع المحتويات محمية بحقوق الطبع والنشر.'
+  },
+  fr: {
+    title: 'Conditions d\'Utilisation',
+    description: 'Les conditions et avis qui régissent l\'utilisation du site',
+    acceptance: 'En acceptant ces conditions, vous acceptez d\'utiliser le site conformément à ces conditions.',
+    restrictions: 'Il est interdit d\'utiliser le site à des fins illégales ou nuisibles.',
+    intellectual: 'Tout le contenu est protégé par les droits d\'auteur.'
+  },
+  en: {
+    title: 'Terms of Use',
+    description: 'The terms and conditions that govern the use of the site',
+    acceptance: 'By accepting these terms, you agree to use the site in accordance with these terms.',
+    restrictions: 'It is prohibited to use the site for any illegal or harmful purpose.',
+    intellectual: 'All content is protected by copyright.'
   }
 };
 
