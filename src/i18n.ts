@@ -412,6 +412,49 @@ export const contentPages = {
   },
 };
 
+// Home page translations
+export const homePage = {
+  exampleProjects: {
+    title: {
+      ar: '💡 أمثلة على مشاريع برمجية بسيطة',
+      fr: '💡 Exemples de projets de programmation simples',
+      en: '💡 Examples of Simple Programming Projects',
+    },
+  },
+};
+
+// Videos page translations
+export const videosPage = {
+  title: {
+    ar: '📹 أهم الفيديوهات التعليمية',
+    fr: '📹 Vidéos Éducatives Importantes',
+    en: '📹 Important Educational Videos',
+  },
+  description: {
+    ar: 'ستجد هنا أهم الفيديوهات التعليمية في مجال البرمجة والتقنية:',
+    fr: 'Vous trouverez ici les vidéos éducatives les plus importantes dans le domaine de la programmation et de la technologie:',
+    en: 'Here you will find the most important educational videos in the field of programming and technology:',
+  },
+};
+
+// Tools page translations
+export const toolsPage = {
+  noResults: {
+    ar: 'لا توجد نتائج مطابقة لبحثك.',
+    fr: 'Aucun résultat ne correspond à votre recherche.',
+    en: 'No results match your search.',
+  },
+};
+
+// Terms page translations
+export const termsPage = {
+  title: {
+    ar: 'شروط الاستخدام',
+    fr: 'Conditions d\'Utilisation',
+    en: 'Terms of Use',
+  },
+};
+
 // Helper function to get translated text
 export const t = (key: string, language: Language, params: Record<string, any> = {}): string | any => {
   // Split the key by dots to access nested properties
