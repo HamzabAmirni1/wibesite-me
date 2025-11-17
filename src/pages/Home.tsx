@@ -6,7 +6,6 @@ import Timeline from '../components/Timeline';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import Card from '../components/Card';
-import AdContainer from '../components/ads/AdContainer';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -43,7 +42,15 @@ const Home: React.FC = () => {
 
       {/* Banner Ad */}
       <motion.div variants={itemVariants}>
-        <AdContainer type="banner" size="medium" />
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-4xl mx-auto rounded-2xl border-2 border-dashed border-primary/40 bg-white/70 shadow-sm overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+              alt="مساحة إعلانية"
+              className="w-full h-32 sm:h-40 object-cover"
+            />
+          </div>
+        </div>
       </motion.div>
       
       <motion.div variants={itemVariants}>
@@ -69,7 +76,6 @@ const Home: React.FC = () => {
 
       {/* Inline Ad */}
       <motion.div variants={itemVariants}>
-        <AdContainer type="inline" variant="card" />
       </motion.div>
       
       <motion.div variants={itemVariants}>

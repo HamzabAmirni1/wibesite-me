@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { navLinks } from '../constants';
 import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
-import AdContainer from './ads/AdContainer';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getNavLabel } from '../i18n';
 
 interface SidebarProps {
   activeSection: string;
@@ -12,6 +13,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOpen }) => {
   const navContainerRef = useRef<HTMLDivElement>(null);
+  const { language, setLanguage } = useLanguage();
 
   return (
     <aside className={cn(
@@ -26,6 +28,35 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
         </div>
         <h1 className="text-xl font-bold">حمزة اعمرني</h1>
         <p className="text-sm text-white/80 mt-1">مبرمج وصانع محتوى تقني</p>
+        <div className="mt-4 flex justify-center gap-2 text-xs">
+          <button
+            onClick={() => setLanguage('ar')}
+            className={cn(
+              'px-3 py-1 rounded-full border border-white/40',
+              language === 'ar' ? 'bg-white text-primary' : 'bg-white/10 text-white/80'
+            )}
+          >
+            AR
+          </button>
+          <button
+            onClick={() => setLanguage('fr')}
+            className={cn(
+              'px-3 py-1 rounded-full border border-white/40',
+              language === 'fr' ? 'bg-white text-primary' : 'bg-white/10 text-white/80'
+            )}
+          >
+            FR
+          </button>
+          <button
+            onClick={() => setLanguage('en')}
+            className={cn(
+              'px-3 py-1 rounded-full border border-white/40',
+              language === 'en' ? 'bg-white text-primary' : 'bg-white/10 text-white/80'
+            )}
+          >
+            EN
+          </button>
+        </div>
         <div className="w-1/2 h-px bg-white/20 mx-auto mt-6"></div>
       </div>
       
@@ -47,16 +78,11 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               <link.icon className="w-5 h-5" />
-              {link.title}
+              {getNavLabel(language, link.id)}
             </motion.a>
           ))}
         </nav>
         
-        {/* Sidebar Ads */}
-        <div className="p-6 pt-0">
-          <AdContainer type="sidebar" maxAds={2} />
-        </div>
-
         {/* Footer Links */}
         <div className="p-6 pt-0 border-t border-white/20">
           <div className="text-xs text-white/60 space-y-2">
@@ -65,13 +91,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
                 onClick={() => setActiveSection('privacy')}
                 className="hover:text-white transition-colors"
               >
-                سياسة الخصوصية
+                {getNavLabel(language, 'privacy')}
               </button>
               <button 
                 onClick={() => setActiveSection('terms')}
                 className="hover:text-white transition-colors"
               >
-                شروط الاستخدام
+                {getNavLabel(language, 'terms')}
               </button>
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
@@ -79,21 +105,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
                 onClick={() => setActiveSection('contact')}
                 className="hover:text-white transition-colors"
               >
-                اتصل بنا
+                {getNavLabel(language, 'contact')}
               </button>
               <button 
                 onClick={() => setActiveSection('disclaimer')}
                 className="hover:text-white transition-colors"
               >
-                إخلاء المسؤولية
-              </button>
-            </div>
-            <div className="flex justify-center mt-3">
-              <button 
-                onClick={() => setActiveSection('admanager')}
-                className="text-yellow-300 hover:text-yellow-100 transition-colors text-xs"
-              >
-                إدارة الإعلانات
+                {getNavLabel(language, 'disclaimer')}
               </button>
             </div>
           </div>

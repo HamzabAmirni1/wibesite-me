@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { heroName, introScreenSubtitle } from '../i18n';
 
 interface IntroAnimationProps {
   onAnimationComplete: () => void;
 }
 
 const IntroAnimation: React.FC<IntroAnimationProps> = ({ onAnimationComplete }) => {
+  const { language } = useLanguage();
   useEffect(() => {
     const timer = setTimeout(() => {
       onAnimationComplete();
@@ -85,8 +88,8 @@ const IntroAnimation: React.FC<IntroAnimationProps> = ({ onAnimationComplete }) 
             animate="visible"
             variants={subtitleVariants}
         >
-            <h1 className="text-2xl md:text-3xl font-bold tracking-wider">حمزة اعمرني</h1>
-            <p className="text-lg md:text-xl text-white/70 mt-1">مبرمج وصانع محتوى تقني</p>
+            <h1 className="text-2xl md:text-3xl font-bold tracking-wider">{heroName[language]}</h1>
+            <p className="text-lg md:text-xl text-white/70 mt-1">{introScreenSubtitle[language]}</p>
         </motion.div>
     </motion.div>
   );
