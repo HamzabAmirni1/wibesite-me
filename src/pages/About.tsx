@@ -8,6 +8,7 @@ import SkillsCard from '../components/SkillsCard';
 import Timeline from '../components/Timeline';
 import CallToAction from '../components/CallToAction';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useNavigation } from '../contexts/NavigationContext';
 import { t } from '../i18n';
 
 const containerVariants = {
@@ -30,6 +31,7 @@ const itemVariants = {
 };
 
 const About: React.FC = () => {
+  const { setActiveSection } = useNavigation();
   return (
     <motion.div 
       className="space-y-8"
@@ -52,9 +54,17 @@ const About: React.FC = () => {
                     {aboutContent.role}
                 </span>
             </div>
-            <p 
+            <p
               className="text-lg leading-relaxed text-dark-color/70 max-w-3xl mx-auto mt-6"
               dangerouslySetInnerHTML={{ __html: aboutContent.description }}
+              onClick={(e) => {
+                const target = e.target as HTMLElement;
+                const anchor = target.closest('a') as HTMLAnchorElement | null;
+                if (anchor && anchor.getAttribute('href') === '/contact') {
+                  e.preventDefault();
+                setActiveSection('contact');
+                }
+              }}
             />
             <SocialLinks />
         </Card>
