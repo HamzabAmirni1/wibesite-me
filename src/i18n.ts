@@ -416,9 +416,36 @@ export const contentPages = {
 export const homePage = {
   exampleProjects: {
     title: {
-      ar: '💡 أمثلة على مشاريع برمجية بسيطة',
-      fr: '💡 Exemples de projets de programmation simples',
-      en: '💡 Examples of Simple Programming Projects',
+      ar: 'أمثلة على مشاريع برمجية بسيطة',
+      fr: 'Exemples de projets de programmation simples',
+      en: 'Examples of Simple Programming Projects',
+    },
+    projects: {
+      calculator: {
+        ar: 'آلة حاسبة بسيطة باستخدام HTML وCSS وJavaScript',
+        fr: 'Calculatrice simple utilisant HTML, CSS et JavaScript',
+        en: 'Simple calculator using HTML, CSS and JavaScript',
+      },
+      portfolio: {
+        ar: 'موقع صفحة تعريفية شخصية (Portfolio)',
+        fr: 'Site de portefeuille personnel',
+        en: 'Personal portfolio website',
+      },
+      todoList: {
+        ar: 'تطبيق قائمة مهام (To-Do List)',
+        fr: 'Application de liste de tâches',
+        en: 'To-Do List Application',
+      },
+      currencyConverter: {
+        ar: 'برنامج لتحويل العملات',
+        fr: 'Programme de conversion de devises',
+        en: 'Currency Converter Program',
+      },
+      ticTacToe: {
+        ar: 'لعبة XO (تيك تاك تو) على الويب',
+        fr: 'Jeu de Morpion sur le Web',
+        en: 'Tic Tac Toe Game on Web',
+      },
     },
   },
 };
@@ -426,9 +453,9 @@ export const homePage = {
 // Videos page translations
 export const videosPage = {
   title: {
-    ar: '📹 أهم الفيديوهات التعليمية',
-    fr: '📹 Vidéos Éducatives Importantes',
-    en: '📹 Important Educational Videos',
+    ar: 'أهم الفيديوهات التعليمية',
+    fr: 'Vidéos Éducatives Importantes',
+    en: 'Important Educational Videos',
   },
   description: {
     ar: 'ستجد هنا أهم الفيديوهات التعليمية في مجال البرمجة والتقنية:',
@@ -452,6 +479,11 @@ export const termsPage = {
     ar: 'شروط الاستخدام',
     fr: 'Conditions d\'Utilisation',
     en: 'Terms of Use',
+  },
+  disclaimer: {
+    ar: 'الشروط والأحكام التي تحكم استخدام موقع حمزة اعمرني',
+    fr: 'Les conditions et avis qui régissent l\'utilisation du site de Hamza Amrni',
+    en: 'The terms and notices that govern the use of Hamza Amrni\'s website',
   },
 };
 
@@ -478,6 +510,18 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     contactPage,
     aboutPage,
     contentPages,
+    homePage,
+    videosPage,
+    toolsPage,
+    termsPage,
+    programmingPage: programmingPageLabels,
+    funPage: funPageLabels,
+    botsPage: botsPageLabels,
+    articlesPage: articlesPageLabels,
+    chatPage: chatPageLabels,
+    privacyPage: privacyPageLabels,
+    disclaimerPage: disclaimerPageLabels,
+    contactPageLabels,
   };
 
   let value: any = translations;
@@ -645,7 +689,7 @@ export const chatPageLabels = {
 
 export const privacyPageLabels = {
   ar: {
-    title: '🔒 سياسة الخصوصية',
+    title: 'سياسة الخصوصية',
     description: 'كيف نحافظ على بيانات خصوصيتك',
     dataCollection: 'جمع البيانات',
     dataUsage: 'استخدام البيانات',
@@ -653,7 +697,7 @@ export const privacyPageLabels = {
     contactUsAbout: 'تواصل معنا بشأن الخصوصية'
   },
   fr: {
-    title: '🔒 Politique de Confidentialité',
+    title: 'Politique de Confidentialité',
     description: 'Comment nous protégeons vos données personnelles',
     dataCollection: 'Collecte de données',
     dataUsage: 'Utilisation des données',
@@ -661,7 +705,7 @@ export const privacyPageLabels = {
     contactUsAbout: 'Contactez-nous au sujet de la confidentialité'
   },
   en: {
-    title: '🔒 Privacy Policy',
+    title: 'Privacy Policy',
     description: 'How we protect your personal data',
     dataCollection: 'Data Collection',
     dataUsage: 'Data Usage',
@@ -672,21 +716,21 @@ export const privacyPageLabels = {
 
 export const disclaimerPageLabels = {
   ar: {
-    title: '⚠️ إخلاء المسؤولية',
+    title: 'إخلاء المسؤولية',
     description: 'الإخلاء القانوني للموقع',
     accuracy: 'دقة المعلومات',
     responsibility: 'المسؤولية',
     usage: 'الاستخدام'
   },
   fr: {
-    title: '⚠️ Clause de non-responsabilité',
+    title: 'Clause de non-responsabilité',
     description: 'Avertissement légal du site',
     accuracy: 'Exactitude des informations',
     responsibility: 'Responsabilité',
     usage: 'Utilisation'
   },
   en: {
-    title: '⚠️ Disclaimer',
+    title: 'Disclaimer',
     description: 'Legal disclaimer for the website',
     accuracy: 'Accuracy of Information',
     responsibility: 'Responsibility',

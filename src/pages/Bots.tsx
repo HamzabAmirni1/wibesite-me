@@ -55,6 +55,8 @@ const BotCard: React.FC<typeof botsContent.bots[0]> = ({ IconComponent, title, d
 );
 
 const Bots: React.FC = () => {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       variants={containerVariants}
@@ -64,8 +66,8 @@ const Bots: React.FC = () => {
     >
         <motion.div variants={itemVariants}>
             <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-                <h1 className="text-4xl font-bold text-dark-color">{botsContent.title}</h1>
-                <p className="text-lg text-dark-color/70 mt-4">{botsContent.description}</p>
+                <h1 className="text-4xl font-bold text-dark-color">🤖 {t('botsPage.title', language)}</h1>
+                <p className="text-lg text-dark-color/70 mt-4">{t('botsPage.description', language)}</p>
             </Card>
         </motion.div>
 

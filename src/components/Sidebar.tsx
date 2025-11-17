@@ -96,13 +96,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
                 onClick={() => setActiveSection('privacy')}
                 className="hover:text-white transition-colors"
               >
-                {t('nav.privacy', language) || 'سياسة الخصوصية'}
+                {t('navLabels.privacy', language) || 'سياسة الخصوصية'}
               </button>
               <button 
                 onClick={() => setActiveSection('terms')}
                 className="hover:text-white transition-colors"
               >
-                {t('nav.terms', language) || 'شروط الاستخدام'}
+                {t('navLabels.terms', language) || 'شروط الاستخدام'}
               </button>
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
