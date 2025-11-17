@@ -534,6 +534,27 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     contactPageLabels,
   };
 
+  // Check if first key maps to a language-first structure (like homePage, videosPage, termsPage)
+  if (keys[0] && translations[keys[0]] && (translations[keys[0]].ar || translations[keys[0]].fr || translations[keys[0]].en)) {
+    // Language-first structure
+    let value: any = (translations[keys[0]] as any)[language];
+    
+    // Traverse the rest of the keys
+    for (let i = 1; i < keys.length; i++) {
+      if (value === undefined || value === null) break;
+      value = value[keys[i]];
+    }
+    
+    if (typeof value === 'string') {
+      return Object.entries(params).reduce(
+        (str, [param, val]) => str.replace(new RegExp(`{{${param}}}`, 'g'), String(val)),
+        value
+      );
+    }
+    return key;
+  }
+
+  // Regular structure traversal
   let value: any = translations;
 
   // Traverse the object to get the value
