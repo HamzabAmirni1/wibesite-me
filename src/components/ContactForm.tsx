@@ -51,6 +51,17 @@ ${formData.message}
     };
 
     const subject = `[${formData.priority}] ${formData.requestType} من ${formData.name || 'زائر'}`;
+    const emailBody = `
+        الاسم: ${formData.name}
+        البريد الإلكتروني: ${formData.email}
+        نوع الطلب: ${formData.requestType}
+        الأولوية: ${formData.priority}
+        
+        الرسالة:
+        ${formData.message}
+        
+        تم الإرسال من الموقع: ${window.location.href}
+    `;
 
     return (
         <motion.form
@@ -60,7 +71,11 @@ ${formData.message}
             variants={itemVariants}
         >
             <input type="hidden" name="_subject" value={subject} />
+            <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
+            <input type="hidden" name="_autoresponse" value="شكراً لتواصلك معنا! سنقوم بالرد عليك في أقرب وقت ممكن." />
+            <input type="hidden" name="_next" value={window.location.href} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name Field */}
@@ -142,7 +157,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <Mail size={22} />
-                    إرسال عبر البريد
+                    إرسال الرسالة
                 </motion.button>
                 <motion.button
                     type="button"
@@ -152,7 +167,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <MessageSquare size={22} />
-                    إرسال عبر واتساب
+                    محادثة واتساب
                 </motion.button>
             </div>
         </motion.form>

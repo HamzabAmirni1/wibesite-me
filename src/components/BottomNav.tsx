@@ -3,7 +3,7 @@ import { navLinks } from '../constants';
 import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
-import { getNavLabel } from '../i18n';
+import { t } from '../i18n';
 
 interface BottomNavProps {
   activeSection: string;
@@ -28,7 +28,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSection }
             )}
           >
             <link.icon className="w-6 h-6" />
-            <span className="text-xs font-semibold">{getNavLabel(language, link.id)}</span>
+            <span className="text-xs font-semibold">{t(`navLabels.${link.id}`, language)}</span>
             {activeSection === link.id && (
               <motion.div 
                 className="absolute bottom-2 w-6 h-1 bg-primary rounded-full"

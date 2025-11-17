@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 import SocialLinks from './SocialLinks';
 import { useLanguage } from '../contexts/LanguageContext';
-import { heroName, heroSubtitle, heroIntro } from '../i18n';
+import { t } from '../i18n';
 
 const ProfileSection: React.FC = () => {
     const { language } = useLanguage();
@@ -17,16 +17,16 @@ const ProfileSection: React.FC = () => {
             >
                 <span className="text-6xl font-bold text-primary">HA</span>
             </motion.div>
-            <h1 className="text-4xl font-bold text-dark-color">{heroName[language]}</h1>
+            <h1 className="text-4xl font-bold text-dark-color">{t('heroContent.name', language)}</h1>
             <div className="my-4 inline-block">
                 <span className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full font-semibold shadow-md text-base inline-flex items-center gap-2">
                     🚀
-                    <span>{heroSubtitle[language]}</span>
+                    <span>{t('heroContent.subtitle', language)}</span>
                 </span>
             </div>
             <p className="text-lg leading-relaxed text-dark-color/70 max-w-3xl mx-auto mt-6">
-                {heroIntro[language]} 🎉<br /><br />
-                <strong className="text-primary text-xl">🎯 معًا نحو مستقبل رقمي أفضل!</strong>
+                {t('heroContent.intro', language)} 🎉<br /><br />
+                <strong className="text-primary text-xl">🎯 {t('heroContent.cta', language)}</strong>
             </p>
             <SocialLinks />
         </Card>

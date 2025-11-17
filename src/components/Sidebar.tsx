@@ -3,7 +3,7 @@ import { navLinks } from '../constants';
 import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
-import { getNavLabel } from '../i18n';
+import { t } from '../i18n';
 
 interface SidebarProps {
   activeSection: string;
@@ -78,7 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
               transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               <link.icon className="w-5 h-5" />
-              {getNavLabel(language, link.id)}
+              {t(`navLabels.${link.id}`, language)}
             </motion.a>
           ))}
         </nav>
@@ -91,13 +91,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
                 onClick={() => setActiveSection('privacy')}
                 className="hover:text-white transition-colors"
               >
-                {getNavLabel(language, 'privacy')}
+                {t('navLabels.privacy', language)}
               </button>
               <button 
                 onClick={() => setActiveSection('terms')}
                 className="hover:text-white transition-colors"
               >
-                {getNavLabel(language, 'terms')}
+                {t('navLabels.terms', language)}
               </button>
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
@@ -105,13 +105,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
                 onClick={() => setActiveSection('contact')}
                 className="hover:text-white transition-colors"
               >
-                {getNavLabel(language, 'contact')}
+                {t('navLabels.contact', language)}
               </button>
               <button 
                 onClick={() => setActiveSection('disclaimer')}
                 className="hover:text-white transition-colors"
               >
-                {getNavLabel(language, 'disclaimer')}
+                {t('navLabels.disclaimer', language)}
               </button>
             </div>
           </div>
