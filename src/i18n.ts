@@ -617,6 +617,12 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     footerTranslations,
     errorMessages,
     buttonLabels,
+    sidebarProfile,
+    skillsSection,
+    journeySection,
+    philosophySection,
+    socialMediaLinks,
+    channelNames,
   };
 
   // Check if first key maps to a language-first structure (like homePage, videosPage, termsPage)
@@ -1415,6 +1421,198 @@ export const adManagerTranslations = {
     impressions: 'Impressions',
     clicks: 'Clicks',
     ctr: 'Click rate'
+  }
+};
+
+// Additional comprehensive translations
+export const sidebarProfile = {
+  ar: {
+    name: 'حمزة اعمرني',
+    role: '👨 مطور ويب متخصص',
+    description: 'أهلا وسهلا! أنا حمزة اعمرني، مطور ويب متخصص عندي خبرة كبيرة في مجال البرمجيات والتقنيات. 🙌\n\nأعمل في مجالات الويب ديفلوبمنت والتطبيقات والبرمجيات والتقنيات الحديثة.\n\nأحب التعلم المستمر وتطوير المهارات في مجالات البرمجة والتصميم والتكنولوجيا.\n\nإذا كان لديك أي استفسار أو تريد التعاون معي، فلا تتردد في التواصل. 🔥'
+  },
+  fr: {
+    name: 'Hamza Amrni',
+    role: 'Développeur et créateur de contenu tech',
+    description: 'Bonjour et bienvenue ! Je suis Hamza Amrni, un développeur web spécialisé avec une grande expérience dans le domaine des logiciels et des technologies. 🙌\n\nJe travaille dans les domaines du développement web, des applications, des logiciels et des technologies modernes.\n\nJ\'aime l\'apprentissage continu et le développement de compétences en programmation, conception et technologie.\n\nSi vous avez des questions ou souhaitez collaborer avec moi, n\'hésitez pas à me contacter. 🔥'
+  },
+  en: {
+    name: 'Hamza Amrni',
+    role: 'Professional Web Developer',
+    description: 'Hello and welcome! I\'m Hamza Amrni, a professional web developer with extensive experience in software and technologies. 🙌\n\nI work in web development, applications, software, and modern technologies.\n\nI love continuous learning and developing skills in programming, design, and technology.\n\nIf you have any questions or would like to collaborate, feel free to get in touch. 🔥'
+  }
+};
+
+// Skills section translations
+export const skillsSection = {
+  ar: {
+    title: 'مهاراتي',
+    htmlCssJs: 'HTML, CSS, JS',
+    htmlCssJsPercent: '95%',
+    phpPython: 'PHP, Python',
+    phpPythonPercent: '90%',
+    uiUx: 'UI/UX Design',
+    uiUxPercent: '85%',
+    problemSolving: 'Problem Solving',
+    problemSolvingPercent: '92%',
+    hardwareSoftware: 'Hardware & Software',
+    hardwareSoftwarePercent: '88%'
+  },
+  fr: {
+    title: 'Mes compétences',
+    htmlCssJs: 'HTML, CSS, JS',
+    htmlCssJsPercent: '95%',
+    phpPython: 'PHP, Python',
+    phpPythonPercent: '90%',
+    uiUx: 'UI/UX Design',
+    uiUxPercent: '85%',
+    problemSolving: 'Résolution de problèmes',
+    problemSolvingPercent: '92%',
+    hardwareSoftware: 'Matériel et logiciel',
+    hardwareSoftwarePercent: '88%'
+  },
+  en: {
+    title: 'My Skills',
+    htmlCssJs: 'HTML, CSS, JS',
+    htmlCssJsPercent: '95%',
+    phpPython: 'PHP, Python',
+    phpPythonPercent: '90%',
+    uiUx: 'UI/UX Design',
+    uiUxPercent: '85%',
+    problemSolving: 'Problem Solving',
+    problemSolvingPercent: '92%',
+    hardwareSoftware: 'Hardware & Software',
+    hardwareSoftwarePercent: '88%'
+  }
+};
+
+// Journey section translations
+export const journeySection = {
+  ar: {
+    title: '🚀 مقتطف من مسيرتي',
+    items: [
+      'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
+      'أكملت الدراسة الثانوية في 2019.',
+      'عملت في عدة مشاريع برمجية مهمة.',
+      'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.'
+    ]
+  },
+  fr: {
+    title: '🚀 Aperçu de mon parcours',
+    items: [
+      'J\'ai commencé à apprendre la programmation à un jeune âge et j\'ai appris par la pratique.',
+      'J\'ai terminé mes études secondaires en 2019.',
+      'J\'ai travaillé sur plusieurs projets logiciels importants.',
+      'J\'ai acquis une grande expérience dans les domaines de la programmation et du web.'
+    ]
+  },
+  en: {
+    title: '🚀 Highlights of My Journey',
+    items: [
+      'I started learning software at an early age and learned through practice.',
+      'I completed high school in 2019.',
+      'I have worked on several important software projects.',
+      'I have gained extensive experience in programming and web development.'
+    ]
+  }
+};
+
+// Philosophy section translations
+export const philosophySection = {
+  ar: {
+    title: '🎯 فلسفتي',
+    continuousLearning: {
+      title: 'التعليم المستمر',
+      description: 'أؤمن بأن التعليم المستمر يدفعك للأمام والمعرفة تزداد كلما تعلمت أكثر.'
+    },
+    qualityDelivery: {
+      title: 'تقديم الجودة',
+      description: 'أركز على تقديم جودة عالية في كل مشاريعي.'
+    },
+    designCreativity: {
+      title: 'التصميم والإبداع',
+      description: 'أحب تقديم أفكار جديدة وحلول مبتكرة وجميلة.'
+    }
+  },
+  fr: {
+    title: '🎯 Ma philosophie',
+    continuousLearning: {
+      title: 'Apprentissage continu',
+      description: 'Je crois que l\'apprentissage continu vous pousse vers l\'avant et que les connaissances augmentent à mesure que vous en apprenez davantage.'
+    },
+    qualityDelivery: {
+      title: 'Fournir de la qualité',
+      description: 'Je me concentre sur la fourniture d\'une qualité élevée dans tous mes projets.'
+    },
+    designCreativity: {
+      title: 'Design et créativité',
+      description: 'J\'aime proposer de nouvelles idées et des solutions innovantes et belles.'
+    }
+  },
+  en: {
+    title: '🎯 My Philosophy',
+    continuousLearning: {
+      title: 'Continuous Learning',
+      description: 'I believe that continuous learning pushes you forward and knowledge increases as you learn more.'
+    },
+    qualityDelivery: {
+      title: 'Deliver Quality',
+      description: 'I focus on delivering high quality in all my projects.'
+    },
+    designCreativity: {
+      title: 'Design & Creativity',
+      description: 'I enjoy presenting new ideas and innovative, beautiful solutions.'
+    }
+  }
+};
+
+// Social media translations
+export const socialMediaLinks = {
+  ar: {
+    facebook: 'الفيسبوك',
+    youtube: 'اليوتيوب',
+    instagram: 'إنستجرام',
+    whatsapp: 'واتساب',
+    telegram: 'تيليجرام',
+    github: 'GitHub',
+    linkedin: 'لينكدإن',
+    twitter: 'تويتر'
+  },
+  fr: {
+    facebook: 'Facebook',
+    youtube: 'YouTube',
+    instagram: 'Instagram',
+    whatsapp: 'WhatsApp',
+    telegram: 'Telegram',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    twitter: 'Twitter'
+  },
+  en: {
+    facebook: 'Facebook',
+    youtube: 'YouTube',
+    instagram: 'Instagram',
+    whatsapp: 'WhatsApp',
+    telegram: 'Telegram',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    twitter: 'Twitter'
+  }
+};
+
+// Channel names translations
+export const channelNames = {
+  ar: {
+    programmingUpdates: 'قناة تحديثات البرمجيات',
+    quranUpdates: 'قناة تحديثات القرآنيات'
+  },
+  fr: {
+    programmingUpdates: 'Canal des mises à jour de programmation',
+    quranUpdates: 'Canal des mises à jour du Coran'
+  },
+  en: {
+    programmingUpdates: 'Programming Updates Channel',
+    quranUpdates: 'Quran Updates Channel'
   }
 };
 
