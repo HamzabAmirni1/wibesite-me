@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Cookie, Shield, Settings } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t, cookieConsent } from '../i18n';
 
 const CookieConsent: React.FC = () => {
+  const { language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -55,14 +58,12 @@ const CookieConsent: React.FC = () => {
             
             <div className="flex-1">
               <h3 className="text-lg font-bold text-gray-800 mb-2">
-                🍪 نحن نستخدم ملفات تعريف الارتباط
+                {t('cookieConsent.title', language)}
               </h3>
               
               <p className="text-gray-600 mb-4 leading-relaxed">
-                نستخدم ملفات تعريف الارتباط لتحسين تجربتك وعرض إعلانات مخصصة وتحليل حركة المرور. 
-                من خلال الاستمرار في استخدام موقعنا، فإنك توافق على استخدام ملفات تعريف الارتباط وفقاً لـ
-                <a href="#privacy" className="text-primary hover:underline mx-1">سياسة الخصوصية</a>
-                الخاصة بنا.
+                {t('cookieConsent.description', language)}
+                <a href="#privacy" className="text-primary hover:underline mx-1">{t('cookieConsent.privacyLink', language)}</a>
               </p>
 
               {showDetails && (
@@ -75,32 +76,32 @@ const CookieConsent: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Shield size={16} className="text-green-600" />
-                        <span className="font-medium">ملفات تعريف الارتباط الضرورية</span>
+                        <span className="font-medium">{t('cookieConsent.necessary', language)}</span>
                       </div>
-                      <span className="text-green-600 text-xs">مطلوبة</span>
+                      <span className="text-green-600 text-xs">{t('cookieConsent.necessaryRequired', language)}</span>
                     </div>
                     <p className="text-gray-600 text-xs">
-                      ضرورية لعمل الموقع الأساسي وحفظ تفضيلاتك
+                      {t('cookieConsent.necessaryDesc', language)}
                     </p>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Settings size={16} className="text-blue-600" />
-                        <span className="font-medium">ملفات تعريف الارتباط التحليلية</span>
+                        <span className="font-medium">{t('cookieConsent.analytics', language)}</span>
                       </div>
                     </div>
                     <p className="text-gray-600 text-xs">
-                      تساعدنا في فهم كيفية استخدام الزوار للموقع لتحسين الأداء
+                      {t('cookieConsent.analyticsDesc', language)}
                     </p>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Cookie size={16} className="text-purple-600" />
-                        <span className="font-medium">ملفات تعريف الارتباط الإعلانية</span>
+                        <span className="font-medium">{t('cookieConsent.advertising', language)}</span>
                       </div>
                     </div>
                     <p className="text-gray-600 text-xs">
-                      تُستخدم لعرض إعلانات مخصصة وذات صلة بك
+                      {t('cookieConsent.advertisingDesc', language)}
                     </p>
                   </div>
                 </motion.div>
@@ -111,21 +112,21 @@ const CookieConsent: React.FC = () => {
                   onClick={acceptAll}
                   className="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors"
                 >
-                  قبول جميع ملفات تعريف الارتباط
+                  {t('cookieConsent.acceptAll', language)}
                 </button>
                 
                 <button
                   onClick={acceptNecessary}
                   className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors"
                 >
-                  الضرورية فقط
+                  {t('cookieConsent.necessaryOnly', language)}
                 </button>
                 
                 <button
                   onClick={() => setShowDetails(!showDetails)}
                   className="text-primary hover:underline text-sm font-medium"
                 >
-                  {showDetails ? 'إخفاء التفاصيل' : 'عرض التفاصيل'}
+                  {showDetails ? t('cookieConsent.hideDetails', language) : t('cookieConsent.showDetails', language)}
                 </button>
               </div>
             </div>

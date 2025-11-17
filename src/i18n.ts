@@ -603,10 +603,14 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     funPage: funPageLabels,
     botsPage: botsPageLabels,
     articlesPage: articlesPageLabels,
+    articlesPageTranslations: articlesPageTranslations,
     chatPage: chatPageLabels,
     privacyPage: privacyPageLabels,
     disclaimerPage: disclaimerPageLabels,
     contactPageLabels,
+    callToAction,
+    sidebar,
+    contactFormLabels,
   };
 
   // Check if first key maps to a language-first structure (like homePage, videosPage, termsPage)
@@ -925,6 +929,186 @@ export const termsPageLabels = {
     ipDesc: 'All content is protected by copyright.',
     disclaimerTitle: '6. Disclaimer',
     disclaimerDesc: 'The site and content are provided "as is" without warranties.'
+  }
+};
+
+// Cookie Consent translations
+export const cookieConsent = {
+  ar: {
+    title: '🍪 نحن نستخدم ملفات تعريف الارتباط',
+    description: 'نستخدم ملفات تعريف الارتباط لتحسين تجربتك وعرض إعلانات مخصصة وتحليل حركة المرور. من خلال الاستمرار في استخدام موقعنا، فإنك توافق على استخدام ملفات تعريف الارتباط وفقاً لسياسة الخصوصية الخاصة بنا.',
+    privacyLink: 'سياسة الخصوصية',
+    acceptAll: 'قبول جميع ملفات تعريف الارتباط',
+    necessaryOnly: 'الضرورية فقط',
+    showDetails: 'عرض التفاصيل',
+    hideDetails: 'إخفاء التفاصيل',
+    necessary: 'ملفات تعريف الارتباط الضرورية',
+    necessaryRequired: 'مطلوبة',
+    necessaryDesc: 'ضرورية لعمل الموقع الأساسي وحفظ تفضيلاتك',
+    analytics: 'ملفات تعريف الارتباط التحليلية',
+    analyticsDesc: 'تساعدنا في فهم كيفية استخدام الزوار للموقع لتحسين الأداء',
+    advertising: 'ملفات تعريف الارتباط الإعلانية',
+    advertisingDesc: 'تُستخدم لعرض إعلانات مخصصة وذات صلة بك'
+  },
+  fr: {
+    title: '🍪 Nous utilisons des cookies',
+    description: 'Nous utilisons des cookies pour améliorer votre expérience, afficher des publicités personnalisées et analyser le trafic. En continuant à utiliser notre site, vous acceptez l\'utilisation de cookies conformément à notre politique de confidentialité.',
+    privacyLink: 'Politique de confidentialité',
+    acceptAll: 'Accepter tous les cookies',
+    necessaryOnly: 'Seulement les nécessaires',
+    showDetails: 'Afficher les détails',
+    hideDetails: 'Masquer les détails',
+    necessary: 'Cookies nécessaires',
+    necessaryRequired: 'Obligatoire',
+    necessaryDesc: 'Nécessaires pour le fonctionnement du site et la sauvegarde de vos préférences',
+    analytics: 'Cookies analytiques',
+    analyticsDesc: 'Nous aident à comprendre comment les visiteurs utilisent le site pour améliorer les performances',
+    advertising: 'Cookies publicitaires',
+    advertisingDesc: 'Utilisés pour afficher des publicités personnalisées et pertinentes'
+  },
+  en: {
+    title: '🍪 We use cookies',
+    description: 'We use cookies to improve your experience, display personalized ads, and analyze traffic. By continuing to use our site, you agree to the use of cookies in accordance with our privacy policy.',
+    privacyLink: 'Privacy Policy',
+    acceptAll: 'Accept all cookies',
+    necessaryOnly: 'Necessary only',
+    showDetails: 'Show details',
+    hideDetails: 'Hide details',
+    necessary: 'Necessary cookies',
+    necessaryRequired: 'Required',
+    necessaryDesc: 'Essential for site functionality and saving your preferences',
+    analytics: 'Analytics cookies',
+    analyticsDesc: 'Help us understand how visitors use the site to improve performance',
+    advertising: 'Advertising cookies',
+    advertisingDesc: 'Used to display personalized and relevant ads'
+  }
+};
+
+// Contact Form translations
+export const contactFormTranslations = {
+  ar: {
+    nameRequired: 'الرجاء إدخال الاسم والرسالة على الأقل',
+    sending: 'جاري الإرسال...',
+    sent: 'تم الإرسال بنجاح!',
+    error: 'حدث خطأ في الإرسال',
+    success: 'شكراً لتواصلك معنا! لقد تلقينا رسالتك وسنقوم بالرد عليك في أقرب فرصة. نقدّر اهتمامك!',
+    newMessageFromSite: 'رسالة جديدة من موقعي',
+    name: 'الاسم',
+    email: 'البريد الإلكتروني',
+    requestType: 'نوع الطلب',
+    priority: 'الأولوية',
+    notSpecified: 'لم يحدد',
+    message: 'الرسالة',
+    from: 'من',
+    visitor: 'زائر',
+    sentFromSite: 'تم الإرسال من الموقع'
+  },
+  fr: {
+    nameRequired: 'Veuillez saisir au moins le nom et le message',
+    sending: 'Envoi en cours...',
+    sent: 'Envoyé avec succès!',
+    error: 'Erreur lors de l\'envoi',
+    success: 'Merci de nous avoir contactés! Nous avons reçu votre message et vous répondrons dès que possible. Nous apprécions votre intérêt!',
+    newMessageFromSite: 'Nouveau message de mon site',
+    name: 'Nom',
+    email: 'Email',
+    requestType: 'Type de demande',
+    priority: 'Priorité',
+    notSpecified: 'Non spécifié',
+    message: 'Message',
+    from: 'De',
+    visitor: 'Visiteur',
+    sentFromSite: 'Envoyé depuis le site'
+  },
+  en: {
+    nameRequired: 'Please enter at least name and message',
+    sending: 'Sending...',
+    sent: 'Sent successfully!',
+    error: 'Error sending message',
+    success: 'Thank you for contacting us! We have received your message and will respond to you as soon as possible. We appreciate your interest!',
+    newMessageFromSite: 'New message from my site',
+    name: 'Name',
+    email: 'Email',
+    requestType: 'Request type',
+    priority: 'Priority',
+    notSpecified: 'Not specified',
+    message: 'Message',
+    from: 'From',
+    visitor: 'Visitor',
+    sentFromSite: 'Sent from site'
+  }
+};
+
+// Call to Action translations
+export const callToAction = {
+  ar: {
+    title: 'هل لديك سؤال أو فكرة مشروع؟',
+    description: 'أنا هنا للمساعدة! سواء كنت تحتاج إلى استشارة تقنية، أو ترغب في مناقشة فكرة، أو حتى تريد أن تقول مرحباً، لا تتردد في التواصل معي.',
+    buttonText: 'تواصل معي الآن'
+  },
+  fr: {
+    title: 'Avez-vous une question ou une idée de projet ?',
+    description: 'Je suis ici pour vous aider ! Que vous ayez besoin de conseils techniques, que vous souhaitiez discuter d\'une idée ou simplement dire bonjour, n\'hésitez pas à me contacter.',
+    buttonText: 'Contactez-moi maintenant'
+  },
+  en: {
+    title: 'Do you have a question or project idea?',
+    description: 'I\'m here to help! Whether you need technical consultation, want to discuss an idea, or just want to say hello, feel free to contact me.',
+    buttonText: 'Contact me now'
+  }
+};
+
+// Sidebar translations
+export const sidebar = {
+  ar: {
+    name: 'حمزة اعمرني',
+    title: 'مبرمج وصانع محتوى تقني'
+  },
+  fr: {
+    name: 'Hamza Amrni',
+    title: 'Développeur et créateur de contenu tech'
+  },
+  en: {
+    name: 'Hamza Amrni',
+    title: 'Developer & tech content creator'
+  }
+};
+
+// Articles page translations
+export const articlesPageTranslations = {
+  ar: {
+    tags: 'الوسوم:'
+  },
+  fr: {
+    tags: 'Mots-clés:'
+  },
+  en: {
+    tags: 'Tags:'
+  }
+};
+
+// Contact form translations
+export const contactFormLabels = {
+  ar: {
+    namePlaceholder: 'الاسم الكامل',
+    emailPlaceholder: 'البريد الإلكتروني (اختياري)',
+    messagePlaceholder: 'اكتب رسالتك هنا بالتفصيل...',
+    sendViaEmail: 'إرسال عبر البريد',
+    sendViaWhatsApp: 'إرسال عبر واتساب'
+  },
+  fr: {
+    namePlaceholder: 'Nom complet',
+    emailPlaceholder: 'Email (facultatif)',
+    messagePlaceholder: 'Écrivez votre message en détail ici...',
+    sendViaEmail: 'Envoyer par email',
+    sendViaWhatsApp: 'Envoyer via WhatsApp'
+  },
+  en: {
+    namePlaceholder: 'Full name',
+    emailPlaceholder: 'Email (optional)',
+    messagePlaceholder: 'Write your message in detail here...',
+    sendViaEmail: 'Send via email',
+    sendViaWhatsApp: 'Send via WhatsApp'
   }
 };
 
