@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { socialLinks } from '../constants';
 
-const floatingSocials = socialLinks.filter(link => 
-  ['فيسبوك', 'إنستغرام', 'واتساب'].includes(link.name)
+// Use the exact names from `src/constants.ts` so filtering matches correctly
+const floatingSocials = socialLinks.filter(link =>
+  ['الفيسبوك', 'اليوتيوب', 'إنستجرام', 'واتساب', 'تيليجرام'].includes(link.name)
 );
 
 const containerVariants = {
@@ -23,9 +24,11 @@ const itemVariants = {
 };
 
 const iconColors: { [key: string]: string } = {
-  'فيسبوك': 'hover:bg-blue-600',
-  'إنستغرام': 'hover:bg-pink-500',
+  'الفيسبوك': 'hover:bg-blue-600',
+  'اليوتيوب': 'hover:bg-red-600',
+  'إنستجرام': 'hover:bg-pink-500',
   'واتساب': 'hover:bg-green-500',
+  'تيليجرام': 'hover:bg-sky-500',
 };
 
 const FloatingSocials: React.FC = () => {
