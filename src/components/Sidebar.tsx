@@ -31,8 +31,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
         <div className="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-white/30 shadow-lg bg-white flex items-center justify-center">
             <span className="text-3xl font-bold text-primary">HA</span>
         </div>
-        <h1 className="text-xl font-bold">حمزة اعمرني</h1>
-        <p className="text-sm text-white/80 mt-1">مبرمج وصانع محتوى تقني</p>
+        <h1 className="text-xl font-bold">{t('sidebar.name', language)}</h1>
+        <p className="text-sm text-white/80 mt-1">{t('sidebar.title', language)}</p>
         <div className="mt-4 flex justify-center gap-2 text-xs">
           <button
             onClick={() => setLanguage('ar')}

@@ -3,9 +3,12 @@ import { motion } from 'framer-motion';
 import Card from './Card';
 import { MessageSquare, ArrowLeft } from 'lucide-react';
 import { useNavigation } from '../contexts/NavigationContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 const CallToAction: React.FC = () => {
   const { setActiveSection } = useNavigation();
+  const { language } = useLanguage();
 
   const handleNavigate = () => {
     setActiveSection('chat');
@@ -20,9 +23,9 @@ const CallToAction: React.FC = () => {
     >
       <Card className="bg-gradient-to-br from-primary to-secondary text-white overflow-hidden !p-0">
         <div className="relative z-10 text-center p-6 md:p-10">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">هل لديك سؤال أو فكرة مشروع؟</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-3">{t('callToAction.title', language)}</h3>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            أنا هنا للمساعدة! سواء كنت تحتاج إلى استشارة تقنية، أو ترغب في مناقشة فكرة، أو حتى تريد أن تقول مرحباً، لا تتردد في التواصل معي.
+            {t('callToAction.description', language)}
           </p>
           <motion.button
             onClick={handleNavigate}
@@ -30,7 +33,7 @@ const CallToAction: React.FC = () => {
             whileHover={{ y: -3, scale: 1.05, boxShadow: "0 10px 20px rgba(0,0,0,0.2)" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <span>تواصل معي الآن</span>
+            <span>{t('callToAction.buttonText', language)}</span>
             <ArrowLeft size={22} />
           </motion.button>
         </div>

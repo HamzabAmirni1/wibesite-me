@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { articlesContent } from '../constants';
 import { ArrowRight, User, Calendar, Tag } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 type Article = typeof articlesContent.articles[0];
 
@@ -11,6 +13,8 @@ interface ArticleDetailProps {
 }
 
 const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onBack }) => {
+    const { language } = useLanguage();
+    
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -22,7 +26,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onBack }) => {
                 <div className="p-6">
                     <button onClick={onBack} className="flex items-center gap-2 text-primary font-bold mb-6 hover:underline">
                         <ArrowRight size={20} />
-                        <span>العودة إلى كل المقالات</span>
+                        <span>{t('commonTexts.back', language)}</span>
                     </button>
                 </div>
                 <img src={article.image} alt={article.title} className="w-full h-48 md:h-72 object-cover" />
@@ -45,7 +49,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onBack }) => {
                     <article className="prose prose-lg max-w-none prose-a:text-primary prose-a:font-semibold hover:prose-a:underline prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-ol:text-dark-color/90 prose-ul:text-dark-color/90" dangerouslySetInnerHTML={{ __html: article.content }} />
 
                     <div className="mt-10 pt-6 border-t border-border-color">
-                        <h4 className="font-bold text-lg mb-3">الوسوم:</h4>
+                        <h4 className="font-bold text-lg mb-3">{t('articlesPageTranslations.tags', language)}</h4>
                         <div className="flex flex-wrap gap-2">
                             {article.tags.map(tag => (
                                 <span key={tag} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center gap-1">

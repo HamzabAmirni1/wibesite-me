@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Mail, MessageSquare, ChevronDown, AlertCircle } from 'lucide-react';
 import { chatContent } from '../constants';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t, contactFormTranslations } from '../i18n';
 
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
@@ -13,6 +15,7 @@ const itemVariants = {
 };
 
 const ContactForm: React.FC = () => {
+    const { language } = useLanguage();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -27,19 +30,19 @@ const ContactForm: React.FC = () => {
 
     const handleSendViaWhatsApp = () => {
         if (!formData.name || !formData.message) {
-            alert('الرجاء إدخال الاسم والرسالة على الأقل');
+            alert(t('contactFormTranslations.nameRequired', language));
             return;
         }
 
         const messageBody = `
-رسالة جديدة من موقعي:
+${t('contactFormTranslations.newMessageFromSite', language)}:
 --------------------
-*الاسم:* ${formData.name}
-*البريد الإلكتروني:* ${formData.email || 'لم يحدد'}
-*نوع الطلب:* ${formData.requestType}
-*الأولوية:* ${formData.priority}
+*${t('contactFormTranslations.name', language)}:* ${formData.name}
+*${t('contactFormTranslations.email', language)}:* ${formData.email || t('contactFormTranslations.notSpecified', language)}
+*${t('contactFormTranslations.requestType', language)}:* ${formData.requestType}
+*${t('contactFormTranslations.priority', language)}:* ${formData.priority}
 --------------------
-*الرسالة:*
+*${t('contactFormTranslations.message', language)}:*
 ${formData.message}
         `.trim();
 
@@ -50,17 +53,17 @@ ${formData.message}
         window.open(whatsappUrl, '_blank');
     };
 
-    const subject = `[${formData.priority}] ${formData.requestType} من ${formData.name || 'زائر'}`;
+    const subject = `[${formData.priority}] ${formData.requestType} ${t('contactFormTranslations.from', language)} ${formData.name || t('contactFormTranslations.visitor', language)}`;
     const emailBody = `
-        الاسم: ${formData.name}
-        البريد الإلكتروني: ${formData.email}
-        نوع الطلب: ${formData.requestType}
-        الأولوية: ${formData.priority}
+        ${t('contactFormTranslations.name', language)}: ${formData.name}
+        ${t('contactFormTranslations.email', language)}: ${formData.email}
+        ${t('contactFormTranslations.requestType', language)}: ${formData.requestType}
+        ${t('contactFormTranslations.priority', language)}: ${formData.priority}
         
-        الرسالة:
+        ${t('contactFormTranslations.message', language)}:
         ${formData.message}
         
-        تم الإرسال من الموقع: ${window.location.href}
+        ${t('contactFormTranslations.sentFromSite', language)}: ${window.location.href}
     `;
 
     return (
@@ -74,7 +77,7 @@ ${formData.message}
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
-            <input type="hidden" name="_autoresponse" value="شكراً لتواصلك معنا! لقد تلقينا رسالتك وسنقوم بالرد عليك في أقرب فرصة. نقدّر اهتمامك!" />
+            <input type="hidden" name="_autoresponse" value={t('contactFormTranslations.success', language)} />
             <input type="hidden" name="_next" value={window.location.href} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -84,7 +87,7 @@ ${formData.message}
                     <input
                         type="text"
                         name="name"
-                        placeholder="الاسم الكامل"
+                        placeholder={t('contactPage.namePlaceholder', language)}
                         required
                         value={formData.name}
                         onChange={handleChange}
@@ -98,7 +101,7 @@ ${formData.message}
                     <input
                         type="email"
                         name="email"
-                        placeholder="البريد الإلكتروني (اختياري)"
+                        placeholder={t('contactPage.emailPlaceholder', language)}
                         required
                         value={formData.email}
                         onChange={handleChange}
@@ -139,7 +142,7 @@ ${formData.message}
             <div>
                 <textarea
                     name="message"
-                    placeholder="اكتب رسالتك هنا بالتفصيل..."
+                    placeholder={t('contactPage.messagePlaceholder', language)}
                     rows={6}
                     required
                     value={formData.message}
@@ -157,7 +160,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <Mail size={22} />
-                    إرسال عبر البريد
+                    {t('contactFormTranslations.sendViaEmail', language)}
                 </motion.button>
                 <motion.button
                     type="button"
@@ -167,7 +170,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <MessageSquare size={22} />
-                    إرسال عبر واتساب
+                    {t('contactFormTranslations.sendViaWhatsApp', language)}
                 </motion.button>
             </div>
         </motion.form>

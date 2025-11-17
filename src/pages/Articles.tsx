@@ -56,7 +56,7 @@ const Articles: React.FC = () => {
             <div className="relative">
               <input
                 type="text"
-                placeholder="ابحث عن مقال..."
+                placeholder={t('articlesPageComprehensive.searchPlaceholder', language)}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full p-4 pr-12 text-lg border-2 border-border-color rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition"

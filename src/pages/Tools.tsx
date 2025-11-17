@@ -77,7 +77,7 @@ const Tools: React.FC = () => {
         <motion.div variants={itemVariants} className="relative">
             <input
                 type="text"
-                placeholder="ابحث عن أداة أو موقع..."
+                placeholder={t('toolsPageComprehensive.searchPlaceholder', language)}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full p-4 pr-12 text-lg border-2 border-border-color rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition"

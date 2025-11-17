@@ -56,7 +56,6 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="font-semibold text-gray-800">{t('contactPage.emailLabel', language)}</h3>
                 <p className="text-gray-600">hamzaamirni451@gmail.com</p>
-                <p className="text-gray-600 text-sm">privacy@hamzaamirni.com</p>
               </div>
             </div>
 

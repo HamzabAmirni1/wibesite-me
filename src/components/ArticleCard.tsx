@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { articlesContent } from '../constants';
 import { User, Calendar } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n';
 
 type Article = typeof articlesContent.articles[0];
 
@@ -11,6 +13,8 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, onReadMore }) => {
+  const { language } = useLanguage();
+  
   return (
     <motion.div 
       className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-2xl"
@@ -39,7 +43,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onReadMore }) => {
           onClick={onReadMore}
           className="mt-6 w-full bg-primary text-white font-bold py-3 rounded-lg transition-colors duration-300 hover:bg-primary-dark"
         >
-          اقرأ المزيد
+          {t('commonTexts.readMore', language)}
         </button>
       </div>
     </motion.div>
