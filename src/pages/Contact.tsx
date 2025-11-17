@@ -18,8 +18,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    alert('شكراً لك! تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.');
+    alert(t('contactPage.successMessage', language));
     setFormData({ name: '', email: '', subject: '', priority: '', message: '' });
   };
 
@@ -38,16 +37,16 @@ const Contact: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-        <h1 className="text-4xl font-bold text-dark-color mb-4">تواصل معنا</h1>
+        <h1 className="text-4xl font-bold text-dark-color mb-4">{t('contactPage.title', language)}</h1>
         <p className="text-lg text-dark-color/70">
-          نحن هنا للإجابة على استفساراتك ومساعدتك في رحلتك التقنية
+          {t('contactPage.description', language)}
         </p>
       </Card>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Contact Information */}
         <Card>
-          <h2 className="text-2xl font-bold text-primary mb-6">معلومات التواصل</h2>
+          <h2 className="text-2xl font-bold text-primary mb-6">{t('contactPage.contactInfoTitle', language)}</h2>
           
           <div className="space-y-6">
             <div className="flex items-center gap-4">
@@ -55,7 +54,7 @@ const Contact: React.FC = () => {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800">البريد الإلكتروني</h3>
+                <h3 className="font-semibold text-gray-800">{t('contactPage.emailLabel', language)}</h3>
                 <p className="text-gray-600">hamzaamirni451@gmail.com</p>
                 <p className="text-gray-600 text-sm">privacy@hamzaamirni.com</p>
               </div>
@@ -66,8 +65,8 @@ const Contact: React.FC = () => {
                 <MessageCircle className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800">واتساب</h3>
-                <p className="text-gray-600">متاح من خلال الروابط في الموقع</p>
+                <h3 className="font-semibold text-gray-800">{t('contactPage.whatsappLabel', language)}</h3>
+                <p className="text-gray-600">{t('contactPage.whatsappDesc', language)}</p>
               </div>
             </div>
 
@@ -76,15 +75,15 @@ const Contact: React.FC = () => {
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800">الموقع</h3>
-                <p className="text-gray-600">المغرب</p>
+                <h3 className="font-semibold text-gray-800">{t('contactPage.locationLabel', language)}</h3>
+                <p className="text-gray-600">{t('contactPage.locationCountry', language)}</p>
               </div>
             </div>
           </div>
 
           {/* Social Media Links */}
           <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-            <h3 className="font-semibold text-gray-800 mb-4 text-center">تابعني على وسائل التواصل الاجتماعي</h3>
+            <h3 className="font-semibold text-gray-800 mb-4 text-center">{t('contactPage.socialMediaTitle', language)}</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <a 
                 href="https://wa.me/+212624855939" 
@@ -149,26 +148,26 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <h3 className="font-semibold text-blue-800 mb-2">أوقات الاستجابة</h3>
+            <h3 className="font-semibold text-blue-800 mb-2">{t('contactPage.responseTimeTitle', language)}</h3>
             <p className="text-blue-700 text-sm">
-              نسعى للرد على جميع الرسائل خلال 24-48 ساعة في أيام العمل. للاستفسارات العاجلة، تواصل معي عبر واتساب.
+              {t('contactPage.responseTimeDesc', language)}
             </p>
           </div>
         </Card>
 
         {/* Contact Form */}
         <Card>
-          <h2 className="text-2xl font-bold text-primary mb-6">أرسل لنا رسالة</h2>
+          <h2 className="text-2xl font-bold text-primary mb-6">{t('contactPage.formTitle', language)}</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* WhatsApp Direct Send Button */}
             <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
               <h3 className="font-semibold text-green-800 mb-2 flex items-center gap-2">
                 <SiWhatsapp className="w-5 h-5" />
-                إرسال مباشر عبر واتساب
+                {t('contactPage.whatsappDirectTitle', language)}
               </h3>
               <p className="text-green-700 text-sm mb-3">
-                للحصول على رد سريع، يمكنك إرسال رسالتك مباشرة عبر واتساب
+                {t('contactPage.whatsappDirectDesc', language)}
               </p>
               <a 
                 href="https://wa.me/+212624855939?text=مرحباً، أود التواصل معك"
@@ -177,12 +176,12 @@ const Contact: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors font-medium"
               >
                 <SiWhatsapp className="w-4 h-4" />
-                فتح واتساب
+                {t('contactPage.openWhatsapp', language)}
               </a>
             </div>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                الاسم الكامل *
+                {t('contactPage.nameLabel', language)} {t('contactPage.requiredFieldIndicator', language)}
               </label>
               <input
                 type="text"
@@ -192,13 +191,13 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                placeholder="أدخل اسمك الكامل"
+                placeholder={t('contactPage.namePlaceholder', language)}
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                البريد الإلكتروني *
+                {t('contactPage.emailFieldLabel', language)} {t('contactPage.requiredFieldIndicator', language)}
               </label>
               <input
                 type="email"
@@ -208,13 +207,13 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                placeholder="أدخل بريدك الإلكتروني"
+                placeholder={t('contactPage.emailPlaceholder', language)}
               />
             </div>
 
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                موضوع الرسالة *
+                {t('contactPage.subjectLabel', language)} {t('contactPage.requiredFieldIndicator', language)}
               </label>
               <select
                 id="subject"
@@ -224,20 +223,20 @@ const Contact: React.FC = () => {
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               >
-                <option value="">اختر موضوع الرسالة</option>
-                <option value="استفسار عام">استفسار عام</option>
-                <option value="دعم فني">دعم فني</option>
-                <option value="تطوير مواقع">تطوير مواقع</option>
-                <option value="برمجة تطبيقات">برمجة تطبيقات</option>
-                <option value="استشارة تقنية">استشارة تقنية</option>
-                <option value="تعاون ومشاريع">تعاون ومشاريع</option>
-                <option value="أخرى">أخرى</option>
+                <option value="">{t('contactPage.subjectPlaceholder', language)}</option>
+                <option value="استفسار عام">{t('contactPage.subjectOptions.general', language)}</option>
+                <option value="دعم فني">{t('contactPage.subjectOptions.support', language)}</option>
+                <option value="تطوير مواقع">{t('contactPage.subjectOptions.webDevelopment', language)}</option>
+                <option value="برمجة تطبيقات">{t('contactPage.subjectOptions.appDevelopment', language)}</option>
+                <option value="استشارة تقنية">{t('contactPage.subjectOptions.consultation', language)}</option>
+                <option value="تعاون ومشاريع">{t('contactPage.subjectOptions.collaboration', language)}</option>
+                <option value="أخرى">{t('contactPage.subjectOptions.other', language)}</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="priority" className="block text-sm font-medium text-gray-700 mb-2">
-                أهمية الرسالة *
+                {t('contactPage.priorityLabel', language)} {t('contactPage.requiredFieldIndicator', language)}
               </label>
               <select
                 id="priority"
@@ -247,16 +246,16 @@ const Contact: React.FC = () => {
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               >
-                <option value="">اختر مستوى الأهمية</option>
-                <option value="عادي">عادي - رد خلال 24-48 ساعة</option>
-                <option value="مهم">مهم - رد خلال 12-24 ساعة</option>
-                <option value="عاجل">عاجل - يُفضل استخدام واتساب للرد السريع</option>
+                <option value="">{t('contactPage.priorityPlaceholder', language)}</option>
+                <option value="عادي">{t('contactPage.priorityOptions.normal', language)}</option>
+                <option value="مهم">{t('contactPage.priorityOptions.important', language)}</option>
+                <option value="عاجل">{t('contactPage.priorityOptions.urgent', language)}</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                تفاصيل الرسالة *
+                {t('contactPage.messageLabel', language)} {t('contactPage.requiredFieldIndicator', language)}
               </label>
               <textarea
                 id="message"
@@ -266,7 +265,7 @@ const Contact: React.FC = () => {
                 rows={6}
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
-                placeholder="اكتب تفاصيل رسالتك هنا... كلما كانت التفاصيل أوضح، كان الرد أدق وأسرع."
+                placeholder={t('contactPage.messagePlaceholder', language)}
               />
             </div>
 
@@ -277,17 +276,16 @@ const Contact: React.FC = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Send size={20} />
-              إرسال الرسالة
+              {t('contactPage.sendButton', language)}
             </motion.button>
           </form>
 
           <div className="mt-6 p-4 bg-green-50 rounded-lg">
             <p className="text-green-700 text-sm">
-              <strong>ملاحظة:</strong> جميع الحقول المطلوبة مميزة بعلامة (*). 
-              نحن نحترم خصوصيتك ولن نشارك معلوماتك مع أطراف ثالثة.
+              <strong>{language === 'ar' ? 'ملاحظة:' : language === 'fr' ? 'Remarque:' : 'Note:'}</strong> {t('contactPage.formNote', language)}
             </p>
             <p className="text-green-700 text-sm mt-2">
-              <strong>للرد السريع:</strong> استخدم زر واتساب أعلاه أو راسلنا على: hamzaamirni451@gmail.com أو privacy@hamzaamirni.com
+              <strong>{language === 'ar' ? 'للرد السريع:' : language === 'fr' ? 'Pour une réponse rapide:' : 'For quick response:'}</strong> {t('contactPage.quickResponseNote', language)}
             </p>
           </div>
         </Card>
@@ -295,34 +293,34 @@ const Contact: React.FC = () => {
 
       {/* FAQ Section */}
       <Card>
-        <h2 className="text-2xl font-bold text-primary mb-6">الأسئلة الشائعة</h2>
+        <h2 className="text-2xl font-bold text-primary mb-6">{t('contactPage.faqTitle', language)}</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="font-semibold text-gray-800 mb-2">كيف يمكنني طلب استشارة تقنية؟</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">{t('contactPage.faqQ1', language)}</h3>
             <p className="text-gray-600 text-sm">
-              يمكنك التواصل معنا عبر النموذج أعلاه أو واتساب لطلب استشارة تقنية مخصصة.
+              {t('contactPage.faqA1', language)}
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-800 mb-2">هل تقدمون دورات تدريبية؟</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">{t('contactPage.faqQ2', language)}</h3>
             <p className="text-gray-600 text-sm">
-              نعم، نقدم دورات ومحتوى تعليمي في البرمجة والتقنية. تابع قنواتنا للحصول على التحديثات.
+              {t('contactPage.faqA2', language)}
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-800 mb-2">كم يستغرق الرد على الرسائل؟</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">{t('contactPage.faqQ3', language)}</h3>
             <p className="text-gray-600 text-sm">
-              نسعى للرد خلال 24-48 ساعة في أيام العمل. الرسائل العاجلة يُفضل إرسالها عبر واتساب.
+              {t('contactPage.faqA3', language)}
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-800 mb-2">هل يمكنني طلب مشروع مخصص؟</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">{t('contactPage.faqQ4', language)}</h3>
             <p className="text-gray-600 text-sm">
-              بالطبع! نقدم خدمات تطوير مخصصة. تواصل معنا لمناقشة متطلبات مشروعك.
+              {t('contactPage.faqA4', language)}
             </p>
           </div>
         </div>
