@@ -232,7 +232,7 @@ const Videos: React.FC = () => {
             لا تفوت أي فيديو جديد! اشترك الآن وفعّل الجرس ليصلك كل جديد
           </p>
           <a
-            href="https://youtube.com/@hamzaamirni"
+            href="https://www.youtube.com/@Hamzaamirni01"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-red-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
