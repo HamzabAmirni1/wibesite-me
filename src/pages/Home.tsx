@@ -140,13 +140,25 @@ const Home: React.FC = () => {
       <motion.div variants={itemVariants}>
         <Card>
           <div className="space-y-10">
-            <section className="space-y-3 text-center">
-              <h2 className="text-3xl font-extrabold text-primary">
-                صفحة خدمات تطوير وتصميم المواقع
+            <section className="space-y-4 text-center">
+              <h2 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                حلول رقمية متكاملة لنجاح مشروعك
               </h2>
-              <p className="text-dark-color/80 leading-relaxed max-w-3xl mx-auto">
-                مرحباً بك في مساحة خدماتي الخاصة بتطوير وتصميم المواقع الإلكترونية. أعمل على مساعدة الأفراد والشركات على بناء حضور رقمي احترافي وسريع، مع تجربة استخدام مريحة على جميع الأجهزة.
+              <p className="text-lg text-dark-color/80 leading-relaxed max-w-4xl mx-auto">
+                أقدم خدمات تطوير وتصميم المواقع والتطبيقات بأعلى معايير الجودة والاحترافية. 
+                سواء كنت فرداً، شركة ناشئة، أو مؤسسة كبيرة، أساعدك في بناء حضور رقمي قوي يحقق أهدافك ويجذب عملاءك.
               </p>
+              <div className="flex flex-wrap justify-center gap-4 pt-4">
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-3 rounded-full">
+                  <span className="text-sm font-semibold text-blue-700">✓ تصميم عصري</span>
+                </div>
+                <div className="bg-gradient-to-r from-green-50 to-green-100 px-6 py-3 rounded-full">
+                  <span className="text-sm font-semibold text-green-700">✓ أداء سريع</span>
+                </div>
+                <div className="bg-gradient-to-r from-purple-50 to-purple-100 px-6 py-3 rounded-full">
+                  <span className="text-sm font-semibold text-purple-700">✓ دعم مستمر</span>
+                </div>
+              </div>
             </section>
 
             <section className="space-y-4">

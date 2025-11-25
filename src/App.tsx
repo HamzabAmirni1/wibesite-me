@@ -18,6 +18,7 @@ const About = lazy(() => import('./pages/About.tsx'));
 const Videos = lazy(() => import('./pages/Videos.tsx'));
 const Programming = lazy(() => import('./pages/Programming.tsx'));
 const Services = lazy(() => import('./pages/Services.tsx'));
+const Projects = lazy(() => import('./pages/Projects.tsx'));
 const Bots = lazy(() => import('./pages/Bots.tsx'));
 const Tools = lazy(() => import('./pages/Tools.tsx'));
 const Articles = lazy(() => import('./pages/Articles.tsx'));
@@ -29,6 +30,7 @@ const Disclaimer = lazy(() => import('./pages/Disclaimer.tsx'));
 const sectionComponents: { [key: string]: React.LazyExoticComponent<React.FC<{}>> } = {
   home: Home,
   about: About,
+  projects: Projects,
   videos: Videos,
   programming: Programming,
   apps: Apps,

@@ -79,6 +79,7 @@ export const navLabels = {
   ar: {
     home: 'الصفحة الرئيسية',
     about: 'عني',
+    projects: 'مشاريعي',
     videos: 'الفيديوهات',
     programming: 'البرمجة',
     apps: 'التطبيقات',
@@ -95,6 +96,7 @@ export const navLabels = {
   fr: {
     home: 'Accueil',
     about: 'À propos de moi',
+    projects: 'Mes Projets',
     videos: 'Vidéos',
     programming: 'Programmation',
     apps: 'Applications',
@@ -111,6 +113,7 @@ export const navLabels = {
   en: {
     home: 'Home',
     about: 'About me',
+    projects: 'My Projects',
     videos: 'Videos',
     programming: 'Programming',
     apps: 'Apps',

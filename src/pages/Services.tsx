@@ -9,6 +9,7 @@ import {
   Shield,
   ArrowRight,
   CheckCircle,
+  MessageCircle,
 } from "lucide-react";
 import { useNavigation } from "../contexts/NavigationContext";
 import CallToAction from "../components/CallToAction";
@@ -47,7 +48,7 @@ const services = [
     ],
     icon: Palette,
     image:
-      "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
     color: "from-purple-500 to-indigo-500",
   },
   {
@@ -63,7 +64,7 @@ const services = [
     ],
     icon: Smartphone,
     image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
     color: "from-blue-500 to-cyan-500",
   },
   {
@@ -79,8 +80,24 @@ const services = [
     ],
     icon: ShoppingCart,
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
     color: "from-emerald-500 to-green-500",
+  },
+  {
+    id: "whatsapp-business",
+    title: "حلول WhatsApp Business",
+    description:
+      "استفد من قوة WhatsApp للتواصل مع عملائك. نقدم حلول WhatsApp Business API، روبوتات ذكية، وأنظمة رد آلي لتحسين خدمة العملاء.",
+    details: [
+      "إعداد WhatsApp Business API",
+      "روبوتات محادثة ذكية (Chatbots)",
+      "رسائل جماعية منظمة",
+      "تكامل مع أنظمة CRM",
+    ],
+    icon: MessageCircle,
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=800&q=80",
+    color: "from-green-400 to-emerald-600",
   },
   {
     id: "seo",
@@ -95,7 +112,7 @@ const services = [
     ],
     icon: Search,
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=800&q=80",
     color: "from-orange-500 to-amber-500",
   },
   {
@@ -111,7 +128,7 @@ const services = [
     ],
     icon: Globe,
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
     color: "from-pink-500 to-rose-500",
   },
   {
@@ -127,7 +144,7 @@ const services = [
     ],
     icon: Shield,
     image:
-      "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     color: "from-slate-500 to-gray-500",
   },
 ];
