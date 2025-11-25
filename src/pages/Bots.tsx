@@ -24,11 +24,13 @@ const itemVariants = {
   }
 };
 
+import { SiWhatsapp, SiOpenai, SiGithub, SiPerplexity } from 'react-icons/si';
+
 const bots = [
   {
     id: 1,
     name: 'بوت حمزة الشخصي',
-    icon: '👨‍💻',
+    icon: <SiWhatsapp className="w-16 h-16 text-green-500" />,
     description: 'تواصل معي مباشرة عبر WhatsApp للاستشارات التقنية، تطوير المشاريع، أو أي استفسارات برمجية',
     platform: 'WhatsApp',
     features: [
@@ -45,59 +47,8 @@ const bots = [
   },
   {
     id: 2,
-    name: 'بوت خدمة العملاء',
-    icon: '🤖',
-    description: 'بوت ذكي للرد على استفسارات العملاء على مدار الساعة بطريقة احترافية وسريعة',
-    platform: 'WhatsApp',
-    features: [
-      'ردود تلقائية ذكية',
-      'دعم متعدد اللغات',
-      'متاح 24/7',
-      'تحليلات وتقارير'
-    ],
-    users: '+500',
-    rating: 4.9,
-    color: 'from-green-500 to-emerald-600',
-    demoUrl: 'https://api.whatsapp.com/send/?phone=18334363285&text&type=phone_number&app_absent=0'
-  },
-  {
-    id: 3,
-    name: 'بوت الدعم التقني',
-    icon: '🛠️',
-    description: 'بوت متخصص في الدعم التقني وحل المشاكل التقنية بشكل سريع وفعال',
-    platform: 'WhatsApp',
-    features: [
-      'حل المشاكل التقنية',
-      'إرشادات خطوة بخطوة',
-      'دعم فني متخصص',
-      'استجابة سريعة'
-    ],
-    users: '+800',
-    rating: 4.8,
-    color: 'from-blue-500 to-cyan-600',
-    demoUrl: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0'
-  },
-  {
-    id: 4,
-    name: 'بوت الاستفسارات',
-    icon: '💬',
-    description: 'بوت للإجابة على الأسئلة الشائعة والاستفسارات العامة بشكل تلقائي وفوري',
-    platform: 'WhatsApp',
-    features: [
-      'إجابات فورية',
-      'قاعدة معرفية شاملة',
-      'دعم متعدد اللغات',
-      'تحديثات مستمرة'
-    ],
-    users: '+600',
-    rating: 4.7,
-    color: 'from-purple-500 to-pink-600',
-    demoUrl: 'https://api.whatsapp.com/send/?phone=18002428478&text&type=phone_number&app_absent=0'
-  },
-  {
-    id: 5,
     name: 'ChatGPT',
-    icon: '🤖',
+    icon: <SiOpenai className="w-16 h-16 text-green-600" />,
     description: 'بوت ذكاء اصطناعي متقدم من OpenAI للإجابة على أسئلتك وحل مشاكلك البرمجية',
     platform: 'AI Assistant',
     features: [
@@ -113,9 +64,9 @@ const bots = [
     isAI: true
   },
   {
-    id: 6,
+    id: 3,
     name: 'GitHub Copilot',
-    icon: '🐙',
+    icon: <SiGithub className="w-16 h-16 text-gray-800" />,
     description: 'مساعد برمجة ذكي يساعدك في كتابة الأكواد بشكل أسرع وأكثر كفاءة',
     platform: 'AI Code Assistant',
     features: [
@@ -131,9 +82,9 @@ const bots = [
     isAI: true
   },
   {
-    id: 7,
+    id: 4,
     name: 'Perplexity AI',
-    icon: '🔍',
+    icon: <SiPerplexity className="w-16 h-16 text-cyan-600" />,
     description: 'محرك بحث ذكي يستخدم الذكاء الاصطناعي لتقديم إجابات دقيقة مع المصادر',
     platform: 'AI Search',
     features: [
