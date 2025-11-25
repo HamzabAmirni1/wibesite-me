@@ -43,7 +43,10 @@ export const myApps = [
 
 export const whatsappChannels = [
     { name: 'قناة تحديثات البرمجيات', url: 'https://whatsapp.com/channel/0029ValXRoHCnA7yKopcrn1p', IconComponent: SiWhatsapp },
-    { name: 'قناة تحديثات القرآنيات', url: 'https://whatsapp.com/channel/0029VaDbxoYJpe8byewMhd3s', IconComponent: FaQuran }
+    { name: 'قناة تحديثات القرآنيات', url: 'https://whatsapp.com/channel/0029VaDbxoYJpe8byewMhd3s', IconComponent: FaQuran },
+    { name: 'بوت الدعم التقني', url: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0', IconComponent: SiWhatsapp },
+    { name: 'بوت خدمة العملاء', url: 'https://api.whatsapp.com/send/?phone=18334363285&text&type=phone_number&app_absent=0', IconComponent: SiWhatsapp },
+    { name: 'بوت الاستفسارات', url: 'https://api.whatsapp.com/send/?phone=18002428478&text&type=phone_number&app_absent=0', IconComponent: SiWhatsapp }
 ];
 
 // NOTE: Use sidebarProfile, skillsSection, journeySection, philosophySection from i18n.ts for translations
