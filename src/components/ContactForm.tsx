@@ -53,33 +53,33 @@ ${formData.message}
         window.open(whatsappUrl, '_blank');
     };
 
-    const subject = `[${formData.priority}] ${formData.requestType} ${t('contactFormTranslations.from', language)} ${formData.name || t('contactFormTranslations.visitor', language)}`;
-    const emailBody = `
-        ${t('contactFormTranslations.name', language)}: ${formData.name}
-        ${t('contactFormTranslations.email', language)}: ${formData.email}
-        ${t('contactFormTranslations.requestType', language)}: ${formData.requestType}
-        ${t('contactFormTranslations.priority', language)}: ${formData.priority}
-        
-        ${t('contactFormTranslations.message', language)}:
-        ${formData.message}
-        
-        ${t('contactFormTranslations.sentFromSite', language)}: ${window.location.href}
-    `;
+    const handleSendViaGmail = () => {
+        if (!formData.name || !formData.message) {
+            alert(t('contactFormTranslations.nameRequired', language));
+            return;
+        }
+
+        const subject = encodeURIComponent(`[${formData.priority}] ${formData.requestType} - ${formData.name}`);
+        const body = encodeURIComponent(`
+الاسم: ${formData.name}
+البريد الإلكتروني: ${formData.email}
+نوع الطلب: ${formData.requestType}
+الأهمية: ${formData.priority}
+
+الرسالة:
+${formData.message}
+        `.trim());
+
+        // Open Gmail compose window directly
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hamzaamirni451@gmail.com&su=${subject}&body=${body}`;
+        window.open(gmailUrl, '_blank');
+    };
 
     return (
-        <motion.form
-            action="https://formsubmit.co/hamzaamirni451@gmail.com"
-            method="POST"
+        <motion.div
             className="space-y-6"
             variants={itemVariants}
         >
-            <input type="hidden" name="_subject" value={subject} />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
-            <input type="hidden" name="_autoresponse" value={t('contactFormTranslations.success', language)} />
-            <input type="hidden" name="_next" value={window.location.href} />
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Name Field */}
                 <div className="relative">
@@ -154,7 +154,8 @@ ${formData.message}
             {/* Action Buttons */}
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:gap-4">
                 <motion.button
-                    type="submit"
+                    type="button"
+                    onClick={handleSendViaGmail}
                     className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-bold shadow-lg text-lg"
                     whileHover={{ y: -3, scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -173,7 +174,7 @@ ${formData.message}
                     {t('contactFormTranslations.sendViaWhatsApp', language)}
                 </motion.button>
             </div>
-        </motion.form>
+        </motion.div>
     );
 };
 
