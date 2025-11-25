@@ -34,13 +34,13 @@ const bots = [
     features: [
       'ردود تلقائية ذكية',
       'دعم متعدد اللغات',
-      'تكامل مع قواعد البيانات',
+      'متاح 24/7',
       'تحليلات وتقارير'
     ],
-    users: '500+',
+    users: '+500',
     rating: 4.9,
     color: 'from-green-500 to-emerald-600',
-    demoUrl: '#'
+    demoUrl: 'https://api.whatsapp.com/send/?phone=18334363285&text&type=phone_number&app_absent=0'
   },
   {
     id: 2,
@@ -54,44 +54,27 @@ const bots = [
       'ترحيب تلقائي',
       'أوامر مخصصة'
     ],
-    users: '1.2K+',
+    users: '+1.2K',
     rating: 4.8,
     color: 'from-blue-500 to-cyan-600',
-    demoUrl: '#'
+    demoUrl: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0'
   },
   {
     id: 3,
-    name: 'بوت التذكيرات',
-    icon: '⏰',
-    description: 'بوت للتذكير بالمهام والمواعيد المهمة مع إشعارات ذكية ومتكررة',
-    platform: 'WhatsApp & Telegram',
+    name: 'بوت الاستفسارات',
+    icon: '💬',
+    description: 'بوت للإجابة على الأسئلة الشائعة والاستفسارات العامة بشكل تلقائي',
+    platform: 'WhatsApp',
     features: [
-      'تذكيرات مجدولة',
-      'تكرار تلقائي',
-      'إشعارات مخصصة',
-      'إدارة المهام'
+      'إجابات فورية',
+      'قاعدة معرفية شاملة',
+      'دعم متعدد اللغات',
+      'تحديثات مستمرة'
     ],
-    users: '800+',
+    users: '+800',
     rating: 4.7,
     color: 'from-purple-500 to-pink-600',
-    demoUrl: '#'
-  },
-  {
-    id: 4,
-    name: 'بوت الأخبار',
-    icon: '📰',
-    description: 'بوت لنشر الأخبار والتحديثات تلقائياً من مصادر متعددة',
-    platform: 'Telegram',
-    features: [
-      'جلب أخبار تلقائي',
-      'مصادر متعددة',
-      'جدولة النشر',
-      'تصنيف الأخبار'
-    ],
-    users: '2K+',
-    rating: 4.6,
-    color: 'from-orange-500 to-red-600',
-    demoUrl: '#'
+    demoUrl: 'https://api.whatsapp.com/send/?phone=18002428478&text&type=phone_number&app_absent=0'
   }
 ];
 
@@ -138,7 +121,7 @@ const Bots: React.FC = () => {
             </h1>
             <p className="text-lg text-dark-color/70 max-w-3xl mx-auto leading-relaxed">
               بوتات ذكية ومتطورة لأتمتة المهام وتحسين الإنتاجية. 
-              جميع البوتات مجانية وسهلة الاستخدام.
+              جميع البوتات متاحة للاستخدام المباشر.
             </p>
           </div>
         </Card>
@@ -170,7 +153,7 @@ const Bots: React.FC = () => {
         <h2 className="text-3xl font-bold text-center text-dark-color mb-8">
           البوتات المتاحة
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bots.map((bot) => (
             <motion.div
               key={bot.id}
@@ -179,30 +162,28 @@ const Bots: React.FC = () => {
               className="group"
             >
               <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-300">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="text-5xl">{bot.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors mb-1">
-                      {bot.name}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full font-medium">
-                        {bot.platform}
-                      </span>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                        <span className="text-gray-600 font-medium">{bot.rating}</span>
-                      </div>
-                    </div>
+                <div className="text-center mb-4">
+                  <div className="text-6xl mb-4">{bot.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors mb-2">
+                    {bot.name}
+                  </h3>
+                  <div className="flex items-center justify-center gap-2 text-sm mb-2">
+                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full font-medium">
+                      {bot.platform}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-1 mb-3">
+                    <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                    <span className="text-gray-600 font-bold text-lg">{bot.rating}</span>
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-4 leading-relaxed text-center px-2">
                   {bot.description}
                 </p>
 
                 <div className="mb-4">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
                     <MessageSquare className="w-4 h-4" />
                     <span>{bot.users} مستخدم نشط</span>
                   </div>
@@ -219,6 +200,8 @@ const Bots: React.FC = () => {
                 <div className="mt-auto pt-4 border-t border-gray-100">
                   <a
                     href={bot.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-3 rounded-xl bg-gradient-to-r ${bot.color} text-white font-semibold text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2`}
                   >
                     <ExternalLink className="w-5 h-5" />
@@ -249,14 +232,14 @@ const Bots: React.FC = () => {
               <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
                 2
               </div>
-              <h4 className="font-bold text-gray-800 mb-2">ابدأ المحادثة</h4>
-              <p className="text-sm text-gray-600">افتح البوت وابدأ التفاعل معه</p>
+              <h4 className="font-bold text-gray-800 mb-2">اضغط "تجربة البوت"</h4>
+              <p className="text-sm text-gray-600">سيتم فتح WhatsApp مباشرة</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
                 3
               </div>
-              <h4 className="font-bold text-gray-800 mb-2">استمتع بالخدمة</h4>
+              <h4 className="font-bold text-gray-800 mb-2">ابدأ المحادثة</h4>
               <p className="text-sm text-gray-600">استفد من جميع الميزات المتاحة</p>
             </div>
           </div>
