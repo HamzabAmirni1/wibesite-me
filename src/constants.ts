@@ -42,6 +42,7 @@ export const myApps = [
 ];
 
 export const whatsappChannels = [
+    { name: 'تواصل معي مباشرة', url: 'https://api.whatsapp.com/send/?phone=212708869993&text&type=phone_number&app_absent=0', IconComponent: SiWhatsapp },
     { name: 'قناة تحديثات البرمجيات', url: 'https://whatsapp.com/channel/0029ValXRoHCnA7yKopcrn1p', IconComponent: SiWhatsapp },
     { name: 'قناة تحديثات القرآنيات', url: 'https://whatsapp.com/channel/0029VaDbxoYJpe8byewMhd3s', IconComponent: FaQuran },
     { name: 'بوت الدعم التقني', url: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0', IconComponent: SiWhatsapp },
