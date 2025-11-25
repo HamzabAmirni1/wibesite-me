@@ -82,7 +82,7 @@ export const navLabels = {
     videos: 'الفيديوهات',
     programming: 'البرمجة',
     apps: 'التطبيقات',
-    fun: 'التسلية',
+    services: 'خدماتنا',
     bots: 'البوتات',
     tools: 'أدوات مفيدة',
     gaza: 'المقالات',
@@ -98,7 +98,7 @@ export const navLabels = {
     videos: 'Vidéos',
     programming: 'Programmation',
     apps: 'Applications',
-    fun: 'Divertissement',
+    services: 'Nos Services',
     bots: 'Bots',
     tools: 'Outils utiles',
     gaza: 'Articles',
@@ -114,7 +114,7 @@ export const navLabels = {
     videos: 'Videos',
     programming: 'Programming',
     apps: 'Apps',
-    fun: 'Fun',
+    services: 'Our Services',
     bots: 'Bots',
     tools: 'Useful tools',
     gaza: 'Articles',
@@ -592,7 +592,7 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     toolsPageComprehensive,
     termsPage,
     programmingPage: programmingPageLabels,
-    funPage: funPageLabels,
+    servicesPage: servicesPageLabels,
     botsPage: botsPageLabels,
     articlesPage: articlesPageLabels,
     articlesPageComprehensive,
@@ -616,7 +616,7 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     channelNames,
     programmingPageComprehensive,
     appsPageComprehensive,
-    funPageComprehensive,
+    servicesPageComprehensive,
     disclaimerPageComprehensive,
     privacyPageComprehensive,
     termsPageComprehensive,
@@ -701,27 +701,27 @@ export const programmingPageLabels = {
   }
 };
 
-export const funPageLabels = {
+export const servicesPageLabels = {
   ar: {
-    title: '🎮 منطقة المرح والتسلية',
-    description: 'مشاريع برمجية مرحة وألعاب تفاعلية لتطوير مهاراتك بطريقة ممتعة',
-    games: 'الألعاب',
-    projects: 'مشاريع مرحة',
-    challenges: 'تحديات برمجية'
+    title: '🛠️ خدماتنا الاحترافية',
+    description: 'نقدم مجموعة واسعة من الخدمات التقنية والبرمجية لتلبية احتياجاتك',
+    games: 'الخدمات',
+    projects: 'مشاريعنا',
+    challenges: 'اطلب خدمة'
   },
   fr: {
-    title: '🎮 Zone de Plaisir et de Divertissement',
-    description: 'Projets amusants et jeux interactifs pour développer vos compétences de manière agréable',
-    games: 'Jeux',
-    projects: 'Projets amusants',
-    challenges: 'Défis de programmation'
+    title: '🛠️ Nos Services Professionnels',
+    description: 'Nous offrons une large gamme de services techniques et logiciels pour répondre à vos besoins',
+    games: 'Services',
+    projects: 'Nos Projets',
+    challenges: 'Commander'
   },
   en: {
-    title: '🎮 Fun & Entertainment Zone',
-    description: 'Fun projects and interactive games to develop your skills in an enjoyable way',
-    games: 'Games',
-    projects: 'Fun Projects',
-    challenges: 'Programming Challenges'
+    title: '🛠️ Our Professional Services',
+    description: 'We offer a wide range of technical and software services to meet your needs',
+    games: 'Services',
+    projects: 'Our Projects',
+    challenges: 'Order Now'
   }
 };
 
@@ -1676,24 +1676,24 @@ export const appsPageComprehensive = {
 };
 
 // Fun page comprehensive translations
-export const funPageComprehensive = {
+export const servicesPageComprehensive = {
   ar: {
-    title: '🎮 منطقة المرح والتسلية',
-    description: 'مشاريع برمجية مرحة وألعاب تفاعلية لتطوير مهاراتك بطريقة ممتعة',
-    noContent: 'لا يوجد محتوى متاح حالياً',
-    exploreGames: 'استكشف الألعاب'
+    title: '🛠️ خدماتنا الاحترافية',
+    description: 'نقدم حلولاً برمجية متكاملة لمساعدتك على النجاح في عالمك الرقمي',
+    noContent: 'لا توجد خدمات متاحة حالياً',
+    exploreGames: 'استكشف خدماتنا'
   },
   fr: {
-    title: '🎮 Zone de Plaisir et de Divertissement',
-    description: 'Projets amusants et jeux interactifs pour développer vos compétences de manière agréable',
-    noContent: 'Aucun contenu disponible pour le moment',
-    exploreGames: 'Explorer les jeux'
+    title: '🛠️ Nos Services Professionnels',
+    description: 'Nous offrons des solutions logicielles complètes pour vous aider à réussir dans votre monde numérique',
+    noContent: 'Aucun service disponible pour le moment',
+    exploreGames: 'Explorer nos services'
   },
   en: {
-    title: '🎮 Fun & Entertainment Zone',
-    description: 'Fun projects and interactive games to develop your skills in an enjoyable way',
-    noContent: 'No content available at the moment',
-    exploreGames: 'Explore games'
+    title: '🛠️ Our Professional Services',
+    description: 'We offer comprehensive software solutions to help you succeed in your digital world',
+    noContent: 'No services available at the moment',
+    exploreGames: 'Explore our services'
   }
 };
 

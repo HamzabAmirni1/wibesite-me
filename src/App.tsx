@@ -17,7 +17,7 @@ const Apps = lazy(() => import('./pages/Apps.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Videos = lazy(() => import('./pages/Videos.tsx'));
 const Programming = lazy(() => import('./pages/Programming.tsx'));
-const Fun = lazy(() => import('./pages/Fun.tsx'));
+const Services = lazy(() => import('./pages/Services.tsx'));
 const Bots = lazy(() => import('./pages/Bots.tsx'));
 const Tools = lazy(() => import('./pages/Tools.tsx'));
 const Articles = lazy(() => import('./pages/Articles.tsx'));
@@ -32,7 +32,7 @@ const sectionComponents: { [key: string]: React.LazyExoticComponent<React.FC<{}>
   videos: Videos,
   programming: Programming,
   apps: Apps,
-  fun: Fun,
+  services: Services,
   bots: Bots,
   tools: Tools,
   gaza: Articles, // 'gaza' id maps to Articles page

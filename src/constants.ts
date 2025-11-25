@@ -1,4 +1,4 @@
-﻿import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle } from 'lucide-react';
+﻿import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle, Briefcase } from 'lucide-react';
 import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiStackoverflow } from 'react-icons/si';
 import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ export const navLinks = [
   { id: 'videos', title: 'الفيديوهات', icon: Youtube },
   { id: 'programming', title: 'البرمجة', icon: Code },
   { id: 'apps', title: 'التطبيقات', icon: AppWindow },
-  { id: 'fun', title: 'التسلية', icon: Gamepad2 },
+  { id: 'services', title: 'خدماتنا', icon: Briefcase },
   { id: 'bots', title: 'البوتات', icon: Bot },
   { id: 'tools', title: 'أدوات مفيدة', icon: Wrench },
   { id: 'gaza', title: 'المقالات', icon: Newspaper },
