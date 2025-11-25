@@ -109,7 +109,7 @@ const bots = [
     users: '100M+',
     rating: 4.9,
     color: 'from-green-500 to-emerald-600',
-    demoUrl: 'https://chat.openai.com',
+    demoUrl: 'https://api.whatsapp.com/send/?phone=18002428478&text&type=phone_number&app_absent=0',
     isAI: true
   },
   {
@@ -127,7 +127,7 @@ const bots = [
     users: '10M+',
     rating: 4.8,
     color: 'from-blue-500 to-cyan-600',
-    demoUrl: 'https://github.com/features/copilot',
+    demoUrl: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0',
     isAI: true
   },
   {
@@ -145,7 +145,7 @@ const bots = [
     users: '5M+',
     rating: 4.7,
     color: 'from-purple-500 to-pink-600',
-    demoUrl: 'https://www.perplexity.ai',
+    demoUrl: 'https://api.whatsapp.com/send/?phone=18334363285&text&type=phone_number&app_absent=0',
     isAI: true
   }
 ];
