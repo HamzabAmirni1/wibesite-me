@@ -133,8 +133,8 @@ export const navLabels = {
 export const heroContent = {
   name: {
     ar: 'حمزة اعمرني',
-    fr: 'Hamza Amrni',
-    en: 'Hamza Amrni',
+    fr: 'Hamza Amirni',
+    en: 'Hamza Amirni',
   },
   subtitle: {
     ar: 'مبرمج وصانع محتوى تقني',
@@ -197,6 +197,7 @@ export const contactPage = {
     messageLabel: 'تفاصيل الرسالة',
     messagePlaceholder: 'اكتب تفاصيل رسالتك هنا. كلما كانت التفاصيل أوضح، كان الرد أدق وأسرع.',
     sendButton: 'إرسال الرسالة',
+    sendViaWhatsapp: 'إرسال عبر واتساب',
     formNote: 'ملاحظة: جميع الحقول المطلوبة مميزة بعلامة (*). نحن نحترم خصوصيتك ولن نشارك معلوماتك مع أطراف ثالثة.',
     quickResponseNote: 'للرد السريع: استخدم زر واتساب أعلاه أو راسلنا على: hamzaamirni451@gmail.com',
     responseTimeTitle: 'أوقات الاستجابة',
@@ -256,6 +257,7 @@ export const contactPage = {
     messageLabel: 'Détails du message',
     messagePlaceholder: 'Écrivez les détails de votre message ici. Plus les informations sont claires, plus la réponse sera précise et rapide.',
     sendButton: 'Envoyer le message',
+    sendViaWhatsapp: 'Envoyer via WhatsApp',
     formNote: 'Remarque: Tous les champs obligatoires sont marqués d\'une (*). Nous respectons votre vie privée et ne partagerons pas vos données avec des tiers.',
     quickResponseNote: 'Pour une réponse rapide: Utilisez le bouton WhatsApp ci-dessus ou contactez-nous sur: hamzaamirni451@gmail.com',
     responseTimeTitle: 'Temps de réponse',
@@ -315,6 +317,7 @@ export const contactPage = {
     messageLabel: 'Message Details',
     messagePlaceholder: 'Write your message details here. The clearer the details, the more accurate and faster the response will be.',
     sendButton: 'Send Message',
+    sendViaWhatsapp: 'Send via WhatsApp',
     formNote: 'Note: All required fields are marked with (*). We respect your privacy and will not share your information with third parties.',
     quickResponseNote: 'For quick response: Use the WhatsApp button above or contact us at: hamzaamirni451@gmail.com',
     responseTimeTitle: 'Response Times',

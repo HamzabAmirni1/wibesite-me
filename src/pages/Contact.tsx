@@ -29,6 +29,28 @@ const Contact: React.FC = () => {
     });
   };
 
+  const handleWhatsAppSubmit = () => {
+    if (!formData.name || !formData.email || !formData.subject || !formData.priority || !formData.message) {
+      alert(t('contactPage.requiredText', language));
+      return;
+    }
+
+    const text = `
+*رسالة جديدة من الموقع* 🌐
+------------------------
+👤 *الاسم:* ${formData.name}
+📧 *البريد:* ${formData.email}
+📝 *الموضوع:* ${formData.subject}
+🚨 *الأهمية:* ${formData.priority}
+------------------------
+*الرسالة:*
+${formData.message}
+    `.trim();
+
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/+212624855939?text=${encodedText}`, '_blank');
+  };
+
   return (
     <motion.div 
       className="space-y-8"
@@ -271,15 +293,28 @@ const Contact: React.FC = () => {
               />
             </div>
 
-            <motion.button
-              type="submit"
-              className="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-200"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Send size={20} />
-              {t('contactPage.sendButton', language)}
-            </motion.button>
+            <div className="flex flex-col md:flex-row gap-4">
+              <motion.button
+                type="submit"
+                className="flex-1 bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Send size={20} />
+                {t('contactPage.sendButton', language)}
+              </motion.button>
+
+              <motion.button
+                type="button"
+                onClick={handleWhatsAppSubmit}
+                className="flex-1 bg-green-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-green-600 hover:shadow-lg transition-all duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <SiWhatsapp size={20} />
+                {t('contactPage.sendViaWhatsapp', language)}
+              </motion.button>
+            </div>
           </form>
 
           <div className="mt-6 p-4 bg-green-50 rounded-lg">
