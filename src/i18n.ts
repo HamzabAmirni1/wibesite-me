@@ -351,8 +351,8 @@ export const aboutPage = {
   },
   description: {
     ar: 'أهلاً وسهلاً! أنا حمزة اعمرني، مطور ويب متخصص أمتلك خبرة واسعة في البرمجيات والتقنيات. أعمل في تطوير الويب والتطبيقات والبرمجيات الحديثة. أحب التعلم المستمر وتطوير المهارات في البرمجة والتصميم والتكنولوجيا. إذا كان لديك أي استفسار أو رغبة في التعاون، فلا تتردد في التواصل. 🔥',
-    fr: 'Bonjour et bienvenue ! Je suis Hamza Amrni, développeur web spécialisé avec une solide expérience dans les logiciels et les technologies. Je travaille sur le développement web, les applications et les technologies modernes. J’apprécie l’apprentissage continu et le développement de compétences en programmation, design et technologie. Si vous avez des questions ou souhaitez collaborer, contactez‑moi. 🔥',
-    en: 'Hello and welcome! I’m Hamza Amrni, a professional web developer with extensive experience in software and modern technologies. I work on web development, applications and modern tech. I enjoy continuous learning and improving skills in programming, design and technology. If you have any questions or would like to collaborate, feel free to get in touch. 🔥',
+    fr: 'Bonjour et bienvenue ! Je suis Hamza Amirni, développeur web spécialisé avec une solide expérience dans les logiciels et les technologies. Je travaille sur le développement web, les applications et les technologies modernes. J’apprécie l’apprentissage continu et le développement de compétences en programmation, design et technologie. Si vous avez des questions ou souhaitez collaborer, contactez‑moi. 🔥',
+    en: 'Hello and welcome! I’m Hamza Amirni, a professional web developer with extensive experience in software and modern technologies. I work on web development, applications and modern tech. I enjoy continuous learning and improving skills in programming, design and technology. If you have any questions or would like to collaborate, feel free to get in touch. 🔥',
   },
   skills: {
     title: {
@@ -570,11 +570,11 @@ export const termsPage = {
   },
   fr: {
     title: 'Conditions d\'Utilisation',
-    disclaimer: 'Les conditions et avis qui régissent l\'utilisation du site de Hamza Amrni',
+    disclaimer: 'Les conditions et avis qui régissent l\'utilisation du site de Hamza Amirni',
   },
   en: {
     title: 'Terms of Use',
-    disclaimer: 'The terms and notices that govern the use of Hamza Amrni\'s website',
+    disclaimer: 'The terms and notices that govern the use of Hamza Amirni\'s website',
   },
 };
 
