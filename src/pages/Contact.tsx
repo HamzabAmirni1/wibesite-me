@@ -224,11 +224,14 @@ const Contact: React.FC = () => {
               >
                 <option value="">{t('contactPage.subjectPlaceholder', language)}</option>
                 <option value="استفسار عام">{t('contactPage.subjectOptions.general', language)}</option>
-                <option value="دعم فني">{t('contactPage.subjectOptions.support', language)}</option>
-                <option value="تطوير مواقع">{t('contactPage.subjectOptions.webDevelopment', language)}</option>
-                <option value="برمجة تطبيقات">{t('contactPage.subjectOptions.appDevelopment', language)}</option>
+                <option value="تطوير مواقع ويب">{t('contactPage.subjectOptions.webDevelopment', language)}</option>
+                <option value="تطوير تطبيقات">{t('contactPage.subjectOptions.appDevelopment', language)}</option>
+                <option value="برمجة بوتات وأتمتة">{t('contactPage.subjectOptions.botsAutomation', language)}</option>
                 <option value="استشارة تقنية">{t('contactPage.subjectOptions.consultation', language)}</option>
+                <option value="دعم فني">{t('contactPage.subjectOptions.support', language)}</option>
+                <option value="طلب دورة تدريبية">{t('contactPage.subjectOptions.training', language)}</option>
                 <option value="تعاون ومشاريع">{t('contactPage.subjectOptions.collaboration', language)}</option>
+                <option value="صناعة محتوى وإعلانات">{t('contactPage.subjectOptions.contentCreation', language)}</option>
                 <option value="أخرى">{t('contactPage.subjectOptions.other', language)}</option>
               </select>
             </div>
