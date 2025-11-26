@@ -167,7 +167,13 @@ const Articles: React.FC = () => {
                       <span>{filteredArticles[0].readTime}</span>
                     </div>
                   </div>
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 w-fit">
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openArticle(filteredArticles[0]);
+                    }}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 w-fit"
+                  >
                     اقرأ المزيد
                     <ArrowRight className="w-5 h-5" />
                   </button>
