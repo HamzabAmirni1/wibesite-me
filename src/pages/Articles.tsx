@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../components/Card';
 import { Newspaper, Calendar, User, ArrowRight, BookOpen, TrendingUp, X } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
+import ArticleSearch from '../components/ArticleSearch';
+import CategoryFilter from '../components/CategoryFilter';
+import ShareButtons from '../components/ShareButtons';
 import { articlesData } from '../data/articles';
 
 const containerVariants = {
@@ -27,6 +30,28 @@ const itemVariants = {
 
 const Articles: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<typeof articlesData[0] | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('الكل');
+
+  // Get unique categories
+  const categories = useMemo(() => {
+    const cats = articlesData.map(article => article.category);
+    return Array.from(new Set(cats));
+  }, []);
+
+  // Filter articles based on search and category
+  const filteredArticles = useMemo(() => {
+    return articlesData.filter(article => {
+      const matchesSearch = searchQuery === '' || 
+        article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        article.category.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      const matchesCategory = selectedCategory === 'الكل' || article.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchQuery, selectedCategory]);
 
   const openArticle = (article: typeof articlesData[0]) => {
     setSelectedArticle(article);
@@ -85,20 +110,41 @@ const Articles: React.FC = () => {
           </div>
         </motion.div>
 
+        {/* Search and Filter Section */}
+        <motion.div variants={itemVariants} className="space-y-6">
+          <ArticleSearch onSearch={setSearchQuery} />
+          <CategoryFilter 
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onSelectCategory={setSelectedCategory}
+          />
+          
+          {/* Results count */}
+          {(searchQuery || selectedCategory !== 'الكل') && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center text-gray-600"
+            >
+              تم العثور على <span className="font-bold text-primary">{filteredArticles.length}</span> مقال
+            </motion.p>
+          )}
+        </motion.div>
+
         {/* Featured Article */}
-        {articlesData.length > 0 && (
+        {filteredArticles.length > 0 && (
           <motion.div variants={itemVariants}>
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer" onClick={() => openArticle(articlesData[0])}>
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer" onClick={() => openArticle(filteredArticles[0])}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="relative h-64 lg:h-auto overflow-hidden">
-                  <div className={`absolute inset-0 bg-gradient-to-t ${articlesData[0].color} opacity-40 mix-blend-multiply z-10`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${filteredArticles[0].color} opacity-40 mix-blend-multiply z-10`} />
                   <img 
-                    src={articlesData[0].image} 
-                    alt={articlesData[0].title}
+                    src={filteredArticles[0].image} 
+                    alt={filteredArticles[0].title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 z-20 bg-white/90 px-3 py-1 rounded-full backdrop-blur-sm">
-                    <span className="text-xs font-semibold text-gray-700">{articlesData[0].category}</span>
+                    <span className="text-xs font-semibold text-gray-700">{filteredArticles[0].category}</span>
                   </div>
                 </div>
                 <div className="p-8 flex flex-col justify-center">
@@ -106,19 +152,19 @@ const Articles: React.FC = () => {
                     مقال مميز
                   </div>
                   <h2 className="text-3xl font-bold text-gray-800 mb-4 group-hover:text-primary transition-colors">
-                    {articlesData[0].title}
+                    {filteredArticles[0].title}
                   </h2>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    {articlesData[0].excerpt}
+                    {filteredArticles[0].excerpt}
                   </p>
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      <span>{new Date(articlesData[0].date).toLocaleDateString('ar-SA')}</span>
+                      <span>{new Date(filteredArticles[0].date).toLocaleDateString('ar-SA')}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <BookOpen className="w-4 h-4" />
-                      <span>{articlesData[0].readTime}</span>
+                      <span>{filteredArticles[0].readTime}</span>
                     </div>
                   </div>
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 w-fit">
@@ -136,56 +182,87 @@ const Articles: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-dark-color mb-8">
             أحدث المقالات
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articlesData.slice(1).map((article) => (
-              <motion.div
-                key={article.id}
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="group cursor-pointer"
-                onClick={() => openArticle(article)}
+          {filteredArticles.length > 1 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.slice(1).map((article) => (
+                <motion.div
+                  key={article.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}
+                  className="group cursor-pointer"
+                  onClick={() => openArticle(article)}
+                >
+                  <Card className="h-full flex flex-col overflow-hidden hover:shadow-2xl transition-all duration-300">
+                    <div className="relative h-48 overflow-hidden">
+                      <div className={`absolute inset-0 bg-gradient-to-t ${article.color} opacity-40 mix-blend-multiply z-10`} />
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 right-3 z-20 bg-white/90 px-3 py-1 rounded-full backdrop-blur-sm">
+                        <span className="text-xs font-semibold text-gray-700">{article.category}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4 flex-1 line-clamp-3">
+                        {article.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center justify-between text-xs text-gray-500 mb-4 pb-4 border-b border-gray-100">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          <span>{new Date(article.date).toLocaleDateString('ar-SA')}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <BookOpen className="w-3 h-3" />
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                      
+                      <button className="w-full py-2 rounded-lg bg-gray-50 text-gray-700 font-medium text-sm hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                        اقرأ المقال
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          ) : filteredArticles.length === 1 ? (
+            <p className="text-center text-gray-500 py-8">
+              لا توجد مقالات أخرى
+            </p>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-12"
+            >
+              <div className="inline-block p-6 bg-gray-100 rounded-full mb-4">
+                <BookOpen className="w-12 h-12 text-gray-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-700 mb-2">
+                لم يتم العثور على مقالات
+              </h3>
+              <p className="text-gray-500 mb-6">
+                جرب البحث بكلمات مختلفة أو اختر تصنيف آخر
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('الكل');
+                }}
+                className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-secondary transition-all duration-300"
               >
-                <Card className="h-full flex flex-col overflow-hidden hover:shadow-2xl transition-all duration-300">
-                  <div className="relative h-48 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-t ${article.color} opacity-40 mix-blend-multiply z-10`} />
-                    <img 
-                      src={article.image} 
-                      alt={article.title}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-3 right-3 z-20 bg-white/90 px-3 py-1 rounded-full backdrop-blur-sm">
-                      <span className="text-xs font-semibold text-gray-700">{article.category}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4 flex-1 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4 pb-4 border-b border-gray-100">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        <span>{new Date(article.date).toLocaleDateString('ar-SA')}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-3 h-3" />
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-                    
-                    <button className="w-full py-2 rounded-lg bg-gray-50 text-gray-700 font-medium text-sm hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
-                      اقرأ المقال
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                إعادة تعيين البحث
+              </button>
+            </motion.div>
+          )}
         </motion.div>
 
         <motion.div variants={itemVariants}>
@@ -252,6 +329,11 @@ const Articles: React.FC = () => {
                     <BookOpen className="w-4 h-4" />
                     <span>{selectedArticle.readTime}</span>
                   </div>
+                </div>
+
+                {/* Share Buttons */}
+                <div className="mb-6 pb-6 border-b">
+                  <ShareButtons title={selectedArticle.title} />
                 </div>
 
                 <div className="prose prose-lg max-w-none prose-headings:text-gray-800 prose-p:text-gray-600 prose-a:text-primary hover:prose-a:text-secondary prose-strong:text-gray-900 prose-ul:list-disc prose-ul:pl-5 prose-ol:list-decimal prose-ol:pl-5">
