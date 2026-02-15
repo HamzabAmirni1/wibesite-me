@@ -70,9 +70,9 @@ ${t('contactFormTranslations.message', language)}:
 ${formData.message}
         `.trim());
 
-        // Open Gmail compose window directly
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hamzaamirni451@gmail.com&su=${subject}&body=${body}`;
-        window.open(gmailUrl, '_blank');
+        // Use mailto to open the default email app (including Gmail app on mobile)
+        const mailtoUrl = `mailto:hamzaamirni451@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoUrl;
     };
 
     return (
