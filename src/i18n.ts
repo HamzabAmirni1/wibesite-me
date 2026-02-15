@@ -582,7 +582,7 @@ export const termsPage = {
 export const t = (key: string, language: Language, params: Record<string, any> = {}): string | any => {
   // Split the key by dots to access nested properties
   const keys = key.split('.');
-  
+
   // Special handling for navLabels - structure is different
   if (keys[0] === 'navLabels') {
     const labelKey = keys[1];
@@ -592,7 +592,7 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     }
     return key; // Return key as fallback if not found
   }
-  
+
   // Start with the root translations object
   const translations: any = {
     commonTexts,
@@ -641,13 +641,13 @@ export const t = (key: string, language: Language, params: Record<string, any> =
   if (keys[0] && translations[keys[0]] && (translations[keys[0]].ar || translations[keys[0]].fr || translations[keys[0]].en)) {
     // Language-first structure
     let value: any = (translations[keys[0]] as any)[language];
-    
+
     // Traverse the rest of the keys
     for (let i = 1; i < keys.length; i++) {
       if (value === undefined || value === null) break;
       value = value[keys[i]];
     }
-    
+
     if (typeof value === 'string') {
       return Object.entries(params).reduce(
         (str, [param, val]) => str.replace(new RegExp(`{{${param}}}`, 'g'), String(val)),
@@ -927,9 +927,9 @@ export const termsPageLabels = {
   fr: {
     title: 'Conditions d\'utilisation',
     acceptanceTitle: '1. Acceptation des conditions',
-    acceptance: 'En utilisant le site de Hamza Amrni, vous acceptez de respecter ces conditions.',
+    acceptance: 'En utilisant le site de Hamza Amirni, vous acceptez de respecter ces conditions.',
     serviceTitle: '2. Description du service',
-    serviceDesc: 'Le site de Hamza Amrni est une plateforme technique qui propose du contenu éducatif.',
+    serviceDesc: 'Le site de Hamza Amirni est une plateforme technique qui propose du contenu éducatif.',
     usageTitle: '3. Utilisation autorisée',
     usageDesc: 'Vous êtes autorisé à utiliser le site pour consulter le contenu et apprendre.',
     forbiddenTitle: '4. Utilisation interdite',
@@ -942,9 +942,9 @@ export const termsPageLabels = {
   en: {
     title: 'Terms of Use',
     acceptanceTitle: '1. Acceptance of Terms',
-    acceptance: 'By using Hamza Amrni\'s website, you agree to comply with these terms.',
+    acceptance: 'By using Hamza Amirni\'s website, you agree to comply with these terms.',
     serviceTitle: '2. Service Description',
-    serviceDesc: 'Hamza Amrni\'s website is a technical platform offering educational content.',
+    serviceDesc: 'Hamza Amirni\'s website is a technical platform offering educational content.',
     usageTitle: '3. Acceptable Use',
     usageDesc: 'You are allowed to use the site to view content and learn.',
     forbiddenTitle: '4. Forbidden Use',
@@ -1089,11 +1089,11 @@ export const sidebar = {
     title: 'مبرمج وصانع محتوى تقني'
   },
   fr: {
-    name: 'Hamza Amrni',
+    name: 'Hamza Amirni',
     title: 'Développeur et créateur de contenu tech'
   },
   en: {
-    name: 'Hamza Amrni',
+    name: 'Hamza Amirni',
     title: 'Developer & tech content creator'
   }
 };
@@ -1174,7 +1174,7 @@ export const footerTranslations = {
     terms: 'Conditions d\'utilisation',
     disclaimer: 'Avertissement',
     madeWith: 'Créé avec ❤️',
-    byHamza: 'Par Hamza Amrni'
+    byHamza: 'Par Hamza Amirni'
   },
   en: {
     allRightsReserved: 'All rights reserved',
@@ -1185,7 +1185,7 @@ export const footerTranslations = {
     terms: 'Terms of Use',
     disclaimer: 'Disclaimer',
     madeWith: 'Made with ❤️',
-    byHamza: 'By Hamza Amrni'
+    byHamza: 'By Hamza Amirni'
   }
 };
 
@@ -1444,14 +1444,14 @@ export const sidebarProfile = {
     description: 'أهلا وسهلا! أنا حمزة اعمرني، مطور ويب متخصص عندي خبرة كبيرة في مجال البرمجيات والتقنيات. 🙌\n\nأعمل في مجالات الويب ديفلوبمنت والتطبيقات والبرمجيات والتقنيات الحديثة.\n\nأحب التعلم المستمر وتطوير المهارات في مجالات البرمجة والتصميم والتكنولوجيا.\n\nإذا كان لديك أي استفسار أو تريد التعاون معي، فلا تتردد في التواصل. 🔥'
   },
   fr: {
-    name: 'Hamza Amrni',
+    name: 'Hamza Amirni',
     role: 'Développeur et créateur de contenu tech',
-    description: 'Bonjour et bienvenue ! Je suis Hamza Amrni, un développeur web spécialisé avec une grande expérience dans le domaine des logiciels et des technologies. 🙌\n\nJe travaille dans les domaines du développement web, des applications, des logiciels et des technologies modernes.\n\nJ\'aime l\'apprentissage continu et le développement de compétences en programmation, conception et technologie.\n\nSi vous avez des questions ou souhaitez collaborer avec moi, n\'hésitez pas à me contacter. 🔥'
+    description: 'Bonjour et bienvenue ! Je suis Hamza Amirni, un développeur web spécialisé avec une grande expérience dans le domaine des logiciels et des technologies. 🙌\n\nJe travaille dans les domaines du développement web, des applications, des logiciels et des technologies modernes.\n\nJ\'aime l\'apprentissage continu et le développement de compétences en programmation, conception et technologie.\n\nSi vous avez des questions ou souhaitez collaborer avec moi, n\'hésitez pas à me contacter. 🔥'
   },
   en: {
-    name: 'Hamza Amrni',
+    name: 'Hamza Amirni',
     role: 'Professional Web Developer',
-    description: 'Hello and welcome! I\'m Hamza Amrni, a professional web developer with extensive experience in software and technologies. 🙌\n\nI work in web development, applications, software, and modern technologies.\n\nI love continuous learning and developing skills in programming, design, and technology.\n\nIf you have any questions or would like to collaborate, feel free to get in touch. 🔥'
+    description: 'Hello and welcome! I\'m Hamza Amirni, a professional web developer with extensive experience in software and technologies. 🙌\n\nI work in web development, applications, software, and modern technologies.\n\nI love continuous learning and developing skills in programming, design, and technology.\n\nIf you have any questions or would like to collaborate, feel free to get in touch. 🔥'
   }
 };
 
@@ -1722,13 +1722,13 @@ export const disclaimerPageComprehensive = {
   },
   fr: {
     title: 'Clause de non-responsabilité',
-    description: 'Clause de non-responsabilité légale pour le site de Hamza Amrni',
+    description: 'Clause de non-responsabilité légale pour le site de Hamza Amirni',
     content: 'Toutes les informations et le contenu fourni sur ce site sont à titre éducatif uniquement. Nous n\'assumons aucune responsabilité pour tout dommage ou perte résultant de l\'utilisation du site ou de son contenu.',
     noWarranty: 'Aucune garantie'
   },
   en: {
     title: 'Disclaimer',
-    description: 'Legal disclaimer for Hamza Amrni\'s website',
+    description: 'Legal disclaimer for Hamza Amirni\'s website',
     content: 'All information and content provided on this website is for educational purposes only. We assume no responsibility for any damage or loss resulting from the use of the website or its content.',
     noWarranty: 'No warranties'
   }
