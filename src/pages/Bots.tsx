@@ -116,6 +116,60 @@ const bots = [
     color: 'from-blue-600 to-indigo-700',
     demoUrl: 'https://www.facebook.com/profile.php?id=61578860781418',
     isAI: false
+  },
+  {
+    id: 6,
+    name: 'بوت واتساب (رقم 2)',
+    icon: <SiWhatsapp className="w-16 h-16 text-green-500" />,
+    description: 'بوت تواصل إضافي لضمان سرعة الرد وتقديم الدعم الفني المستمر عبر واتساب',
+    platform: 'WhatsApp',
+    features: [
+      'دعم فني سريع',
+      'تواصل مباشر',
+      'خدمات برمجية',
+      'متاح دائماً'
+    ],
+    users: 'جديد',
+    rating: 4.9,
+    color: 'from-green-400 to-green-600',
+    demoUrl: 'https://wa.me/212631342792',
+    isAI: false
+  },
+  {
+    id: 7,
+    name: 'بوت واتساب (رقم 3)',
+    icon: <SiWhatsapp className="w-16 h-16 text-green-500" />,
+    description: 'رقم إضافي للتواصل المباشر والحصول على المساعدة التقنية وتطوير المشاريع',
+    platform: 'WhatsApp',
+    features: [
+      'دعم فني',
+      'استفسارات عامة',
+      'مشاريع برمجية',
+      'رد تلقائي'
+    ],
+    users: 'جديد',
+    rating: 4.9,
+    color: 'from-green-400 to-green-600',
+    demoUrl: 'https://wa.me/212649550748',
+    isAI: false
+  },
+  {
+    id: 8,
+    name: 'بوت واتساب (رقم 4)',
+    icon: <SiWhatsapp className="w-16 h-16 text-green-500" />,
+    description: 'قناة تواصل فعالة للحصول على آخر التحديثات والخدمات البرمجية والرد على تساؤلاتكم',
+    platform: 'WhatsApp',
+    features: [
+      'تحديثات فورية',
+      'تواصل تقني',
+      'خدمة العملاء',
+      'سهولة الاستخدام'
+    ],
+    users: 'جديد',
+    rating: 4.9,
+    color: 'from-green-400 to-green-600',
+    demoUrl: 'https://wa.me/212656918407',
+    isAI: false
   }
 ];
 
