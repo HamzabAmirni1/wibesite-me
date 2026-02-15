@@ -619,6 +619,7 @@ export const t = (key: string, language: Language, params: Record<string, any> =
     callToAction,
     sidebar,
     contactFormLabels,
+    contactFormTranslations,
     adManagerTranslations,
     footerTranslations,
     errorMessages,

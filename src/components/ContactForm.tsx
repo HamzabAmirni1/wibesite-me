@@ -6,12 +6,12 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { t, contactFormTranslations } from '../i18n';
 
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { type: 'spring' }
-  }
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { type: 'spring' }
+    }
 };
 
 const ContactForm: React.FC = () => {
@@ -49,7 +49,7 @@ ${formData.message}
         const encodedMessage = encodeURIComponent(messageBody);
         const phoneNumber = '212624855939';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-        
+
         window.open(whatsappUrl, '_blank');
     };
 
@@ -61,12 +61,12 @@ ${formData.message}
 
         const subject = encodeURIComponent(`[${formData.priority}] ${formData.requestType} - ${formData.name}`);
         const body = encodeURIComponent(`
-الاسم: ${formData.name}
-البريد الإلكتروني: ${formData.email}
-نوع الطلب: ${formData.requestType}
-الأهمية: ${formData.priority}
+${t('contactFormTranslations.name', language)}: ${formData.name}
+${t('contactFormTranslations.email', language)}: ${formData.email || t('contactFormTranslations.notSpecified', language)}
+${t('contactFormTranslations.requestType', language)}: ${formData.requestType}
+${t('contactFormTranslations.priority', language)}: ${formData.priority}
 
-الرسالة:
+${t('contactFormTranslations.message', language)}:
 ${formData.message}
         `.trim());
 
@@ -161,7 +161,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <Mail size={22} />
-                    {t('contactFormTranslations.sendViaEmail', language)}
+                    {t('contactFormLabels.sendViaEmail', language)}
                 </motion.button>
                 <motion.button
                     type="button"
@@ -171,7 +171,7 @@ ${formData.message}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <MessageSquare size={22} />
-                    {t('contactFormTranslations.sendViaWhatsApp', language)}
+                    {t('contactFormLabels.sendViaWhatsApp', language)}
                 </motion.button>
             </div>
         </motion.div>

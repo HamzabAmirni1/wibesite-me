@@ -59,7 +59,7 @@ const apps = [
       'نصائح للتوجيه',
       'حساب المعدلات'
     ],
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80',
     downloadUrl: 'https://www.mediafire.com/file/kqc4zsmhg9stjyx/smart_education_BAC_1.0.apk/file',
     color: 'from-blue-500 to-cyan-600'
   },

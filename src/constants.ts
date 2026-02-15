@@ -17,16 +17,16 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-    { name: 'فيسبوك', url: 'https://www.facebook.com/6kqzuj3y4e', IconComponent: SiFacebook },
-    { name: 'صفحة فيسبوك', url: 'https://www.facebook.com/profile.php?id=61564527797752', IconComponent: SiFacebook },
-    { name: 'يوتيوب', url: 'https://www.youtube.com/@Hamzaamirni01', IconComponent: SiYoutube },
-    { name: 'إنستجرام', url: 'https://instagram.com/hamza_amirni_01', IconComponent: SiInstagram },
-    { name: 'إنستجرام 2', url: 'https://instagram.com/hamza_amirni_02', IconComponent: SiInstagram },
-    { name: 'قناة إنستجرام', url: 'https://www.instagram.com/channel/AbbqrMVbExH_EZLD/', IconComponent: SiInstagram },
-    { name: 'واتساب', url: 'https://wa.me/+212624855939', IconComponent: SiWhatsapp },
-    { name: 'قناة الواتساب', url: 'https://whatsapp.com/channel/0029ValXRoHCnA7yKopcrn1p', IconComponent: SiWhatsapp },
-    { name: 'مجموعات واتساب', url: 'https://chat.whatsapp.com/DDb3fGPuZPB1flLc1BV9gJ', IconComponent: SiWhatsapp },
-    { name: 'تيليجرام', url: 'https://t.me/hamzaamirni', IconComponent: SiTelegram },
+    { name: 'فيسبوك', url: 'https://www.facebook.com/6kqzuj3y4e', IconComponent: SiFacebook, color: 'bg-[#1877F2]' },
+    { name: 'صفحة فيسبوك', url: 'https://www.facebook.com/profile.php?id=61564527797752', IconComponent: SiFacebook, color: 'bg-[#1877F2]' },
+    { name: 'يوتيوب', url: 'https://www.youtube.com/@Hamzaamirni01', IconComponent: SiYoutube, color: 'bg-[#FF0000]' },
+    { name: 'إنستجرام', url: 'https://instagram.com/hamza_amirni_01', IconComponent: SiInstagram, color: 'bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]' },
+    { name: 'إنستجرام 2', url: 'https://instagram.com/hamza_amirni_02', IconComponent: SiInstagram, color: 'bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]' },
+    { name: 'قناة إنستجرام', url: 'https://www.instagram.com/channel/AbbqrMVbExH_EZLD/', IconComponent: SiInstagram, color: 'bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]' },
+    { name: 'واتساب', url: 'https://wa.me/+212624855939', IconComponent: SiWhatsapp, color: 'bg-[#25D366]' },
+    { name: 'قناة الواتساب', url: 'https://whatsapp.com/channel/0029ValXRoHCnA7yKopcrn1p', IconComponent: SiWhatsapp, color: 'bg-[#25D366]' },
+    { name: 'مجموعات واتساب', url: 'https://chat.whatsapp.com/DDb3fGPuZPB1flLc1BV9gJ', IconComponent: SiWhatsapp, color: 'bg-[#25D366]' },
+    { name: 'تيليجرام', url: 'https://t.me/hamzaamirni', IconComponent: SiTelegram, color: 'bg-[#229ED9]' },
 ];
 
 export const myApps = [
