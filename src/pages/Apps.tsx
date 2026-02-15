@@ -60,7 +60,7 @@ const apps = [
       'حساب المعدلات'
     ],
     image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400&q=80',
-    downloadUrl: 'https://www.mediafire.com/file/z4dr352cdqb6bd2/smart_education_BAC_1.0.apk/file',
+    downloadUrl: 'https://www.mediafire.com/file/kqc4zsmhg9stjyx/smart_education_BAC_1.0.apk/file',
     color: 'from-blue-500 to-cyan-600'
   },
   {
@@ -122,7 +122,7 @@ const Apps: React.FC = () => {
               تطبيقاتي المميزة
             </h1>
             <p className="text-lg text-dark-color/70 max-w-3xl mx-auto leading-relaxed">
-              مجموعة من التطبيقات المفيدة التي طورتها لتسهيل حياتك اليومية. 
+              مجموعة من التطبيقات المفيدة التي طورتها لتسهيل حياتك اليومية.
               جميع التطبيقات مجانية ومتاحة للتحميل.
             </p>
           </div>
@@ -162,8 +162,8 @@ const Apps: React.FC = () => {
               {/* App Image */}
               <div className="relative h-48 overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-t ${app.color} opacity-50 mix-blend-multiply z-10`} />
-                <img 
-                  src={app.image} 
+                <img
+                  src={app.image}
                   alt={app.name}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -230,7 +230,7 @@ const Apps: React.FC = () => {
             المزيد قريباً!
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            نعمل حالياً على تطوير المزيد من التطبيقات المفيدة. 
+            نعمل حالياً على تطوير المزيد من التطبيقات المفيدة.
             تابعنا على قنواتنا لتكون أول من يعرف عن الإصدارات الجديدة.
           </p>
         </Card>
