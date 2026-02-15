@@ -24,7 +24,7 @@ const itemVariants = {
   }
 };
 
-import { SiWhatsapp, SiOpenai, SiGithub, SiPerplexity } from 'react-icons/si';
+import { SiWhatsapp, SiOpenai, SiGithub, SiPerplexity, SiFacebook } from 'react-icons/si';
 
 const bots = [
   {
@@ -98,6 +98,24 @@ const bots = [
     color: 'from-purple-500 to-pink-600',
     demoUrl: 'https://api.whatsapp.com/send/?phone=18334363285&text&type=phone_number&app_absent=0',
     isAI: true
+  },
+  {
+    id: 5,
+    name: 'بوت فيسبوك الذكي',
+    icon: <SiFacebook className="w-16 h-16 text-blue-600" />,
+    description: 'بوت متخصص على منصة فيسبوك لتقديم خدمات ذكية وتواصل سريع مع المستخدمين',
+    platform: 'Facebook',
+    features: [
+      'تواصل ذكي',
+      'تحديثات تقنية',
+      'دعم مستمر',
+      'سهولة الوصول'
+    ],
+    users: 'جديد',
+    rating: 4.9,
+    color: 'from-blue-600 to-indigo-700',
+    demoUrl: 'https://www.facebook.com/profile.php?id=61578860781418',
+    isAI: false
   }
 ];
 
@@ -192,7 +210,7 @@ const Bots: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-4">
                   <div className="text-6xl mb-4">{bot.icon}</div>
                   <h3 className="text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors mb-2">

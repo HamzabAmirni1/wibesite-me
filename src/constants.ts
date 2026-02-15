@@ -220,6 +220,7 @@ export const botsContent = {
         { title: 'ChatGPT Bot', description: 'استخدام بوت ChatGPT لحل أسئلة ومشاكل', url: 'https://wa.me/18002428478', buttonText: 'نتحدث', IconComponent: SiOpenai, color: 'primary' },
         { title: 'Copilot Bot', description: 'مساعد برمجي ذكي لمساعدتك في مشاريع البرمجة', url: 'https://wa.me/18772241042', buttonText: 'نتحدث', IconComponent: SiGithubcopilot, color: 'warning' },
         { title: 'Perplexity Bot', description: 'محرك بحث ذكي لمساعدتك على الحصول على المعلومات', url: 'https://wa.me/18334363285', buttonText: 'نتحدث', IconComponent: SiPerplexity, color: 'danger' },
+        { title: 'بوت فيسبوك الذكي', description: 'بوت متخصص على منصة فيسبوك لتقديم خدمات ذكية وتواصل سريع', url: 'https://www.facebook.com/profile.php?id=61578860781418', buttonText: 'نتحدث', IconComponent: SiFacebook, color: 'primary' },
     ]
 };
 
