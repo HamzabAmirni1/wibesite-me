@@ -30,6 +30,9 @@ const staticPages = [
   { url: '/services', changefreq: 'monthly', priority: '0.7' },
   { url: '/articles', changefreq: 'daily', priority: '0.9' },
   { url: '/contact', changefreq: 'monthly', priority: '0.6' },
+  { url: '/privacy', changefreq: 'monthly', priority: '0.5' },
+  { url: '/terms', changefreq: 'monthly', priority: '0.5' },
+  { url: '/disclaimer', changefreq: 'monthly', priority: '0.5' },
 ];
 
 // Generate sitemap XML

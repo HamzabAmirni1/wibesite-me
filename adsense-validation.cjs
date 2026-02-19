@@ -48,15 +48,26 @@ pages.forEach(page => {
 
 // Check policy documents
 const policyDocs = ['Privacy.tsx', 'Terms.tsx', 'Disclaimer.tsx'];
+const i18nPath = path.join(__dirname, 'src', 'i18n.ts');
+const i18nContent = fs.existsSync(i18nPath) ? fs.readFileSync(i18nPath, 'utf8') : '';
+
 policyDocs.forEach(doc => {
   const docPath = path.join(pagesDir, doc);
   if (fs.existsSync(docPath)) {
     const content = fs.readFileSync(docPath, 'utf8');
-    if (content.includes('Google AdSense') && !content.includes('advertising partners')) {
-      console.log(`❌ ${doc} still mentions Google AdSense specifically`);
+
+    const mentionsAdSense = content.includes('Google AdSense') || i18nContent.includes('Google AdSense');
+    const mentionsGeneric = content.includes('advertising partners') ||
+      content.includes('third-party advertisers') ||
+      i18nContent.includes('advertising partners') ||
+      i18nContent.includes('third-party advertisers') ||
+      i18nContent.includes('شركاء إعلانات');
+
+    if (mentionsAdSense && !mentionsGeneric) {
+      console.log(`❌ ${doc} still mentions Google AdSense specifically without generic terms`);
       allValid = false;
-    } else if (content.includes('advertising partners') || content.includes('third-party advertisers')) {
-      console.log(`✅ ${doc} correctly updated to generic advertising`);
+    } else if (mentionsGeneric) {
+      console.log(`✅ ${doc} correctly updated with generic advertising terms`);
     } else {
       console.log(`⚠️  ${doc} - unable to verify policy updates`);
       allValid = false;

@@ -1,153 +1,85 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import { AlertTriangle, Info, Shield, ExternalLink } from 'lucide-react';
+import { AlertTriangle, Info, Shield, ExternalLink, Code, Globe, MessageSquare, RefreshCw, XCircle, Lock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
 
 const Disclaimer: React.FC = () => {
   const { language } = useLanguage();
 
+  const sections = [
+    { key: 'general', icon: <Info className="w-6 h-6 text-blue-500" /> },
+    { key: 'technical', icon: <Code className="w-6 h-6 text-purple-500" /> },
+    { key: 'external', icon: <Globe className="w-6 h-6 text-indigo-500" /> },
+    { key: 'advertising', icon: <Shield className="w-6 h-6 text-green-500" /> },
+    { key: 'professional', icon: <MessageSquare className="w-6 h-6 text-orange-500" /> },
+    { key: 'contentUpdate', icon: <RefreshCw className="w-6 h-6 text-teal-500" /> },
+    { key: 'errors', icon: <AlertTriangle className="w-6 h-6 text-red-500" /> },
+    { key: 'availability', icon: <XCircle className="w-6 h-6 text-gray-500" /> },
+  ];
+
   return (
-    <motion.div 
-      className="space-y-8"
+    <motion.div
+      className="space-y-8 pb-12"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="text-center bg-gradient-to-br from-orange-50 to-red-50">
+      <Card className="text-center bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200">
         <div className="flex items-center justify-center mb-4">
           <AlertTriangle className="w-12 h-12 text-orange-500" />
         </div>
-        <h1 className="text-4xl font-bold text-dark-color mb-4">⚠️ {t('disclaimerPage.title', language)}</h1>
-        <p className="text-lg text-dark-color/70">
-          {t('disclaimerPage.description', language)}
+        <h1 className="text-4xl font-bold text-dark-color mb-4">⚠️ {t('disclaimerPageComprehensive.title', language)}</h1>
+        <p className="text-lg text-dark-color/70 max-w-2xl mx-auto">
+          {t('disclaimerPageComprehensive.description', language)}
         </p>
       </Card>
 
-      <Card>
-        <div className="prose prose-lg max-w-none text-right">
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <div className="flex items-center">
-              <Info className="w-5 h-5 text-yellow-600 ml-2" />
-              <p className="text-yellow-800 font-semibold">
-                {t('disclaimerPageComprehensive.content', language)}
-              </p>
-            </div>
+      <div className="grid grid-cols-1 gap-6">
+        {sections.map((section, index) => (
+          <motion.div
+            key={section.key}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <Card className="hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 text-right">
+                <div className="mt-1 flex-shrink-0">
+                  {section.icon}
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-700 leading-relaxed font-medium">
+                    {t(`disclaimerPageComprehensive.${section.key}`, language)}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+
+      <Card className="bg-red-50 border border-red-200">
+        <div className="flex items-center gap-4 text-right">
+          <Lock className="w-6 h-6 text-red-600 flex-shrink-0" />
+          <p className="text-red-800 text-sm leading-relaxed font-bold">
+            {language === 'ar'
+              ? 'تنبيه: استخدام هذا الموقع يعني موافقتك على جميع بنود إخلاء المسؤولية هذا. إذا كنت لا توافق على أي من هذه البنود، يرجى عدم استخدام الموقع.'
+              : 'Notice: Using this website means your agreement to all terms of this disclaimer. If you do not agree to any of these terms, please do not use the website.'}
+          </p>
+        </div>
+      </Card>
+
+      <Card className="bg-gray-50 border border-gray-200">
+        <div className="text-center space-y-4">
+          <div className="flex justify-center items-center gap-2 text-primary font-medium">
+            <ExternalLink size={18} />
+            <span>{language === 'ar' ? 'تواصل معنا لمزيد من المعلومات' : 'Contact us for more information'}</span>
           </div>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">1. إخلاء المسؤولية العام</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            المعلومات الواردة في موقع حمزة اعمرني مقدمة لأغراض تعليمية وإعلامية فقط. 
-            رغم بذل أقصى الجهود لضمان دقة المعلومات، إلا أننا لا نضمن اكتمالها أو دقتها أو حداثتها. 
-            استخدام هذه المعلومات يكون على مسؤوليتك الشخصية.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">2. المحتوى التقني والبرمجي</h2>
-          <div className="bg-blue-50 p-4 rounded-lg mb-6">
-            <h3 className="font-semibold text-blue-800 mb-2">تنبيه مهم للمطورين:</h3>
-            <ul className="list-disc list-inside text-blue-700 space-y-1">
-              <li>الأكواد والحلول البرمجية مقدمة كأمثلة تعليمية</li>
-              <li>يجب اختبار جميع الأكواد في بيئة آمنة قبل الاستخدام الإنتاجي</li>
-              <li>قد تحتاج الأكواد لتعديلات حسب متطلبات مشروعك</li>
-              <li>نحن غير مسؤولين عن أي أضرار ناتجة عن استخدام الأكواد</li>
-            </ul>
-          </div>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">3. الروابط الخارجية</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            يحتوي الموقع على روابط لمواقع خارجية لأغراض المرجعية والفائدة. نحن لسنا مسؤولين عن:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>محتوى المواقع الخارجية أو دقة المعلومات فيها</li>
-            <li>سياسات الخصوصية للمواقع الخارجية</li>
-            <li>أي أضرار قد تنتج عن زيارة هذه المواقع</li>
-            <li>توفر أو استمرارية عمل هذه المواقع</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">4. الإعلانات والمحتوى التجاري</h2>
-          <div className="bg-green-50 p-4 rounded-lg mb-6">
-            <div className="flex items-center mb-2">
-              <Shield className="w-5 h-5 text-green-600 ml-2" />
-              <h3 className="font-semibold text-green-800">الإعلانات</h3>
-            </div>
-            <p className="mb-4">
-              يستخدم هذا الموقع شركاء إعلانات معتمدين لعرض الإعلانات. نحن غير مسؤولين عن محتوى هذه الإعلانات
-              أو الممارسات الخاصة بالخصوصية الخاصة بها.
-            </p>
-          </div>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">5. النصائح والاستشارات</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            أي نصائح أو توصيات مقدمة في الموقع:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>مبنية على الخبرة الشخصية والمعرفة العامة</li>
-            <li>لا تشكل استشارة مهنية رسمية</li>
-            <li>قد لا تناسب جميع الحالات أو المشاريع</li>
-            <li>يُنصح بالحصول على استشارة متخصصة للقرارات المهمة</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">6. حقوق الطبع والنشر</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            نحترم حقوق الملكية الفكرية ونسعى لتجنب انتهاكها. إذا كنت تعتقد أن محتوى في الموقع 
-            ينتهك حقوق الطبع والنشر الخاصة بك، يرجى التواصل معنا فوراً لحل المشكلة.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">7. تحديث المحتوى</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            نسعى لتحديث المحتوى بانتظام، لكن التقنية تتطور بسرعة. بعض المعلومات قد تصبح قديمة 
-            أو غير دقيقة مع مرور الوقت. يُنصح بالتحقق من أحدث المصادر الرسمية.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">8. الأخطاء والسهو</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            رغم بذل العناية في إعداد المحتوى، قد تحدث أخطاء أو سهو. نحن غير مسؤولين عن أي 
-            أضرار ناتجة عن هذه الأخطاء. إذا وجدت خطأ، يرجى إبلاغنا لتصحيحه.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">9. توفر الخدمة</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            نسعى لضمان توفر الموقع على مدار الساعة، لكن قد تحدث انقطاعات لأسباب تقنية أو صيانة:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>لسنا مسؤولين عن انقطاع الخدمة المؤقت</li>
-            <li>قد نحتاج لإيقاف الموقع للصيانة دون إشعار مسبق</li>
-            <li>لا نضمن الوصول المستمر للموقع</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">10. التغييرات على الإخلاء</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            نحتفظ بالحق في تعديل هذا الإخلاء في أي وقت. التعديلات تصبح سارية فور نشرها. 
-            يُنصح بمراجعة هذه الصفحة دورياً للاطلاع على أي تغييرات.
-          </p>
-
-          <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-6">
-            <div className="flex items-center mb-2">
-              <AlertTriangle className="w-5 h-5 text-red-600 ml-2" />
-              <h3 className="font-semibold text-red-800">تنبيه مهم</h3>
-            </div>
-            <p className="text-red-700 text-sm">
-              استخدام هذا الموقع يعني موافقتك على جميع بنود إخلاء المسؤولية هذا. 
-              إذا كنت لا توافق على أي من هذه البنود، يرجى عدم استخدام الموقع.
-            </p>
-          </div>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">11. التواصل</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            للاستفسارات حول إخلاء المسؤولية أو الإبلاغ عن مشاكل:
-          </p>
-          <div className="flex items-center gap-2 text-primary">
-            <ExternalLink size={16} />
-            <span>تواصل معنا عبر صفحة الاتصال</span>
-          </div>
-
-          <div className="bg-gray-100 p-4 rounded-lg mt-8">
-            <p className="text-sm text-gray-600">
-              <strong>تاريخ آخر تحديث:</strong> {new Date().toLocaleDateString('ar-SA')}
-            </p>
-            <p className="text-sm text-gray-600 mt-2">
-              <strong>تاريخ السريان:</strong> {new Date().toLocaleDateString('ar-SA')}
+          <div className="pt-4 border-t border-gray-200">
+            <p className="text-sm text-gray-500">
+              <strong>تاريخ آخر تحديث:</strong> {new Date().toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US')}
             </p>
           </div>
         </div>

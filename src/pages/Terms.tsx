@@ -3,138 +3,78 @@ import { motion } from 'framer-motion';
 import Card from '../components/Card';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
+import { Scale, FileText, ShieldCheck, UserCheck, AlertCircle, RefreshCw, XCircle, Globe } from 'lucide-react';
 
 const Terms: React.FC = () => {
   const { language } = useLanguage();
 
+  const sections = [
+    { key: 'acceptance', icon: <UserCheck className="w-6 h-6 text-blue-500" /> },
+    { key: 'restrictions', icon: <XCircle className="w-6 h-6 text-red-500" /> },
+    { key: 'intellectual', icon: <ShieldCheck className="w-6 h-6 text-purple-500" /> },
+    { key: 'userContent', icon: <FileText className="w-6 h-6 text-green-500" /> },
+    { key: 'liabilities', icon: <AlertCircle className="w-6 h-6 text-orange-500" /> },
+    { key: 'updates', icon: <RefreshCw className="w-6 h-6 text-teal-500" /> },
+    { key: 'termination', icon: <XCircle className="w-6 h-6 text-gray-500" /> },
+    { key: 'governingLaw', icon: <Globe className="w-6 h-6 text-indigo-500" /> },
+  ];
+
   return (
-    <motion.div 
-      className="space-y-8"
+    <motion.div
+      className="space-y-8 pb-12"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5">
-        <h1 className="text-4xl font-bold text-dark-color mb-4">{t('termsPage.title', language)}</h1>
-        <p className="text-lg text-dark-color/70">
-          {t('termsPage.disclaimer', language)}
+      <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10">
+        <Scale className="w-12 h-12 text-primary mx-auto mb-4" />
+        <h1 className="text-4xl font-bold text-dark-color mb-4">{t('termsPageComprehensive.title', language)}</h1>
+        <p className="text-lg text-dark-color/70 max-w-2xl mx-auto">
+          {t('termsPageComprehensive.description', language)}
         </p>
       </Card>
 
-      <Card>
-        <div className="prose prose-lg max-w-none text-right">
-          <h2 className="text-2xl font-bold text-primary mb-4">1. {t('termsPageComprehensive.acceptance', language)}</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            {t('termsPageComprehensive.acceptance', language)}
-          </p>
+      <div className="grid grid-cols-1 gap-6">
+        {sections.map((section, index) => (
+          <motion.div
+            key={section.key}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <Card className="hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4 text-right">
+                <div className="mt-1 flex-shrink-0">
+                  {section.icon}
+                </div>
+                <div className="flex-1">
+                  <p className="text-gray-700 leading-relaxed font-medium">
+                    {t(`termsPageComprehensive.${section.key}`, language)}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
 
-          <h2 className="text-2xl font-bold text-primary mb-4">2. وصف الخدمة</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            موقع حمزة اعمرني هو منصة تقنية تقدم:
+      {/* AdSense specific clause for terms */}
+      <Card className="bg-blue-50 border border-blue-100">
+        <div className="flex items-center gap-4 text-right">
+          <Info className="w-6 h-6 text-blue-600" />
+          <p className="text-blue-800 text-sm leading-relaxed">
+            {language === 'ar'
+              ? 'نحن نستخدم شركاء إعلانات خارجيين لعرض الإعلانات عندما تزور موقعنا. قد تستخدم هذه الشركات معلومات حول زياراتك لهذا الموقع والمواقع الأخرى من أجل عرض إعلانات حول السلع والخدمات التي تهمك.'
+              : 'We use third-party advertising companies to serve ads when you visit our website. These companies may use information about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.'}
           </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>محتوى تعليمي في مجال البرمجة والتقنية</li>
-            <li>مقالات ودروس تقنية</li>
-            <li>معلومات حول المشاريع والخدمات</li>
-            <li>روابط للتواصل والقنوات التعليمية</li>
-          </ul>
+        </div>
+      </Card>
 
-          <h2 className="text-2xl font-bold text-primary mb-4">3. الاستخدام المقبول</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            يُسمح لك باستخدام الموقع للأغراض التالية فقط:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>الاطلاع على المحتوى التعليمي والتقني</li>
-            <li>التعلم والاستفادة من المواد المقدمة</li>
-            <li>التواصل معنا للاستفسارات المشروعة</li>
-            <li>مشاركة المحتوى مع ذكر المصدر</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">4. الاستخدام المحظور</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            يُحظر عليك القيام بما يلي:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>نسخ أو إعادة نشر المحتوى دون إذن</li>
-            <li>استخدام الموقع لأغراض غير قانونية</li>
-            <li>محاولة اختراق أو إلحاق الضرر بالموقع</li>
-            <li>إرسال محتوى مسيء أو غير لائق</li>
-            <li>انتهاك حقوق الملكية الفكرية</li>
-            <li>استخدام برامج آلية لجمع البيانات</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">5. حقوق الملكية الفكرية</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            جميع المحتويات الموجودة على الموقع، بما في ذلك النصوص والصور والتصميم والكود، 
-            محمية بحقوق الطبع والنشر وتخص حمزة اعمرني. لا يُسمح بإعادة الاستخدام دون إذن مكتوب.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">6. المحتوى المقدم من المستخدمين</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            عند إرسال أي محتوى إلينا (تعليقات، رسائل، إلخ):
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>تضمن أن المحتوى لا ينتهك حقوق الآخرين</li>
-            <li>تمنحنا الحق في استخدام المحتوى للأغراض التعليمية</li>
-            <li>تتحمل المسؤولية الكاملة عن المحتوى المرسل</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">7. الإعلانات</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            قد يحتوي الموقع على إعلانات من شركاء إعلانات معتمدين. 
-            نحن غير مسؤولين عن محتوى هذه الإعلانات أو المواقع التي تؤدي إليها.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">8. إخلاء المسؤولية</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            الموقع والمحتوى مقدمان "كما هما" دون أي ضمانات. نحن غير مسؤولين عن:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>دقة أو اكتمال المعلومات المقدمة</li>
-            <li>أي أضرار ناتجة عن استخدام الموقع</li>
-            <li>انقطاع الخدمة أو الأخطاء التقنية</li>
-            <li>محتوى المواقع الخارجية المرتبطة</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">9. تحديد المسؤولية</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            في أي حال من الأحوال، لن نكون مسؤولين عن أي أضرار مباشرة أو غير مباشرة 
-            أو عرضية أو خاصة أو تبعية ناتجة عن استخدام الموقع.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">10. التعديلات</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            نحتفظ بالحق في تعديل هذه الشروط في أي وقت. التعديلات تصبح سارية فور نشرها على الموقع. 
-            استمرارك في استخدام الموقع يعني موافقتك على الشروط المحدثة.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">11. إنهاء الاستخدام</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            نحتفظ بالحق في منع أو تقييد الوصول إلى الموقع لأي مستخدم ينتهك هذه الشروط، 
-            دون إشعار مسبق ودون تحمل أي مسؤولية.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">12. القانون المطبق</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            تخضع هذه الشروط لقوانين المملكة العربية السعودية. أي نزاع ينشأ عن استخدام الموقع 
-            يخضع لاختصاص المحاكم السعودية.
-          </p>
-
-          <h2 className="text-2xl font-bold text-primary mb-4">13. التواصل</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            للاستفسارات حول هذه الشروط، يمكنك التواصل معنا عبر:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-            <li>البريد الإلكتروني: terms@hamzaamirni.com</li>
-            <li>واتساب: من خلال الروابط المتاحة في الموقع</li>
-          </ul>
-
-          <div className="bg-gray-100 p-4 rounded-lg mt-8">
-            <p className="text-sm text-gray-600">
-              <strong>تاريخ آخر تحديث:</strong> {new Date().toLocaleDateString('ar-SA')}
-            </p>
-            <p className="text-sm text-gray-600 mt-2">
-              <strong>تاريخ السريان:</strong> {new Date().toLocaleDateString('ar-SA')}
+      <Card className="bg-gray-50 border border-gray-200">
+        <div className="text-center space-y-4">
+          <div className="pt-4 border-t border-gray-200">
+            <p className="text-sm text-gray-500">
+              <strong>تاريخ آخر تحديث:</strong> {new Date().toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US')}
             </p>
           </div>
         </div>
@@ -142,5 +82,12 @@ const Terms: React.FC = () => {
     </motion.div>
   );
 };
+
+// Internal Info icon for the AdSense clause since I forgot to import it
+const Info = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" />
+  </svg>
+);
 
 export default Terms;

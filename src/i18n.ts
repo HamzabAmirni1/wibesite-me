@@ -1717,21 +1717,39 @@ export const servicesPageComprehensive = {
 export const disclaimerPageComprehensive = {
   ar: {
     title: 'إخلاء المسؤولية',
-    description: 'إخلاء المسؤولية القانوني لموقع حمزة اعمرني',
-    content: 'جميع المعلومات والمحتوى المقدم على هذا الموقع هو لأغراض تعليمية فقط. لا نتحمل أي مسؤولية عن أي ضرر أو خسارة قد ينجم عن استخدام الموقع أو محتواه.',
-    noWarranty: 'لا توجد ضمانات'
+    description: 'توضح هذه الصفحة حدود مسؤوليتنا القانونية تجاه المحتوى والخدمات المقدمة.',
+    general: 'إخلاء مسؤولية عام: المعلومات المقدمة على موقع حمزة اعمرني هي لأغراض تعليمية وإعلامية فقط. نحن نبذل قصارى جهدنا لضمان دقة المعلومات ولكن لا نضمن اكتمالها.',
+    technical: 'المحتوى التقني: الأكواد والحلول البرمجية المقدمة هي أمثلة تعليمية. يجب اختبار الأكواد في بيئة آمنة قبل الاستخدام، ونحن غير مسؤولين عن أي أضرار ناتجة عن استخدامها.',
+    external: 'الروابط الخارجية: قد يحتوي الموقع على روابط لمواقع خارجية. نحن لسنا مسؤولين عن محتوى أو سياسات الخصوصية أو توفر هذه المواقع.',
+    advertising: 'الإعلانات: نستخدم شركاء إعلانات خارجيين (مثل Google AdSense). نحن غير مسؤولين عن محتوى الإعلانات أو ممارسات الخصوصية الخاصة بالمعلنين.',
+    professional: 'استشارة مهنية: المحتوى لا يشكل استشارة مهنية رسمية. يُنصح دائماً باستشارة متخصص قبل اتخاذ قرارات تقنية أو مالية مهمة.',
+    contentUpdate: 'تحديث المحتوى: المعلومات التقنية تتغير بسرعة، وقد تصبح بعض المقالات قديمة. نحن غير ملزمين بتحديث المحتوى بشكل فوري.',
+    errors: 'الأخطاء والسهو: رغم التدقيق، قد تحدث أخطاء إملائية أو تقنية. نحن غير مسؤولين عن أي تبعات ناتجة عن هذه الأخطاء.',
+    availability: 'توفر الخدمة: لا نضمن استمرار عمل الموقع دون انقطاع، ونحتفظ بالحق في إيقاف الخدمة للصيانة في أي وقت.'
   },
   fr: {
     title: 'Clause de non-responsabilité',
-    description: 'Clause de non-responsabilité légale pour le site de Hamza Amirni',
-    content: 'Toutes les informations et le contenu fourni sur ce site sont à titre éducatif uniquement. Nous n\'assumons aucune responsabilité pour tout dommage ou perte résultant de l\'utilisation du site ou de son contenu.',
-    noWarranty: 'Aucune garantie'
+    description: 'Cette page définit les limites de notre responsabilité légale concernant le contenu et les services fournis.',
+    general: 'Avis général : Les informations fournies sur le site de Hamza Amirni sont à des fins éducatives et informatives uniquement. Nous faisons de notre mieux pour assurer l\'exactitude mais ne garantissons pas l\'exhaustivité.',
+    technical: 'Contenu technique : Les codes et solutions fournis sont des exemples éducatifs. Ils doivent être testés dans un environnement sûr avant utilisation.',
+    external: 'Liens externes : Le site peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leur contenu ou de leurs politiques de confidentialité.',
+    advertising: 'Publicité : Nous utilisons des partenaires publicitaires tiers (comme Google AdSense). Nous ne sommes pas responsables du contenu des annonces.',
+    professional: 'Conseil professionnel : Le contenu ne constitue pas un conseil professionnel officiel. Consultez toujours un expert pour vos décisions importantes.',
+    contentUpdate: 'Mise à jour : Les informations techniques évoluent rapidement ; certains contenus peuvent devenir obsolètes.',
+    errors: 'Erreurs et omissions : Malgré nos efforts, des erreurs peuvent survenir. Nous déclinons toute responsabilité pour les conséquences de ces erreurs.',
+    availability: 'Disponibilité : Nous ne garantissons pas un accès ininterrompu au site et nous nous réservons le droit de suspendre le service pour maintenance.'
   },
   en: {
     title: 'Disclaimer',
-    description: 'Legal disclaimer for Hamza Amirni\'s website',
-    content: 'All information and content provided on this website is for educational purposes only. We assume no responsibility for any damage or loss resulting from the use of the website or its content.',
-    noWarranty: 'No warranties'
+    description: 'This page defines the limits of our legal responsibility regarding the content and services provided.',
+    general: 'General Disclaimer: The information provided on Hamza Amirni\'s website is for educational and informational purposes only. We strive for accuracy but do not guarantee completeness.',
+    technical: 'Technical Content: Code and solutions provided are educational examples. They should be tested in a safe environment before use.',
+    external: 'External Links: The site may contain links to third-party websites. We are not responsible for their content or privacy policies.',
+    advertising: 'Advertising: We use third-party advertising partners (like Google AdSense). We are not responsible for the content of ads or the advertisers\' privacy practices.',
+    professional: 'Professional Advice: Content does not constitute official professional advice. Always consult an expert for important technical or financial decisions.',
+    contentUpdate: 'Content Updates: Technical information changes rapidly; some content may become outdated.',
+    errors: 'Errors and Omissions: Despite auditing, errors may occur. We are not responsible for any consequences resulting from these errors.',
+    availability: 'Service Availability: We do not guarantee uninterrupted access to the site and reserve the right to suspend service for maintenance at any time.'
   }
 };
 
@@ -1739,24 +1757,45 @@ export const disclaimerPageComprehensive = {
 export const privacyPageComprehensive = {
   ar: {
     title: 'سياسة الخصوصية',
-    description: 'كيفية حماية بيانات خصوصيتك',
-    dataCollection: 'جمع البيانات: نحن لا نجمع بيانات شخصية دون موافقتك.',
-    dataUsage: 'استخدام البيانات: البيانات التي نجمعها تُستخدم فقط لتحسين الخدمة.',
-    dataSecurity: 'أمان البيانات: نستخدم أحدث تقنيات التشفير لحماية بيانات المستخدمين.'
+    description: 'نحن نقدر خصوصيتك ونلتزم بحماية بياناتك الشخصية وفقاً لأعلى المعايير.',
+    intro: 'تشرح هذه السياسة كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك الشخصية عند زيارتك لموقع حمزة اعمرني.',
+    dataCollection: 'جمع البيانات: نحن نجمع فقط البيانات التي تقدمها لنا طواعية، مثل اسمك وبريدك الإلكتروني عند استخدام نموذج الاتصال.',
+    dataUsage: 'استخدام البيانات: نستخدم بياناتك للرد على استفساراتك، وتحسين تجربة المستخدم، وتخصيص المحتوى والإعلانات.',
+    cookies: 'ملفات تعريف الارتباط (Cookies): نستخدم ملفات تعريف الارتباط لتحسين تجربتك وجمع إحصاءات حول زوار الموقع.',
+    googleAdSense: 'جوجل أدسنس (Google AdSense): يستخدم هذا الموقع جوجل أدسنس لعرض الإعلانات. تستخدم جوجل ملفات تعريف الارتباط (مثل ملف تعريف الارتباط DART) لعرض الإعلانات بناءً على زياراتك لموقعنا والمواقع الأخرى على الإنترنت.',
+    optOut: 'إلغاء الاشتراك: يمكن للمستخدمين اختيار عدم استخدام ملف تعريف الارتباط DART عبر زيارة سياسة الخصوصية الخاصة بإعلانات جوجل وشبكة المحتوى.',
+    thirdParty: 'أطراف ثالثة: قد يستخدم مزودو الإعلانات الخارجيون تقنيات مثل ملفات تعريف الارتباط لجمع معلومات حول نشاطك الإعلاني.',
+    dataSecurity: 'أمان البيانات: نستخدم معايير أمان تقنية وإدارية لحماية بياناتك من الوصول غير المصرح به أو التغيير أو الإفصاح.',
+    userRights: 'حقوق المستخدم: لك الحق في الوصول إلى بياناتك الشخصية التي نحتفظ بها، أو طلب تصحيحها، أو حذفها في أي وقت.',
+    contact: 'لأي استفسار بخصوص سياسة الخصوصية، يرجى التواصل معنا عبر صفحة الاتصال.'
   },
   fr: {
     title: 'Politique de Confidentialité',
-    description: 'Comment nous protégeons vos données personnelles',
-    dataCollection: 'Collecte de données: Nous ne collectons pas de données personnelles sans votre consentement.',
-    dataUsage: 'Utilisation des données: Les données que nous collectons sont utilisées uniquement pour améliorer le service.',
-    dataSecurity: 'Sécurité des données: Nous utilisons les dernières technologies de cryptage pour protéger les données des utilisateurs.'
+    description: 'Nous accordons une grande importance à votre vie privée et nous nous engageons à protéger vos données personnelles.',
+    intro: 'Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles lorsque vous visitez le site de Hamza Amirni.',
+    dataCollection: 'Collecte de données : Nous collectons uniquement les données que vous nous fournissez volontairement, telles que votre nom et votre adresse e-mail lors de l\'utilisation du formulaire de contact.',
+    dataUsage: 'Utilisation des données : Nous utilisons vos données pour répondre à vos demandes, améliorer l\'expérience utilisateur et personnaliser le contenu et les publicités.',
+    cookies: 'Cookies : Nous utilisons des cookies pour améliorer votre expérience et recueillir des statistiques sur les visiteurs du site.',
+    googleAdSense: 'Google AdSense : Ce site utilise Google AdSense pour diffuser des annonces. Google utilise des cookies (comme le cookie DART) pour diffuser des annonces basées sur vos visites sur notre site et d\'autres sites sur Internet.',
+    optOut: 'Désactivation : Les utilisateurs peuvent choisir de ne pas utiliser le cookie DART en visitant la politique de confidentialité de Google Ads.',
+    thirdParty: 'Tiers : Les fournisseurs de publicité tiers peuvent utiliser des technologies telles que les cookies pour collecter des informations sur votre activité publicitaire.',
+    dataSecurity: 'Sécurité des données : Nous utilisons des normes de sécurité techniques et administratives pour protéger vos données contre tout accès non autorisé.',
+    userRights: 'Droits de l\'utilisateur : Vous avez le droit d\'accéder à vos données personnelles, de demander leur correction ou leur suppression à tout moment.',
+    contact: 'Pour toute question concernant la politique de confidentialité, veuillez nous contacter via la page de contact.'
   },
   en: {
     title: 'Privacy Policy',
-    description: 'How we protect your personal data',
-    dataCollection: 'Data Collection: We do not collect personal data without your consent.',
-    dataUsage: 'Data Usage: The data we collect is used only to improve the service.',
-    dataSecurity: 'Data Security: We use the latest encryption technologies to protect user data.'
+    description: 'We value your privacy and are committed to protecting your personal data according to the highest standards.',
+    intro: 'This policy explains how we collect, use, and protect your personal information when you visit Hamza Amirni\'s website.',
+    dataCollection: 'Data Collection: We only collect data that you voluntarily provide to us, such as your name and email when using the contact form.',
+    dataUsage: 'Data Usage: We use your data to respond to your inquiries, improve user experience, and personalize content and advertisements.',
+    cookies: 'Cookies: We use cookies to enhance your experience and gather statistics about site visitors.',
+    googleAdSense: 'Google AdSense: This site uses Google AdSense to display advertisements. Google uses cookies (such as the DART cookie) to serve ads based on your visits to our site and other sites on the Internet.',
+    optOut: 'Opt-out: Users may choose to opt-out of the use of the DART cookie by visiting the Google Ad and Content Network privacy policy.',
+    thirdParty: 'Third Parties: Third-party ad providers may use technologies like cookies to collect information about your advertising activity.',
+    dataSecurity: 'Data Security: We use technical and administrative security standards to protect your data from unauthorized access, alteration, or disclosure.',
+    userRights: 'User Rights: You have the right to access your personal data, request its correction, or deletion at any time.',
+    contact: 'For any inquiries regarding the privacy policy, please contact us through the contact page.'
   }
 };
 
@@ -1764,24 +1803,39 @@ export const privacyPageComprehensive = {
 export const termsPageComprehensive = {
   ar: {
     title: 'شروط الاستخدام',
-    description: 'الشروط والأحكام التي تحكم استخدام الموقع',
-    acceptance: 'بقبول هذه الشروط، أنت توافق على استخدام الموقع وفقاً لهذه الأحكام.',
-    restrictions: 'يُحظر استخدام الموقع لأي غرض غير قانوني أو ضار.',
-    intellectual: 'جميع المحتويات محمية بحقوق الطبع والنشر.'
+    description: 'تحدد هذه الشروط القواعد واللوائح الخاصة باستخدام موقع حمزة اعمرني.',
+    acceptance: 'قبول الشروط: باستخدامك لهذا الموقع، فإنك تقبل هذه الشروط والأحكام بالكامل. إذا كنت لا توافق، يرجى عدم استخدام الموقع.',
+    restrictions: 'القيود: يُحظر عليك إعادة نشر مواد من هذا الموقع، أو بيعها، أو تأجيرها، أو استنساخها لأغراض تجارية دون إذن.',
+    intellectual: 'الملكية الفكرية: جميع المحتويات والعلامات التجارية الموجودة على الموقع هي ملك لحمزة اعمرني ومحمية بحقوق الطبع والنشر.',
+    userContent: 'محتوى المستخدم: عند تقديم أي محتوى، فإنك تمنحنا ترخيصاً عالمياً غير حصري لاستخدامه وتوزيعه للأغراض التعليمية.',
+    liabilities: 'إخلاء المسؤولية: لا نضمن دقة المعلومات المقدمة، ولا نتحمل المسؤولية عن أي خسائر ناتجة عن استخدام الموقع.',
+    updates: 'التحديثات: نحتفظ بالحق في تعديل هذه الشروط في أي وقت، وتصبح التعديلات فعالة فور نشرها.',
+    termination: 'إنهاء الخدمة: نحتفظ بالحق في إنهاء وصولك إلى الموقع في حال انتهاك أي من هذه الشروط.',
+    governingLaw: 'القانون المطبق: تخضع هذه الشروط لقوانين الدولة المعمول بها، وأي نزاع يحل أمام المحاكم المختصة.'
   },
   fr: {
     title: 'Conditions d\'Utilisation',
-    description: 'Les conditions et avis qui régissent l\'utilisation du site',
-    acceptance: 'En acceptant ces conditions, vous acceptez d\'utiliser le site conformément à ces conditions.',
-    restrictions: 'Il est interdit d\'utiliser le site à des fins illégales ou nuisibles.',
-    intellectual: 'Tout le contenu est protégé par les droits d\'auteur.'
+    description: 'Ces conditions définissent les règles et réglementations pour l\'utilisation du site de Hamza Amirni.',
+    acceptance: 'Acceptation des conditions : En utilisant ce site, vous acceptez pleinement ces conditions. Si vous n\'êtes pas d\'accord, veuillez ne pas utiliser le site.',
+    restrictions: 'Restrictions : Il est interdit de republier, vendre, louer ou reproduire le contenu de ce site à des fins commerciales sans autorisation.',
+    intellectual: 'Propriété intellectuelle : Tous les contenus et marques sur le site sont la propriété de Hamza Amirni et sont protégés par le droit d\'auteur.',
+    userContent: 'Contenu utilisateur : En soumettant du contenu, vous nous accordez une licence mondiale pour l\'utiliser à des fins éducatives.',
+    liabilities: 'Avertissement : Nous ne garantissons pas l\'exactitude des informations et ne sommes pas responsables des pertes résultant de l\'utilisation du site.',
+    updates: 'Mises à jour : Nous nous réservons le droit de modifier ces conditions à tout moment.',
+    termination: 'Résiliation : Nous nous réservons le droit de mettre fin à votre accès au site en cas de violation des conditions.',
+    governingLaw: 'Loi applicable : Ces conditions sont régies par les lois en vigueur.'
   },
   en: {
     title: 'Terms of Use',
-    description: 'The terms and conditions that govern the use of the site',
-    acceptance: 'By accepting these terms, you agree to use the site in accordance with these terms.',
-    restrictions: 'It is prohibited to use the site for any illegal or harmful purpose.',
-    intellectual: 'All content is protected by copyright.'
+    description: 'These terms set out the rules and regulations for using Hamza Amirni\'s website.',
+    acceptance: 'Acceptance of Terms: By using this website, you accept these terms and conditions in full. If you disagree, please do not use the website.',
+    restrictions: 'Restrictions: You are prohibited from republishing, selling, renting, or reproducing content from this site for commercial purposes without permission.',
+    intellectual: 'Intellectual Property: All content and trademarks on the site are the property of Hamza Amirni and are protected by copyright.',
+    userContent: 'User Content: By submitting any content, you grant us a worldwide license to use and distribute it for educational purposes.',
+    liabilities: 'Disclaimer: We do not guarantee the accuracy of the information provided and are not liable for any losses resulting from using the site.',
+    updates: 'Updates: We reserve the right to modify these terms at any time.',
+    termination: 'Termination: We reserve the right to terminate your access to the site in case of a violation of these terms.',
+    governingLaw: 'Governing Law: These terms are governed by the applicable laws.'
   }
 };
 
