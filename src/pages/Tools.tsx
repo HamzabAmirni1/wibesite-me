@@ -60,7 +60,7 @@ const Tools: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const translatedTools = useMemo(() => {
-    const keys = ['doc', 'chatgpt', 'coursera', 'canva', 'github', 'stackoverflow'];
+    const keys = ['doc', 'chatgpt', 'coursera', 'canva', 'stackoverflow'];
     return toolsContent.tools.map((tool, index) => {
       const toolKey = keys[index] || keys[0];
       const translatedData = t(`toolsPageComprehensive.items.${toolKey}`, language);

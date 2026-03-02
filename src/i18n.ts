@@ -189,14 +189,14 @@ export const heroContent = {
     en: 'Hamza Amirni',
   },
   subtitle: {
-    ar: 'مطور واجهات متقدم (Full-Stack) ومصمم حلول برمجية مبتكرة',
-    fr: 'Développeur Full-Stack Senior & Concepteur de solutions innovantes',
-    en: 'Senior Full-Stack Developer & Innovative Solutions Architect',
+    ar: 'مطور Full-Stack وخبير أتمتة | بناء بوتات ذكية وتطبيقات ويب قابلة للتطوير',
+    fr: 'Développeur Full-Stack & Expert en Automatisation | Bots Intelligents & Apps Web',
+    en: 'Full-Stack Developer & Automation Expert | Building Intelligent Bots & Scalable Web Apps',
   },
   intro: {
-    ar: 'مرحباً بك في منصتي الإلكترونية! هنا أشارك معك خبرتي وشغفي في عالم البرمجة والتقنية وتطوير الذات.',
-    fr: "Bienvenue sur ma plateforme ! Je partage avec toi mon expérience et ma passion pour la programmation, la technologie et le développement personnel.",
-    en: 'Welcome to my digital space! I share my experience and passion for programming, technology and self‑development.',
+    ar: 'متخصص في Python و JavaScript و PHP لتبسيط سير عمل عملك وأتمتة المهام المعقدة لمشاريع الـ SaaS والشركات الناشئة.',
+    fr: 'Spécialisé en Python, JavaScript et PHP pour optimiser vos flux de travail et automatiser vos processus métier.',
+    en: 'Specializing in Python, JavaScript, and PHP to streamline your business workflows and automate complex tasks for SaaS & startups.',
   },
   cta: {
     ar: 'معًا نحو مستقبل رقمي أفضل!',
@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'مطور واجهات متقدم (Full-Stack) ومصمم حلول برمجية مبتكرة',
-    fr: 'Développeur Full-Stack Senior & Concepteur de solutions innovantes',
-    en: 'Senior Full-Stack Developer & Innovative Solutions Architect',
+    ar: 'خبير في تطوير بوتات التواصل والـ SaaS (React, Next.js, PHP, Python)',
+    fr: 'Expert en bots de messagerie & SaaS (React, Next.js, PHP, Python)',
+    en: 'Expert Bot Developer (WA, TG, FB) & Full-Stack Engineer (React, PHP, Python)',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
@@ -458,9 +458,9 @@ export const aboutPage = {
       en: 'I believe that technology is a powerful tool for improving people\'s lives and solving complex problems. Therefore, I always strive to learn everything new and share my knowledge with others through technical content creation.',
     },
     p3: {
-      ar: 'رؤيتي هي بناء مجتمع تقني عربي قوي ومبدع، والمساهمة في تطوير مشاريع تترك أثراً إيجابياً في العالم.',
-      fr: 'Ma vision est de construire une communauté technique arabe forte et créative, et de contribuer au développement de projets qui laissent un impact positif dans le monde.',
-      en: 'My vision is to build a strong and creative Arabic technical community, and to contribute to the development of projects that leave a positive impact on the world.',
+      ar: 'أؤمن بقوة الأتمتة لبناء مشاريع ذكية وفعالة، لهذا تخصصت في هندسة البوتات والحلول السحابية المتقدمة.',
+      fr: 'Je crois au pouvoir de l\'automatisation pour des projets intelligents et efficaces, c\'est pourquoi je me suis spécialisé dans l\'ingénierie des bots et les solutions cloud avancées.',
+      en: 'I believe in the power of automation to build smart and efficient projects, specializing in Messaging Bots and advanced cloud solutions.',
     },
   },
   description: {
@@ -488,6 +488,7 @@ export const aboutPage = {
       backend: { ar: 'تطوير الخلفيات', fr: 'Développement Backend', en: 'Backend Development' },
       mobile: { ar: 'تطبيقات الموبايل', fr: 'Applications Mobiles', en: 'Mobile Applications' },
       databases: { ar: 'قواعد البيانات', fr: 'Bases de données', en: 'Databases' },
+      automation: { ar: 'البوتات والأتمتة', fr: 'Bots & Automatisation', en: 'Bots & Automation' },
       algorithms: { ar: 'الخوارزميات', fr: 'Algorithmes', en: 'Algorithms' },
     },
   },
@@ -516,7 +517,12 @@ export const aboutPage = {
       {
         ar: 'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.',
         fr: "J'ai acquis une grande expérience dans les domaines de la programmation et du web.",
-        en: 'I have gained extensive experience in programming and web development.',
+        en: 'I have gained extensive experience in programming and web development, specializing in React and Next.js.',
+      },
+      {
+        ar: 'أوفر ساعات عمل مرنة تتناسب مع توقيت الولايات المتحدة وأوروبا.',
+        fr: 'Je propose des horaires flexibles adaptés aux fuseaux horaires US et Europe.',
+        en: 'I offer flexible working hours to accommodate US and European time zones.',
       },
     ],
   },
@@ -643,6 +649,10 @@ export const homePage = {
           title: 'تحسين محركات البحث (SEO)',
           desc: 'تهيئة الموقع للظهور في نتائج البحث، تحسين السرعة، وهيكلة المحتوى لزيادة فرص الوصول إلى عملائك.'
         },
+        automation: {
+          title: 'تطوير البوتات والأتمتة',
+          desc: 'برمجة بوتات ذكية لـ WhatsApp و Telegram و Facebook لتسهيل التواصل وأتمتة المهام المتكررة.'
+        },
         custom: {
           title: 'برمجة حلول خاصة حسب الطلب',
           desc: 'تطوير أنظمة ولوحات تحكم ومنصّات مخصّصة (حجز، إدارة عملاء، أنظمة داخلية…) وفق احتياجات مشروعك.'
@@ -743,6 +753,10 @@ export const homePage = {
           title: 'Optimisation des moteurs de recherche (SEO)',
           desc: 'Optimiser le site pour apparaître dans les résultats de recherche, améliorer la vitesse et structurer le contenu pour augmenter les chances d\'atteindre vos clients.'
         },
+        automation: {
+          title: 'Dév Bots & Automatisation',
+          desc: 'Création de bots intelligents pour WhatsApp, Telegram et Facebook pour automatiser vos processus.'
+        },
         custom: {
           title: 'Programmation de solutions personnalisées sur demande',
           desc: 'Développement de systèmes, de panneaux de contrôle et de plateformes personnalisées (réservation, gestion client, systèmes internes...) selon vos besoins.'
@@ -842,6 +856,10 @@ export const homePage = {
         seo: {
           title: 'Search Engine Optimization (SEO)',
           desc: 'Optimizing the site to appear in search results, improving speed, and structuring content to increase the chances of reaching your customers.'
+        },
+        automation: {
+          title: 'Bot Development & Automation',
+          desc: 'Building intelligent bots for WhatsApp, Telegram, and Facebook to automate workflows and engagement.'
         },
         custom: {
           title: 'Custom Software Solutions on Demand',
@@ -1393,11 +1411,7 @@ export const botsPageFull = {
         desc: 'بوت ذكاء اصطناعي متقدم من OpenAI للإجابة على أسئلتك وحل مشاكلك البرمجية',
         features: ['إجابات ذكية ودقيقة', 'مساعدة في البرمجة', 'شرح المفاهيم', 'كتابة الأكواد']
       },
-      b3: {
-        name: 'GitHub Copilot',
-        desc: 'مساعد برمجة ذكي يساعدك في كتابة الأكواد بشكل أسرع وأكثر كفاءة',
-        features: ['اقتراحات أكواد ذكية', 'دعم لغات متعددة', 'تكامل مع VS Code', 'تعلم من سياق الكود']
-      },
+
       b4: {
         name: 'Perplexity AI',
         desc: 'محرك بحث ذكي يستخدم الذكاء الاصطناعي لتقديم إجابات دقيقة مع المصادر',
@@ -1467,11 +1481,7 @@ export const botsPageFull = {
         desc: 'Outil IA avancé d\'OpenAI pour répondre à vos questions complexes.',
         features: ['Réponses intelligentes', 'Aide au codage', 'Explications', 'Génération code']
       },
-      b3: {
-        name: 'GitHub Copilot',
-        desc: 'Assistant de codage IA pour écrire du code plus rapidement.',
-        features: ['Suggestions intelligentes', 'Multi-langages', 'VS Code Sync', 'Context Aware']
-      },
+
       b4: {
         name: 'Perplexity AI',
         desc: 'Moteur de recherche IA fournissant des sources précises.',
@@ -1541,11 +1551,7 @@ export const botsPageFull = {
         desc: 'Advanced AI from OpenAI to answer questions and solve code issues.',
         features: ['Smart answers', 'Coding help', 'Explanations', 'Code generation']
       },
-      b3: {
-        name: 'GitHub Copilot',
-        desc: 'AI coding assistant to help you write code faster and better.',
-        features: ['Intelligent suggestions', 'Multiple languages', 'VS Code sync', 'Context aware']
-      },
+
       b4: {
         name: 'Perplexity AI',
         desc: 'AI search engine that provides accurate answers with sources.',
@@ -1651,9 +1657,9 @@ export const projectsPage = {
         features: ['رسوم بيانية تفاعلية', 'تقارير قابلة للتصدير', 'تحديث بيانات فوري', 'واجهة سهلة الاستخدام']
       },
       p6: {
-        title: 'موقع مطعم تفاعلي',
-        description: 'تطوير نظام طلبات أونلاين متكامل. التحدي كان تبسيط عملية الطلب للمستخدمين غير التقنيين. ركزت على تصميم UI بديهي جداً وتقليل خطوات الدفع لزيادة معدل التحويل.',
-        features: ['قائمة طعام رقمية', 'نظام طلبات أونلاين', 'حجز الطاولات', 'تكامل مع Google Maps']
+        title: 'بوت خدمة عملاء مؤتمت',
+        description: 'نظام خدمة عملاء ذكي يتعامل مع أكثر من 1000 استفسار يومياً باستخدام Python و Meta API. حقق نسبة حل تلقائي بلغت 95% عبر تكامل NLP متقدم.',
+        features: ['WhatsApp Cloud API', 'خلفية Python قابلة للتوسع', 'معالجة لغات طبيعية ذكية', 'لوحة قياس فورية']
       }
     },
     preview: 'معاينة'
@@ -1694,9 +1700,9 @@ export const projectsPage = {
         features: ['Graphiques interactifs', 'Rapports exportables', 'Données en temps réel', 'Interface intuitive']
       },
       p6: {
-        title: 'Site de restaurant interactif',
-        description: 'Système complet de commande en ligne. Focus sur une interface utilisateur très intuitive pour simplifier le processus de commande.',
-        features: ['Menu numérique', 'Système de commande', 'Réservation de tables', 'Intégration Google Maps']
+        title: 'Bot de Support Client Automatisé',
+        description: 'Système automatisé traitant plus de 1000 requêtes par jour via Python & Meta API. Atteint un taux de résolution de 95% grâce à l\'intégration NLP.',
+        features: ['WhatsApp Cloud API', 'Backend Python Scalable', 'Traitement NLP Intelligent', 'Tableau de bord en temps réel']
       }
     },
     preview: 'Aperçu'
@@ -1712,34 +1718,34 @@ export const projectsPage = {
     },
     projects: {
       p1: {
-        title: 'Tech Company Website',
-        description: 'Built to provide a modern digital interface for a software company. The challenge was balancing performance with rich visual design using Next.js and Framer Motion.',
-        features: ['Fully responsive design', 'Admin dashboard', 'Content management system', 'Advanced SEO optimization']
+        title: 'SaaS Tech Platform',
+        description: 'Engineered a high-performance digital interface that increased user engagement by 35%. Optimized Next.js rendering for 2x faster load times.',
+        features: ['Full-stack SaaS architecture', 'Interactive analytics dashboard', 'SEO-first blog system', 'Enterprise-grade security']
       },
       p2: {
-        title: 'Fashion E-commerce Store',
-        description: 'The goal was to create a seamless shopping experience. Solved real-time stock synchronization issues using Webhooks with Stripe and MongoDB.',
-        features: ['Smart shopping cart', 'Multiple payment gateway', 'Product rating system', 'Order & shipping management']
+        title: 'Scalable E-commerce Engine',
+        description: 'Developed a conversion-optimized store that saw a 20% increase in sales within 3 months. Implemented advanced caching for sub-second page loads.',
+        features: ['Stripe & PayPal integration', 'Inventory management', 'Real-time order tracking', 'Mobile-first UX design']
       },
       p3: {
-        title: 'Interactive Learning Platform',
-        description: 'Educational project simplifying remote learning. Used Firebase for real-time services and Mux for efficient video content management.',
-        features: ['Course management system', 'Advanced video player', 'Interactive quizzes', 'E-certificates']
+        title: 'EdTech Video Platform',
+        description: 'Built a remote learning solution reducing server costs by 40% using efficient video streaming strategies. Scalable to 10k+ concurrent users.',
+        features: ['Global CDN optimization', 'LMS integration', 'Automated certification', 'Real-time collaborative tools']
       },
       p4: {
-        title: 'Appointment Booking App',
-        description: 'Application solving appointment organization for small businesses. Used an intelligent algorithm for real-time availability checks.',
-        features: ['Instant booking', 'Auto notifications', 'Rating system', 'Mobile payment']
+        title: 'Smart Booking System',
+        description: 'Automated appointment workflows for small businesses, reducing admin time by 15 hours/week via intelligent scheduling algorithms.',
+        features: ['Automated email/SMS alerts', 'Multi-timezone support', 'Integrated payment processing', 'Business analytics']
       },
       p5: {
-        title: 'Analytics Dashboard',
-        description: 'Dashboard for big data display. Used React Query for state management and virtualization strategies for long lists.',
-        features: ['Interactive charts', 'Exportable reports', 'Real-time data', 'User-friendly interface']
+        title: 'Operations Dashboard',
+        description: 'Visualized complex big data into actionable insights for high-traffic apps. Real-time data sync with 99.9% uptime using React Query.',
+        features: ['Live data visualization', 'Customizable reporting', 'Multi-tenant support', 'Role-based access control']
       },
       p6: {
-        title: 'Interactive Restaurant Site',
-        description: 'Integrated online ordering system. Focused on very intuitive UI design to reduce payment steps and increase conversion.',
-        features: ['Digital menu', 'Online ordering system', 'Table reservation', 'Google Maps integration']
+        title: 'Automated Customer Support Bot',
+        description: 'Automated customer support system handling 1000+ queries daily using Python & Meta API. Achieving 95% resolution rate via smart NLP integration.',
+        features: ['WhatsApp Cloud API', 'Scalable Python Backend', 'Intelligent NLP Processing', 'Real-time Metrics Dashboard']
       }
     },
     preview: 'Preview'
@@ -2242,7 +2248,7 @@ h1 {
       {
         id: 10,
         title: 'أفضل أدوات البرمجة للمبتدئين والمحترفين في 2026 🛠️',
-        excerpt: 'تعرف على أفضل أدوات البرمجة في 2026 مع روابط التحميل الرسمية مثل Visual Studio Code و Git و GitHub و Node.js.',
+        excerpt: 'تعرف على أفضل أدوات البرمجة في 2026 مع روابط التحميل الرسمية مثل Visual Studio Code و Git و Node.js.',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
         category: 'أدوات',
         author: 'حمزة اعمرني',
@@ -2261,11 +2267,7 @@ h1 {
           <p>Git يسمح لك بحفظ وتتبع جميع التغييرات في مشروعك.</p>
           <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 رابط التحميل</a></p>
 
-          <h2>3. GitHub – أفضل منصة لحفظ المشاريع 🌐</h2>
-          <p>GitHub يسمح لك بحفظ مشاريعك على الإنترنت ومشاركتها مع العالم.</p>
-          <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">🔗 الموقع الرسمي</a></p>
-
-          <h2>4. Google Chrome – أفضل متصفح للمطورين 🌍</h2>
+          <h2>3. Google Chrome – أفضل متصفح للمطورين 🌍</h2>
           <p>Chrome يحتوي على أدوات مطورين (DevTools) قوية جدًا لاختبار المواقع وتعديلها.</p>
 
           <h2>5. Node.js – لتشغيل JavaScript 🟢</h2>
@@ -2313,7 +2315,7 @@ h1 {
           <ul>
             <li>بناء مشاريع حقيقية وحل مشاكل واقعية.</li>
             <li>المساهمة في المشاريع مفتوحة المصدر.</li>
-            <li>تحسين ملفك الشخصي على LinkedIn و GitHub.</li>
+            <li>تحسين ملفك الشخصي على LinkedIn.</li>
           </ul>
 
           <h2>الخاتمة 🧾</h2>
@@ -2644,7 +2646,7 @@ h1 {
       {
         id: 10,
         title: 'Les Meilleurs Outils de Programmation en 2026 🛠️',
-        excerpt: 'Découvrez les meilleurs outils de programmation en 2026 avec les liens de téléchargement officiels (VS Code, Git, GitHub, etc.).',
+        excerpt: 'Découvrez les meilleurs outils de programmation en 2026 avec les liens de téléchargement officiels (VS Code, Git, etc.).',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
         category: 'Outils',
         author: 'Hamza Amirni',
@@ -2663,11 +2665,7 @@ h1 {
           <p>Pour enregistrer et suivre toutes les modifications apportées à votre projet.</p>
           <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 Télécharger</a></p>
 
-          <h2>3. GitHub 🌐</h2>
-          <p>Pour sauvegarder vos projets en ligne et les partager.</p>
-          <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">🔗 Site Officiel</a></p>
-
-          <h2>4. Google Chrome 🌍</h2>
+          <h2>3. Google Chrome 🌍</h2>
           <p>Contient des outils pour développeurs (DevTools) très puissants.</p>
 
           <h2>5. Node.js 🟢</h2>
@@ -2710,7 +2708,7 @@ h1 {
           </ul>
 
           <h2>3. Opportunités de Carrière au Maroc 💼</h2>
-          <p>Que ce soit à Casablanca, Rabat ou en télétravail, les opportunités sont nombreuses. Pour vous démarquer, construisez un portfolio solide sur GitHub et soignez votre profil LinkedIn.</p>
+          <p>Que ce soit à Casablanca, Rabat ou en télétravail, les opportunités sont nombreuses. Pour vous démarquer, construisez un portfolio solide et soignez votre profil LinkedIn.</p>
 
           <h2>Conclusion 🧾</h2>
           <p>Devenir un "React Expert" ou un "Full-stack Developer Morocco" demande du temps et de la pratique. Restez curieux et continuez à apprendre chaque jour.</p>
@@ -3043,7 +3041,7 @@ h1 {
       {
         id: 10,
         title: 'Best Programming Tools for Beginners and Pros in 2026 🛠️',
-        excerpt: 'Discover the best programming tools in 2026 with official download links like VS Code, Git, GitHub, and Node.js.',
+        excerpt: 'Discover the best programming tools in 2026 with official download links like VS Code, Git, and Node.js.',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
         category: 'Tools',
         author: 'Hamza Amirni',
@@ -3062,11 +3060,7 @@ h1 {
           <p>Git allows you to save and track all changes in your project.</p>
           <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 Download Git</a></p>
 
-          <h2>3. GitHub 🌐</h2>
-          <p>Save your projects online and share them with the world.</p>
-          <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">🔗 Official Website</a></p>
-
-          <h2>4. Google Chrome 🌍</h2>
+          <h2>3. Google Chrome 🌍</h2>
           <p>Chrome contains powerful developer tools (DevTools).</p>
 
           <h2>5. Node.js 🟢</h2>
@@ -3109,7 +3103,7 @@ h1 {
           </ul>
 
           <h2>3. High-Paying Opportunities in Morocco 💰</h2>
-          <p>The secret to high-paying roles is a strong portfolio. Build real-world projects, contribute to open source, and optimize your GitHub and LinkedIn presence.</p>
+          <p>The secret to high-paying roles is a strong portfolio. Build real-world projects, contribute to open source, and optimize your LinkedIn presence.</p>
 
           <h2>Conclusion 🧾</h2>
           <p>Becoming a "React Expert" or a "Full-stack Developer Morocco" is a journey. With consistency and practice, you can reach the top of the tech market.</p>
@@ -3522,19 +3516,22 @@ export const contactFormTranslations = {
 // Call to Action translations
 export const callToAction = {
   ar: {
-    title: 'هل لديك سؤال أو فكرة مشروع؟',
-    description: 'أنا هنا للمساعدة! سواء كنت تحتاج إلى استشارة تقنية، أو ترغب في مناقشة فكرة، أو حتى تريد أن تقول مرحباً، لا تتردد في التواصل معي.',
-    buttonText: 'تواصل معي الآن'
+    title: 'جاهز لأتمتة عملك؟',
+    description: 'متخصص في بناء بوتات الأتمتة (WhatsApp/Telegram/Facebook) ومنصات الـ SaaS عالية الأداء. دعنا نطور مشروعك معاً.',
+    buttonText: 'احصل على عرض سعر لبوتك القادم',
+    calendlyButton: 'احجز مكالمة استشارية'
   },
   fr: {
-    title: 'Avez-vous une question ou une idée de projet ?',
-    description: 'Je suis ici pour vous aider ! Que vous ayez besoin de conseils techniques, que vous souhaitiez discuter d\'une idée ou simplement dire bonjour, n\'hésitez pas à me contacter.',
-    buttonText: 'Contactez-moi maintenant'
+    title: 'Prêt à automatiser votre business ?',
+    description: 'Spécialisé dans la création de bots automatisés (WA/TG/FB) et de plateformes SaaS. Automatisons votre projet ensemble.',
+    buttonText: 'Devis gratuit pour votre prochain Bot',
+    calendlyButton: 'Réserver un appel'
   },
   en: {
-    title: 'Do you have a question or project idea?',
-    description: 'I\'m here to help! Whether you need technical consultation, want to discuss an idea, or just want to say hello, feel free to contact me.',
-    buttonText: 'Contact me now'
+    title: 'Ready to Scale Your Business?',
+    description: 'Specialized in building automated bots (WA/TG/FB) and SaaS platforms. Let\'s scale your startup together.',
+    buttonText: 'Get a Free Quote for Your Next Bot',
+    calendlyButton: 'Book a Discovery Call'
   }
 };
 
@@ -3542,15 +3539,15 @@ export const callToAction = {
 export const sidebar = {
   ar: {
     name: 'حمزة اعمرني',
-    title: 'مبرمج وصانع محتوى تقني'
+    title: 'خبير تطوير بوتات و SaaS'
   },
   fr: {
     name: 'Hamza Amirni',
-    title: 'Développeur et créateur de contenu tech'
+    title: 'Expert Développement Bot & SaaS'
   },
   en: {
     name: 'Hamza Amirni',
-    title: 'Developer & tech content creator'
+    title: 'Expert Bot & SaaS Developer'
   }
 };
 
@@ -3605,7 +3602,6 @@ export const toolsPageComprehensive = {
       chatgpt: { title: 'ChatGPT', description: 'مساعد ذكي للإجابة على الأسئلة', tags: ['ذكاء اصطناعي', 'مساعد'] },
       coursera: { title: 'Coursera', description: 'منصة تعليمية من جامعات عالمية', tags: ['منصات', 'تعليم'] },
       canva: { title: 'Canva', description: 'برنامج تصميم سهل وسريع', tags: ['تصميم', 'جرافيكس'] },
-      github: { title: 'GitHub', description: 'منصة مشهورة لمشاركة البرمجيات', tags: ['برمجة', 'أدوات'] },
       stackoverflow: { title: 'Stack Overflow', description: 'موقع رائع للأسئلة والإجابات على مشاكل البرمجة', tags: ['برمجة', 'أسئلة'] },
     }
   },
@@ -3620,7 +3616,6 @@ export const toolsPageComprehensive = {
       chatgpt: { title: 'ChatGPT', description: 'Assistant intelligent pour répondre aux questions', tags: ['IA', 'assistant'] },
       coursera: { title: 'Coursera', description: 'Plateforme éducative des universités mondiales', tags: ['plateformes', 'éducation'] },
       canva: { title: 'Canva', description: 'Programme de conception facile et rapide', tags: ['conception', 'graphiques'] },
-      github: { title: 'GitHub', description: 'Plateforme célèbre pour le partage de logiciels', tags: ['programmation', 'outils'] },
       stackoverflow: { title: 'Stack Overflow', description: 'Super site pour les questions et réponses de programmation', tags: ['programmation', 'questions'] },
     }
   },
@@ -3635,7 +3630,6 @@ export const toolsPageComprehensive = {
       chatgpt: { title: 'ChatGPT', description: 'Smart assistant to answer questions', tags: ['AI', 'assistant'] },
       coursera: { title: 'Coursera', description: 'Educational platform from global universities', tags: ['platforms', 'education'] },
       canva: { title: 'Canva', description: 'Easy and fast design program', tags: ['design', 'graphics'] },
-      github: { title: 'GitHub', description: 'Famous platform for software sharing', tags: ['programming', 'tools'] },
       stackoverflow: { title: 'Stack Overflow', description: 'Great site for programming questions and answers', tags: ['programming', 'questions'] },
     }
   }
@@ -3715,7 +3709,7 @@ export const buttonLabels = {
     visit: 'زيارة',
     download: 'تحميل',
     demo: 'عرض توضيحي',
-    github: 'GitHub',
+
     preview: 'معاينة',
     learn: 'تعلم المزيد',
     subscribe: 'اشترك',
@@ -3731,7 +3725,7 @@ export const buttonLabels = {
     visit: 'Visiter',
     download: 'Télécharger',
     demo: 'Démo',
-    github: 'GitHub',
+
     preview: 'Aperçu',
     learn: 'En savoir plus',
     subscribe: 'S\'abonner',
@@ -3747,7 +3741,7 @@ export const buttonLabels = {
     visit: 'Visit',
     download: 'Download',
     demo: 'Demo',
-    github: 'GitHub',
+
     preview: 'Preview',
     learn: 'Learn more',
     subscribe: 'Subscribe',
@@ -3757,7 +3751,8 @@ export const buttonLabels = {
     expand: 'Expand',
     collapse: 'Collapse',
     sort: 'Sort',
-    filter: 'Filter'
+    filter: 'Filter',
+    calendly: 'Book a Call'
   }
 };
 
@@ -3939,8 +3934,8 @@ export const sidebarProfile = {
   },
   en: {
     name: 'Hamza Amirni',
-    role: 'Professional Web Developer',
-    description: 'Hello and welcome! I\'m Hamza Amirni, a professional web developer with extensive experience in software and technologies. 🙌\n\nI work in web development, applications, software, and modern technologies.\n\nI love continuous learning and developing skills in programming, design, and technology.\n\nIf you have any questions or would like to collaborate, feel free to get in touch. 🔥'
+    role: 'Expert Bot Developer & Full-Stack Engineer',
+    description: 'Specialist in building automated ecosystems for messaging platforms (WhatsApp, Telegram, Facebook) and high-performance SaaS using React, PHP, and Python. Available for US/EU timezone collaborations. 🔥'
   }
 };
 
@@ -4080,9 +4075,9 @@ export const socialMediaLinks = {
     whatsappChannel: 'قناة واتساب',
     whatsappGroups: 'مجموعات واتساب',
     telegram: 'تيليجرام',
-    github: 'GitHub',
     linkedin: 'لينكدإن',
-    twitter: 'تويتر'
+    twitter: 'X (تويتر)',
+    tiktok: 'تيك توك'
   },
   fr: {
     facebook: 'Facebook',
@@ -4095,9 +4090,9 @@ export const socialMediaLinks = {
     whatsappChannel: 'Canal WhatsApp',
     whatsappGroups: 'Groupes WhatsApp',
     telegram: 'Telegram',
-    github: 'GitHub',
     linkedin: 'LinkedIn',
-    twitter: 'Twitter'
+    twitter: 'X (Twitter)',
+    tiktok: 'TikTok'
   },
   en: {
     facebook: 'Facebook',
@@ -4110,9 +4105,9 @@ export const socialMediaLinks = {
     whatsappChannel: 'WhatsApp Channel',
     whatsappGroups: 'WhatsApp Groups',
     telegram: 'Telegram',
-    github: 'GitHub',
     linkedin: 'LinkedIn',
-    twitter: 'Twitter'
+    twitter: 'X (Twitter)',
+    tiktok: 'TikTok'
   }
 };
 

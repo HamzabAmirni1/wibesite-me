@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
-import { SiWhatsapp, SiFacebook, SiInstagram, SiYoutube, SiTiktok, SiTelegram } from 'react-icons/si';
+import { SiWhatsapp, SiFacebook, SiInstagram, SiYoutube, SiTiktok, SiTelegram, SiX } from 'react-icons/si';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
 
@@ -165,6 +165,16 @@ ${formData.message}
               >
                 <SiTelegram className="w-5 h-5" />
                 <span className="text-sm font-medium">تيليجرام</span>
+              </a>
+
+              <a
+                href="https://x.com/Hamza_Amirni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                <SiX className="w-5 h-5" />
+                <span className="text-sm font-medium">X (تويتر)</span>
               </a>
             </div>
           </div>

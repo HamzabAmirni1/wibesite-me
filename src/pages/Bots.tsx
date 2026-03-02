@@ -6,7 +6,7 @@ import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
-import { SiWhatsapp, SiOpenai, SiGithub, SiPerplexity, SiFacebook } from 'react-icons/si';
+import { SiWhatsapp, SiOpenai, SiPerplexity, SiFacebook } from 'react-icons/si';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,19 +55,6 @@ const Bots: React.FC = () => {
       rating: 4.9,
       color: 'from-green-500 to-emerald-600',
       demoUrl: 'https://api.whatsapp.com/send/?phone=18002428478&text&type=phone_number&app_absent=0',
-      isAI: true
-    },
-    {
-      id: 3,
-      name: t('botsPageFull.items.b3.name', language),
-      icon: <SiGithub className="w-16 h-16 text-gray-800 dark:text-gray-200" />,
-      description: t('botsPageFull.items.b3.desc', language),
-      platform: 'AI Code Assistant',
-      features: (t('botsPageFull.items.b3.features', language) as unknown as string[]),
-      users: '10M+',
-      rating: 4.8,
-      color: 'from-blue-500 to-cyan-600',
-      demoUrl: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0',
       isAI: true
     },
     {

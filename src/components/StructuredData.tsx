@@ -9,7 +9,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    
+
     let structuredData: any = {
       '@context': 'https://schema.org',
       '@type': type,
@@ -74,12 +74,15 @@ export const generatePersonData = () => ({
   name: 'حمزة اعمرني',
   url: 'https://hamzaamirni.netlify.app',
   image: 'https://hamzaamirni.netlify.app/hamza-logo.svg',
-  jobTitle: 'مبرمج وصانع محتوى تقني',
-  description: 'مبرمج وصانع محتوى تقني متخصص في تطوير الويب والتطبيقات',
+  jobTitle: 'Full-Stack Developer & Automation Expert',
+  description: 'Specialist in building intelligent bots (WhatsApp, Telegram, Facebook) and high-performance SaaS platforms for startups and business automation.',
   sameAs: [
-    'https://github.com/hamzaamirni',
-    'https://linkedin.com/in/hamzaamirni',
-    'https://twitter.com/hamzaamirni'
+    'https://www.facebook.com/6kqzuj3y4e',
+    'https://www.youtube.com/@Hamzaamirni01',
+    'https://instagram.com/hamza_amirni_01',
+    'https://www.linkedin.com/in/hamza-a-05b639281/',
+    'https://x.com/Hamza_Amirni',
+    'https://github.com/HamzabAmirni1'
   ]
 });
 

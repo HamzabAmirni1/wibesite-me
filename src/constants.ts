@@ -1,5 +1,5 @@
 ﻿import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle, Briefcase, FolderGit } from 'lucide-react';
-import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiGithubcopilot, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiGithub, SiLinkedin, SiStackoverflow } from 'react-icons/si';
+import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiLinkedin, SiStackoverflow, SiX, SiTiktok, SiGithub } from 'react-icons/si';
 import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
 export const navLinks = [
@@ -27,8 +27,10 @@ export const socialLinks = [
     { name: 'قناة الواتساب', url: 'https://whatsapp.com/channel/0029ValXRoHCnA7yKopcrn1p', IconComponent: SiWhatsapp, color: 'bg-[#25D366]', key: 'whatsappChannel' },
     { name: 'مجموعات واتساب', url: 'https://chat.whatsapp.com/DDb3fGPuZPB1flLc1BV9gJ', IconComponent: SiWhatsapp, color: 'bg-[#25D366]', key: 'whatsappGroups' },
     { name: 'تيليجرام', url: 'https://t.me/hamzaamirni', IconComponent: SiTelegram, color: 'bg-[#229ED9]', key: 'telegram' },
-    { name: 'GitHub', url: 'https://github.com/HamzabAmirni1', IconComponent: SiGithub, color: 'bg-[#181717]', key: 'github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hamza-a-05b639281/', IconComponent: SiLinkedin, color: 'bg-[#0A66C2]', key: 'linkedin' },
+    { name: 'X (تويتر)', url: 'https://x.com/Hamza_Amirni', IconComponent: SiX, color: 'bg-[#000000]', key: 'twitter' },
+    { name: 'تيك توك', url: 'https://www.tiktok.com/@hamzaamirni?_t=ZS-8zGhf6i3jyZ&_r=1', IconComponent: SiTiktok, color: 'bg-[#000000]', key: 'tiktok' },
+    { name: 'GitHub', url: 'https://github.com/HamzabAmirni1', IconComponent: SiGithub, color: 'bg-[#181717]', key: 'github' },
 ];
 
 export const myApps = [
@@ -58,7 +60,7 @@ export const whatsappChannels = [
 // NOTE: Use sidebarProfile, skillsSection, journeySection, philosophySection from i18n.ts for translations
 export const aboutContent = {
     name: 'حمزة اعمرني',
-    role: '🚀 مطور واجهات الويب السريعة والتطبيقات المتكاملة',
+    role: '🚀 Expert React & Next.js Developer for SaaS Startups',
     description: `
             <p class="mb-4">مرحباً — أنا <strong>حمزة اعمرني</strong>، مطور ويب ومُحب للتقنية أعمل على بناء تجارب رقمية عملية وجذابة. أركز على كتابة شفرة نظيفة، تحسين أداء المواقع، وتصميم واجهات سهلة الاستخدام.</p>
             <p class="mb-4">أمتلك خبرة في تطوير واجهات الويب، بناء أنظمة متكاملة، وتقديم حلول برمجية مخصّصة للمشاريع الصغيرة والمتوسطة. أحب التعلم المستمر وتجربة تقنيات جديدة لتقديم منتجات أكثر موثوقية وسرعة.</p>
@@ -81,7 +83,8 @@ export const aboutContent = {
         'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
         'أكملت الدراسة الثانوية في 2019.',
         'عملت في عدة مشاريع برمجية مهمة.',
-        'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.',
+        'اكتسبت خبرة كبيرة في مجالات البرمجة والويب، متخصصاً في React و Next.js.',
+        'ساعات عمل مرنة تتناسب مع توقيت الولايات المتحدة وأوروبا.',
     ],
     philosophy: {
         title: '🎯 فلسفتي',
@@ -226,7 +229,6 @@ export const botsContent = {
     bots: [
         { title: 'بوت تحديث البرمجيات', description: 'تحديث معلومات سريعة للبوت في تحديث البرمجيات', url: 'https://wa.me/212708869993', buttonText: 'تحديث', IconComponent: SiWhatsapp, color: 'success' },
         { title: 'ChatGPT Bot', description: 'استخدام بوت ChatGPT لحل أسئلة ومشاكل', url: 'https://wa.me/18002428478', buttonText: 'نتحدث', IconComponent: SiOpenai, color: 'primary' },
-        { title: 'Copilot Bot', description: 'مساعد برمجي ذكي لمساعدتك في مشاريع البرمجة', url: 'https://wa.me/18772241042', buttonText: 'نتحدث', IconComponent: SiGithubcopilot, color: 'warning' },
         { title: 'Perplexity Bot', description: 'محرك بحث ذكي لمساعدتك على الحصول على المعلومات', url: 'https://wa.me/18334363285', buttonText: 'نتحدث', IconComponent: SiPerplexity, color: 'danger' },
         { title: 'بوت فيسبوك الذكي', description: 'بوت متخصص على منصة فيسبوك لتقديم خدمات ذكية وتواصل سريع', url: 'https://www.facebook.com/profile.php?id=61578860781418', buttonText: 'نتحدث', IconComponent: SiFacebook, color: 'primary' },
         { title: 'بوت واتساب (رقم 2)', description: 'تواصل مباشر للحصول على المساعدة التقنية والبرمجية', url: 'https://wa.me/212631342792', buttonText: 'نتحدث', IconComponent: SiWhatsapp, color: 'success' },
@@ -243,7 +245,6 @@ export const toolsContent = {
         { title: 'ChatGPT', description: 'مساعد ذكي للإجابة على الأسئلة', url: 'https://chat.openai.com/', IconComponent: SiOpenai, tags: ['ذكاء اصطناعي', 'مساعد'] },
         { title: 'Coursera', description: 'منصة تعليمية من جامعات عالمية', url: 'https://www.coursera.org/', IconComponent: SiCoursera, tags: ['منصات', 'تعليم'] },
         { title: 'Canva', description: 'برنامج تصميم سهل وسريع', url: 'https://www.canva.com/', IconComponent: SiCanva, tags: ['تصميم', 'جرافيكس'] },
-        { title: 'GitHub', description: 'منصة مشهورة لمشاركة البرمجيات', url: 'https://github.com/', IconComponent: SiGithub, tags: ['برمجة', 'أدوات'] },
         { title: 'Stack Overflow', description: 'موقع رائع للأسئلة والإجابات على مشاكل البرمجة', url: 'https://stackoverflow.com/', IconComponent: SiStackoverflow, tags: ['برمجة', 'أسئلة'] },
     ]
 };

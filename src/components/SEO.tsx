@@ -14,14 +14,14 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Hamza Amirni | Senior Full-Stack Developer & Tech Content Creator',
-  description = "Hamza Amirni's platform to share experience and passion in programming, technology, and self-development.",
+  title = 'Hamza Amirni | Expert React & Next.js Developer for SaaS Startups',
+  description = "Hire a remote React & Next.js expert for your SaaS startup. Specializing in high-performance web apps, scalable frontends, and sub-second load times.",
   image = 'https://hamzaamirni.netlify.app/og-image.jpg',
   url = 'https://hamzaamirni.netlify.app',
   type = 'website',
   author = 'Hamza Amirni',
   publishedTime,
-  keywords = ['programming', 'web', 'JavaScript', 'Python', 'technology', 'education', 'programming articles']
+  keywords = ['Hire Remote React Developer', 'Freelance Web Developer for US Startups', 'Next.js Expert', 'SaaS Development', 'High Performance Web Apps', 'Remote Python Developer', 'Telegram Bot Developer for Hire', 'Custom PHP Web Solutions', 'WhatsApp Bot Developer', 'Automation Expert']
 }) => {
   const siteTitle = title.includes('Hamza Amirni') ? title : `${title} | Hamza Amirni`;
   const { language } = useLanguage();
@@ -54,7 +54,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@hamzaamirni" />
+      <meta name="twitter:creator" content="@Hamza_Amirni" />
 
       {/* Article specific */}
       {type === 'article' && publishedTime && (

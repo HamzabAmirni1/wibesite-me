@@ -536,7 +536,7 @@ h1 {
   {
     id: 10,
     title: 'أفضل أدوات البرمجة للمبتدئين والمحترفين في 2026 🛠️',
-    excerpt: 'تعرف على أفضل أدوات البرمجة في 2026 مع روابط التحميل الرسمية مثل Visual Studio Code و Git و GitHub و Node.js.',
+    excerpt: 'تعرف على أفضل أدوات البرمجة في 2026 مع روابط التحميل الرسمية مثل Visual Studio Code و Git و Node.js.',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
     category: 'أدوات',
     author: 'حمزة اعمرني',
@@ -556,11 +556,7 @@ h1 {
       <p>Git يسمح لك بحفظ وتتبع جميع التغييرات في مشروعك.</p>
       <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 رابط التحميل</a></p>
 
-      <h2>3. GitHub – أفضل منصة لحفظ المشاريع 🌐</h2>
-      <p>GitHub يسمح لك بحفظ مشاريعك على الإنترنت ومشاركتها مع العالم.</p>
-      <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">🔗 الموقع الرسمي</a></p>
-
-      <h2>4. Google Chrome – أفضل متصفح للمطورين 🌍</h2>
+      <h2>3. Google Chrome – أفضل متصفح للمطورين 🌍</h2>
       <p>Chrome يحتوي على أدوات مطورين (DevTools) قوية جدًا لاختبار المواقع وتعديلها.</p>
 
       <h2>5. Node.js – لتشغيل JavaScript 🟢</h2>

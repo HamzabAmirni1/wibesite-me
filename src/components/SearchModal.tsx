@@ -113,7 +113,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
 
         // 4. Search in Tools
         const catTool = t('searchModal.categories.tool', language) || 'أداة مفيدة';
-        const toolKeys = ['doc', 'chatgpt', 'coursera', 'canva', 'github', 'stackoverflow'];
+        const toolKeys = ['doc', 'chatgpt', 'coursera', 'canva', 'stackoverflow'];
         const translatedToolsItems = t('toolsPageComprehensive.items', language) as any;
         toolsContent.tools.forEach((tool, index) => {
             const tKey = toolKeys[index] || toolKeys[0];

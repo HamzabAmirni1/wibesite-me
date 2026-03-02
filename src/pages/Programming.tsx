@@ -88,7 +88,7 @@ const learningResources = [
     icon: Laptop,
     items: [
       'VS Code',
-      'Git & GitHub',
+      'Git',
       'Chrome DevTools',
       'Postman'
     ],

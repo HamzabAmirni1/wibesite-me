@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star } from 'lucide-react';
+import { ExternalLink, Star } from 'lucide-react';
 import Card from '../components/Card';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -40,7 +40,6 @@ const Projects: React.FC = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
       features: t('projectsPage.projects.p1.features', language),
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -52,7 +51,6 @@ const Projects: React.FC = () => {
       technologies: ['Next.js', 'Stripe', 'MongoDB', 'Tailwind CSS'],
       features: t('projectsPage.projects.p2.features', language),
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-pink-500 to-rose-500'
     },
     {
@@ -64,7 +62,6 @@ const Projects: React.FC = () => {
       technologies: ['React', 'Firebase', 'Material-UI', 'Video.js'],
       features: t('projectsPage.projects.p3.features', language),
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-purple-500 to-indigo-500'
     },
     {
@@ -76,7 +73,6 @@ const Projects: React.FC = () => {
       technologies: ['React Native', 'Firebase', 'Push Notifications'],
       features: t('projectsPage.projects.p4.features', language),
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -88,7 +84,6 @@ const Projects: React.FC = () => {
       technologies: ['React', 'Chart.js', 'D3.js', 'REST API'],
       features: t('projectsPage.projects.p5.features', language),
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-orange-500 to-amber-500'
     },
     {
@@ -100,7 +95,6 @@ const Projects: React.FC = () => {
       technologies: ['Vue.js', 'Node.js', 'Express', 'MySQL'],
       features: t('projectsPage.projects.p6.features', language),
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-red-500 to-pink-500'
     }
   ];
@@ -183,12 +177,6 @@ const Projects: React.FC = () => {
                   >
                     <ExternalLink className="w-4 h-4" />
                     {t('projectsPage.preview', language)}
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="py-2 px-4 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <Github className="w-4 h-4" />
                   </a>
                 </div>
               </div>
