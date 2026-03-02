@@ -1,9 +1,6 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm run build"
   publish = "dist"
-  base = "/"
-  ignore = "false"
-  force = "true"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -54,6 +51,12 @@
 
 # إعادة توجيه الجذر
 [[redirects]]
-  from = "/"
+  from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
