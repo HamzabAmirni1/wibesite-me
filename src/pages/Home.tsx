@@ -171,7 +171,7 @@ const Home: React.FC = () => {
               )} dir={language === 'ar' ? 'rtl' : 'ltr'}>
                 {[
                   'personal', 'company', 'ecommerce',
-                  'payment', 'maintenance', 'seo', 'custom'
+                  'payment', 'maintenance', 'seo', 'automation', 'consultation', 'custom'
                 ].map((key) => (
                   <div key={key} className="space-y-2 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
                     <h4 className="font-semibold text-lg text-dark-color dark:text-gray-100">

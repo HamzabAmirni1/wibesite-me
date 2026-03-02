@@ -189,14 +189,14 @@ export const heroContent = {
     en: 'Hamza Amirni',
   },
   subtitle: {
-    ar: 'مطور Full-Stack وخبير أتمتة | بناء بوتات ذكية وتطبيقات ويب قابلة للتطوير',
-    fr: 'Développeur Full-Stack & Expert en Automatisation | Bots Intelligents & Apps Web',
-    en: 'Full-Stack Developer & Automation Expert | Building Intelligent Bots & Scalable Web Apps',
+    ar: 'خبير في تطوير البوتات والمواقع | استشارات تقنية متخصصة',
+    fr: 'Expert en Dével. de Bots & Sites Web | Consultations Techniques',
+    en: 'Expert Bot & Website Developer | Technical Consultations',
   },
   intro: {
-    ar: 'متخصص في Python و JavaScript و PHP لتبسيط سير عمل عملك وأتمتة المهام المعقدة لمشاريع الـ SaaS والشركات الناشئة.',
-    fr: 'Spécialisé en Python, JavaScript et PHP pour optimiser vos flux de travail et automatiser vos processus métier.',
-    en: 'Specializing in Python, JavaScript, and PHP to streamline your business workflows and automate complex tasks for SaaS & startups.',
+    ar: 'أقوم ببناء بوتات (WhatsApp, Telegram, Facebook) ذكية وتطوير مواقع ويب احترافية، مع تقديم استشارات تقنية لمساعدتكم في أتمتة وتطوير أعمالكم.',
+    fr: 'Je construis des bots intelligents (WhatsApp, Telegram, Facebook) et des sites web de haute performance, tout en offrant des consultations techniques.',
+    en: 'I build intelligent messaging bots (WhatsApp, Telegram, Facebook) and high-performance websites, reinforced by expert technical consultations.',
   },
   cta: {
     ar: 'معًا نحو مستقبل رقمي أفضل!',
@@ -653,6 +653,10 @@ export const homePage = {
           title: 'تطوير البوتات والأتمتة',
           desc: 'برمجة بوتات ذكية لـ WhatsApp و Telegram و Facebook لتسهيل التواصل وأتمتة المهام المتكررة.'
         },
+        consultation: {
+          title: 'الاستشارات التقنية المتخصصة',
+          desc: 'تقديم استشارات تقنية لمساعدتك في أتمتة أعمالك، اختيار الحلول البرمجية الأنسب، وتطوير البنية التحتية لمشروعك.'
+        },
         custom: {
           title: 'برمجة حلول خاصة حسب الطلب',
           desc: 'تطوير أنظمة ولوحات تحكم ومنصّات مخصّصة (حجز، إدارة عملاء، أنظمة داخلية…) وفق احتياجات مشروعك.'
@@ -757,6 +761,10 @@ export const homePage = {
           title: 'Dév Bots & Automatisation',
           desc: 'Création de bots intelligents pour WhatsApp, Telegram et Facebook pour automatiser vos processus.'
         },
+        consultation: {
+          title: 'Consultations Techniques',
+          desc: 'Conseils techniques spécialisés pour vous aider à automatiser vos processus, choisir les meilleures solutions et développer votre projet.'
+        },
         custom: {
           title: 'Programmation de solutions personnalisées sur demande',
           desc: 'Développement de systèmes, de panneaux de contrôle et de plateformes personnalisées (réservation, gestion client, systèmes internes...) selon vos besoins.'
@@ -860,6 +868,10 @@ export const homePage = {
         automation: {
           title: 'Bot Development & Automation',
           desc: 'Building intelligent bots for WhatsApp, Telegram, and Facebook to automate workflows and engagement.'
+        },
+        consultation: {
+          title: 'Technical Consultations',
+          desc: 'Providing expert technical guidance to help you automate workflows, choose the right technology, and scale your business.'
         },
         custom: {
           title: 'Custom Software Solutions on Demand',
