@@ -196,12 +196,12 @@ export const heroContent = {
   intro: {
     ar: 'أقوم ببناء بوتات (WhatsApp, Telegram, Facebook) ذكية وتطوير مواقع ويب احترافية، مع تقديم استشارات تقنية لمساعدتكم في أتمتة وتطوير أعمالكم.',
     fr: 'Je construis des bots intelligents (WhatsApp, Telegram, Facebook) et des sites web de haute performance, tout en offrant des consultations techniques.',
-    en: 'I build intelligent messaging bots (WhatsApp, Telegram, Facebook) and high-performance websites, reinforced by expert technical consultations.',
+    en: 'Helping US startups and SMEs scale through AI-driven automation (WA, TG, FB) and high-performance web engineering. [US-Timezone Support Available]',
   },
   cta: {
     ar: 'معًا نحو مستقبل رقمي أفضل!',
     fr: 'Ensemble vers un avenir numérique meilleur !',
-    en: 'Together towards a better digital future!',
+    en: 'Let\'s Scale Your Business with Code.',
   },
 };
 
@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'خبير في تطوير بوتات التواصل والـ SaaS (React, Next.js, PHP, Python)',
+    ar: 'خبير في تطوير البوتات والمواقع | استشارات تقنية متخصصة',
     fr: 'Expert en bots de messagerie & SaaS (React, Next.js, PHP, Python)',
-    en: 'Expert Bot Developer (WA, TG, FB) & Full-Stack Engineer (React, PHP, Python)',
+    en: 'Strategic Automation & Full-Stack Web Engineer | Specialized Technical Partner',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
@@ -441,9 +441,9 @@ export const aboutPage = {
   },
   stats: [
     { ar: 'سنوات خبرة', fr: 'Années d\'expérience', en: 'Years Experience' },
-    { ar: 'مشروع ناجح', fr: 'Projets réussis', en: 'Successful Projects' },
-    { ar: 'عميل سعيد', fr: 'Clients satisfaits', en: 'Happy Clients' },
-    { ar: 'كوب قهوة', fr: 'Tasses de café', en: 'Cups of Coffee' },
+    { ar: 'مشروع ناجح', fr: 'Projets réussis', en: 'Global Successful Projects' },
+    { ar: 'عميل سعيد', fr: 'Clients satisfaits', en: 'Strategic Happy Clients' },
+    { ar: 'كوب قهوة', fr: 'Tasses de café', en: 'Cups of Productive Coffee' },
   ],
   story: {
     title: { ar: 'قصتي ورؤيتي', fr: 'Mon Histoire & Ma Vision', en: 'My Story & Vision' },
@@ -502,27 +502,27 @@ export const aboutPage = {
       {
         ar: 'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
         fr: "J'ai commencé à apprendre la programmation à un jeune âge et j'ai appris par la pratique.",
-        en: 'I started learning software at an early age and learned through practice.',
+        en: 'Mastered software engineering through years of hands-on technical execution.',
       },
       {
         ar: 'أكملت الدراسة الثانوية في 2023.',
         fr: "J'ai terminé mes études secondaires en 2023.",
-        en: 'I completed high school in 2023.',
+        en: 'Built a strong core engineering foundation starting specialized dev work in 2019.',
       },
       {
         ar: 'عملت في عدة مشاريع برمجية مهمة.',
         fr: "J'ai travaillé sur plusieurs projets logiciels importants.",
-        en: 'I have worked on several important software projects.',
+        en: 'Engineered and deployed business-critical automated systems for international scale.',
       },
       {
         ar: 'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.',
         fr: "J'ai acquis une grande expérience dans les domaines de la programmation et du web.",
-        en: 'I have gained extensive experience in programming and web development, specializing in React and Next.js.',
+        en: 'Specializing in React/Next.js and AI Automation with a core focus on US-market scalability.',
       },
       {
         ar: 'أوفر ساعات عمل مرنة تتناسب مع توقيت الولايات المتحدة وأوروبا.',
         fr: 'Je propose des horaires flexibles adaptés aux fuseaux horaires US et Europe.',
-        en: 'I offer flexible working hours to accommodate US and European time zones.',
+        en: '100% Remote, fully compatible with US & European business timezones.',
       },
     ],
   },
@@ -842,85 +842,85 @@ export const homePage = {
       title: 'Services I offer',
       items: {
         personal: {
-          title: 'Personal Website Design & Development',
-          desc: 'Introductory sites and landing pages for freelancers, trainers, and content creators, designed to market your services professionally.'
+          title: 'High-Conversion Landing Pages',
+          desc: 'Custom-built pages for freelancers and influencers designed to maximize conversion rates and visitor engagement.'
         },
         company: {
-          title: 'Corporate Website Design',
-          desc: 'Professional sites to showcase company services, team, and achievements, with contact forms and quote request models.'
+          title: 'Growth-Focused Business Sites',
+          desc: 'Strategic corporate websites built for high traffic, brand positioning, and streamlined customer inquiries.'
         },
         ecommerce: {
-          title: 'E-commerce Store Development',
-          desc: 'Complete online stores to sell physical or digital products with easy product and order management.'
+          title: 'Scalable E-commerce Platforms',
+          desc: 'End-to-end online stores optimized for mobile sales, with seamless product management and inventory automation.'
         },
         payment: {
-          title: 'Payment Gateway Integration',
-          desc: 'Linking the site with reliable electronic payment gateways suitable for the local and international market to ensure a smooth and secure payment experience.'
+          title: 'Global Payment Architecture',
+          desc: 'Integrating safe, PCI-compliant billing systems (Stripe, PayPal) to process international transactions instantly.'
         },
         maintenance: {
-          title: 'Technical Support & Maintenance',
-          desc: 'Periodic site monitoring, fixing bugs, security updates, and performance improvement to ensure the stability of your project.'
+          title: 'Reliability & Security Management',
+          desc: 'High-uptime monitoring, security patches, and performance optimization to keep your digital assets stable 24/7.'
         },
         seo: {
-          title: 'Search Engine Optimization (SEO)',
-          desc: 'Optimizing the site to appear in search results, improving speed, and structuring content to increase the chances of reaching your customers.'
+          title: 'Growth-Oriented SEO Strategy',
+          desc: 'Targeting high-intent search terms to rank your business where your customers are. Focused on speed and metadata science.'
         },
         automation: {
-          title: 'Bot Development & Automation',
-          desc: 'Building intelligent bots for WhatsApp, Telegram, and Facebook to automate workflows and engagement.'
+          title: 'AI-Driven Bot Systems (WA/TG/FB)',
+          desc: 'Eliminate repetitive tasks with intelligent bots that handle support, lead gen, and sales while you sleep.'
         },
         consultation: {
-          title: 'Technical Consultations',
-          desc: 'Providing expert technical guidance to help you automate workflows, choose the right technology, and scale your business.'
+          title: 'Strategic Technical Consulting',
+          desc: 'Fractional CTO guidance to help you choose the right tech stack, automate internal workflows, and scale efficiently.'
         },
         custom: {
-          title: 'Custom Software Solutions on Demand',
-          desc: 'Developing systems, control panels, and custom platforms (reservation, customer management, internal systems...) according to your project needs.'
+          title: 'Enterprise Custom Software',
+          desc: 'Building bespoke admin dashboards, CRM integrations, and unique platforms tailored specifically for your operational goals.'
         }
       },
       whyUs: {
-        title: 'Why choose to work with me?',
+        title: 'Why Hire Me?',
         professional: {
-          title: 'Professional Execution',
-          desc: 'Commitment to the best design and programming standards with modern, responsive interfaces suitable for your project\'s identity.'
+          title: 'Enterprise-Grade Execution',
+          desc: 'Commitment to the highest engineering standards with modern, scalable architectures tailored to your business goals.'
         },
         speed: {
-          title: 'Sped of Execution',
-          desc: 'Respecting agreed-upon deadlines and delivering the project on time without sacrificing quality.'
+          title: 'Agile & Rapid Deployment',
+          desc: 'Fast delivery cycles without compromising quality, ensuring your project goes live exactly when you need it.'
         },
         price: {
-          title: 'Affordable & Flexible Prices',
-          desc: 'Multiple packages and options suitable for individuals, entrepreneurs, and companies of all sizes.'
+          title: 'Value-Driven ROI Strategy',
+          desc: 'Transparent, result-oriented pricing packages designed to provide the highest return on your digital investment.'
         },
         support: {
-          title: 'Ongoing Post-Delivery Support',
-          desc: 'Technical accompaniment after the site launch, with the possibility of adjustments and improvements when needed.'
+          title: 'Strategic Technical Partnership',
+          desc: 'Long-term technical support and post-launch optimization to ensure your platform grows with your business.'
         }
       },
       plans: {
-        title: 'Service Packages',
+        title: 'Strategic Packages',
         basic: {
-          title: 'Starter Package',
-          features: ['One-page website (Landing Page)', 'Mobile responsive design', 'Simple contact form', 'Link to social media accounts'],
-          price: 'Price: Starting from X MAD',
-          example: 'Example: Bio page for a freelancer, trainer, or a single service.'
+          title: 'Starter / Landing Page',
+          features: ['High-conversion one-page design', 'SEO-ready structure', 'Mobile-first optimization', 'Lead generation form'],
+          price: 'Price: Starting from $X (Custom Quote)',
+          example: 'Ideal for: Freelancers, beta launches, and personal brand visibility.'
         },
         business: {
-          title: 'Business Package',
-          features: ['3 to 5 pages website', 'Design compatible with brand identity', 'Quote request form', 'Basic SEO setup'],
-          price: 'Price: Starting from Y MAD',
-          example: 'Example: Website for a service company, agency, or consulting office.'
+          title: 'Scale / Multi-Page Corporate',
+          features: ['Advanced 5-page business site', 'Standard-compliant brand UI/UX', 'Strategic SEO architecture', 'Custom CRM integration'],
+          price: 'Price: Starting from $Y (Custom Quote)',
+          example: 'Ideal for: Agencies, service-based firms, and growing startups.'
         },
         ecommerce: {
-          title: 'E-commerce Package',
-          features: ['Complete online store', 'Product pages and shopping cart', 'Payment gateway link', 'Shipping options and basic tax setup'],
-          price: 'Price: Starting from Z MAD',
-          example: 'Example: Store for selling clothes, digital products, or others.'
+          title: 'Growth / E-commerce Ecosystem',
+          features: ['Elite end-to-end online store', 'Inventory automation', 'Global payment checkout (Stripe/PayPal)', 'Advanced marketing analytics'],
+          price: 'Price: Starting from $Z (Custom Quote)',
+          example: 'Ideal for: Physical/digital product brands and enterprise retail.'
         }
       },
       ready: {
-        title: 'Ready to start your project?',
-        desc: 'To contact and order, you can use the contact form on the site or message me directly via e-mail or WhatsApp. Send a brief description of your project and I will get back to you with an offer including price and execution time.'
+        title: 'Ready to Scale Your Business?',
+        desc: 'Book a discovery call or send a brief description of your project. We’ll discuss your goals and I’ll provide a personalized proposal with strategic pricing and milestones.'
       },
       adAlt: 'Hamza Amirni\'s Professional Software & Web Development Services in Morocco',
       imgAlt1: 'Professional and Responsive Website Design and Development in Morocco',
