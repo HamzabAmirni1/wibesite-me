@@ -189,9 +189,9 @@ export const heroContent = {
     en: 'Hamza Amirni',
   },
   subtitle: {
-    ar: 'خبير في تطوير البوتات والمواقع | استشارات تقنية متخصصة',
-    fr: 'Expert en Dével. de Bots & Sites Web | Consultations Techniques',
-    en: 'Expert Bot & Website Developer | Technical Consultations',
+    ar: 'Full-Stack Developer | خبير في تطوير البوتات والمواقع',
+    fr: 'Full-Stack Developer & Expert en Automatisation',
+    en: 'Full-Stack Developer & Automation Expert | Technical Consultations',
   },
   intro: {
     ar: 'أقوم ببناء بوتات (WhatsApp, Telegram, Facebook) ذكية وتطوير مواقع ويب احترافية، مع تقديم استشارات تقنية لمساعدتكم في أتمتة وتطوير أعمالكم.',
@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'خبير في تطوير البوتات والمواقع | استشارات تقنية متخصصة',
-    fr: 'Expert en bots de messagerie & SaaS (React, Next.js, PHP, Python)',
-    en: 'Strategic Automation & Full-Stack Web Engineer | Specialized Technical Partner',
+    ar: 'Full-Stack Developer | خبير في تطوير البوتات والمواقع',
+    fr: 'Expert Full-Stack & Automatisation (React, Next.js, PHP, Python)',
+    en: 'Full-Stack Developer & Automation Expert | Strategic Technical Partner',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
@@ -3551,15 +3551,15 @@ export const callToAction = {
 export const sidebar = {
   ar: {
     name: 'حمزة اعمرني',
-    title: 'خبير في تطوير البوتات والمواقع | استشارات تقنية'
+    title: 'Full-Stack Developer | خبير تطوير بوتات'
   },
   fr: {
     name: 'Hamza Amirni',
-    title: 'Expert en Dével. de Bots & Sites Web | Consultations'
+    title: 'Développeur Full-Stack | Expert Bots & SaaS'
   },
   en: {
     name: 'Hamza Amirni',
-    title: 'Strategic Automation & Full-Stack Web Engineer'
+    title: 'Full-Stack Developer & Automation Expert'
   }
 };
 

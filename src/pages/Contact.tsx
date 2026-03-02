@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Send, MessageCircle } from 'lucide-react';
 import { SiWhatsapp, SiFacebook, SiInstagram, SiYoutube, SiTiktok, SiTelegram, SiX } from 'react-icons/si';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
