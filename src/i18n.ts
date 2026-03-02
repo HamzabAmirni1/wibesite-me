@@ -3551,15 +3551,15 @@ export const callToAction = {
 export const sidebar = {
   ar: {
     name: 'حمزة اعمرني',
-    title: 'خبير تطوير بوتات و SaaS'
+    title: 'خبير في تطوير البوتات والمواقع | استشارات تقنية'
   },
   fr: {
     name: 'Hamza Amirni',
-    title: 'Expert Développement Bot & SaaS'
+    title: 'Expert en Dével. de Bots & Sites Web | Consultations'
   },
   en: {
     name: 'Hamza Amirni',
-    title: 'Expert Bot & SaaS Developer'
+    title: 'Strategic Automation & Full-Stack Web Engineer'
   }
 };
 

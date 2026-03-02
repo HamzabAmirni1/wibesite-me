@@ -114,7 +114,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
               >
                 <SiWhatsapp className="w-5 h-5" />
-                <span className="text-sm font-medium">واتساب</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.whatsapp', language)}</span>
               </a>
 
               <a
@@ -124,7 +124,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <SiFacebook className="w-5 h-5" />
-                <span className="text-sm font-medium">فيسبوك</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.facebook', language)}</span>
               </a>
 
               <a
@@ -134,7 +134,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors"
               >
                 <SiInstagram className="w-5 h-5" />
-                <span className="text-sm font-medium">إنستجرام</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.instagram', language)}</span>
               </a>
 
               <a
@@ -144,7 +144,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
               >
                 <SiYoutube className="w-5 h-5" />
-                <span className="text-sm font-medium">يوتيوب</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.youtube', language)}</span>
               </a>
 
               <a
@@ -154,7 +154,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
                 <SiTiktok className="w-5 h-5" />
-                <span className="text-sm font-medium">تيك توك</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.tiktok', language)}</span>
               </a>
 
               <a
@@ -164,7 +164,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
               >
                 <SiTelegram className="w-5 h-5" />
-                <span className="text-sm font-medium">تيليجرام</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.telegram', language)}</span>
               </a>
 
               <a
@@ -174,7 +174,7 @@ ${formData.message}
                 className="flex items-center gap-3 p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
                 <SiX className="w-5 h-5" />
-                <span className="text-sm font-medium">X (تويتر)</span>
+                <span className="text-sm font-medium">{t('socialMediaLinks.twitter', language)}</span>
               </a>
             </div>
           </div>
