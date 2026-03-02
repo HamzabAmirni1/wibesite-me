@@ -76,76 +76,83 @@ const About: React.FC = () => {
       initial="hidden"
       animate="visible"
     >
-      {/* Hero Section - Polished Top */}
-      <motion.div variants={itemVariants}>
-        <Card className="relative overflow-hidden border-none bg-white/40 dark:bg-gray-800/40 backdrop-blur-md shadow-xl rounded-3xl p-6 md:p-10">
-          {/* Subtle accent line */}
-          <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-indigo-500 to-secondary opacity-80" />
-
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Avatar Section */}
-            <motion.div
-              className="relative shrink-0"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse" />
-              <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full bg-white dark:bg-gray-800 p-1.5 shadow-2xl border border-white/20">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center overflow-hidden border-4 border-white dark:border-gray-800 shadow-inner">
-                  <span className="text-5xl md:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary via-indigo-500 to-secondary tracking-tighter">HA</span>
-                </div>
-                {/* Status Indicator */}
-                <div className="absolute bottom-4 right-4 w-5 h-5 bg-green-500 rounded-full border-4 border-white dark:border-gray-800 shadow-lg animate-pulse" />
+      {/* Hero Section - Clean & Professional */}
+      <motion.div variants={itemVariants} className="pt-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          {/* Avatar Area - Clean & Modern */}
+          <motion.div
+            className="relative shrink-0"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full p-2 bg-gradient-to-tr from-primary/20 via-transparent to-secondary/20 border border-gray-100 dark:border-gray-800 shadow-2xl">
+              <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 flex items-center justify-center overflow-hidden border-4 border-white dark:border-gray-800 shadow-inner">
+                <span className="text-6xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary via-indigo-500 to-secondary tracking-tighter">HA</span>
               </div>
-            </motion.div>
+              {/* Refined Status Indicator */}
+              <div className="absolute bottom-6 right-6 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-gray-800 shadow-xl animate-pulse" />
+            </div>
+          </motion.div>
 
-            {/* Content Section */}
-            <div className={cn(
-              "flex-1 space-y-5",
-              language === 'ar' ? 'text-center md:text-right' : 'text-center md:text-left'
-            )}>
-              <div className="space-y-2">
-                <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">
-                  <span className="text-gray-500 dark:text-gray-400 font-medium text-2xl md:text-3xl block mb-2">{t('aboutPage.welcome', language)}</span>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{t('aboutPage.name', language)}</span> 👋
-                </h1>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-600 dark:text-indigo-300 flex items-center justify-center md:justify-start gap-3">
-                  <span className="w-6 h-[2px] bg-primary/30 hidden md:block" />
+          {/* Text Content - Clear & Impactful */}
+          <div className={cn(
+            "flex-1 space-y-6 lg:space-y-8",
+            language === 'ar' ? 'text-center lg:text-right' : 'text-center lg:text-left'
+          )}>
+            <div className="space-y-3">
+              <h1 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white leading-[1.1]">
+                <span className="text-lg md:text-2xl font-bold text-primary block mb-2 uppercase tracking-[0.2em]">{t('aboutPage.welcome', language)}</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-indigo-500 to-secondary">{t('aboutPage.name', language)}</span> 👋
+              </h1>
+              <div className={cn(
+                "flex items-center gap-4 justify-center lg:justify-start",
+                language === 'ar' && "flex-row-reverse"
+              )}>
+                <div className="h-px w-12 bg-gray-200 dark:bg-gray-700 hidden md:block" />
+                <h2 className="text-xl md:text-3xl font-bold text-gray-700 dark:text-blue-300">
                   {t('aboutPage.role', language)}
                 </h2>
               </div>
+            </div>
 
-              <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
-                {t('aboutPage.description', language)}
-              </p>
+            <p className="text-lg md:text-2xl text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl font-medium">
+              {t('aboutPage.description', language)}
+            </p>
 
-              <div className={cn(
-                "flex flex-wrap gap-4 pt-2",
-                language === 'ar' ? 'justify-center md:justify-start' : 'justify-center md:justify-start'
-              )}>
-                <button
-                  onClick={() => setActiveSection('contact')}
-                  className="px-10 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-2xl font-bold shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  {t('aboutPage.buttons.contact', language)}
-                </button>
-                <button
-                  onClick={() => setActiveSection('projects')}
-                  className="px-10 py-3.5 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-100 dark:border-gray-700 rounded-2xl font-bold hover:border-primary/30 transition-all duration-300 shadow-sm"
-                >
-                  {t('aboutPage.buttons.projects', language)}
-                </button>
-              </div>
+            <div className={cn(
+              "flex flex-wrap gap-5 pt-4",
+              language === 'ar' ? 'justify-center lg:justify-start' : 'justify-center lg:justify-start'
+            )}>
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setActiveSection('contact')}
+                className="px-12 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-2xl font-black text-lg shadow-2xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300"
+              >
+                {t('aboutPage.buttons.contact', language)}
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setActiveSection('projects')}
+                className="px-12 py-4 bg-white dark:bg-transparent text-gray-900 dark:text-white border-4 border-gray-100 dark:border-gray-800 rounded-2xl font-black text-lg hover:border-primary/50 transition-all duration-300 shadow-sm"
+              >
+                {t('aboutPage.buttons.projects', language)}
+              </motion.button>
+            </div>
 
-              <div className={cn(
-                "pt-6 border-t border-gray-50 dark:border-gray-700/50 flex",
-                language === 'ar' ? 'justify-center md:justify-start' : 'justify-center md:justify-start'
-              )}>
+            <div className={cn(
+              "pt-10 flex",
+              language === 'ar' ? 'justify-center lg:justify-start' : 'justify-center lg:justify-start'
+            )}>
+              <div className="p-2 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm">
                 <SocialLinks />
               </div>
             </div>
           </div>
-        </Card>
+        </div>
       </motion.div>
 
       {/* Stats Section */}
