@@ -121,12 +121,19 @@
     let deferredPrompt;
 
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(registration => {
-          console.log('SW registered:', registration);
-        }).catch(error => {
-          console.log('SW registration failed:', error);
-        });
+      window.addEventListener('load', async () => {
+        try {
+          // Unregister any old broken service workers first
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          for (const reg of registrations) {
+            await reg.unregister();
+          }
+          // Register the new stable service worker
+          await navigator.serviceWorker.register('/sw.js');
+          console.log('SW registered successfully');
+        } catch (error) {
+          console.log('SW error:', error);
+        }
       });
 
       // Capture install prompt
