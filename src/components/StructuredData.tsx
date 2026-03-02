@@ -81,8 +81,7 @@ export const generatePersonData = () => ({
     'https://www.youtube.com/@Hamzaamirni01',
     'https://instagram.com/hamza_amirni_01',
     'https://www.linkedin.com/in/hamza-a-05b639281/',
-    'https://x.com/Hamza_Amirni',
-    'https://github.com/HamzabAmirni1'
+    'https://x.com/Hamza_Amirni'
   ]
 });
 

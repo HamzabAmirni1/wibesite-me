@@ -1,5 +1,5 @@
 ﻿import { Home, User, Youtube, Code, AppWindow, Gamepad2, Bot, Wrench, Newspaper, MessageSquare, Server, Palette, BrainCircuit, Cpu, Lightbulb, CheckCircle, Briefcase, FolderGit } from 'lucide-react';
-import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiLinkedin, SiStackoverflow, SiX, SiTiktok, SiGithub } from 'react-icons/si';
+import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp, SiTelegram, SiOpenai, SiPerplexity, SiGoogledocs, SiCoursera, SiCanva, SiLinkedin, SiStackoverflow, SiX, SiTiktok } from 'react-icons/si';
 import { FaChess, FaKeyboard, FaGraduationCap, FaMosque, FaQuran, FaTh } from 'react-icons/fa';
 
 export const navLinks = [
@@ -30,7 +30,6 @@ export const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/hamza-a-05b639281/', IconComponent: SiLinkedin, color: 'bg-[#0A66C2]', key: 'linkedin' },
     { name: 'X (تويتر)', url: 'https://x.com/Hamza_Amirni', IconComponent: SiX, color: 'bg-[#000000]', key: 'twitter' },
     { name: 'تيك توك', url: 'https://www.tiktok.com/@hamzaamirni?_t=ZS-8zGhf6i3jyZ&_r=1', IconComponent: SiTiktok, color: 'bg-[#000000]', key: 'tiktok' },
-    { name: 'GitHub', url: 'https://github.com/HamzabAmirni1', IconComponent: SiGithub, color: 'bg-[#181717]', key: 'github' },
 ];
 
 export const myApps = [
