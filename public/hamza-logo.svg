@@ -5,11 +5,12 @@
       <stop offset="1" stop-color="#ec4899" />
     </linearGradient>
   </defs>
-  <!-- Background with full coverage for maskable icons -->
-  <rect width="512" height="512" rx="64" fill="url(#g)" />
-  <!-- Centered content with safe area mapping -->
-  <text x="51%" y="54%" text-anchor="middle" dominant-baseline="central"
+  <!-- Full background for perfect masking -->
+  <rect width="512" height="512" fill="url(#g)" />
+  <!-- Centered 'HA' text within safe zone -->
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="central"
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="200" font-weight="700" fill="#ffffff" style="letter-spacing: -5px;">HA</text>
+        font-size="180" font-weight="700" fill="#ffffff" style="letter-spacing: -5px;">HA</text>
 </svg>
+
 
