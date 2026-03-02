@@ -104,78 +104,75 @@ ${formData.message}
           </div>
 
           {/* Social Media Links */}
-          <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-            <h3 className="font-semibold text-gray-800 mb-4 text-center">{t('contactPage.socialMediaTitle', language)}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <a
-                href="https://wa.me/+212624855939"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
-              >
-                <SiWhatsapp className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.whatsapp', language)}</span>
-              </a>
-
-              <a
-                href="https://www.facebook.com/6kqzuj3y4e"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <SiFacebook className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.facebook', language)}</span>
-              </a>
-
-              <a
-                href="https://instagram.com/hamza_amirni_01"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors"
-              >
-                <SiInstagram className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.instagram', language)}</span>
-              </a>
-
-              <a
-                href="https://youtube.com/@hamzaamirni01?si=GvjbnPjS4HMxdZ_i"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-              >
-                <SiYoutube className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.youtube', language)}</span>
-              </a>
-
-              <a
-                href="https://www.tiktok.com/@hamzaamirni?_t=ZS-8zGhf6i3jyZ&_r=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
-              >
-                <SiTiktok className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.tiktok', language)}</span>
-              </a>
-
-              <a
-                href="https://T.me/hamzaamirni"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                <SiTelegram className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.telegram', language)}</span>
-              </a>
-
-              <a
-                href="https://x.com/Hamza_Amirni"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
-              >
-                <SiX className="w-5 h-5" />
-                <span className="text-sm font-medium">{t('socialMediaLinks.twitter', language)}</span>
-              </a>
+          <div className="mt-10 p-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-100 dark:border-gray-700 rounded-2xl shadow-sm">
+            <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+              {t('contactPage.socialMediaTitle', language)}
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                {
+                  href: "https://wa.me/+212624855939",
+                  icon: SiWhatsapp,
+                  label: t('socialMediaLinks.whatsapp', language),
+                  color: "bg-[#25D366]",
+                  hover: "hover:bg-[#20bd5a]"
+                },
+                {
+                  href: "https://www.facebook.com/6kqzuj3y4e",
+                  icon: SiFacebook,
+                  label: t('socialMediaLinks.facebook', language),
+                  color: "bg-[#1877F2]",
+                  hover: "hover:bg-[#166fe5]"
+                },
+                {
+                  href: "https://instagram.com/hamza_amirni_01",
+                  icon: SiInstagram,
+                  label: t('socialMediaLinks.instagram', language),
+                  color: "bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]",
+                  hover: "opacity-90 hover:opacity-100"
+                },
+                {
+                  href: "https://youtube.com/@hamzaamirni01?si=GvjbnPjS4HMxdZ_i",
+                  icon: SiYoutube,
+                  label: t('socialMediaLinks.youtube', language),
+                  color: "bg-[#FF0000]",
+                  hover: "hover:bg-[#cc0000]"
+                },
+                {
+                  href: "https://www.tiktok.com/@hamzaamirni?_t=ZS-8zGhf6i3jyZ&_r=1",
+                  icon: SiTiktok,
+                  label: t('socialMediaLinks.tiktok', language),
+                  color: "bg-black",
+                  hover: "hover:bg-gray-900"
+                },
+                {
+                  href: "https://T.me/hamzaamirni",
+                  icon: SiTelegram,
+                  label: t('socialMediaLinks.telegram', language),
+                  color: "bg-[#24A1DE]",
+                  hover: "hover:bg-[#1d82b3]"
+                },
+                {
+                  href: "https://x.com/Hamza_Amirni",
+                  icon: SiX,
+                  label: t('socialMediaLinks.twitter', language),
+                  color: "bg-black",
+                  hover: "hover:bg-gray-900"
+                }
+              ].map((social, index) => (
+                <motion.a
+                  key={index}
+                  whileHover={{ scale: 1.05, translateY: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 px-6 py-3 ${social.color} ${social.hover} text-white rounded-xl shadow-md transition-all duration-300 min-w-[140px] justify-center group`}
+                >
+                  <social.icon className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span className="text-sm font-semibold tracking-wide">{social.label}</span>
+                </motion.a>
+              ))}
             </div>
           </div>
 
