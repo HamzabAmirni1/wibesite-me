@@ -117,8 +117,12 @@ const sectionOrder = [
 ];
 
 const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState("home");
-  const [prevSection, setPrevSection] = useState("home");
+  const [activeSection, setActiveSection] = useState(() => {
+    const hash = window.location.hash.replace('#', '');
+    return sectionOrder.includes(hash) ? hash : "home";
+  });
+  const [prevSection, setPrevSection] = useState(activeSection);
+
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [showToTop, setShowToTop] = useState(false);
@@ -147,6 +151,20 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Sync section with URL hash for browser back/forward buttons
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      const newSection = sectionOrder.includes(hash) ? hash : 'home';
+      if (newSection !== activeSection) {
+        setPrevSection(activeSection);
+        setActiveSection(newSection);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [activeSection]);
+
   useEffect(() => {
     const el = mainContentRef.current;
     if (!el) return;
@@ -164,6 +182,7 @@ const App: React.FC = () => {
   const handleSetSection = (section: string) => {
     setPrevSection(activeSection);
     setActiveSection(section);
+    window.location.hash = section;
     if (window.innerWidth < 1024) setSidebarOpen(false);
     mainContentRef.current?.scrollTo({ top: 0, behavior: "smooth" });
   };

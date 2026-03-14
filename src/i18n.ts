@@ -2836,15 +2836,15 @@ export const callToAction = {
 export const sidebar = {
   ar: {
     name: 'حمزة اعمرني',
-    title: 'مبرمج وصانع محتوى تقني'
+    title: 'مطور روبوتات وخبير ويب'
   },
   fr: {
     name: 'Hamza Amirni',
-    title: 'Développeur et créateur de contenu tech'
+    title: 'Développeur de Bots et Expert Web'
   },
   en: {
     name: 'Hamza Amirni',
-    title: 'Developer & tech content creator'
+    title: 'Freelance Bot Developer & Web Expert'
   }
 };
 

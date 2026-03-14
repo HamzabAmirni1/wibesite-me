@@ -13,7 +13,7 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'حمزة اعمرني | مبرمج وصانع محتوى تقني',
+  title = 'حمزة اعمرني | مطور روبوتات وخبير ويب',
   description = 'منصة حمزة اعمرني لمشاركة الخبرة والشغف في عالم البرمجة والتقنية وتطوير الذات.',
   image = 'https://hamzaamirni.netlify.app/og-image.jpg',
   url = 'https://hamzaamirni.netlify.app',
@@ -69,7 +69,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
-      
+
       {/* Language */}
       <meta httpEquiv="content-language" content="ar" />
       <html lang="ar" dir="rtl" />
