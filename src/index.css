@@ -428,6 +428,19 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+@media (max-width: 767px) {
+    .glass-card {
+        /* Remove heavy blur on mobile, use a much softer one or nothing, and keep opacity higher to compensate */
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(2px) saturate(100%);
+        -webkit-backdrop-filter: blur(2px) saturate(100%);
+    }
+
+    .dark .glass-card {
+        background: rgba(17, 24, 39, 0.94);
+    }
+}
+
 /* ─── Neon Text Glow ─────────────────────────────────────────────────────────── */
 .text-glow-primary {
     text-shadow:

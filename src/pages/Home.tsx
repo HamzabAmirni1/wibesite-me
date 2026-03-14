@@ -23,12 +23,11 @@ import { cn } from "../lib/utils";
 
 /* ─── Shared Variants ──────────────────────────────────────────────────────── */
 const fadeUpVariants = {
-  hidden: { opacity: 0, y: 40, filter: "blur(6px)" },
+  hidden: { opacity: 0, y: 20 },
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.4, delay, ease: 'easeOut' },
   }),
 };
 
@@ -36,17 +35,16 @@ const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.05 },
   },
 };
 
 const staggerItem = {
-  hidden: { opacity: 0, y: 32, scale: 0.96 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    transition: { type: "spring", stiffness: 120, damping: 16 },
+    transition: { duration: 0.35, ease: 'easeOut' },
   },
 };
 
@@ -99,14 +97,15 @@ const PhiloCard: React.FC<PhiloCardProps> = ({
     <motion.div
       ref={ref}
       className={`text-center p-7 rounded-2xl bg-gradient-to-br ${gradient} relative overflow-hidden group`}
-      initial={{ opacity: 0, y: 40, scale: 0.94 }}
-      animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{
-        duration: 0.55,
-        delay: index * 0.15,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.4,
+        delay: index * 0.1,
+        ease: 'easeOut',
       }}
-      whileHover={{ y: -8, scale: 1.02 }}
+      whileHover={{ y: -4 }}
+      style={{ willChange: 'transform' }}
     >
       {/* Background glow */}
       <motion.div
@@ -232,20 +231,21 @@ const WhyUsCard: React.FC<{ whyKey: string; index: number }> = ({
     <motion.div
       ref={ref}
       className={cn(
-        "border rounded-2xl p-5 space-y-2 group relative overflow-hidden transition-shadow duration-300",
+        "border rounded-2xl p-5 space-y-2 group relative overflow-hidden transition-all duration-300",
         colors.bg,
         colors.border,
         colors.darkBg,
         colors.darkBorder,
       )}
-      initial={{ opacity: 0, y: 30, scale: 0.95 }}
-      animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+      initial={{ opacity: 0, y: 16 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{
-        duration: 0.5,
-        delay: index * 0.1,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.35,
+        delay: index * 0.08,
+        ease: 'easeOut'
       }}
-      whileHover={{ y: -5, boxShadow: "0 12px 28px rgba(0,0,0,0.09)" }}
+      whileHover={{ y: -3 }}
+      style={{ willChange: 'transform, opacity' }}
     >
       <motion.div
         className="flex items-center gap-2"
@@ -289,23 +289,15 @@ const PlanCard: React.FC<{ planKey: string; index: number }> = ({
           ? "bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/40 shadow-xl shadow-primary/10 dark:from-primary/10 dark:to-secondary/10"
           : "bg-white/80 dark:bg-gray-800/60 border-primary/15 dark:border-primary/30 shadow-md",
       )}
-      initial={{ opacity: 0, y: 40, scale: 0.94 }}
-      animate={
-        isInView
-          ? { opacity: 1, y: isMiddle ? -8 : 0, scale: isMiddle ? 1.03 : 1 }
-          : {}
-      }
+      initial={{ opacity: 0, y: 24 }}
+      animate={isInView ? { opacity: 1, y: isMiddle ? -4 : 0 } : {}}
       transition={{
-        duration: 0.6,
-        delay: index * 0.14,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.4,
+        delay: index * 0.1,
+        ease: 'easeOut'
       }}
-      whileHover={{
-        y: isMiddle ? -14 : -8,
-        boxShadow: isMiddle
-          ? "0 20px 48px rgba(99,102,241,0.22)"
-          : "0 12px 28px rgba(0,0,0,0.12)",
-      }}
+      whileHover={{ y: isMiddle ? -8 : -4 }}
+      style={{ willChange: 'transform' }}
     >
       {isMiddle && (
         <motion.div
@@ -383,7 +375,6 @@ const PlanCard: React.FC<{ planKey: string; index: number }> = ({
   );
 };
 
-/* ─── Image Gallery ─────────────────────────────────────────────────────────── */
 const ImageGallery: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
@@ -411,26 +402,26 @@ const ImageGallery: React.FC = () => {
       {images.map((img, i) => (
         <motion.div
           key={i}
-          className="relative overflow-hidden rounded-2xl shadow-lg group"
-          initial={{ opacity: 0, y: 30, scale: 0.92 }}
-          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+          className="relative overflow-hidden rounded-2xl shadow-md group"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{
-            duration: 0.6,
-            delay: i * 0.16,
-            ease: [0.22, 1, 0.36, 1],
+            duration: 0.4,
+            delay: i * 0.1,
+            ease: 'easeOut',
           }}
-          whileHover={{ scale: 1.03, y: -4 }}
+          whileHover={{ y: -4 }}
+          style={{ willChange: 'transform' }}
         >
           {/* Image */}
           <img
             src={img.src}
             alt={img.alt}
-            className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110 dark:opacity-80"
+            loading="lazy"
+            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105 dark:opacity-80"
           />
           {/* Overlay gradient */}
-          <motion.div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-          {/* Shimmer on hover */}
-          <motion.div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </motion.div>
       ))}
     </div>
