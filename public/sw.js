@@ -16,7 +16,7 @@ try {
 }
 
 // ─── PWA Cache ─────────────────────────────────────────────
-const CACHE_NAME = 'hamza-v2';
+const CACHE_NAME = 'hamza-v3';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -25,7 +25,7 @@ self.addEventListener('install', (event) => {
                 .catch(() => { })
         )
     );
-    // NO skipWaiting → prevents refresh loop
+    self.skipWaiting(); // Force update so new title reflects
 });
 
 self.addEventListener('activate', (event) => {
@@ -34,7 +34,7 @@ self.addEventListener('activate', (event) => {
             Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
         )
     );
-    // NO clients.claim() → prevents refresh loop
+    event.waitUntil(clients.claim());
 });
 
 self.addEventListener('fetch', (event) => {
