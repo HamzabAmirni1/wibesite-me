@@ -16,6 +16,7 @@ import { t } from "./i18n";
 import { Menu, X, ArrowUp, Search } from "lucide-react";
 import { cn } from "./lib/utils";
 import DarkModeToggle from "./components/DarkModeToggle";
+import SEO from "./components/SEO";
 
 // Lazy load pages
 const Home = lazy(() => import("./pages/Home"));
@@ -195,6 +196,7 @@ const App: React.FC = () => {
 
   return (
     <NavigationContext.Provider value={{ setActiveSection: handleSetSection }}>
+      <SEO />
       {/* Intro animation */}
       <AnimatePresence>
         {showIntro && (

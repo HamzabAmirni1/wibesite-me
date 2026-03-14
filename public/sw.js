@@ -16,7 +16,7 @@ try {
 }
 
 // ─── PWA Cache ─────────────────────────────────────────────
-const CACHE_NAME = 'hamza-v4';
+const CACHE_NAME = 'hamza-v5';
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
