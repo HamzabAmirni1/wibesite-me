@@ -88,7 +88,7 @@ const learningResources = [
     icon: Laptop,
     items: [
       'VS Code',
-      'Git',
+      'Git & GitHub',
       'Chrome DevTools',
       'Postman'
     ],
@@ -280,17 +280,17 @@ print(f"Doubled: {doubled}")`}</code>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <img
             src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80"
-            alt="Professional Workspace for Web Development and Programming"
+            alt="Programming"
             className="w-full h-64 object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:opacity-80"
           />
           <img
             src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80"
-            alt="Modern Software Development Environment with High-Quality Code"
+            alt="Development"
             className="w-full h-64 object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:opacity-80"
           />
           <img
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
-            alt="Advanced Programming and Software Engineering Close-up"
+            alt="Code"
             className="w-full h-64 object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl dark:opacity-80"
           />
         </div>

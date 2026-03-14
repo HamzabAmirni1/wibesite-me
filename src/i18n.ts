@@ -189,19 +189,19 @@ export const heroContent = {
     en: 'Hamza Amirni',
   },
   subtitle: {
-    ar: 'Full-Stack Developer | خبير في تطوير البوتات والمواقع',
-    fr: 'Full-Stack Developer & Expert en Automatisation',
-    en: 'Full-Stack Developer & Automation Expert | Technical Consultations',
+    ar: 'مطور واجهات متقدم (Full-Stack) ومصمم حلول برمجية مبتكرة',
+    fr: 'Développeur Full-Stack Senior & Concepteur de solutions innovantes',
+    en: 'Senior Full-Stack Developer & Innovative Solutions Architect',
   },
   intro: {
-    ar: 'أقوم ببناء بوتات (WhatsApp, Telegram, Facebook) ذكية وتطوير مواقع ويب احترافية، مع تقديم استشارات تقنية لمساعدتكم في أتمتة وتطوير أعمالكم.',
-    fr: 'Je construis des bots intelligents (WhatsApp, Telegram, Facebook) et des sites web de haute performance, tout en offrant des consultations techniques.',
-    en: 'Helping US startups and SMEs scale through AI-driven automation (WA, TG, FB) and high-performance web engineering. [US-Timezone Support Available]',
+    ar: 'مرحباً بك في منصتي الإلكترونية! هنا أشارك معك خبرتي وشغفي في عالم البرمجة والتقنية وتطوير الذات.',
+    fr: "Bienvenue sur ma plateforme ! Je partage avec toi mon expérience et ma passion pour la programmation, la technologie et le développement personnel.",
+    en: 'Welcome to my digital space! I share my experience and passion for programming, technology and self‑development.',
   },
   cta: {
     ar: 'معًا نحو مستقبل رقمي أفضل!',
     fr: 'Ensemble vers un avenir numérique meilleur !',
-    en: 'Let\'s Scale Your Business with Code.',
+    en: 'Together towards a better digital future!',
   },
 };
 
@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'Full-Stack Developer | خبير في تطوير البوتات والمواقع',
-    fr: 'Expert Full-Stack & Automatisation (React, Next.js, PHP, Python)',
-    en: 'Full-Stack Developer & Automation Expert | Strategic Technical Partner',
+    ar: 'مطور واجهات متقدم (Full-Stack) ومصمم حلول برمجية مبتكرة',
+    fr: 'Développeur Full-Stack Senior & Concepteur de solutions innovantes',
+    en: 'Senior Full-Stack Developer & Innovative Solutions Architect',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
@@ -441,9 +441,9 @@ export const aboutPage = {
   },
   stats: [
     { ar: 'سنوات خبرة', fr: 'Années d\'expérience', en: 'Years Experience' },
-    { ar: 'مشروع ناجح', fr: 'Projets réussis', en: 'Global Successful Projects' },
-    { ar: 'عميل سعيد', fr: 'Clients satisfaits', en: 'Strategic Happy Clients' },
-    { ar: 'كوب قهوة', fr: 'Tasses de café', en: 'Cups of Productive Coffee' },
+    { ar: 'مشروع ناجح', fr: 'Projets réussis', en: 'Successful Projects' },
+    { ar: 'عميل سعيد', fr: 'Clients satisfaits', en: 'Happy Clients' },
+    { ar: 'كوب قهوة', fr: 'Tasses de café', en: 'Cups of Coffee' },
   ],
   story: {
     title: { ar: 'قصتي ورؤيتي', fr: 'Mon Histoire & Ma Vision', en: 'My Story & Vision' },
@@ -458,15 +458,15 @@ export const aboutPage = {
       en: 'I believe that technology is a powerful tool for improving people\'s lives and solving complex problems. Therefore, I always strive to learn everything new and share my knowledge with others through technical content creation.',
     },
     p3: {
-      ar: 'أؤمن بقوة الأتمتة لبناء مشاريع ذكية وفعالة، لهذا تخصصت في هندسة البوتات والحلول السحابية المتقدمة.',
-      fr: 'Je crois au pouvoir de l\'automatisation pour des projets intelligents et efficaces, c\'est pourquoi je me suis spécialisé dans l\'ingénierie des bots et les solutions cloud avancées.',
-      en: 'I believe in the power of automation to build smart and efficient projects, specializing in Messaging Bots and advanced cloud solutions.',
+      ar: 'رؤيتي هي بناء مجتمع تقني عربي قوي ومبدع، والمساهمة في تطوير مشاريع تترك أثراً إيجابياً في العالم.',
+      fr: 'Ma vision est de construire une communauté technique arabe forte et créative, et de contribuer au développement de projets qui laissent un impact positif dans le monde.',
+      en: 'My vision is to build a strong and creative Arabic technical community, and to contribute to the development of projects that leave a positive impact on the world.',
     },
   },
   description: {
-    ar: 'أنا حمزة اعمرني، مهندس Full-Stack وخبير في هندسة الأتمتة. مهمتي هي مساعدة الشركات الناشئة والناجحة على التوسع من خلال بناء أنظمة برمجية ذكية وتطبيقات ويب عالية الأداء. أتخصص في تحويل الأفكار المعقدة إلى منتجات رقمية قابلة للنمو، مع التركيز الكامل على تحقيق نتائج ملموسة لشركائي حول العالم. 🚀',
-    fr: 'Je suis ingénieur Full-Stack et architecte d\'automatisation, dédié à la croissance des startups à travers des solutions logicielles haute performance. Expert de l\'écosystème React et du déploiement de bots intelligents, je transforme vos idées en produits numériques scalables avec un focus constant sur la rapidité d\'exécution et le ROI. 🚀',
-    en: 'I am a Strategic Full-Stack Engineer and Automation Architect dedicated to scaling startups and SMEs through high-performance code and intelligent ecosystems. My expertise bridges the gap between complex engineering and business growth, specializing in React architectures and AI-integrated automation. Focused on ROI and rapid deployment, I help global partners turn ideas into scalable digital products. 🚀',
+    ar: 'أهلاً وسهلاً! أنا حمزة اعمرني، مطور ويب متخصص أمتلك خبرة واسعة في البرمجيات والتقنيات. أعمل في تطوير الويب والتطبيقات والبرمجيات الحديثة. أحب التعلم المستمر وتطوير المهارات في البرمجة والتصميم والتكنولوجيا. إذا كان لديك أي استفسار أو رغبة في التعاون، فلا تتردد في التواصل. 🔥',
+    fr: 'Bonjour et bienvenue ! Je suis Hamza Amirni, développeur web spécialisé avec une solide expérience dans les logiciels et les technologies. Je travaille sur le développement web, les applications et les technologies modernes. J’apprécie l’apprentissage continu et le développement de compétences en programmation, design et technologie. Si vous avez des questions ou souhaitez collaborer, contactez‑moi. 🔥',
+    en: 'Hello and welcome! I’m Hamza Amirni, a professional web developer with extensive experience in software and modern technologies. I work on web development, applications and modern tech. I enjoy continuous learning and improving skills in programming, design and technology. If you have any questions or would like to collaborate, feel free to get in touch. 🔥',
   },
   values: [
     { title: { ar: 'الجودة والتميز', fr: 'Qualité & Excellence', en: 'Quality & Excellence' }, description: { ar: 'أسعى دائماً لتقديم أفضل جودة ممكنة في كل سطر كود أكتبه.', fr: 'Je m\'efforce toujours de fournir la meilleure qualité possible dans chaque ligne de code que j\'écris.', en: 'I always strive to deliver the best possible quality in every line of code I write.' } },
@@ -488,7 +488,6 @@ export const aboutPage = {
       backend: { ar: 'تطوير الخلفيات', fr: 'Développement Backend', en: 'Backend Development' },
       mobile: { ar: 'تطبيقات الموبايل', fr: 'Applications Mobiles', en: 'Mobile Applications' },
       databases: { ar: 'قواعد البيانات', fr: 'Bases de données', en: 'Databases' },
-      automation: { ar: 'البوتات والأتمتة', fr: 'Bots & Automatisation', en: 'Bots & Automation' },
       algorithms: { ar: 'الخوارزميات', fr: 'Algorithmes', en: 'Algorithms' },
     },
   },
@@ -502,27 +501,22 @@ export const aboutPage = {
       {
         ar: 'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
         fr: "J'ai commencé à apprendre la programmation à un jeune âge et j'ai appris par la pratique.",
-        en: 'Mastered software engineering through years of hands-on technical execution.',
+        en: 'I started learning software at an early age and learned through practice.',
       },
       {
         ar: 'أكملت الدراسة الثانوية في 2023.',
         fr: "J'ai terminé mes études secondaires en 2023.",
-        en: 'Built a strong core engineering foundation starting specialized dev work in 2019.',
+        en: 'I completed high school in 2023.',
       },
       {
         ar: 'عملت في عدة مشاريع برمجية مهمة.',
         fr: "J'ai travaillé sur plusieurs projets logiciels importants.",
-        en: 'Engineered and deployed business-critical automated systems for international scale.',
+        en: 'I have worked on several important software projects.',
       },
       {
         ar: 'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.',
         fr: "J'ai acquis une grande expérience dans les domaines de la programmation et du web.",
-        en: 'Specializing in React/Next.js and AI Automation with a core focus on US-market scalability.',
-      },
-      {
-        ar: 'أوفر ساعات عمل مرنة تتناسب مع توقيت الولايات المتحدة وأوروبا.',
-        fr: 'Je propose des horaires flexibles adaptés aux fuseaux horaires US et Europe.',
-        en: '100% Remote, fully compatible with US & European business timezones.',
+        en: 'I have gained extensive experience in programming and web development.',
       },
     ],
   },
@@ -649,14 +643,6 @@ export const homePage = {
           title: 'تحسين محركات البحث (SEO)',
           desc: 'تهيئة الموقع للظهور في نتائج البحث، تحسين السرعة، وهيكلة المحتوى لزيادة فرص الوصول إلى عملائك.'
         },
-        automation: {
-          title: 'تطوير البوتات والأتمتة',
-          desc: 'برمجة بوتات ذكية لـ WhatsApp و Telegram و Facebook لتسهيل التواصل وأتمتة المهام المتكررة.'
-        },
-        consultation: {
-          title: 'الاستشارات التقنية المتخصصة',
-          desc: 'تقديم استشارات تقنية لمساعدتك في أتمتة أعمالك، اختيار الحلول البرمجية الأنسب، وتطوير البنية التحتية لمشروعك.'
-        },
         custom: {
           title: 'برمجة حلول خاصة حسب الطلب',
           desc: 'تطوير أنظمة ولوحات تحكم ومنصّات مخصّصة (حجز، إدارة عملاء، أنظمة داخلية…) وفق احتياجات مشروعك.'
@@ -706,10 +692,10 @@ export const homePage = {
         title: 'جاهز للبدء في مشروع موقعك؟',
         desc: 'للتواصل والطلب، يمكنك استخدام نموذج التواصل في الموقع أو مراسلتي مباشرة عبر البريد الإلكتروني أو الواتساب. أرسل وصفاً مختصراً لمشروعك ونوع الموقع الذي تريده، وسأعود إليك بعرض يشمل السعر ومدة التنفيذ.'
       },
-      adAlt: 'خدمات حمزة اعمرني لتطوير البرمجيات والمواقع في المغرب',
-      imgAlt1: 'تصميم وتطوير مواقع احترافية متجاوبة في المغرب',
-      imgAlt2: 'تطوير تطبيقات الجوال والأنظمة البرمجية الحديثة',
-      imgAlt3: 'خبير React ومطور Full-Stack محترف في المغرب'
+      adAlt: 'مساحة إعلانية',
+      imgAlt1: 'برمجة حديثة',
+      imgAlt2: 'تطوير تطبيقات',
+      imgAlt3: 'تعلم تقني'
     }
   },
   fr: {
@@ -756,14 +742,6 @@ export const homePage = {
         seo: {
           title: 'Optimisation des moteurs de recherche (SEO)',
           desc: 'Optimiser le site pour apparaître dans les résultats de recherche, améliorer la vitesse et structurer le contenu pour augmenter les chances d\'atteindre vos clients.'
-        },
-        automation: {
-          title: 'Dév Bots & Automatisation',
-          desc: 'Création de bots intelligents pour WhatsApp, Telegram et Facebook pour automatiser vos processus.'
-        },
-        consultation: {
-          title: 'Consultations Techniques',
-          desc: 'Conseils techniques spécialisés pour vous aider à automatiser vos processus, choisir les meilleures solutions et développer votre projet.'
         },
         custom: {
           title: 'Programmation de solutions personnalisées sur demande',
@@ -814,10 +792,10 @@ export const homePage = {
         title: 'Prêt à commencer votre projet ?',
         desc: 'Pour me contacter et commander, vous pouvez utiliser le formulaire de contact sur le site ou m\'envoyer un message directement par e-mail ou WhatsApp. Envoyez une brève description de votre projet et je vous répondrai avec une offre comprenant le prix et le délai d\'exécution.'
       },
-      adAlt: 'Services de Hamza Amirni pour le développement de logiciels et sites web au Maroc',
-      imgAlt1: 'Design et développement de sites professionnels et réactifs au Maroc',
-      imgAlt2: 'Développement d\'applications mobiles et de systèmes logiciels modernes',
-      imgAlt3: 'Expert React et développeur Full-Stack professionnel au Maroc'
+      adAlt: 'Espace publicitaire',
+      imgAlt1: 'Programmation moderne',
+      imgAlt2: 'Développement d\'applications',
+      imgAlt3: 'Apprentissage technique'
     }
   },
   en: {
@@ -842,90 +820,82 @@ export const homePage = {
       title: 'Services I offer',
       items: {
         personal: {
-          title: 'High-Conversion Landing Pages',
-          desc: 'Custom-built pages for freelancers and influencers designed to maximize conversion rates and visitor engagement.'
+          title: 'Personal Website Design & Development',
+          desc: 'Introductory sites and landing pages for freelancers, trainers, and content creators, designed to market your services professionally.'
         },
         company: {
-          title: 'Growth-Focused Business Sites',
-          desc: 'Strategic corporate websites built for high traffic, brand positioning, and streamlined customer inquiries.'
+          title: 'Corporate Website Design',
+          desc: 'Professional sites to showcase company services, team, and achievements, with contact forms and quote request models.'
         },
         ecommerce: {
-          title: 'Scalable E-commerce Platforms',
-          desc: 'End-to-end online stores optimized for mobile sales, with seamless product management and inventory automation.'
+          title: 'E-commerce Store Development',
+          desc: 'Complete online stores to sell physical or digital products with easy product and order management.'
         },
         payment: {
-          title: 'Global Payment Architecture',
-          desc: 'Integrating safe, PCI-compliant billing systems (Stripe, PayPal) to process international transactions instantly.'
+          title: 'Payment Gateway Integration',
+          desc: 'Linking the site with reliable electronic payment gateways suitable for the local and international market to ensure a smooth and secure payment experience.'
         },
         maintenance: {
-          title: 'Reliability & Security Management',
-          desc: 'High-uptime monitoring, security patches, and performance optimization to keep your digital assets stable 24/7.'
+          title: 'Technical Support & Maintenance',
+          desc: 'Periodic site monitoring, fixing bugs, security updates, and performance improvement to ensure the stability of your project.'
         },
         seo: {
-          title: 'Growth-Oriented SEO Strategy',
-          desc: 'Targeting high-intent search terms to rank your business where your customers are. Focused on speed and metadata science.'
-        },
-        automation: {
-          title: 'AI-Driven Bot Systems (WA/TG/FB)',
-          desc: 'Eliminate repetitive tasks with intelligent bots that handle support, lead gen, and sales while you sleep.'
-        },
-        consultation: {
-          title: 'Strategic Technical Consulting',
-          desc: 'Fractional CTO guidance to help you choose the right tech stack, automate internal workflows, and scale efficiently.'
+          title: 'Search Engine Optimization (SEO)',
+          desc: 'Optimizing the site to appear in search results, improving speed, and structuring content to increase the chances of reaching your customers.'
         },
         custom: {
-          title: 'Enterprise Custom Software',
-          desc: 'Building bespoke admin dashboards, CRM integrations, and unique platforms tailored specifically for your operational goals.'
+          title: 'Custom Software Solutions on Demand',
+          desc: 'Developing systems, control panels, and custom platforms (reservation, customer management, internal systems...) according to your project needs.'
         }
       },
       whyUs: {
-        title: 'Why Hire Me?',
+        title: 'Why choose to work with me?',
         professional: {
-          title: 'Enterprise-Grade Execution',
-          desc: 'Commitment to the highest engineering standards with modern, scalable architectures tailored to your business goals.'
+          title: 'Professional Execution',
+          desc: 'Commitment to the best design and programming standards with modern, responsive interfaces suitable for your project\'s identity.'
         },
         speed: {
-          title: 'Agile & Rapid Deployment',
-          desc: 'Fast delivery cycles without compromising quality, ensuring your project goes live exactly when you need it.'
+          title: 'Sped of Execution',
+          desc: 'Respecting agreed-upon deadlines and delivering the project on time without sacrificing quality.'
         },
         price: {
-          title: 'Value-Driven ROI Strategy',
-          desc: 'Transparent, result-oriented pricing packages designed to provide the highest return on your digital investment.'
+          title: 'Affordable & Flexible Prices',
+          desc: 'Multiple packages and options suitable for individuals, entrepreneurs, and companies of all sizes.'
         },
         support: {
-          title: 'Strategic Technical Partnership',
-          desc: 'Long-term technical support and post-launch optimization to ensure your platform grows with your business.'
+          title: 'Ongoing Post-Delivery Support',
+          desc: 'Technical accompaniment after the site launch, with the possibility of adjustments and improvements when needed.'
         }
       },
       plans: {
-        title: 'Strategic Packages',
+        title: 'Service Packages',
         basic: {
-          title: 'Starter / Landing Page',
-          features: ['High-conversion one-page design', 'SEO-ready structure', 'Mobile-first optimization', 'Lead generation form'],
-          price: 'Price: Starting from $X (Custom Quote)',
-          example: 'Ideal for: Freelancers, beta launches, and personal brand visibility.'
+          title: 'Starter Package',
+          features: ['One-page website (Landing Page)', 'Mobile responsive design', 'Simple contact form', 'Link to social media accounts'],
+          price: 'Price: Starting from X MAD',
+          example: 'Example: Bio page for a freelancer, trainer, or a single service.'
         },
         business: {
-          title: 'Scale / Multi-Page Corporate',
-          features: ['Advanced 5-page business site', 'Standard-compliant brand UI/UX', 'Strategic SEO architecture', 'Custom CRM integration'],
-          price: 'Price: Starting from $Y (Custom Quote)',
-          example: 'Ideal for: Agencies, service-based firms, and growing startups.'
+          title: 'Business Package',
+          features: ['3 to 5 pages website', 'Design compatible with brand identity', 'Quote request form', 'Basic SEO setup'],
+          price: 'Price: Starting from Y MAD',
+          example: 'Example: Website for a service company, agency, or consulting office.'
         },
         ecommerce: {
-          title: 'Growth / E-commerce Ecosystem',
-          features: ['Elite end-to-end online store', 'Inventory automation', 'Global payment checkout (Stripe/PayPal)', 'Advanced marketing analytics'],
-          price: 'Price: Starting from $Z (Custom Quote)',
-          example: 'Ideal for: Physical/digital product brands and enterprise retail.'
+          title: 'E-commerce Package',
+          features: ['Complete online store', 'Product pages and shopping cart', 'Payment gateway link', 'Shipping options and basic tax setup'],
+          price: 'Price: Starting from Z MAD',
+          example: 'Example: Store for selling clothes, digital products, or others.'
         }
       },
       ready: {
-        title: 'Ready to Scale Your Business?',
-        desc: 'Book a discovery call or send a brief description of your project. We’ll discuss your goals and I’ll provide a personalized proposal with strategic pricing and milestones.'
+        title: 'Ready to start your project?',
+        desc: 'To contact and order, you can use the contact form on the site or message me directly via e-mail or WhatsApp. Send a brief description of your project and I will get back to you with an offer including price and execution time.'
       },
-      adAlt: 'Hamza Amirni\'s Professional Software & Web Development Services in Morocco',
-      imgAlt1: 'Professional and Responsive Website Design and Development in Morocco',
-      imgAlt2: 'Modern Mobile Application and Software Systems Development',
-      imgAlt3: 'Professional React Expert and Full-Stack Developer in Morocco'
+      adAlt: 'Ad Space',
+      imgAlt1: 'Modern Programming',
+      imgAlt2: 'App Development',
+      imgAlt3: 'Technical Learning'
     }
   },
 };
@@ -1423,7 +1393,11 @@ export const botsPageFull = {
         desc: 'بوت ذكاء اصطناعي متقدم من OpenAI للإجابة على أسئلتك وحل مشاكلك البرمجية',
         features: ['إجابات ذكية ودقيقة', 'مساعدة في البرمجة', 'شرح المفاهيم', 'كتابة الأكواد']
       },
-
+      b3: {
+        name: 'GitHub Copilot',
+        desc: 'مساعد برمجة ذكي يساعدك في كتابة الأكواد بشكل أسرع وأكثر كفاءة',
+        features: ['اقتراحات أكواد ذكية', 'دعم لغات متعددة', 'تكامل مع VS Code', 'تعلم من سياق الكود']
+      },
       b4: {
         name: 'Perplexity AI',
         desc: 'محرك بحث ذكي يستخدم الذكاء الاصطناعي لتقديم إجابات دقيقة مع المصادر',
@@ -1493,7 +1467,11 @@ export const botsPageFull = {
         desc: 'Outil IA avancé d\'OpenAI pour répondre à vos questions complexes.',
         features: ['Réponses intelligentes', 'Aide au codage', 'Explications', 'Génération code']
       },
-
+      b3: {
+        name: 'GitHub Copilot',
+        desc: 'Assistant de codage IA pour écrire du code plus rapidement.',
+        features: ['Suggestions intelligentes', 'Multi-langages', 'VS Code Sync', 'Context Aware']
+      },
       b4: {
         name: 'Perplexity AI',
         desc: 'Moteur de recherche IA fournissant des sources précises.',
@@ -1563,7 +1541,11 @@ export const botsPageFull = {
         desc: 'Advanced AI from OpenAI to answer questions and solve code issues.',
         features: ['Smart answers', 'Coding help', 'Explanations', 'Code generation']
       },
-
+      b3: {
+        name: 'GitHub Copilot',
+        desc: 'AI coding assistant to help you write code faster and better.',
+        features: ['Intelligent suggestions', 'Multiple languages', 'VS Code sync', 'Context aware']
+      },
       b4: {
         name: 'Perplexity AI',
         desc: 'AI search engine that provides accurate answers with sources.',
@@ -1669,9 +1651,9 @@ export const projectsPage = {
         features: ['رسوم بيانية تفاعلية', 'تقارير قابلة للتصدير', 'تحديث بيانات فوري', 'واجهة سهلة الاستخدام']
       },
       p6: {
-        title: 'بوت خدمة عملاء مؤتمت',
-        description: 'نظام خدمة عملاء ذكي يتعامل مع أكثر من 1000 استفسار يومياً باستخدام Python و Meta API. حقق نسبة حل تلقائي بلغت 95% عبر تكامل NLP متقدم.',
-        features: ['WhatsApp Cloud API', 'خلفية Python قابلة للتوسع', 'معالجة لغات طبيعية ذكية', 'لوحة قياس فورية']
+        title: 'موقع مطعم تفاعلي',
+        description: 'تطوير نظام طلبات أونلاين متكامل. التحدي كان تبسيط عملية الطلب للمستخدمين غير التقنيين. ركزت على تصميم UI بديهي جداً وتقليل خطوات الدفع لزيادة معدل التحويل.',
+        features: ['قائمة طعام رقمية', 'نظام طلبات أونلاين', 'حجز الطاولات', 'تكامل مع Google Maps']
       }
     },
     preview: 'معاينة'
@@ -1712,9 +1694,9 @@ export const projectsPage = {
         features: ['Graphiques interactifs', 'Rapports exportables', 'Données en temps réel', 'Interface intuitive']
       },
       p6: {
-        title: 'Bot de Support Client Automatisé',
-        description: 'Système automatisé traitant plus de 1000 requêtes par jour via Python & Meta API. Atteint un taux de résolution de 95% grâce à l\'intégration NLP.',
-        features: ['WhatsApp Cloud API', 'Backend Python Scalable', 'Traitement NLP Intelligent', 'Tableau de bord en temps réel']
+        title: 'Site de restaurant interactif',
+        description: 'Système complet de commande en ligne. Focus sur une interface utilisateur très intuitive pour simplifier le processus de commande.',
+        features: ['Menu numérique', 'Système de commande', 'Réservation de tables', 'Intégration Google Maps']
       }
     },
     preview: 'Aperçu'
@@ -1730,34 +1712,34 @@ export const projectsPage = {
     },
     projects: {
       p1: {
-        title: 'SaaS Tech Platform',
-        description: 'Engineered a high-performance digital interface that increased user engagement by 35%. Optimized Next.js rendering for 2x faster load times.',
-        features: ['Full-stack SaaS architecture', 'Interactive analytics dashboard', 'SEO-first blog system', 'Enterprise-grade security']
+        title: 'Tech Company Website',
+        description: 'Built to provide a modern digital interface for a software company. The challenge was balancing performance with rich visual design using Next.js and Framer Motion.',
+        features: ['Fully responsive design', 'Admin dashboard', 'Content management system', 'Advanced SEO optimization']
       },
       p2: {
-        title: 'Scalable E-commerce Engine',
-        description: 'Developed a conversion-optimized store that saw a 20% increase in sales within 3 months. Implemented advanced caching for sub-second page loads.',
-        features: ['Stripe & PayPal integration', 'Inventory management', 'Real-time order tracking', 'Mobile-first UX design']
+        title: 'Fashion E-commerce Store',
+        description: 'The goal was to create a seamless shopping experience. Solved real-time stock synchronization issues using Webhooks with Stripe and MongoDB.',
+        features: ['Smart shopping cart', 'Multiple payment gateway', 'Product rating system', 'Order & shipping management']
       },
       p3: {
-        title: 'EdTech Video Platform',
-        description: 'Built a remote learning solution reducing server costs by 40% using efficient video streaming strategies. Scalable to 10k+ concurrent users.',
-        features: ['Global CDN optimization', 'LMS integration', 'Automated certification', 'Real-time collaborative tools']
+        title: 'Interactive Learning Platform',
+        description: 'Educational project simplifying remote learning. Used Firebase for real-time services and Mux for efficient video content management.',
+        features: ['Course management system', 'Advanced video player', 'Interactive quizzes', 'E-certificates']
       },
       p4: {
-        title: 'Smart Booking System',
-        description: 'Automated appointment workflows for small businesses, reducing admin time by 15 hours/week via intelligent scheduling algorithms.',
-        features: ['Automated email/SMS alerts', 'Multi-timezone support', 'Integrated payment processing', 'Business analytics']
+        title: 'Appointment Booking App',
+        description: 'Application solving appointment organization for small businesses. Used an intelligent algorithm for real-time availability checks.',
+        features: ['Instant booking', 'Auto notifications', 'Rating system', 'Mobile payment']
       },
       p5: {
-        title: 'Operations Dashboard',
-        description: 'Visualized complex big data into actionable insights for high-traffic apps. Real-time data sync with 99.9% uptime using React Query.',
-        features: ['Live data visualization', 'Customizable reporting', 'Multi-tenant support', 'Role-based access control']
+        title: 'Analytics Dashboard',
+        description: 'Dashboard for big data display. Used React Query for state management and virtualization strategies for long lists.',
+        features: ['Interactive charts', 'Exportable reports', 'Real-time data', 'User-friendly interface']
       },
       p6: {
-        title: 'Automated Customer Support Bot',
-        description: 'Automated customer support system handling 1000+ queries daily using Python & Meta API. Achieving 95% resolution rate via smart NLP integration.',
-        features: ['WhatsApp Cloud API', 'Scalable Python Backend', 'Intelligent NLP Processing', 'Real-time Metrics Dashboard']
+        title: 'Interactive Restaurant Site',
+        description: 'Integrated online ordering system. Focused on very intuitive UI design to reduce payment steps and increase conversion.',
+        features: ['Digital menu', 'Online ordering system', 'Table reservation', 'Google Maps integration']
       }
     },
     preview: 'Preview'
@@ -2069,270 +2051,6 @@ export const articlesPageFull = {
           <h2>4. سهولة الوصول (Accessibility)</h2>
           <p>تأكد من أن الألوان متباينة بما يكفي ليقرأها الجميع، وأن الأحجام كبيرة بما يكفي للنقر عليها بسهولة على شاشات اللمس.</p>
         `
-      },
-      {
-        id: 7,
-        title: 'التكنولوجيا: المحرك الأساسي لمستقبل العالم 🌐',
-        excerpt: 'مقالة طويلة احترافية على مجال التكنولوجيا والمحرك الأساسي للتطور الاقتصادي والاجتماعي',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-        category: 'تقنية',
-        author: 'حمزة اعمرني',
-        date: '2026-02-27',
-        readTime: '15 دقيقة',
-        color: 'from-blue-600 to-indigo-700',
-        content: `
-          <h2>مقدمة 📖</h2>
-          <p>في عصرنا الحالي، أصبحت التكنولوجيا جزءًا لا يتجزأ من حياتنا اليومية، حيث أثرت بشكل كبير على طريقة تواصلنا، تعلمنا، وعملنا. لم تعد التكنولوجيا مجرد أدوات إلكترونية، بل أصبحت محركًا أساسيًا للتطور الاقتصادي والاجتماعي. فمن الهواتف الذكية إلى الذكاء الاصطناعي، ساهمت الابتكارات التكنولوجية في تغيير العالم وجعل الحياة أكثر سهولة وكفاءة.</p>
-
-          <h2>مفهوم التكنولوجيا 💡</h2>
-          <p>التكنولوجيا هي تطبيق المعرفة العلمية لإنشاء أدوات وأنظمة تساعد الإنسان على حل المشكلات وتحسين جودة الحياة. وتشمل التكنولوجيا عدة مجالات مثل الحاسوب، الإنترنت، الذكاء الاصطناعي، البرمجة، الأمن المعلوماتي، والروبوتات.</p>
-          <p>اليوم، تعتمد معظم القطاعات على التكنولوجيا، بما في ذلك التعليم، الصحة، التجارة، والصناعة. وقد ساهمت هذه التقنيات في تسريع العمل وتقليل الأخطاء وزيادة الإنتاجية.</p>
-
-          <h2>أهمية التكنولوجيا في حياتنا ⚙️</h2>
-          <h3>1. تسهيل التواصل 📱</h3>
-          <p>أصبح بإمكان الأشخاص التواصل مع بعضهم البعض بسهولة عبر الإنترنت باستخدام تطبيقات مثل البريد الإلكتروني ووسائل التواصل الاجتماعي. هذا سهل تبادل المعلومات بسرعة كبيرة بغض النظر عن المسافة.</p>
-          
-          <h3>2. تطوير التعليم 🎓</h3>
-          <p>ساعدت التكنولوجيا في تحسين التعليم من خلال التعلم عن بعد، والدورات الإلكترونية، والمنصات التعليمية. يمكن للطلاب الآن الوصول إلى مصادر تعليمية من جميع أنحاء العالم.</p>
-
-          <h3>3. تحسين الاقتصاد 💼</h3>
-          <p>ساهمت التكنولوجيا في خلق فرص عمل جديدة، خاصة في مجالات البرمجة، تطوير المواقع، الأمن السيبراني، وتحليل البيانات. كما ساعدت الشركات على تحسين خدماتها وزيادة أرباحها.</p>
-
-          <h3>4. تحسين جودة الحياة 🏥</h3>
-          <p>في المجال الطبي، ساعدت التكنولوجيا في تطوير الأجهزة الطبية والتشخيص السريع للأمراض، مما ساهم في إنقاذ العديد من الأرواح.</p>
-
-          <h2>أهم مجالات التكنولوجيا الحديثة 🤖</h2>
-          <h3>الذكاء الاصطناعي (Artificial Intelligence)</h3>
-          <p>يعتبر الذكاء الاصطناعي من أهم التقنيات الحديثة، حيث يمكن للأنظمة الذكية تحليل البيانات واتخاذ قرارات. يستخدم في السيارات الذكية، المساعدات الصوتية، والتطبيقات الحديثة.</p>
-
-          <h3>تطوير الويب (Web Development) 🌍</h3>
-          <p>يعد تطوير المواقع من أكثر المجالات طلبًا اليوم، حيث تعتمد الشركات على المواقع الإلكترونية لتقديم خدماتها. يستخدم المطورون لغات مثل HTML، CSS، JavaScript، وPython.</p>
-
-          <h3>الأمن السيبراني (Cybersecurity) 🔐</h3>
-          <p>مع زيادة استخدام الإنترنت، أصبح الأمن السيبراني ضروريًا لحماية البيانات من الاختراق والهجمات الإلكترونية.</p>
-
-          <h3>تحليل البيانات (Data Analysis) 📊</h3>
-          <p>تستخدم الشركات تحليل البيانات لفهم العملاء واتخاذ قرارات أفضل.</p>
-
-          <h2>مزايا التكنولوجيا ✅</h2>
-          <ul>
-            <li>تسهيل الحياة اليومية</li>
-            <li>توفير الوقت والجهد</li>
-            <li>تحسين الإنتاجية</li>
-            <li>توفير فرص عمل جديدة</li>
-            <li>تحسين جودة الخدمات</li>
-          </ul>
-
-          <h2>عيوب التكنولوجيا ⚠️</h2>
-          <p>رغم مزاياها، إلا أن للتكنولوجيا بعض السلبيات مثل:</p>
-          <ul>
-            <li>الإدمان على الإنترنت</li>
-            <li>تقليل التفاعل الاجتماعي الحقيقي</li>
-            <li>مخاطر الاختراق وسرقة البيانات</li>
-            <li>فقدان بعض الوظائف التقليدية</li>
-          </ul>
-
-          <h2>مستقبل التكنولوجيا 🚀</h2>
-          <p>يتوقع أن تستمر التكنولوجيا في التطور بسرعة كبيرة، خاصة في مجالات الذكاء الاصطناعي، الواقع الافتراضي، والروبوتات. وستلعب دورًا مهمًا في بناء مستقبل أكثر ذكاءً وكفاءة.</p>
-          <p>الشباب اليوم لديهم فرصة كبيرة لتعلم مهارات التكنولوجيا مثل البرمجة وتطوير المواقع، مما يفتح لهم أبوابًا واسعة للعمل والنجاح.</p>
-
-          <h2>خاتمة 🧾</h2>
-          <p>في الختام، تعد التكنولوجيا عنصرًا أساسيًا في تقدم المجتمعات وتطورها. فهي تسهل الحياة وتوفر فرصًا جديدة في مختلف المجالات. لذلك، من المهم تعلم التكنولوجيا واستخدامها بشكل إيجابي للمساهمة في بناء مستقبل أفضل.</p>
-        `
-      },
-      {
-        id: 8,
-        title: 'كيف تنشئ أول موقع ويب باستخدام HTML و CSS و JavaScript',
-        excerpt: 'تعلم كيفية إنشاء موقع ويب من الصفر باستخدام HTML و CSS و JavaScript مع شرح خطوة بخطوة للمبتدئين.',
-        image: 'https://images.unsplash.com/photo-1618477388954-7f1134a66fbc?auto=format&fit=crop&w=800&q=80',
-        category: 'تطوير',
-        author: 'حمزة اعمرني',
-        date: '2026-02-27',
-        readTime: '10 دقائق',
-        color: 'from-orange-500 to-red-600',
-        content: `
-          <h2>مقدمة 📖</h2>
-          <p>أصبح إنشاء موقع ويب مهارة أساسية في عالم التكنولوجيا الحديثة. سواء كنت تريد إنشاء موقع شخصي، موقع لشركة، أو حتى مدونة، فإن تعلم تطوير المواقع هو الخطوة الأولى لتحقيق ذلك. الخبر الجيد هو أن إنشاء موقع ويب لم يعد صعبًا، ويمكن لأي شخص تعلمه حتى بدون خبرة سابقة.</p>
-          <p>في هذا الدليل، ستتعلم كيفية إنشاء موقع ويب باستخدام HTML و CSS و JavaScript، وهي أهم التقنيات المستخدمة في تطوير الويب.</p>
-
-          <h2>ما هو موقع الويب؟ 🌐</h2>
-          <p>موقع الويب هو مجموعة من الصفحات التي يمكن الوصول إليها عبر الإنترنت باستخدام المتصفح مثل Google Chrome.</p>
-          <p>أمثلة على مواقع الويب: مواقع التواصل الاجتماعي، مواقع الشركات، المدونات، المواقع التعليمية. كل هذه المواقع تم إنشاؤها باستخدام HTML و CSS و JavaScript.</p>
-
-          <h2>ما هي HTML؟ 🧱</h2>
-          <p>HTML هي لغة تستخدم لإنشاء هيكل الموقع.</p>
-          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;موقعي الأول&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;مرحبا بكم في موقعي&lt;/h1&gt;
-    &lt;p&gt;هذا أول موقع أقوم بإنشائه&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-          <p>HTML تستخدم لإنشاء: العناوين، النصوص، الصور، والأزرار.</p>
-
-          <h2>ما هي CSS؟ 🎨</h2>
-          <p>CSS تستخدم لتصميم الموقع وجعله جميلًا.</p>
-          <pre><code class="language-css">body {
-    background-color: #f4f4f4;
-    font-family: Arial;
-}
-h1 {
-    color: blue;
-}</code></pre>
-          <p>CSS تستخدم لتغيير: الألوان، حجم النص، التصميم، والتخطيط.</p>
-
-          <h2>ما هي JavaScript؟ ⚡</h2>
-          <p>JavaScript تستخدم لجعل الموقع تفاعليًا.</p>
-          <pre><code class="language-javascript">alert("مرحبا بك في موقعي");</code></pre>
-          <p>يمكن استخدامها لإنشاء: أزرار تفاعلية، نماذج تسجيل، وتطبيقات ويب.</p>
-
-          <h2>خطوات إنشاء أول موقع ويب 👨💻</h2>
-          <h3>الخطوة 1: إنشاء ملف HTML</h3>
-          <p>افتح محرر الأكواد (مثل VS Code) وأنشئ ملف <code>index.html</code> وأضف الهيكل الأساسي.</p>
-          
-          <h3>الخطوة 2: إضافة CSS</h3>
-          <p>أنشئ ملف <code>style.css</code> واربطه بـ HTML باستخدام <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</p>
-          
-          <h3>الخطوة 3: إضافة JavaScript</h3>
-          <p>أنشئ ملف <code>script.js</code> واربطه بـ HTML باستخدام <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.</p>
-
-          <h2>نصائح مهمة للمبتدئين ✅</h2>
-          <ul>
-            <li>تدرب يوميًا</li>
-            <li>أنشئ مشاريع</li>
-            <li>لا تستسلم</li>
-            <li>تعلم خطوة بخطوة</li>
-          </ul>
-
-          <h2>خاتمة 🧾</h2>
-          <p>إنشاء موقع ويب هو الخطوة الأولى لدخول عالم البرمجة. باستخدام HTML و CSS و JavaScript، يمكنك إنشاء مواقع احترافية بسهولة. ابدأ اليوم، ومع الممارسة ستصبح مطور ويب محترفًا.</p>
-        `
-      },
-      {
-        id: 9,
-        title: 'كيف تربح المال من البرمجة في 2026: دليل شامل للمبتدئين 💻💰',
-        excerpt: 'تعرف على أفضل الطرق للربح من البرمجة في 2026، بما في ذلك العمل الحر، إنشاء المواقع، بيع التطبيقات، والعمل عبر الإنترنت.',
-        image: 'https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&w=800&q=80',
-        category: 'برمجة',
-        author: 'حمزة اعمرني',
-        date: '2026-02-27',
-        readTime: '12 دقيقة',
-        color: 'from-green-500 to-emerald-700',
-        content: `
-          <h2>مقدمة 📖</h2>
-          <p>أصبحت البرمجة واحدة من أفضل الطرق للربح من الإنترنت في العصر الحديث. مع التطور الكبير في التكنولوجيا، تحتاج الشركات والأفراد إلى مبرمجين لإنشاء مواقع الويب، التطبيقات، والأنظمة المختلفة. الخبر الجيد هو أنك لا تحتاج إلى شهادة جامعية للبدء، بل يمكنك تعلم البرمجة من المنزل والبدء في الربح.</p>
-
-          <h2>لماذا تعتبر البرمجة فرصة ممتازة للربح؟ 💼</h2>
-          <ul>
-            <li>الطلب الكبير على المبرمجين</li>
-            <li>إمكانية العمل من المنزل</li>
-            <li>إمكانية العمل مع شركات عالمية</li>
-            <li>دخل مرتفع</li>
-          </ul>
-
-          <h2>1. العمل الحر (Freelancing) 🌍</h2>
-          <p>العمل الحر هو أفضل طريقة للبدء. يمكنك العمل في إنشاء وتعديل المواقع على منصات مثل Fiverr، Upwork، و Freelancer.</p>
-
-          <h2>2. إنشاء مواقع وبيعها 🌐</h2>
-          <p>يمكنك إنشاء مواقع وبيعها للعملاء، مثل مواقع المطاعم أو الشركات.</p>
-
-          <h2>3. العمل كمطور ويب 💻</h2>
-          <p>يمكنك العمل مع شركة كمطور ويب براتب شهري ثابت.</p>
-
-          <h2>4. إنشاء مشاريعك الخاصة 🚀</h2>
-          <p>يمكنك إنشاء موقع، تطبيق أو أداة والربح من الإعلانات والاشتراكات.</p>
-
-          <h2>نصائح مهمة للنجاح ✅</h2>
-          <ul>
-            <li>تعلم كل يوم </li>
-            <li>أنشئ مشاريع </li>
-            <li>لا تستسلم </li>
-            <li>ابدأ بمشاريع صغيرة </li>
-          </ul>
-
-          <h2>خاتمة 🧾</h2>
-          <p>الربح من البرمجة ليس حلمًا، بل حقيقة. بادر بتعلم المهارات المطلوبة، واعتمد على الممارسة المستمرة لبناء دخل مستدام ومستقبل مشرق.</p>
-        `
-      },
-      {
-        id: 10,
-        title: 'أفضل أدوات البرمجة للمبتدئين والمحترفين في 2026 🛠️',
-        excerpt: 'تعرف على أفضل أدوات البرمجة في 2026 مع روابط التحميل الرسمية مثل Visual Studio Code و Git و Node.js.',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
-        category: 'أدوات',
-        author: 'حمزة اعمرني',
-        date: '2026-02-27',
-        readTime: '8 دقائق',
-        color: 'from-indigo-500 to-purple-600',
-        content: `
-          <h2>مقدمة 📖</h2>
-          <p>إذا كنت تريد أن تصبح مطور ويب محترف أو مبرمج ناجح، فإن استخدام الأدوات المناسبة أمر ضروري. هذه الأدوات تساعدك على كتابة الأكواد، اختبار المشاريع، ونشر المواقع بسهولة.</p>
-
-          <h2>1. Visual Studio Code – أفضل محرر أكواد 💻</h2>
-          <p>Visual Studio Code هو محرر أكواد مجاني وقوي يستخدمه ملايين المبرمجين حول العالم.</p>
-          <p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">🔗 رابط التحميل</a></p>
-
-          <h2>2. Git – أداة إدارة الأكواد 🔄</h2>
-          <p>Git يسمح لك بحفظ وتتبع جميع التغييرات في مشروعك.</p>
-          <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 رابط التحميل</a></p>
-
-          <h2>3. Google Chrome – أفضل متصفح للمطورين 🌍</h2>
-          <p>Chrome يحتوي على أدوات مطورين (DevTools) قوية جدًا لاختبار المواقع وتعديلها.</p>
-
-          <h2>5. Node.js – لتشغيل JavaScript 🟢</h2>
-          <p>Node.js يسمح لك بتشغيل أكواد JavaScript خارج المتصفح (في الخوادم/الخلفية).</p>
-          <p><a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">🔗 رابط التحميل</a></p>
-
-          <h2>6. أدوات إضافية هامة 🚀</h2>
-          <ul>
-            <li><strong>Figma:</strong> تصميم واجهات المواقع.</li>
-            <li><strong>Netlify:</strong> نشر المواقع بسهولة ومجاناً.</li>
-            <li><strong>ChatGPT:</strong> أفضل مساعد للذكاء الاصطناعي للمبرمجين.</li>
-          </ul>
-
-          <h2>خاتمة 🧾</h2>
-          <p>استخدام الأدوات المناسبة هو خطوة أساسية لتصبح مبرمجًا محترفًا. قم بتحميل هذه الأدوات وابدأ رحلتك في البرمجة اليوم.</p>
-        `
-      },
-      {
-        id: 11,
-        title: 'كيف تصبح خبير React ومطور Full-Stack ناجح في المغرب 🇲🇦',
-        excerpt: 'دليل شامل للمطورين المغاربة المهتمين باحتراف React والعمل كمطورين Full-Stack في السوق المحلية والعالمية بمهارة عالية.',
-        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
-        category: 'برمجة',
-        author: 'حمزة اعمرني',
-        date: '2026-03-01',
-        readTime: '12 دقيقة',
-        color: 'from-cyan-500 to-blue-700',
-        content: `
-          <h2>المقدمة: سوق البرمجة في المغرب 🇲🇦</h2>
-          <p>يشهد قطاع التكنولوجيا في المغرب نمواً متسارعاً في السنوات الأخيرة، حيث أصبح الطلب على مطوري الويب، وخاصة خبراء React، في أعلى مستوياته. سواء كنت تبحث عن عمل في الدار البيضاء، الرباط، أو تفضل العمل عن بعد مع شركات دولية، فإن امتلاك مهارات Full-Stack هو طريقك للنجاح.</p>
-          
-          <h2>1. لماذا يجب أن تصبح خبير React؟ ⚛️</h2>
-          <p>تعتبر React حالياً المكتبة الأكثر شعبية لتطوير الواجهات الأمامية عالمياً وفي المغرب. تتميز بقدرتها على بناء واجهات مستخدم سرايعة، تفاعلية، وسهلة الصيانة. أغلب الشركات الناشئة (Startups) والشركات الكبرى في المغرب تفضل المطورين الذين يتقنون React مع TypeScript.</p>
-
-          <h2>2. مهارات المطور الشامل (Full-Stack Developer) 💻</h2>
-          <p>المطور الشامل هو الشخص الذي يمكنه التعامل مع كل من الواجهة الأمامية (Frontend) والخلفية (Backend). لتكون مطوراً ناجحاً في المغرب، ننصحك بالتركيز على التقنيات التالية:</p>
-          <ul>
-            <li><strong>الواجهة الأمامية:</strong> إتقان React, Next.js, و Tailwind CSS.</li>
-            <li><strong>الواجهة الخلفية:</strong> تعلم Node.js أو Laravel (المطلوب بشدة في المغرب).</li>
-            <li><strong>قواعد البيانات:</strong> التعامل مع MongoDB أو PostgreSQL.</li>
-          </ul>
-
-          <h2>3. كيف تجد فرص عمل برواتب عالية؟ 💰</h2>
-          <p>السوق المغربي مليء بالفرص، ولكن التميز يتطلب بناء معرض أعمال (Portfolio) قوي. احرص على:</p>
-          <ul>
-            <li>بناء مشاريع حقيقية وحل مشاكل واقعية.</li>
-            <li>المساهمة في المشاريع مفتوحة المصدر.</li>
-            <li>تحسين ملفك الشخصي على LinkedIn.</li>
-          </ul>
-
-          <h2>الخاتمة 🧾</h2>
-          <p>أن تصبح "React Expert" أو "Full-stack Developer Morocco" ليس أمراً مستحيلاً. بالصبر، التعلم المستمر، والتطبيق العملي، يمكنك تحقيق أهدافك المهنية والوصول إلى أفضل الفرص في سوق الشغل.</p>
-        `
       }
     ]
   },
@@ -2509,221 +2227,6 @@ h1 {
 
           <h2>4. Accessibilité (a11y)</h2>
           <p>Assurez-vous que vos textes sont lisibles par tous (bon contraste) et que vos interfaces sont utilisables aussi bien à la souris qu'au clavier.</p>
-        `
-      },
-      {
-        id: 7,
-        title: 'La Technologie : Le Moteur Principal de l\'Avenir du Monde 🌐',
-        excerpt: 'Un long article professionnel sur le domaine de la technologie et son rôle en tant que moteur principal de l\'évolution économique et sociale.',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-        category: 'Techno',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '15 min',
-        color: 'from-blue-600 to-indigo-700',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>À notre époque actuelle, la technologie est devenue une partie intégrante de notre vie quotidienne, ayant un impact significatif sur la façon dont nous communiquons, apprenons et travaillons. La technologie n'est plus seulement constituée d'outils électroniques, mais est devenue un moteur principal pour le développement économique et social. Des smartphones à l'intelligence artificielle, les innovations technologiques ont contribué à changer le monde et à rendre la vie plus facile et plus efficace.</p>
-
-          <h2>Concept de la Technologie 💡</h2>
-          <p>La technologie est l'application des connaissances scientifiques pour créer des outils et des systèmes qui aident l'homme à résoudre des problèmes et à améliorer la qualité de vie. Elle englobe plusieurs domaines tels que l'informatique, l'Internet, l'intelligence artificielle, la programmation, la sécurité de l'information et la robotique.</p>
-          <p>Aujourd'hui, la plupart des secteurs dépendent de la technologie, y compris l'éducation, la santé, le commerce et l'industrie. Ces technologies ont contribué à accélérer le travail, réduire les erreurs et augmenter la productivité.</p>
-
-          <h2>L'importance de la technologie dans notre vie ⚙️</h2>
-          <h3>1. Faciliter la communication 📱</h3>
-          <p>Il est désormais possible de communiquer facilement à travers le monde en utilisant Internet via des applications comme les emails et les réseaux sociaux.</p>
-          
-          <h3>2. Améliorer l'éducation 🎓</h3>
-          <p>La technologie a contribué à l'amélioration de l'éducation grâce à l'apprentissage à distance, aux cours en ligne et aux plateformes éducatives.</p>
-
-          <h3>3. Améliorer l'économie 💼</h3>
-          <p>Elle a permis de créer de nouvelles opportunités d'emploi, particulièrement dans les domaines du code, du développement web et de la cybersécurité.</p>
-
-          <h3>4. Améliorer la qualité de vie 🏥</h3>
-          <p>Dans le domaine médical, l'évolution rapide a aidé à développer des équipements sophistiqués et des diagnostics rapides.</p>
-
-          <h2>Principaux domaines 🤖</h2>
-          <p>L'intelligence artificielle, le développement web, l'analyse de données et la cybersécurité sont les piliers fondamentaux d'aujourd'hui.</p>
-
-          <h2>Conclusion 🧾</h2>
-          <p>La technologie est essentielle pour l'avenir de toute société. Apprenez ses usages et bénéficiez-en positivement pour construire un avenir meilleur.</p>
-        `
-      },
-      {
-        id: 8,
-        title: 'Créez votre premier site web HTML, CSS et JavaScript 🌐',
-        excerpt: 'Apprenez à créer un site web à partir de zéro en utilisant HTML, CSS et JavaScript avec une explication étape par étape pour les débutants.',
-        image: 'https://images.unsplash.com/photo-1618477388954-7f1134a66fbc?auto=format&fit=crop&w=800&q=80',
-        category: 'Dev',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '10 min',
-        color: 'from-orange-500 to-red-600',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>La création d'un site web est devenue une compétence essentielle dans le monde de la technologie moderne. Que vous souhaitiez créer un site personnel, un site d'entreprise ou même un blog, apprendre le développement web est la première étape pour y parvenir. La bonne nouvelle est que la création d'un site web n'est plus difficile et n'importe qui peut l'apprendre même sans expérience préalable.</p>
-          <p>Dans ce guide, vous apprendrez à créer un site web en utilisant HTML, CSS et JavaScript, les technologies les plus importantes utilisées dans le développement web.</p>
-
-          <h2>Qu'est-ce qu'un site web ? 🌐</h2>
-          <p>Un site web est une collection de pages accessibles sur Internet à l'aide d'un navigateur comme Google Chrome.</p>
-          <p>Exemples de sites : réseaux sociaux, sites d'entreprises, blogs, sites éducatifs. Tous ces sites sont créés en utilisant HTML, CSS et JavaScript.</p>
-
-          <h2>Qu'est-ce que le HTML ? 🧱</h2>
-          <p>Le HTML est un langage utilisé pour créer la structure du site.</p>
-          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Mon premier site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;
-    &lt;p&gt;C'est le premier site que je crée&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-          <p>Le HTML est utilisé pour créer les titres, le texte, les images et les boutons.</p>
-
-          <h2>Qu'est-ce que le CSS ? 🎨</h2>
-          <p>Le CSS est utilisé pour styliser le site et le rendre attrayant.</p>
-          <pre><code class="language-css">body {
-    background-color: #f4f4f4;
-    font-family: Arial;
-}
-h1 {
-    color: blue;
-}</code></pre>
-          <p>Le CSS permet de modifier les couleurs, la taille du texte, le design et la mise en page.</p>
-
-          <h2>Qu'est-ce que JavaScript ? ⚡</h2>
-          <p>JavaScript sert à rendre le site interactif.</p>
-          <pre><code class="language-javascript">alert("Bienvenue sur mon site");</code></pre>
-          <p>Il peut être utilisé pour créer des boutons interactifs, des formulaires d'inscription et des applications web.</p>
-
-          <h2>Étapes pour créer votre premier site 👨💻</h2>
-          <h3>Étape 1 : Créer un fichier HTML</h3>
-          <p>Ouvrez VS Code et créez un fichier <code>index.html</code> et ajoutez la structure de base.</p>
-          
-          <h3>Étape 2 : Ajouter du CSS</h3>
-          <p>Créez un fichier <code>style.css</code> et liez-le au HTML à l'aide de <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</p>
-          
-          <h3>Étape 3 : Ajouter JavaScript</h3>
-          <p>Créez un fichier <code>script.js</code> et reliez-le au HTML en utilisant <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.</p>
-
-          <h2>Conseils importants pour les débutants ✅</h2>
-          <ul>
-            <li>Pratiquez tous les jours</li>
-            <li>Créez des projets</li>
-            <li>N'abandonnez pas</li>
-            <li>Apprenez étape par étape</li>
-          </ul>
-
-          <h2>Conclusion 🧾</h2>
-          <p>La création d'un site web est la première étape pour entrer dans le monde de la programmation. En utilisant HTML, CSS et JavaScript, vous pouvez facilement créer des sites professionnels. Commencez dès aujourd'hui et, avec la pratique, vous deviendrez un pro.</p>
-        `
-      },
-      {
-        id: 9,
-        title: 'Comment Gagner de l\'Argent avec la Programmation en 2026 💻💰',
-        excerpt: 'Découvrez les meilleures façons de gagner de l\'argent avec la programmation en 2026, y compris le freelancing, la création de sites web et bien plus.',
-        image: 'https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&w=800&q=80',
-        category: 'Programmation',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '12 min',
-        color: 'from-green-500 to-emerald-700',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>La programmation est devenue l'un des meilleurs moyens de gagner de l'argent sur Internet à l'époque moderne. Vous n'avez pas besoin d'un diplôme universitaire pour commencer ; vous pouvez apprendre la programmation à domicile et commencer à en tirer des revenus.</p>
-
-          <h2>Pourquoi est-ce une excellente opportunité ? 💼</h2>
-          <ul>
-            <li>Forte demande pour les programmeurs</li>
-            <li>Possibilité de travailler à domicile</li>
-            <li>Travailler avec des entreprises mondiales</li>
-            <li>Revenu élevé</li>
-          </ul>
-
-          <h2>1. Le Freelancing 🌍</h2>
-          <p>Le travail en freelance est le meilleur moyen de commencer. Travaillez sur la création et la modification de sites via Fiverr, Upwork, Freelancer.</p>
-
-          <h2>2. Création et vente de sites 🌐</h2>
-          <p>Créez des sites pour des clients (restaurants, entreprises).</p>
-
-          <h2>3. Travailler comme développeur web 💻</h2>
-          <p>Travaillez pour une entreprise en tant que développeur web avec un salaire fixe.</p>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Gagner de l'argent grâce à la programmation n'est pas un rêve, c'est une réalité. Développez vos compétences et commencez à bâtir un revenu durable.</p>
-        `
-      },
-      {
-        id: 10,
-        title: 'Les Meilleurs Outils de Programmation en 2026 🛠️',
-        excerpt: 'Découvrez les meilleurs outils de programmation en 2026 avec les liens de téléchargement officiels (VS Code, Git, etc.).',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
-        category: 'Outils',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '8 min',
-        color: 'from-indigo-500 to-purple-600',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>Utiliser les bons outils est essentiel. Ils vous aident à écrire du code, tester des projets et déployer des sites facilement.</p>
-
-          <h2>1. Visual Studio Code 💻</h2>
-          <p>C'est un éditeur gratuit, puissant et utilisé par des millions de personnes.</p>
-          <p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">🔗 Télécharger</a></p>
-
-          <h2>2. Git 🔄</h2>
-          <p>Pour enregistrer et suivre toutes les modifications apportées à votre projet.</p>
-          <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 Télécharger</a></p>
-
-          <h2>3. Google Chrome 🌍</h2>
-          <p>Contient des outils pour développeurs (DevTools) très puissants.</p>
-
-          <h2>5. Node.js 🟢</h2>
-          <p>Permet d'exécuter JavaScript en dehors du navigateur.</p>
-
-          <h2>6. Outils supplémentaires 🚀</h2>
-          <ul>
-            <li><strong>Figma:</strong> Design d'interfaces web.</li>
-            <li><strong>Netlify:</strong> Hébergement gratuit.</li>
-            <li><strong>ChatGPT:</strong> Le meilleur assistant IA.</li>
-          </ul>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Téléchargez ces outils et commencez votre aventure en programmation dès aujourd'hui.</p>
-        `
-      },
-      {
-        id: 11,
-        title: 'Comment devenir un Expert React et Développeur Full-Stack au Maroc 🇲🇦',
-        excerpt: 'Un guide complet pour les développeurs marocains souhaitant maîtriser React et travailler en tant que développeur Full-Stack au Maroc.',
-        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
-        category: 'Dev',
-        author: 'Hamza Amirni',
-        date: '2026-03-01',
-        readTime: '12 min',
-        color: 'from-cyan-500 to-blue-700',
-        content: `
-          <h2>Introduction: Le Marché des Développeurs au Maroc 🇲🇦</h2>
-          <p>Le secteur technologique au Maroc connaît une croissance exponentielle. La demande pour des développeurs web qualifiés, particulièrement des experts React, est à son apogée. Maîtriser le développement Full-Stack est devenu un atout majeur pour réussir sur le marché local et international.</p>
-
-          <h2>1. Pourquoi devenir un Expert React ? ⚛️</h2>
-          <p>React est la bibliothèque la plus populaire pour le développement frontend. Au Maroc, de nombreuses startups et grandes entreprises l'utilisent pour sa performance et sa flexibilité. Apprendre React avec TypeScript vous ouvrira de nombreuses portes.</p>
-
-          <h2>2. Compétences d'un Développeur Full-Stack 💻</h2>
-          <p>Un développeur Full-Stack au Maroc doit maîtriser plusieurs couches :</p>
-          <ul>
-            <li><strong>Frontend :</strong> React, Next.js, Tailwind CSS.</li>
-            <li><strong>Backend :</strong> Node.js ou Laravel (très demandé au Maroc).</li>
-            <li><strong>Base de données :</strong> MongoDB ou PostgreSQL.</li>
-          </ul>
-
-          <h2>3. Opportunités de Carrière au Maroc 💼</h2>
-          <p>Que ce soit à Casablanca, Rabat ou en télétravail, les opportunités sont nombreuses. Pour vous démarquer, construisez un portfolio solide et soignez votre profil LinkedIn.</p>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Devenir un "React Expert" ou un "Full-stack Developer Morocco" demande du temps et de la pratique. Restez curieux et continuez à apprendre chaque jour.</p>
         `
       }
     ]
@@ -2904,221 +2407,6 @@ h1 {
 
           <h2>4. Color Theory and Typography</h2>
           <p>Limit your color palette and choose fonts that are highly readable on mobile screens. Consistency across all pages builds brand trust.</p>
-        `
-      },
-      {
-        id: 7,
-        title: 'Technology: The Main Engine for the Future of the World 🌐',
-        excerpt: 'A professional long article on the technology field and its role as the primary engine for economic and social development.',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-        category: 'Tech',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '15 min',
-        color: 'from-blue-600 to-indigo-700',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>In our current era, technology has become an integral part of our daily lives, significantly impacting how we communicate, learn, and work. Technology is no longer just electronic tools, but has become a primary engine for economic and social development. From smartphones to AI, technological innovations have changed the world and made life easier and more efficient.</p>
-
-          <h2>Concept of Technology 💡</h2>
-          <p>Technology is the application of scientific knowledge to create tools and systems that help humans solve problems and improve the quality of life. It spans multiple fields such as computing, the Internet, artificial intelligence, programming, information security, and robotics.</p>
-          <p>Today, most sectors rely on technology, including education, healthcare, commerce, and industry. These technologies have helped accelerate workflows, reduce errors, and increase productivity.</p>
-
-          <h2>Importance of Technology ⚙️</h2>
-          <h3>1. Facilitating Communication 📱</h3>
-          <p>People can now communicate with each other easily across the internet using applications like email and social media.</p>
-          
-          <h3>2. Advancing Education 🎓</h3>
-          <p>Technology has improved education through distance learning, online courses, and educational platforms.</p>
-
-          <h3>3. Boosting the Economy 💼</h3>
-          <p>Technology has created new job opportunities, especially in programming, web development, cybersecurity, and data analysis.</p>
-
-          <h3>4. Enhancing Quality of Life 🏥</h3>
-          <p>In the medical field, technology has aided in developing medical devices and rapid disease diagnosis.</p>
-
-          <h2>Main Modern Tech Fields 🤖</h2>
-          <p>Artificial Intelligence, Web Development, Cybersecurity, and Data Analysis are central to modern infrastructure.</p>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Technology is essential for the progress and development of societies. It makes life easier and provides new opportunities across all fields. Learn how to harness it effectively.</p>
-        `
-      },
-      {
-        id: 8,
-        title: 'Build Your First Website with HTML, CSS & JavaScript 🌐',
-        excerpt: 'Learn how to build a website from scratch using HTML, CSS, and JavaScript with step-by-step instructions for beginners.',
-        image: 'https://images.unsplash.com/photo-1618477388954-7f1134a66fbc?auto=format&fit=crop&w=800&q=80',
-        category: 'Web',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '10 min',
-        color: 'from-orange-500 to-red-600',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>Building a website has become an essential skill in the modern tech world. Whether you want to create a personal website, a company site, or even a blog, learning web development is the first step to achieving that. The good news is that creating a website is no longer difficult, and anyone can learn it even without prior experience.</p>
-          <p>In this guide, you will learn how to create a website using HTML, CSS, and JavaScript, the most important technologies used in web development.</p>
-
-          <h2>What is a Website? 🌐</h2>
-          <p>A website is a collection of pages that can be accessed over the Internet using a browser like Google Chrome.</p>
-          <p>Examples of websites: social networks, company sites, blogs, educational sites. All these sites are built using HTML, CSS, and JavaScript.</p>
-
-          <h2>What is HTML? 🧱</h2>
-          <p>HTML is a language used to create the structure of the site.</p>
-          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;My First Website&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Welcome to my website&lt;/h1&gt;
-    &lt;p&gt;This is the first site I am creating&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-          <p>HTML is used to create headings, texts, images, and buttons.</p>
-
-          <h2>What is CSS? 🎨</h2>
-          <p>CSS is used to design the site and make it beautiful.</p>
-          <pre><code class="language-css">body {
-    background-color: #f4f4f4;
-    font-family: Arial;
-}
-h1 {
-    color: blue;
-}</code></pre>
-          <p>CSS is used to change colors, text size, design, and layout.</p>
-
-          <h2>What is JavaScript? ⚡</h2>
-          <p>JavaScript is used to make the website interactive.</p>
-          <pre><code class="language-javascript">alert("Welcome to my website");</code></pre>
-          <p>It can be used to create interactive buttons, registration forms, and web applications.</p>
-
-          <h2>Steps to Create Your First Website 👨💻</h2>
-          <h3>Step 1: Create an HTML File</h3>
-          <p>Open VS Code and create an <code>index.html</code> file and add the basic structure.</p>
-          
-          <h3>Step 2: Add CSS</h3>
-          <p>Create a <code>style.css</code> file and link it to your HTML using <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>.</p>
-          
-          <h3>Step 3: Add JavaScript</h3>
-          <p>Create a <code>script.js</code> file and link it to your HTML using <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>.</p>
-
-          <h2>Important Tips for Beginners ✅</h2>
-          <ul>
-            <li>Practice daily</li>
-            <li>Build projects</li>
-            <li>Don't give up</li>
-            <li>Learn step-by-step</li>
-          </ul>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Creating a website is the first step to entering the programming world. By using HTML, CSS, and JavaScript, you can easily create professional sites. Start today, and with practice, you will become a professional web developer.</p>
-        `
-      },
-      {
-        id: 9,
-        title: 'How to Make Money from Programming in 2026 💻💰',
-        excerpt: 'Discover the best ways to make money with programming in 2026, including freelancing, building websites, and working online.',
-        image: 'https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&w=800&q=80',
-        category: 'Programming',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '12 min',
-        color: 'from-green-500 to-emerald-700',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>Programming has become one of the best ways to make money online in the modern era. You do not need a university degree to start; you can learn programming from home and start earning.</p>
-
-          <h2>Why is it a great opportunity? 💼</h2>
-          <ul>
-            <li>High demand for programmers</li>
-            <li>Ability to work from home</li>
-            <li>Working with global companies</li>
-            <li>High income</li>
-          </ul>
-
-          <h2>1. Freelancing 🌍</h2>
-          <p>Freelancing is the best way to start. Work on building and modifying sites via Fiverr, Upwork, and Freelancer.</p>
-
-          <h2>2. Creating and Selling Websites 🌐</h2>
-          <p>Build websites for clients, like restaurants or corporate platforms.</p>
-
-          <h2>3. Working as a Web Developer 💻</h2>
-          <p>Work for a company as a web developer with a fixed monthly salary.</p>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Earning from programming is not a dream, it is a reality. Master your skills and start building a sustainable income.</p>
-        `
-      },
-      {
-        id: 10,
-        title: 'Best Programming Tools for Beginners and Pros in 2026 🛠️',
-        excerpt: 'Discover the best programming tools in 2026 with official download links like VS Code, Git, and Node.js.',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
-        category: 'Tools',
-        author: 'Hamza Amirni',
-        date: '2026-02-27',
-        readTime: '8 min',
-        color: 'from-indigo-500 to-purple-600',
-        content: `
-          <h2>Introduction 📖</h2>
-          <p>Using the right tools is essential. They help you write code, test projects, and deploy sites easily.</p>
-
-          <h2>1. Visual Studio Code 💻</h2>
-          <p>VS Code is a free, powerful code editor used by millions.</p>
-          <p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">🔗 Download Here</a></p>
-
-          <h2>2. Git 🔄</h2>
-          <p>Git allows you to save and track all changes in your project.</p>
-          <p><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">🔗 Download Git</a></p>
-
-          <h2>3. Google Chrome 🌍</h2>
-          <p>Chrome contains powerful developer tools (DevTools).</p>
-
-          <h2>5. Node.js 🟢</h2>
-          <p>Allows you to run JavaScript outside the browser.</p>
-
-          <h2>6. Essential Additional Tools 🚀</h2>
-          <ul>
-            <li><strong>Figma:</strong> Designing interfaces.</li>
-            <li><strong>Netlify:</strong> Free and easy website deployment.</li>
-            <li><strong>ChatGPT:</strong> Best AI coding assistant.</li>
-          </ul>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Download these tools and start your programming journey today.</p>
-        `
-      },
-      {
-        id: 11,
-        title: 'How to Become a React Expert & Full-Stack Developer in Morocco 🇲🇦',
-        excerpt: 'A comprehensive guide for developers in Morocco interested in mastering React and working as a Full-Stack developer in the local and global market.',
-        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
-        category: 'Code',
-        author: 'Hamza Amirni',
-        date: '2026-03-01',
-        readTime: '12 min',
-        color: 'from-cyan-500 to-blue-700',
-        content: `
-          <h2>Introduction: The Tech Scene in Morocco 🇲🇦</h2>
-          <p>The tech industry in Morocco is booming. The demand for skilled web developers, especially React experts, is at an all-time high. Whether you're targeting the market in Casablanca, Rabat, or seeking remote work with global firms, becoming a Full-Stack developer is a game-changer.</p>
-
-          <h2>1. Why Become a React Expert? ⚛️</h2>
-          <p>React is the world's leading frontend library. In Morocco, most modern companies prioritize developers who can build interactive and high-performance user interfaces using React and TypeScript.</p>
-
-          <h2>2. Mastering the Full-Stack 💻</h2>
-          <p>To be competitive as a Full-Stack developer in Morocco, focus on the following stack:</p>
-          <ul>
-            <li><strong>Frontend:</strong> React, Next.js, and Tailwind CSS.</li>
-            <li><strong>Backend:</strong> Node.js (Express) or Laravel (highly requested in the Moroccan market).</li>
-            <li><strong>Databases:</strong> PostgreSQL or MongoDB.</li>
-          </ul>
-
-          <h2>3. High-Paying Opportunities in Morocco 💰</h2>
-          <p>The secret to high-paying roles is a strong portfolio. Build real-world projects, contribute to open source, and optimize your LinkedIn presence.</p>
-
-          <h2>Conclusion 🧾</h2>
-          <p>Becoming a "React Expert" or a "Full-stack Developer Morocco" is a journey. With consistency and practice, you can reach the top of the tech market.</p>
         `
       }
     ]
@@ -3528,22 +2816,19 @@ export const contactFormTranslations = {
 // Call to Action translations
 export const callToAction = {
   ar: {
-    title: 'جاهز لأتمتة عملك؟',
-    description: 'متخصص في بناء بوتات الأتمتة (WhatsApp/Telegram/Facebook) ومنصات الـ SaaS عالية الأداء. دعنا نطور مشروعك معاً.',
-    buttonText: 'احصل على عرض سعر لبوتك القادم',
-    calendlyButton: 'احجز مكالمة استشارية'
+    title: 'هل لديك سؤال أو فكرة مشروع؟',
+    description: 'أنا هنا للمساعدة! سواء كنت تحتاج إلى استشارة تقنية، أو ترغب في مناقشة فكرة، أو حتى تريد أن تقول مرحباً، لا تتردد في التواصل معي.',
+    buttonText: 'تواصل معي الآن'
   },
   fr: {
-    title: 'Prêt à automatiser votre business ?',
-    description: 'Spécialisé dans la création de bots automatisés (WA/TG/FB) et de plateformes SaaS. Automatisons votre projet ensemble.',
-    buttonText: 'Devis gratuit pour votre prochain Bot',
-    calendlyButton: 'Réserver un appel'
+    title: 'Avez-vous une question ou une idée de projet ?',
+    description: 'Je suis ici pour vous aider ! Que vous ayez besoin de conseils techniques, que vous souhaitiez discuter d\'une idée ou simplement dire bonjour, n\'hésitez pas à me contacter.',
+    buttonText: 'Contactez-moi maintenant'
   },
   en: {
-    title: 'Ready to Scale Your Business?',
-    description: 'Specialized in building automated bots (WA/TG/FB) and SaaS platforms. Let\'s scale your startup together.',
-    buttonText: 'Get a Free Quote for Your Next Bot',
-    calendlyButton: 'Book a Discovery Call'
+    title: 'Do you have a question or project idea?',
+    description: 'I\'m here to help! Whether you need technical consultation, want to discuss an idea, or just want to say hello, feel free to contact me.',
+    buttonText: 'Contact me now'
   }
 };
 
@@ -3551,15 +2836,15 @@ export const callToAction = {
 export const sidebar = {
   ar: {
     name: 'حمزة اعمرني',
-    title: 'Full-Stack Developer | خبير تطوير بوتات'
+    title: 'مبرمج وصانع محتوى تقني'
   },
   fr: {
     name: 'Hamza Amirni',
-    title: 'Développeur Full-Stack | Expert Bots & SaaS'
+    title: 'Développeur et créateur de contenu tech'
   },
   en: {
     name: 'Hamza Amirni',
-    title: 'Full-Stack Developer & Automation Expert'
+    title: 'Developer & tech content creator'
   }
 };
 
@@ -3614,6 +2899,7 @@ export const toolsPageComprehensive = {
       chatgpt: { title: 'ChatGPT', description: 'مساعد ذكي للإجابة على الأسئلة', tags: ['ذكاء اصطناعي', 'مساعد'] },
       coursera: { title: 'Coursera', description: 'منصة تعليمية من جامعات عالمية', tags: ['منصات', 'تعليم'] },
       canva: { title: 'Canva', description: 'برنامج تصميم سهل وسريع', tags: ['تصميم', 'جرافيكس'] },
+      github: { title: 'GitHub', description: 'منصة مشهورة لمشاركة البرمجيات', tags: ['برمجة', 'أدوات'] },
       stackoverflow: { title: 'Stack Overflow', description: 'موقع رائع للأسئلة والإجابات على مشاكل البرمجة', tags: ['برمجة', 'أسئلة'] },
     }
   },
@@ -3628,6 +2914,7 @@ export const toolsPageComprehensive = {
       chatgpt: { title: 'ChatGPT', description: 'Assistant intelligent pour répondre aux questions', tags: ['IA', 'assistant'] },
       coursera: { title: 'Coursera', description: 'Plateforme éducative des universités mondiales', tags: ['plateformes', 'éducation'] },
       canva: { title: 'Canva', description: 'Programme de conception facile et rapide', tags: ['conception', 'graphiques'] },
+      github: { title: 'GitHub', description: 'Plateforme célèbre pour le partage de logiciels', tags: ['programmation', 'outils'] },
       stackoverflow: { title: 'Stack Overflow', description: 'Super site pour les questions et réponses de programmation', tags: ['programmation', 'questions'] },
     }
   },
@@ -3642,6 +2929,7 @@ export const toolsPageComprehensive = {
       chatgpt: { title: 'ChatGPT', description: 'Smart assistant to answer questions', tags: ['AI', 'assistant'] },
       coursera: { title: 'Coursera', description: 'Educational platform from global universities', tags: ['platforms', 'education'] },
       canva: { title: 'Canva', description: 'Easy and fast design program', tags: ['design', 'graphics'] },
+      github: { title: 'GitHub', description: 'Famous platform for software sharing', tags: ['programming', 'tools'] },
       stackoverflow: { title: 'Stack Overflow', description: 'Great site for programming questions and answers', tags: ['programming', 'questions'] },
     }
   }
@@ -3721,7 +3009,7 @@ export const buttonLabels = {
     visit: 'زيارة',
     download: 'تحميل',
     demo: 'عرض توضيحي',
-
+    github: 'GitHub',
     preview: 'معاينة',
     learn: 'تعلم المزيد',
     subscribe: 'اشترك',
@@ -3737,7 +3025,7 @@ export const buttonLabels = {
     visit: 'Visiter',
     download: 'Télécharger',
     demo: 'Démo',
-
+    github: 'GitHub',
     preview: 'Aperçu',
     learn: 'En savoir plus',
     subscribe: 'S\'abonner',
@@ -3753,7 +3041,7 @@ export const buttonLabels = {
     visit: 'Visit',
     download: 'Download',
     demo: 'Demo',
-
+    github: 'GitHub',
     preview: 'Preview',
     learn: 'Learn more',
     subscribe: 'Subscribe',
@@ -3763,8 +3051,7 @@ export const buttonLabels = {
     expand: 'Expand',
     collapse: 'Collapse',
     sort: 'Sort',
-    filter: 'Filter',
-    calendly: 'Book a Call'
+    filter: 'Filter'
   }
 };
 
@@ -3946,8 +3233,8 @@ export const sidebarProfile = {
   },
   en: {
     name: 'Hamza Amirni',
-    role: 'Expert Bot Developer & Full-Stack Engineer',
-    description: 'Specialist in building automated ecosystems for messaging platforms (WhatsApp, Telegram, Facebook) and high-performance SaaS using React, PHP, and Python. Available for US/EU timezone collaborations. 🔥'
+    role: 'Professional Web Developer',
+    description: 'Hello and welcome! I\'m Hamza Amirni, a professional web developer with extensive experience in software and technologies. 🙌\n\nI work in web development, applications, software, and modern technologies.\n\nI love continuous learning and developing skills in programming, design, and technology.\n\nIf you have any questions or would like to collaborate, feel free to get in touch. 🔥'
   }
 };
 
@@ -4000,7 +3287,7 @@ export const journeySection = {
     title: '🚀 مقتطف من مسيرتي',
     items: [
       'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
-      'أكملت الدراسة الثانوية في 2023.',
+      'أكملت الدراسة الثانوية في 2019.',
       'عملت في عدة مشاريع برمجية مهمة.',
       'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.'
     ]
@@ -4009,7 +3296,7 @@ export const journeySection = {
     title: '🚀 Aperçu de mon parcours',
     items: [
       'J\'ai commencé à apprendre la programmation à un jeune âge et j\'ai appris par la pratique.',
-      'J\'ai terminé mes études secondaires en 2023.',
+      'J\'ai terminé mes études secondaires en 2019.',
       'J\'ai travaillé sur plusieurs projets logiciels importants.',
       'J\'ai acquis une grande expérience dans les domaines de la programmation et du web.'
     ]
@@ -4018,7 +3305,7 @@ export const journeySection = {
     title: '🚀 Highlights of My Journey',
     items: [
       'I started learning software at an early age and learned through practice.',
-      'I completed high school in 2023.',
+      'I completed high school in 2019.',
       'I have worked on several important software projects.',
       'I have gained extensive experience in programming and web development.'
     ]
@@ -4087,9 +3374,9 @@ export const socialMediaLinks = {
     whatsappChannel: 'قناة واتساب',
     whatsappGroups: 'مجموعات واتساب',
     telegram: 'تيليجرام',
+    github: 'GitHub',
     linkedin: 'لينكدإن',
-    twitter: 'X (تويتر)',
-    tiktok: 'تيك توك'
+    twitter: 'تويتر'
   },
   fr: {
     facebook: 'Facebook',
@@ -4102,9 +3389,9 @@ export const socialMediaLinks = {
     whatsappChannel: 'Canal WhatsApp',
     whatsappGroups: 'Groupes WhatsApp',
     telegram: 'Telegram',
+    github: 'GitHub',
     linkedin: 'LinkedIn',
-    twitter: 'X (Twitter)',
-    tiktok: 'TikTok'
+    twitter: 'Twitter'
   },
   en: {
     facebook: 'Facebook',
@@ -4117,9 +3404,9 @@ export const socialMediaLinks = {
     whatsappChannel: 'WhatsApp Channel',
     whatsappGroups: 'WhatsApp Groups',
     telegram: 'Telegram',
+    github: 'GitHub',
     linkedin: 'LinkedIn',
-    twitter: 'X (Twitter)',
-    tiktok: 'TikTok'
+    twitter: 'Twitter'
   }
 };
 

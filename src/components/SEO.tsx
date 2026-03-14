@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLanguage } from '../contexts/LanguageContext';
 
 interface SEOProps {
   title?: string;
@@ -14,18 +13,16 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Hamza Amirni | Expert React & Next.js Developer for SaaS Startups',
-  description = "Hire a remote React & Next.js expert for your SaaS startup. Specializing in high-performance web apps, scalable frontends, and sub-second load times.",
+  title = 'حمزة اعمرني | مبرمج وصانع محتوى تقني',
+  description = 'منصة حمزة اعمرني لمشاركة الخبرة والشغف في عالم البرمجة والتقنية وتطوير الذات.',
   image = 'https://hamzaamirni.netlify.app/og-image.jpg',
   url = 'https://hamzaamirni.netlify.app',
   type = 'website',
-  author = 'Hamza Amirni',
+  author = 'حمزة اعمرني',
   publishedTime,
-  keywords = ['Hire Remote React Developer', 'Freelance Web Developer for US Startups', 'Next.js Expert', 'SaaS Development', 'High Performance Web Apps', 'Remote Python Developer', 'Telegram Bot Developer for Hire', 'Custom PHP Web Solutions', 'WhatsApp Bot Developer', 'Automation Expert']
+  keywords = ['برمجة', 'ويب', 'JavaScript', 'Python', 'تقنية', 'تعليم', 'مقالات برمجية']
 }) => {
-  const siteTitle = title.includes('Hamza Amirni') ? title : `${title} | Hamza Amirni`;
-  const { language } = useLanguage();
-  const dir = language === 'ar' ? 'rtl' : 'ltr';
+  const siteTitle = title.includes('حمزة اعمرني') ? title : `${title} | حمزة اعمرني`;
 
   return (
     <Helmet>
@@ -45,8 +42,8 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content="Hamza Amirni" />
-      <meta property="og:locale" content={language === 'ar' ? 'ar_AR' : language === 'fr' ? 'fr_FR' : 'en_US'} />
+      <meta property="og:site_name" content="حمزة اعمرني" />
+      <meta property="og:locale" content="ar_AR" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -54,7 +51,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@Hamza_Amirni" />
+      <meta name="twitter:creator" content="@hamzaamirni" />
 
       {/* Article specific */}
       {type === 'article' && publishedTime && (
@@ -72,10 +69,10 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
-
+      
       {/* Language */}
-      <meta httpEquiv="content-language" content={language} />
-      <html lang={language} dir={dir} />
+      <meta httpEquiv="content-language" content="ar" />
+      <html lang="ar" dir="rtl" />
     </Helmet>
   );
 };

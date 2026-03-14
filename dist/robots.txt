@@ -1,37 +1,23 @@
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://hamzaamirni.com/sitemap.xml
-
-# Allow all search engines to crawl the site
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Disallow crawling of admin or sensitive areas (if any in the future)
 Disallow: /admin/
 Disallow: /private/
 
-# Allow crawling of important pages
-Allow: /about
-Allow: /articles
-Allow: /programming
-Allow: /apps
-Allow: /videos
-Allow: /tools
-Allow: /bots
-Allow: /fun
-Allow: /chat
-Allow: /privacy
-Allow: /terms
-Allow: /contact
-Allow: /disclaimer
+# Sitemaps
+Sitemap: https://hamzaamirni.netlify.app/sitemap.xml
 
-# Crawl delay (optional - helps prevent overloading the server)
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# Google AdSense Mobile Crawler
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Google AdSense Crawler for Shopping
+User-agent: AdsBot-Google
+Allow: /
+
+# Crawl delay - معذرة لمحركات البحث عن كثافة الزحف
+User-agent: *
 Crawl-delay: 1

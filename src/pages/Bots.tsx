@@ -6,7 +6,7 @@ import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
-import { SiWhatsapp, SiOpenai, SiPerplexity, SiFacebook } from 'react-icons/si';
+import { SiWhatsapp, SiOpenai, SiGithub, SiPerplexity, SiFacebook } from 'react-icons/si';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,6 +55,19 @@ const Bots: React.FC = () => {
       rating: 4.9,
       color: 'from-green-500 to-emerald-600',
       demoUrl: 'https://api.whatsapp.com/send/?phone=18002428478&text&type=phone_number&app_absent=0',
+      isAI: true
+    },
+    {
+      id: 3,
+      name: t('botsPageFull.items.b3.name', language),
+      icon: <SiGithub className="w-16 h-16 text-gray-800 dark:text-gray-200" />,
+      description: t('botsPageFull.items.b3.desc', language),
+      platform: 'AI Code Assistant',
+      features: (t('botsPageFull.items.b3.features', language) as unknown as string[]),
+      users: '10M+',
+      rating: 4.8,
+      color: 'from-blue-500 to-cyan-600',
+      demoUrl: 'https://api.whatsapp.com/send/?phone=18772241042&text&type=phone_number&app_absent=0',
       isAI: true
     },
     {
@@ -121,7 +134,7 @@ const Bots: React.FC = () => {
     {
       id: 9,
       name: t('botsPageFull.items.t1.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/2.jpeg" alt={t('botsPageFull.items.t1.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/2.jpeg" alt="Bot 1" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t1.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t1.features', language) as unknown as string[]),
@@ -133,7 +146,7 @@ const Bots: React.FC = () => {
     {
       id: 10,
       name: t('botsPageFull.items.t2.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/4.jpeg" alt={t('botsPageFull.items.t2.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/4.jpeg" alt="Bot 2" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t2.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t2.features', language) as unknown as string[]),
@@ -145,7 +158,7 @@ const Bots: React.FC = () => {
     {
       id: 11,
       name: t('botsPageFull.items.t3.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/5.jpeg" alt={t('botsPageFull.items.t3.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/5.jpeg" alt="Bot 3" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t3.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t3.features', language) as unknown as string[]),
@@ -157,7 +170,7 @@ const Bots: React.FC = () => {
     {
       id: 12,
       name: t('botsPageFull.items.t4.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/7.jpeg" alt={t('botsPageFull.items.t4.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/7.jpeg" alt="Bot 4" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t4.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t4.features', language) as unknown as string[]),
@@ -169,7 +182,7 @@ const Bots: React.FC = () => {
     {
       id: 13,
       name: t('botsPageFull.items.t5.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/8.jpeg" alt={t('botsPageFull.items.t5.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/8.jpeg" alt="Bot 5" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t5.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t5.features', language) as unknown as string[]),
@@ -181,7 +194,7 @@ const Bots: React.FC = () => {
     {
       id: 14,
       name: t('botsPageFull.items.t6.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/10.jpeg" alt={t('botsPageFull.items.t6.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/10.jpeg" alt="Bot 6" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t6.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t6.features', language) as unknown as string[]),
@@ -193,7 +206,7 @@ const Bots: React.FC = () => {
     {
       id: 15,
       name: t('botsPageFull.items.t7.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/WhatsApp Image 2026-02-27 at 14.16.42.jpeg" alt={t('botsPageFull.items.t7.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/WhatsApp Image 2026-02-27 at 14.16.42.jpeg" alt="Bot 7" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t7.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t7.features', language) as unknown as string[]),
@@ -205,7 +218,7 @@ const Bots: React.FC = () => {
     {
       id: 16,
       name: t('botsPageFull.items.t8.name', language),
-      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/WhatsApp Image 2026-02-27 at 14.16.43.jpeg" alt={t('botsPageFull.items.t8.name', language)} className="w-full h-full object-cover" /></div>,
+      icon: <div className="w-20 h-20 mx-auto rounded-full overflow-hidden border-4 border-blue-100 shadow-md transform group-hover:scale-110 transition-transform duration-300"><img src="/bots/WhatsApp Image 2026-02-27 at 14.16.43.jpeg" alt="Bot 8" className="w-full h-full object-cover" /></div>,
       description: t('botsPageFull.items.t8.desc', language),
       platform: 'Telegram',
       features: (t('botsPageFull.items.t8.features', language) as unknown as string[]),

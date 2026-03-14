@@ -3,56 +3,412 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  @apply font-sans;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    @apply font-sans;
 }
 
 .dark body {
-  background: #000000;
+    background: #000000;
 }
 
-/* Custom Scrollbar for Webkit browsers */
+/* ─── Custom Scrollbar ─────────────────────────────────────────────────────── */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
-/* For Firefox */
 .custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
 }
 
-/* Intro Animation Gradient */
+/* ─── Intro Animation Gradient ─────────────────────────────────────────────── */
 @keyframes animated-gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .intro-gradient {
-  background: linear-gradient(-45deg, #1f2937, #3730a3, #4f46e5, #1f2937);
-  background-size: 400% 400%;
-  animation: animated-gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #1f2937, #3730a3, #4f46e5, #1f2937);
+    background-size: 400% 400%;
+    animation: animated-gradient 15s ease infinite;
+}
+
+/* ─── Shimmer Sweep (Card hover) ────────────────────────────────────────────── */
+@keyframes shimmer-sweep {
+    0% {
+        transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+        transform: translateX(300%) skewX(-12deg);
+    }
+}
+
+.shimmer-sweep::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.14) 50%,
+        transparent 60%
+    );
+    animation: shimmer-sweep 2.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* ─── Float (gentle up/down) ────────────────────────────────────────────────── */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+    animation: float 2.5s ease-in-out infinite;
+}
+
+/* ─── Pulse Ring ────────────────────────────────────────────────────────────── */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    80% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.animate-pulse-ring {
+    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* ─── Gradient X (animated text gradient) ──────────────────────────────────── */
+@keyframes gradient-x {
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% auto;
+    animation: gradient-x 4s linear infinite;
+}
+
+/* ─── Typing Cursor Blink ───────────────────────────────────────────────────── */
+@keyframes blink-cursor {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-blink {
+    animation: blink-cursor 1s step-end infinite;
+}
+
+/* ─── Spin Slow / Reverse ───────────────────────────────────────────────────── */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+.animate-spin-reverse {
+    animation: spin-reverse 10s linear infinite;
+}
+
+/* ─── Fade Up (utility class) ───────────────────────────────────────────────── */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Fade In Scale ─────────────────────────────────────────────────────────── */
+@keyframes fade-in-scale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in-scale {
+    animation: fade-in-scale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ─── Slide In Left / Right ─────────────────────────────────────────────────── */
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-slide-in-right {
+    animation: slide-in-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Bounce In ─────────────────────────────────────────────────────────────── */
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+    70% {
+        transform: scale(0.96);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-bounce-in {
+    animation: bounce-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ─── Glow Pulse ────────────────────────────────────────────────────────────── */
+@keyframes glow-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0px 0px rgba(99, 102, 241, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px 6px rgba(99, 102, 241, 0.35);
+    }
+}
+
+.animate-glow-pulse {
+    animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* ─── Wiggle ────────────────────────────────────────────────────────────────── */
+@keyframes wiggle {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    40% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(-6deg);
+    }
+    80% {
+        transform: rotate(6deg);
+    }
+}
+
+.animate-wiggle {
+    animation: wiggle 0.7s ease-in-out;
+}
+
+/* ─── Progress Bar Fill ─────────────────────────────────────────────────────── */
+@keyframes progress-fill {
+    from {
+        width: 0%;
+    }
+}
+
+/* ─── Orbit ─────────────────────────────────────────────────────────────────── */
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(68px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(68px) rotate(-360deg);
+    }
+}
+
+.animate-orbit {
+    animation: orbit 6s linear infinite;
+}
+
+/* ─── Background Parallax Blur Orbs ─────────────────────────────────────────── */
+@keyframes orb-drift {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(20px, -30px) scale(1.08);
+    }
+    66% {
+        transform: translate(-15px, 20px) scale(0.95);
+    }
+}
+
+.animate-orb {
+    animation: orb-drift 12s ease-in-out infinite;
+}
+
+/* ─── Stagger Animation Helpers ─────────────────────────────────────────────── */
+.stagger-1 {
+    animation-delay: 0.05s;
+}
+.stagger-2 {
+    animation-delay: 0.1s;
+}
+.stagger-3 {
+    animation-delay: 0.15s;
+}
+.stagger-4 {
+    animation-delay: 0.2s;
+}
+.stagger-5 {
+    animation-delay: 0.25s;
+}
+.stagger-6 {
+    animation-delay: 0.3s;
+}
+.stagger-7 {
+    animation-delay: 0.35s;
+}
+.stagger-8 {
+    animation-delay: 0.4s;
+}
+
+/* ─── Gradient Border Spin ───────────────────────────────────────────────────── */
+@keyframes border-spin {
+    from {
+        --border-angle: 0deg;
+    }
+    to {
+        --border-angle: 360deg;
+    }
+}
+
+/* ─── Glass Card (utility) ───────────────────────────────────────────────────── */
+.glass-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-card {
+    background: rgba(17, 24, 39, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Neon Text Glow ─────────────────────────────────────────────────────────── */
+.text-glow-primary {
+    text-shadow:
+        0 0 10px rgba(99, 102, 241, 0.6),
+        0 0 24px rgba(99, 102, 241, 0.3);
+}
+
+/* ─── Smooth Page Transition ─────────────────────────────────────────────────── */
+.page-enter {
+    animation: fade-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Reduced Motion Respect ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

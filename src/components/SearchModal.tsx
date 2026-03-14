@@ -40,28 +40,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         const q = query.trim().toLowerCase();
         if (!q) return [];
 
-        const queryWords = q.split(/\s+/).filter(Boolean);
-
-        const isMatch = (text?: string) => {
-            if (!text) return false;
-            const t = text.toLowerCase();
-            // Support partial substring matching anywhere directly
-            if (t.includes(q)) return true;
-            // Also support matching the exact start of words (e.g., 'a' matches 'apple', 'chat' matches 'chatgpt')
-            const textWords = t.split(/\s+/);
-            return queryWords.length > 0 && queryWords.every(qw =>
-                textWords.some(tw => tw.startsWith(qw))
-            );
-        };
-
         const allResults: any[] = [];
 
         // 1. Search in Articles
-        const translatedArticles = t('articlesPageFull.data', language) as any[];
-        const finalArticles = Array.isArray(translatedArticles) ? translatedArticles : articlesData;
-
-        finalArticles.forEach(article => {
-            if (isMatch(article.title) || isMatch(article.excerpt || article.summary) || isMatch(article.category) || (article.tags && article.tags.some((tag: string) => isMatch(tag)))) {
+        articlesData.forEach(article => {
+            if (article.title.toLowerCase().includes(q) || article.excerpt.toLowerCase().includes(q)) {
                 allResults.push({
                     id: article.id,
                     title: article.title,
@@ -74,14 +57,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         });
 
         // 2. Search in Apps
-        const catApp = t('searchModal.categories.app', language) || 'تطبيق';
         myApps.forEach(app => {
-            if (isMatch(app.title) || isMatch(app.description)) {
+            if (app.title.toLowerCase().includes(q) || app.description.toLowerCase().includes(q)) {
                 allResults.push({
                     id: 'apps',
                     title: app.title,
                     type: 'app',
-                    category: catApp,
+                    category: 'تطبيق',
                     section: 'apps',
                     icon: app.IconComponent,
                     external: app.url
@@ -90,20 +72,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         });
 
         // 3. Search in Bots
-        const catBot = t('searchModal.categories.bot', language) || 'بوت ذكي';
-        const translatedBotsItems = t('botsPageFull.items', language) as any;
-        botsContent.bots.forEach((bot, index) => {
-            const bKey = `b${index + 1}`;
-            const tBot = translatedBotsItems?.[bKey];
-            const title = tBot?.name || bot.title;
-            const desc = tBot?.desc || bot.description;
-
-            if (isMatch(title) || isMatch(desc)) {
+        botsContent.bots.forEach(bot => {
+            if (bot.title.toLowerCase().includes(q) || bot.description.toLowerCase().includes(q)) {
                 allResults.push({
                     id: 'bots',
-                    title: title,
+                    title: bot.title,
                     type: 'bot',
-                    category: catBot,
+                    category: 'بوت ذكي',
                     section: 'bots',
                     icon: bot.IconComponent,
                     external: bot.url
@@ -112,21 +87,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         });
 
         // 4. Search in Tools
-        const catTool = t('searchModal.categories.tool', language) || 'أداة مفيدة';
-        const toolKeys = ['doc', 'chatgpt', 'coursera', 'canva', 'stackoverflow'];
-        const translatedToolsItems = t('toolsPageComprehensive.items', language) as any;
-        toolsContent.tools.forEach((tool, index) => {
-            const tKey = toolKeys[index] || toolKeys[0];
-            const tTool = translatedToolsItems?.[tKey];
-            const title = tTool?.title || tool.title;
-            const desc = tTool?.description || tool.description;
-
-            if (isMatch(title) || isMatch(desc)) {
+        toolsContent.tools.forEach(tool => {
+            if (tool.title.toLowerCase().includes(q) || tool.description.toLowerCase().includes(q)) {
                 allResults.push({
                     id: 'tools',
-                    title: title,
+                    title: tool.title,
                     type: 'tool',
-                    category: catTool,
+                    category: 'أداة مفيدة',
                     section: 'tools',
                     icon: tool.IconComponent,
                     external: tool.url
@@ -134,16 +101,15 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
             }
         });
 
-        // 5. Search in Games (Services)
-        const catGame = t('searchModal.categories.game', language) || 'خدمة / لعبة';
+        // 5. Search in Games
         funContent.games.forEach(game => {
-            if (isMatch(game.title)) {
+            if (game.title.toLowerCase().includes(q)) {
                 allResults.push({
                     id: 'fun',
                     title: game.title,
                     type: 'game',
-                    category: catGame,
-                    section: 'services',
+                    category: 'لعبة ممتعة',
+                    section: 'home',
                     icon: game.IconComponent,
                     external: game.url
                 });
@@ -151,15 +117,14 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         });
 
         // 6. Search in Navigation/Sections
-        const catSection = t('searchModal.categories.section', language) || 'قسم في الموقع';
         navLinks.forEach(nav => {
             const translatedTitle = t(`navLabels.${nav.id}`, language) || nav.title;
-            if (isMatch(translatedTitle)) {
+            if (translatedTitle.toLowerCase().includes(q)) {
                 allResults.push({
                     id: nav.id,
                     title: translatedTitle,
                     type: 'section',
-                    category: catSection,
+                    category: 'قسم في الموقع',
                     section: nav.id,
                     icon: nav.icon
                 });
@@ -167,14 +132,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         });
 
         // 7. Search in WhatsApp Channels
-        const catChannel = t('searchModal.categories.channel', language) || 'قناة تواصل';
         whatsappChannels.forEach(channel => {
-            if (isMatch(channel.name)) {
+            if (channel.name.toLowerCase().includes(q)) {
                 allResults.push({
                     id: 'channels',
                     title: channel.name,
                     type: 'channel',
-                    category: catChannel,
+                    category: 'قناة تواصل',
                     section: 'home',
                     icon: channel.IconComponent,
                     external: channel.url
@@ -183,14 +147,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         });
 
         // 8. Search in Social Links
-        const catSocial = t('searchModal.categories.social', language) || 'رابط تواصل';
         socialLinks.forEach(link => {
-            if (isMatch(link.name)) {
+            if (link.name.toLowerCase().includes(q)) {
                 allResults.push({
                     id: 'social',
                     title: link.name,
                     type: 'social',
-                    category: catSocial,
+                    category: 'رابط تواصل',
                     section: 'home',
                     icon: link.IconComponent,
                     external: link.url
@@ -236,8 +199,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
                                 placeholder={t('searchModal.placeholder', language) || (t('commonTexts.search', language) + '...')}
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
-                                className="flex-1 bg-transparent border-none focus:ring-0 text-lg text-gray-800 dark:text-gray-100 placeholder-gray-400 rtl:text-right ltr:text-left"
-                                dir={language === 'ar' ? 'rtl' : 'ltr'}
+                                className="flex-1 bg-transparent border-none focus:ring-0 text-lg text-gray-800 dark:text-gray-100 placeholder-gray-400 text-right"
+                                dir="rtl"
                             />
                             <button
                                 onClick={onClose}
@@ -262,8 +225,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: index * 0.05 }}
                                             onClick={() => handleSelect(result)}
-                                            className="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all group rtl:text-right ltr:text-left"
-                                            dir={language === 'ar' ? 'rtl' : 'ltr'}
+                                            className="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all group text-right"
+                                            dir="rtl"
                                         >
                                             <div className={cn(
                                                 "w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0",
@@ -271,7 +234,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
                                             )}>
                                                 {result.type === 'article' ? <Newspaper className="w-5 h-5" /> : (result.icon ? <result.icon className="w-5 h-5" /> : <Search className="w-5 h-5" />)}
                                             </div>
-                                            <div className="flex-1 rtl:text-right ltr:text-left">
+                                            <div className="flex-1 text-right">
                                                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
                                                     {result.title}
                                                 </h4>

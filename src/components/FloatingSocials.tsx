@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { socialLinks } from '../constants';
 
 // Show social buttons
-const desiredOrder = ['إنستجرام', 'فيسبوك', 'تيليجرام', 'واتساب', 'X (تويتر)'];
+const desiredOrder = ['إنستجرام', 'فيسبوك', 'تيليجرام', 'واتساب'];
 const floatingSocials = desiredOrder
   .map(name => socialLinks.find(link => link.name === name))
   .filter(Boolean) as typeof socialLinks;
@@ -30,7 +30,6 @@ const iconColors: { [key: string]: string } = {
   'إنستجرام': 'hover:bg-pink-500',
   'واتساب': 'hover:bg-green-500',
   'تيليجرام': 'hover:bg-sky-500',
-  'X (تويتر)': 'hover:bg-black',
 };
 
 const FloatingSocials: React.FC = () => {
