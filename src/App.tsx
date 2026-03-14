@@ -53,31 +53,28 @@ const sectionComponents: {
   disclaimer: Disclaimer,
 };
 
-// Page transition variants
+// Page transition variants — no blur (GPU-expensive), lighter x offset
 const pageVariants = {
   initial: (direction: number) => ({
     opacity: 0,
-    x: direction > 0 ? 40 : -40,
-    scale: 0.98,
-    filter: "blur(4px)",
+    x: direction > 0 ? 24 : -24,
+    scale: 0.99,
   }),
   animate: {
     opacity: 1,
     x: 0,
     scale: 1,
-    filter: "blur(0px)",
     transition: {
-      duration: 0.4,
+      duration: 0.28,
       ease: [0.22, 1, 0.36, 1],
     },
   },
   exit: (direction: number) => ({
     opacity: 0,
-    x: direction > 0 ? -40 : 40,
-    scale: 0.98,
-    filter: "blur(4px)",
+    x: direction > 0 ? -24 : 24,
+    scale: 0.99,
     transition: {
-      duration: 0.25,
+      duration: 0.18,
       ease: [0.55, 0, 1, 0.45],
     },
   }),
