@@ -189,9 +189,9 @@ export const heroContent = {
     en: 'Hamza Amirni',
   },
   subtitle: {
-    ar: 'مطور واجهات متقدم (Full-Stack) ومصمم حلول برمجية مبتكرة',
-    fr: 'Développeur Full-Stack Senior & Concepteur de solutions innovantes',
-    en: 'Senior Full-Stack Developer & Innovative Solutions Architect',
+    ar: 'مطور روبوتات وخبير ويب',
+    fr: 'Développeur de Bots et Expert Web',
+    en: 'Freelance Bot Developer & Web Expert',
   },
   intro: {
     ar: 'مرحباً بك في منصتي الإلكترونية! هنا أشارك معك خبرتي وشغفي في عالم البرمجة والتقنية وتطوير الذات.',
@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'مطور واجهات متقدم (Full-Stack) ومصمم حلول برمجية مبتكرة',
-    fr: 'Développeur Full-Stack Senior & Concepteur de solutions innovantes',
-    en: 'Senior Full-Stack Developer & Innovative Solutions Architect',
+    ar: 'مطور روبوتات وخبير ويب',
+    fr: 'Développeur de Bots et Expert Web',
+    en: 'Freelance Bot Developer & Web Expert',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
