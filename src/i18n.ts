@@ -1626,44 +1626,34 @@ export const projectsPage = {
     },
     projects: {
       p1: {
-        title: 'موقع شركة تقنية',
-        description: 'تم بناء هذا المشروع لتوفير واجهة رقمية عصرية لشركة برمجيات. التحدي الأكبر كان موازنة الأداء مع التصميم البصري الغني. الحل كان استخدام Next.js لتحقيق سرعة تحميل فائقة مع Framer Motion للأنظمة الحركية السلسة.',
-        features: ['تصميم متجاوب بالكامل', 'لوحة تحكم إدارية', 'نظام إدارة محتوى', 'تحسين SEO متقدم']
+        title: 'أداة تحويل الوحدات (Hamza Converter)',
+        description: 'أداة ويب متكاملة لتحويل العملات والوحدات والقياسات بسهولة وسرعة، مع واجهة مستخدم بديهية.',
+        features: ['تحويل فوري للوحدات', 'واجهة بسيطة وعصرية', 'دعم مختلف أنواع القياسات', 'سرعة في الأداء']
       },
       p2: {
-        title: 'متجر إلكتروني للأزياء',
-        description: 'الهدف كان خلق تجربة تسوق سلسة وآمنة. واجهت صعوبات في مزامنة المخزون لحظياً مع بوابات الدفع. قمت بحل ذلك باستخدام Webhooks مع Stripe ونظام إدارة قواعد بيانات موزعة لضمان دقة البيانات.',
-        features: ['عربة تسوق ذكية', 'بوابة دفع متعددة', 'نظام تقييمات المنتجات', 'إدارة الطلبات والشحن']
+        title: 'مشروع سيجما (Sigma Web)',
+        description: 'منصة برمجية متطورة توفر حلولاً رقمية ذكية، صممت لتلبية احتياجات المستخدمين في مجالات التقنية المختلفة.',
+        features: ['تصميم متجاوب بالكامل', 'أداء عالي وتحميل سريع', 'تجربة مستخدم محسنة', 'تقنيات ويب حديثة']
       },
       p3: {
-        title: 'منصة تعليمية تفاعلية',
-        description: 'مشروع تعليمي يهدف لتبسيط التعلم عن بعد. التحدي كان التعامل مع بث الفيديو بجودة عالية وتتبع تقدم الطلاب. تم استخدام Firebase لخدمات الوقت الفعلي و Mux لإدارة محتوى الفيديو بكفاءة.',
-        features: ['نظام إدارة الدورات', 'مشغل فيديو متقدم', 'اختبارات تفاعلية', 'شهادات إلكترونية']
+        title: 'نظام رنا للتحقق (Rana Verification)',
+        description: 'تطبيق متخصص لتوفير خدمات التحقق والأمان الرقمي، يهدف لتبسيط عمليات التأكد من الهوية والبيانات.',
+        features: ['نظام تحقق آمن', 'حماية بيانات المستخدم', 'واجهة سهلة الاستخدام', 'تنبيهات فورية']
       },
       p4: {
-        title: 'تطبيق حجز المواعيد',
-        description: 'تطبيق يحل مشكلة تنظيم المواعيد للمشاريع الصغيرة. الصعوبة كانت في منع تداخل المواعيد. الحل كان خوارزمية ذكية للتحقق من التوفر لحظياً مع إرسال إشعارات تلقائية عبر Firebase Cloud Messaging.',
-        features: ['حجز فوري للمواعيد', 'إشعارات تلقائية', 'نظام تقييم الخدمات', 'دفع إلكتروني']
+        title: 'متجر حمزة اعمرني',
+        description: 'منصة تجارة إلكترونية متكاملة لبيع المنتجات الرقمية والخدمات، توفر تجربة تسوق سلسة وآمنة.',
+        features: ['إدارة المنتجات الرقمية', 'بوابة دفع آمنة', 'تصميم متوافق مع الجوال', 'تتبع الطلبات']
       },
       p5: {
-        title: 'لوحة تحكم تحليلات',
-        description: 'لوحة تحكم لعرض البيانات الضخمة. التحدي كان معالجة كميات كبيرة من البيانات دون التأثير على استجابة الواجهة. الحل كان استخدام React Query لإدارة الحالة واستراتيجيات الـ Virtualization لعرض القوائم الطويلة.',
-        features: ['رسوم بيانية تفاعلية', 'تقارير قابلة للتصدير', 'تحديث بيانات فوري', 'واجهة سهلة الاستخدام']
+        title: 'تطبيق حسابي (Hsabi)',
+        description: 'أداة ذكية لإدارة الحسابات والعمليات المالية الشخصية، تساعد المستخدمين على تتبع مصاريفهم ومدخراتهم بدقة.',
+        features: ['تتبع المصاريف والمدخرات', 'تقارير مالية دورية', 'سهولة إدارة الحسابات', 'تنظيم المعاملات']
       },
       p6: {
-        title: 'موقع مطعم تفاعلي',
-        description: 'تطوير نظام طلبات أونلاين متكامل. التحدي كان تبسيط عملية الطلب للمستخدمين غير التقنيين. ركزت على تصميم UI بديهي جداً وتقليل خطوات الدفع لزيادة معدل التحويل.',
-        features: ['قائمة طعام رقمية', 'نظام طلبات أونلاين', 'حجز الطاولات', 'تكامل مع Google Maps']
-      },
-      p7: {
-        title: 'متجر حمزة اعمرني',
-        description: 'منصة تجارة إلكترونية متكاملة لبيع المنتجات الرقمية والخدمات. تم تطويرها لتوفير تجربة تسوق سريعة مع واجهة مستخدم عصرية.',
-        features: ['إدارة المنتجات الرقمية', 'تصميم عصري وجذاب', 'سرعة في الأداء', 'متوافق مع جميع الأجهزة']
-      },
-      p8: {
-        title: 'تطبيق حسابي (Hsabi)',
-        description: 'أداة ذكية لإدارة الحسابات والعمليات المالية الشخصية أو التجارية البسيطة، تهدف لتبسيط تتبع الأرباح والمصاريف.',
-        features: ['تتبع المصاريف والأرباح', 'واجهة بسيطة وسهلة', 'تقارير مالية سريعة', 'تنظيم المعاملات']
+        title: 'تطبيق القرآن الكريم',
+        description: 'تطبيق إسلامي شامل لعرض وقراءة القرآن الكريم مع واجهة مريحة وتصميم هادئ يركز على تجربة المستخدم.',
+        features: ['قراءة القرآن الكريم', 'واجهة مستخدم مريحة', 'سرعة التحميل', 'دعم مختلف الأجهزة']
       }
     },
     preview: 'معاينة'
@@ -1679,44 +1669,34 @@ export const projectsPage = {
     },
     projects: {
       p1: {
-        title: 'Site d\'entreprise technologique',
-        description: 'Ce projet a été conçu pour fournir une interface numérique moderne à une entreprise de logiciels. Le plus grand défi était d\'équilibrer les performances avec un design visuel riche.',
-        features: ['Design entièrement réactif', 'Tableau de bord administratif', 'Système de gestion de contenu', 'Optimisation SEO avancée']
+        title: 'Hamza Converter',
+        description: 'Un outil web complet pour une conversion facile et rapide des devises et des unités avec une interface intuitive.',
+        features: ['Conversion instantanée', 'Interface moderne', 'Support multi-mesures', 'Haute performance']
       },
       p2: {
-        title: 'Boutique de mode en ligne',
-        description: 'L\'objectif était de créer une expérience de shopping fluide et sécurisée. J\'ai résolu les problèmes de synchronisation des stocks en utilisant des Webhooks avec Stripe.',
-        features: ['Panier intelligent', 'Passerelle de paiement multiple', 'Système d\'évaluation des produits', 'Gestion des commandes']
+        title: 'Sigma Web Project',
+        description: 'Une plateforme logicielle avancée fournissant des solutions numériques intelligentes.',
+        features: ['Design réactif', 'Performance rapide', 'Expérience utilisateur améliorée', 'Technologies modernes']
       },
       p3: {
-        title: 'Plateforme éducative interactive',
-        description: 'Projet éducatif visant à simplifier l\'apprentissage à distance. Firebase a été utilisé pour le temps réel et Mux pour la gestion vidéo.',
-        features: ['Gestion des cours', 'Lecteur vidéo avancé', 'Quiz interactifs', 'Certificats électroniques']
+        title: 'Rana Verification System',
+        description: 'Une application spécialisée pour les services de vérification et de sécurité numérique.',
+        features: ['Système de vérification sécurisé', 'Protection des données', 'Interface facile à utiliser', 'Alertes instantanées']
       },
       p4: {
-        title: 'Application de prise de rendez-vous',
-        description: 'Application résolvant le problème de l\'organisation des rendez-vous pour les petites entreprises avec des notifications automatiques.',
-        features: ['Réservation immédiate', 'Notifications automatiques', 'Système d\'évaluation', 'Paiement électronique']
+        title: 'Store Hamza Amirni',
+        description: 'Une plateforme e-commerce complète pour la vente de produits et services numériques.',
+        features: ['Gestion de produits numériques', 'Paiement sécurisé', 'Design mobile', 'Suivi des commandes']
       },
       p5: {
-        title: 'Tableau de bord analytique',
-        description: 'Tableau de bord pour afficher des données massives. React Query a été utilisé pour la gestion de l\'état et la virtualisation des listes.',
-        features: ['Graphiques interactifs', 'Rapports exportables', 'Données en temps réel', 'Interface intuitive']
+        title: 'Application Hsabi',
+        description: 'Un outil intelligent pour la gestion des finances personnelles et des comptes.',
+        features: ['Suivi des dépenses', 'Rapports financiers', 'Gestion de compte facile', 'Organisation des transactions']
       },
       p6: {
-        title: 'Site de restaurant interactif',
-        description: 'Système complet de commande en ligne. Focus sur une interface utilisateur très intuitive pour simplifier le processus de commande.',
-        features: ['Menu numérique', 'Système de commande', 'Réservation de tables', 'Intégration Google Maps']
-      },
-      p7: {
-        title: 'Store Hamza Amirni',
-        description: 'Une plateforme e-commerce complète pour la vente de produits et services numériques, conçue pour une expérience d\'achat rapide.',
-        features: ['Gestion de produits numériques', 'Design moderne', 'Haute performance', 'Compatible multi-appareils']
-      },
-      p8: {
-        title: 'Application Hsabi',
-        description: 'Un outil intelligent pour la gestion des comptes et des finances personnelles ou commerciales simples.',
-        features: ['Suivi des revenus et dépenses', 'Interface simple', 'Rapports financiers', 'Organisation des transactions']
+        title: 'Application Quran Karim',
+        description: 'Une application islamique complète pour la lecture du Saint Coran avec une interface apaisante et un design épuré.',
+        features: ['Lecture du Coran', 'Interface utilisateur relaxante', 'Chargement rapide', 'Support multi-appareils']
       }
     },
     preview: 'Aperçu'
@@ -1732,44 +1712,34 @@ export const projectsPage = {
     },
     projects: {
       p1: {
-        title: 'Tech Company Website',
-        description: 'Built to provide a modern digital interface for a software company. The challenge was balancing performance with rich visual design using Next.js and Framer Motion.',
-        features: ['Fully responsive design', 'Admin dashboard', 'Content management system', 'Advanced SEO optimization']
+        title: 'Hamza Converter',
+        description: 'A comprehensive web tool for easy and fast conversion of currencies, units, and measurements with an intuitive UI.',
+        features: ['Instant unit conversion', 'Simple & modern UI', 'Multi-measurement support', 'High performance']
       },
       p2: {
-        title: 'Fashion E-commerce Store',
-        description: 'The goal was to create a seamless shopping experience. Solved real-time stock synchronization issues using Webhooks with Stripe and MongoDB.',
-        features: ['Smart shopping cart', 'Multiple payment gateway', 'Product rating system', 'Order & shipping management']
+        title: 'Sigma Web Project',
+        description: 'An advanced software platform providing smart digital solutions, designed for tech-focused user needs.',
+        features: ['Fully responsive design', 'Fast loading & performance', 'Enhanced user experience', 'Modern web tech']
       },
       p3: {
-        title: 'Interactive Learning Platform',
-        description: 'Educational project simplifying remote learning. Used Firebase for real-time services and Mux for efficient video content management.',
-        features: ['Course management system', 'Advanced video player', 'Interactive quizzes', 'E-certificates']
+        title: 'Rana Verification System',
+        description: 'A specialized application for digital verification and security services, simplifying identity checks.',
+        features: ['Secure verification system', 'Data protection', 'Easy to use interface', 'Instant alerts']
       },
       p4: {
-        title: 'Appointment Booking App',
-        description: 'Application solving appointment organization for small businesses. Used an intelligent algorithm for real-time availability checks.',
-        features: ['Instant booking', 'Auto notifications', 'Rating system', 'Mobile payment']
+        title: 'Hamza Amirni Store',
+        description: 'A complete e-commerce platform for selling digital products and services, offering a seamless shopping experience.',
+        features: ['Digital product management', 'Secure payment gateway', 'Mobile friendly design', 'Order tracking']
       },
       p5: {
-        title: 'Analytics Dashboard',
-        description: 'Dashboard for big data display. Used React Query for state management and virtualization strategies for long lists.',
-        features: ['Interactive charts', 'Exportable reports', 'Real-time data', 'User-friendly interface']
+        title: 'Hsabi Application',
+        description: 'A smart tool for managing personal finances and accounts, helping users track their expenses accurately.',
+        features: ['Expense & savings tracking', 'Periodic financial reports', 'Easy account management', 'Transaction organization']
       },
       p6: {
-        title: 'Interactive Restaurant Site',
-        description: 'Integrated online ordering system. Focused on very intuitive UI design to reduce payment steps and increase conversion.',
-        features: ['Digital menu', 'Online ordering system', 'Table reservation', 'Google Maps integration']
-      },
-      p7: {
-        title: 'Hamza Amirni Store',
-        description: 'A complete e-commerce platform for selling digital products and services, developed for a fast shopping experience.',
-        features: ['Digital product management', 'Modern UI design', 'High performance', 'Responsive layout']
-      },
-      p8: {
-        title: 'Hsabi App',
-        description: 'A smart tool for managing personal or simple business accounts and financial operations.',
-        features: ['Income and expense tracking', 'Simple interface', 'Financial reports', 'Transaction management']
+        title: 'Quran Karim App',
+        description: 'A comprehensive Islamic application for reading the Holy Quran with a soothing interface and clean design focused on user experience.',
+        features: ['Quran reading feature', 'Relaxing UI design', 'Fast performance', 'Responsive layout']
       }
     },
     preview: 'Preview'

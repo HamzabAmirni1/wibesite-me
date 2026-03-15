@@ -34,98 +34,74 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: t('projectsPage.projects.p1.title', language),
-      category: t('projectsPage.categories.web', language),
+      category: t('projectsPage.categories.app', language),
       description: t('projectsPage.projects.p1.description', language),
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+      image: 'https://images.unsplash.com/photo-1543286386-713bdd54865e?auto=format&fit=crop&w=800&q=80',
+      technologies: ['React', 'Converter', 'Tool'],
       features: t('projectsPage.projects.p1.features', language),
-      liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
-      color: 'from-blue-500 to-cyan-500'
+      liveUrl: 'https://hamzaconverter.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-blue-500 to-indigo-500'
     },
     {
       id: 2,
       title: t('projectsPage.projects.p2.title', language),
-      category: t('projectsPage.categories.ecommerce', language),
+      category: t('projectsPage.categories.web', language),
       description: t('projectsPage.projects.p2.description', language),
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
-      technologies: ['Next.js', 'Stripe', 'MongoDB', 'Tailwind CSS'],
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
+      technologies: ['Modern Web', 'Platform', 'Sigma'],
       features: t('projectsPage.projects.p2.features', language),
-      liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
-      color: 'from-pink-500 to-rose-500'
+      liveUrl: 'https://sigma0001.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-cyan-500 to-blue-600'
     },
     {
       id: 3,
       title: t('projectsPage.projects.p3.title', language),
       category: t('projectsPage.categories.app', language),
       description: t('projectsPage.projects.p3.description', language),
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'Firebase', 'Material-UI', 'Video.js'],
+      image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80',
+      technologies: ['Security', 'Verification', 'Web'],
       features: t('projectsPage.projects.p3.features', language),
-      liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
-      color: 'from-purple-500 to-indigo-500'
+      liveUrl: 'https://rana-verification.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       id: 4,
       title: t('projectsPage.projects.p4.title', language),
-      category: t('projectsPage.categories.mobile', language),
+      category: t('projectsPage.categories.ecommerce', language),
       description: t('projectsPage.projects.p4.description', language),
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React Native', 'Firebase', 'Push Notifications'],
+      image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80',
+      technologies: ['React', 'E-commerce', 'Netlify'],
       features: t('projectsPage.projects.p4.features', language),
-      liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
-      color: 'from-green-500 to-emerald-500'
+      liveUrl: 'https://storehamzaamirni.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-orange-400 to-red-500'
     },
     {
       id: 5,
       title: t('projectsPage.projects.p5.title', language),
       category: t('projectsPage.categories.app', language),
       description: t('projectsPage.projects.p5.description', language),
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'Chart.js', 'D3.js', 'REST API'],
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+      technologies: ['JavaScript', 'Financial Tools', 'Netlify'],
       features: t('projectsPage.projects.p5.features', language),
-      liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
-      color: 'from-orange-500 to-amber-500'
+      liveUrl: 'https://hsabi.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-green-400 to-blue-500'
     },
     {
       id: 6,
       title: t('projectsPage.projects.p6.title', language),
-      category: t('projectsPage.categories.web', language),
-      description: t('projectsPage.projects.p6.description', language),
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
-      technologies: ['Vue.js', 'Node.js', 'Express', 'MySQL'],
-      features: t('projectsPage.projects.p6.features', language),
-      liveUrl: 'https://www.instagram.com/hamza_amirni_01',
-      githubUrl: 'https://www.instagram.com/hamza_amirni_01',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      id: 7,
-      title: t('projectsPage.projects.p7.title', language),
-      category: t('projectsPage.categories.ecommerce', language),
-      description: t('projectsPage.projects.p7.description', language),
-      image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'E-commerce', 'Netlify'],
-      features: t('projectsPage.projects.p7.features', language),
-      liveUrl: 'https://storehamzaamirni.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
-      color: 'from-orange-400 to-red-500'
-    },
-    {
-      id: 8,
-      title: t('projectsPage.projects.p8.title', language),
       category: t('projectsPage.categories.app', language),
-      description: t('projectsPage.projects.p8.description', language),
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
-      technologies: ['JavaScript', 'Financial Tools', 'Netlify'],
-      features: t('projectsPage.projects.p8.features', language),
-      liveUrl: 'https://hsabi.netlify.app/',
+      description: t('projectsPage.projects.p6.description', language),
+      image: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80',
+      technologies: ['React', 'Islamic App', 'Quran'],
+      features: t('projectsPage.projects.p6.features', language),
+      liveUrl: 'https://qurankarimapp.netlify.app/',
       githubUrl: 'https://github.com/HamzabAmirni1',
-      color: 'from-green-400 to-blue-500'
+      color: 'from-emerald-500 to-teal-600'
     }
   ];
 
