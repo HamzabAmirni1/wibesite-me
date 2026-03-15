@@ -32,26 +32,15 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
-      id: 1,
-      title: t('projectsPage.projects.p1.title', language),
-      category: t('projectsPage.categories.app', language),
-      description: t('projectsPage.projects.p1.description', language),
-      image: '/images/projects/converter.png',
-      technologies: ['React', 'File Converter', 'PDF to PPT'],
-      features: t('projectsPage.projects.p1.features', language),
-      liveUrl: 'https://hamzaconverter.netlify.app/',
-      color: 'from-blue-500 to-indigo-500'
-    },
-    {
-      id: 2,
-      title: t('projectsPage.projects.p2.title', language),
+      id: 4,
+      title: t('projectsPage.projects.p4.title', language),
       category: t('projectsPage.categories.ecommerce', language),
-      description: t('projectsPage.projects.p2.description', language),
-      image: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?q=80&w=800&auto=format&fit=crop',
-      technologies: ['React', 'Men\'s Fashion', 'Clothing'],
-      features: t('projectsPage.projects.p2.features', language),
-      liveUrl: 'https://sigma0001.netlify.app/',
-      color: 'from-pink-500 to-rose-500'
+      description: t('projectsPage.projects.p4.description', language),
+      image: '/images/projects/store.png',
+      technologies: ['React', 'Digital Store', 'Netlify'],
+      features: t('projectsPage.projects.p4.features', language),
+      liveUrl: 'https://storehamzaamirni.netlify.app/',
+      color: 'from-orange-400 to-red-500'
     },
     {
       id: 3,
@@ -65,15 +54,26 @@ const Projects: React.FC = () => {
       color: 'from-blue-600 to-cyan-500'
     },
     {
-      id: 4,
-      title: t('projectsPage.projects.p4.title', language),
+      id: 2,
+      title: t('projectsPage.projects.p2.title', language),
       category: t('projectsPage.categories.ecommerce', language),
-      description: t('projectsPage.projects.p4.description', language),
-      image: '/images/projects/store.png',
-      technologies: ['React', 'Digital Store', 'Netlify'],
-      features: t('projectsPage.projects.p4.features', language),
-      liveUrl: 'https://storehamzaamirni.netlify.app/',
-      color: 'from-orange-400 to-red-500'
+      description: t('projectsPage.projects.p2.description', language),
+      image: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?q=80&w=800&auto=format&fit=crop',
+      technologies: ['React', 'Men\'s Fashion', 'Clothing'],
+      features: t('projectsPage.projects.p2.features', language),
+      liveUrl: 'https://sigma0001.netlify.app/',
+      color: 'from-pink-500 to-rose-500'
+    },
+    {
+      id: 1,
+      title: t('projectsPage.projects.p1.title', language),
+      category: t('projectsPage.categories.app', language),
+      description: t('projectsPage.projects.p1.description', language),
+      image: '/images/projects/converter.png',
+      technologies: ['React', 'File Converter', 'PDF to PPT'],
+      features: t('projectsPage.projects.p1.features', language),
+      liveUrl: 'https://hamzaconverter.netlify.app/',
+      color: 'from-blue-500 to-indigo-500'
     },
     {
       id: 5,
