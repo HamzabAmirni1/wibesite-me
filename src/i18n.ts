@@ -499,24 +499,24 @@ export const aboutPage = {
     },
     items: [
       {
-        ar: 'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
-        fr: "J'ai commencé à apprendre la programmation à un jeune âge et j'ai appris par la pratique.",
-        en: 'I started learning software at an early age and learned through practice.',
+        ar: 'حاصل على شهادة البكالوريا في العلوم الفيزيائية (PC) سنة 2023.',
+        fr: 'Obtention du Baccalauréat en Sciences Physiques (PC) en 2023.',
+        en: 'Obtained a Baccalaureate in Physics and Chemistry in 2023.',
       },
       {
-        ar: 'أكملت الدراسة الثانوية في 2023.',
-        fr: "J'ai terminé mes études secondaires en 2023.",
-        en: 'I completed high school in 2023.',
+        ar: 'أكملت سنة من التكوين في شعبة رسم البناء (Dessin de Bâtiment).',
+        fr: 'J\'ai terminé une année de formation en Dessin de Bâtiment.',
+        en: 'Completed one year of training in Building Drawing (Dessin de Bâtiment).',
       },
       {
-        ar: 'عملت في عدة مشاريع برمجية مهمة.',
-        fr: "J'ai travaillé sur plusieurs projets logiciels importants.",
-        en: 'I have worked on several important software projects.',
+        ar: 'أتابع حالياً دراستي في شعبة التطوير الرقمي (Développement Digital) بمعهد OFPPT.',
+        fr: 'J\'étudie actuellement le Développement Digital à l\'OFPPT.',
+        en: 'Currently studying Digital Development at OFPPT.',
       },
       {
-        ar: 'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.',
-        fr: "J'ai acquis une grande expérience dans les domaines de la programmation et du web.",
-        en: 'I have gained extensive experience in programming and web development.',
+        ar: 'أعمل على تطوير مهاراتي في البرمجة وبناء البوتات والحلول الرقمية الحديثة.',
+        fr: 'Je développe mes compétences en programmation, création de bots et solutions numériques modernes.',
+        en: 'Developing skills in programming, bot creation, and modern digital solutions.',
       },
     ],
   },
@@ -3286,28 +3286,28 @@ export const journeySection = {
   ar: {
     title: '🚀 مقتطف من مسيرتي',
     items: [
-      'بدأت تعلم البرمجيات في سن مبكرة وتعلمت من خلال الممارسة.',
-      'أكملت الدراسة الثانوية في 2019.',
-      'عملت في عدة مشاريع برمجية مهمة.',
-      'اكتسبت خبرة كبيرة في مجالات البرمجة والويب.'
+      'حاصل على بكالوريا PC سنة 2023 وأدرس حالياً التطوير الرقمي بـ OFPPT.',
+      'أكملت السنة الأولى في شعبة رسم البناء (Dessin de Bâtiment).',
+      'متخصص في برمجة البوتات وتطوير تطبيقات الويب الحديثة.',
+      'أهدف لتقديم حلول تقنية مبتكرة تلبي احتياجات المستخدمين.'
     ]
   },
   fr: {
     title: '🚀 Aperçu de mon parcours',
     items: [
-      'J\'ai commencé à apprendre la programmation à un jeune âge et j\'ai appris par la pratique.',
-      'J\'ai terminé mes études secondaires en 2019.',
-      'J\'ai travaillé sur plusieurs projets logiciels importants.',
-      'J\'ai acquis une grande expérience dans les domaines de la programmation et du web.'
+      'Baccalauréat PC en 2023 et étude actuelle du Développement Digital à l\'OFPPT.',
+      'J\'ai terminé la première année en Dessin de Bâtiment.',
+      'Spécialisé en programmation de bots et développement web moderne.',
+      'Mon objectif est de fournir des solutions techniques innovantes.'
     ]
   },
   en: {
     title: '🚀 Highlights of My Journey',
     items: [
-      'I started learning software at an early age and learned through practice.',
-      'I completed high school in 2019.',
-      'I have worked on several important software projects.',
-      'I have gained extensive experience in programming and web development.'
+      'Baccalaureate PC in 2023 and currently studying Digital Development at OFPPT.',
+      'Completed the first year of Building Drawing (Dessin de Bâtiment).',
+      'Specialized in bot programming and modern web development.',
+      'Aiming to provide innovative technical solutions to users.'
     ]
   }
 };
