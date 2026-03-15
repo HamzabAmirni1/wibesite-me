@@ -7,6 +7,7 @@ import Timeline from "../components/Timeline";
 import CallToAction from "../components/CallToAction";
 import WhatsappChannelLinks from "../components/WhatsappChannelLinks";
 import Card from "../components/Card";
+import AdsterraAd from "../components/AdsterraAd";
 import { useLanguage } from "../contexts/LanguageContext";
 import { t } from "../i18n";
 import {
@@ -532,19 +533,13 @@ const Home: React.FC = () => {
         <ProfileSection />
       </motion.div>
 
-      {/* ── Hero Banner ── */}
+      {/* ── Hero Banner Ad ── */}
       <AnimatedSection delay={0.05}>
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-4xl mx-auto rounded-2xl border-2 border-dashed border-primary/30 bg-white/60 dark:bg-gray-800/40 shadow-sm overflow-hidden group">
-            <div className="relative overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-                alt={t("homePage.services.adAlt", language)}
-                className="w-full h-32 sm:h-40 object-cover dark:opacity-75 transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-            </div>
-          </div>
+        <div className="w-full max-w-4xl mx-auto">
+          <AdsterraAd 
+            adId="a96b7e218b00a3ca41f2b09671463d09" 
+            adUrl="https://pl28923812.effectivegatecpm.com/a96b7e218b00a3ca41f2b09671463d09/invoke.js" 
+          />
         </div>
       </AnimatedSection>
 
@@ -754,6 +749,14 @@ const Home: React.FC = () => {
       {/* ── Call To Action ── */}
       <AnimatedSection delay={0.05}>
         <CallToAction />
+      </AnimatedSection>
+
+      {/* ── Bottom Ad ── */}
+      <AnimatedSection delay={0.05}>
+        <AdsterraAd 
+          adId="a96b7e218b00a3ca41f2b09671463d09" 
+          adUrl="https://pl28923812.effectivegatecpm.com/a96b7e218b00a3ca41f2b09671463d09/invoke.js" 
+        />
       </AnimatedSection>
 
       {/* ── WhatsApp Links ── */}

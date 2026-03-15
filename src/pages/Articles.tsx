@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Card from '../components/Card';
+import AdsterraAd from '../components/AdsterraAd';
 import {
   Newspaper, Calendar, User, ArrowRight,
   BookOpen, TrendingUp, Tag, Search, Filter
@@ -400,8 +401,16 @@ const ArticleView: React.FC<{ article: any; onBack: () => void }> = ({ article, 
                         prose-strong:text-primary dark:prose-strong:text-blue-400
                         prose-img:rounded-3xl prose-img:shadow-2xl prose-img:border-4 prose-img:border-white dark:prose-img:border-gray-800
                         prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:p-6 prose-blockquote:rounded-r-2xl prose-blockquote:italic"
-             dangerouslySetInnerHTML={{ __html: article.content }} 
+             dangerouslySetInnerHTML={{ __html: article.content }}
            />
+
+           {/* Adsterra Native Banner Ad */}
+           <div className="py-8">
+             <AdsterraAd
+               adId="a96b7e218b00a3ca41f2b09671463d09"
+               adUrl="https://pl28923812.effectivegatecpm.com/a96b7e218b00a3ca41f2b09671463d09/invoke.js"
+             />
+           </div>
 
            {/* Premium Share Section */}
            <div className="pt-12 border-t border-gray-100 dark:border-white/5">
@@ -684,6 +693,14 @@ const Articles: React.FC = () => {
           {featuredArticle && (
             <motion.div variants={itemVariants}>
               <FeaturedArticle article={featuredArticle} onClick={() => openArticle(featuredArticle)} />
+              
+              {/* Adsterra Native Banner Ad after Featured Article */}
+              <div className="mt-8">
+                <AdsterraAd 
+                  adId="a96b7e218b00a3ca41f2b09671463d09" 
+                  adUrl="https://pl28923812.effectivegatecpm.com/a96b7e218b00a3ca41f2b09671463d09/invoke.js" 
+                />
+              </div>
             </motion.div>
           )}
 

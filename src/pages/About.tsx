@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import SocialLinks from '../components/SocialLinks';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import CallToAction from '../components/CallToAction';
+import AdsterraAd from '../components/AdsterraAd';
 import { useNavigation } from '../contexts/NavigationContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
@@ -277,6 +278,10 @@ const About: React.FC = () => {
       </div>
 
       <motion.div variants={itemVariants}>
+        <AdsterraAd 
+          adId="a96b7e218b00a3ca41f2b09671463d09" 
+          adUrl="https://pl28923812.effectivegatecpm.com/a96b7e218b00a3ca41f2b09671463d09/invoke.js" 
+        />
         <CallToAction />
       </motion.div>
 
