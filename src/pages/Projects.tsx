@@ -102,6 +102,30 @@ const Projects: React.FC = () => {
       liveUrl: 'https://www.instagram.com/hamza_amirni_01',
       githubUrl: 'https://www.instagram.com/hamza_amirni_01',
       color: 'from-red-500 to-pink-500'
+    },
+    {
+      id: 7,
+      title: t('projectsPage.projects.p7.title', language),
+      category: t('projectsPage.categories.ecommerce', language),
+      description: t('projectsPage.projects.p7.description', language),
+      image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80',
+      technologies: ['React', 'E-commerce', 'Netlify'],
+      features: t('projectsPage.projects.p7.features', language),
+      liveUrl: 'https://storehamzaamirni.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-orange-400 to-red-500'
+    },
+    {
+      id: 8,
+      title: t('projectsPage.projects.p8.title', language),
+      category: t('projectsPage.categories.app', language),
+      description: t('projectsPage.projects.p8.description', language),
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+      technologies: ['JavaScript', 'Financial Tools', 'Netlify'],
+      features: t('projectsPage.projects.p8.features', language),
+      liveUrl: 'https://hsabi.netlify.app/',
+      githubUrl: 'https://github.com/HamzabAmirni1',
+      color: 'from-green-400 to-blue-500'
     }
   ];
 

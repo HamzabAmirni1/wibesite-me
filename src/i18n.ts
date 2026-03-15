@@ -1654,6 +1654,16 @@ export const projectsPage = {
         title: 'موقع مطعم تفاعلي',
         description: 'تطوير نظام طلبات أونلاين متكامل. التحدي كان تبسيط عملية الطلب للمستخدمين غير التقنيين. ركزت على تصميم UI بديهي جداً وتقليل خطوات الدفع لزيادة معدل التحويل.',
         features: ['قائمة طعام رقمية', 'نظام طلبات أونلاين', 'حجز الطاولات', 'تكامل مع Google Maps']
+      },
+      p7: {
+        title: 'متجر حمزة اعمرني',
+        description: 'منصة تجارة إلكترونية متكاملة لبيع المنتجات الرقمية والخدمات. تم تطويرها لتوفير تجربة تسوق سريعة مع واجهة مستخدم عصرية.',
+        features: ['إدارة المنتجات الرقمية', 'تصميم عصري وجذاب', 'سرعة في الأداء', 'متوافق مع جميع الأجهزة']
+      },
+      p8: {
+        title: 'تطبيق حسابي (Hsabi)',
+        description: 'أداة ذكية لإدارة الحسابات والعمليات المالية الشخصية أو التجارية البسيطة، تهدف لتبسيط تتبع الأرباح والمصاريف.',
+        features: ['تتبع المصاريف والأرباح', 'واجهة بسيطة وسهلة', 'تقارير مالية سريعة', 'تنظيم المعاملات']
       }
     },
     preview: 'معاينة'
@@ -1697,6 +1707,16 @@ export const projectsPage = {
         title: 'Site de restaurant interactif',
         description: 'Système complet de commande en ligne. Focus sur une interface utilisateur très intuitive pour simplifier le processus de commande.',
         features: ['Menu numérique', 'Système de commande', 'Réservation de tables', 'Intégration Google Maps']
+      },
+      p7: {
+        title: 'Store Hamza Amirni',
+        description: 'Une plateforme e-commerce complète pour la vente de produits et services numériques, conçue pour une expérience d\'achat rapide.',
+        features: ['Gestion de produits numériques', 'Design moderne', 'Haute performance', 'Compatible multi-appareils']
+      },
+      p8: {
+        title: 'Application Hsabi',
+        description: 'Un outil intelligent pour la gestion des comptes et des finances personnelles ou commerciales simples.',
+        features: ['Suivi des revenus et dépenses', 'Interface simple', 'Rapports financiers', 'Organisation des transactions']
       }
     },
     preview: 'Aperçu'
@@ -1740,6 +1760,16 @@ export const projectsPage = {
         title: 'Interactive Restaurant Site',
         description: 'Integrated online ordering system. Focused on very intuitive UI design to reduce payment steps and increase conversion.',
         features: ['Digital menu', 'Online ordering system', 'Table reservation', 'Google Maps integration']
+      },
+      p7: {
+        title: 'Hamza Amirni Store',
+        description: 'A complete e-commerce platform for selling digital products and services, developed for a fast shopping experience.',
+        features: ['Digital product management', 'Modern UI design', 'High performance', 'Responsive layout']
+      },
+      p8: {
+        title: 'Hsabi App',
+        description: 'A smart tool for managing personal or simple business accounts and financial operations.',
+        features: ['Income and expense tracking', 'Simple interface', 'Financial reports', 'Transaction management']
       }
     },
     preview: 'Preview'
