@@ -1631,14 +1631,14 @@ export const projectsPage = {
         features: ['تحويل فوري للوحدات', 'واجهة بسيطة وعصرية', 'دعم مختلف أنواع القياسات', 'سرعة في الأداء']
       },
       p2: {
-        title: 'مشروع سيجما (Sigma Web)',
-        description: 'منصة برمجية متطورة توفر حلولاً رقمية ذكية، صممت لتلبية احتياجات المستخدمين في مجالات التقنية المختلفة.',
-        features: ['تصميم متجاوب بالكامل', 'أداء عالي وتحميل سريع', 'تجربة مستخدم محسنة', 'تقنيات ويب حديثة']
+        title: 'متجر سيجما (Sigma Store)',
+        description: 'متجر إلكتروني عصري لبيع الملابس والأزياء، يوفر تجربة تسوق فريدة مع عرض مميز للمنتجات وسهولة في الطلب.',
+        features: ['تسوق ملابس وأزياء', 'أداء عالي وتحميل سريع', 'تجربة مستخدم محسنة', 'تقنيات ويب حديثة']
       },
       p3: {
         title: 'نظام رنا للتحقق (Rana Verification)',
-        description: 'تطبيق متخصص لتوفير خدمات التحقق والأمان الرقمي، يهدف لتبسيط عمليات التأكد من الهوية والبيانات.',
-        features: ['نظام تحقق آمن', 'حماية بيانات المستخدم', 'واجهة سهلة الاستخدام', 'تنبيهات فورية']
+        description: 'موقع متخصص في توثيق حسابات التواصل الاجتماعي وتقديم خدمات الأمان الرقمي لضمان مصداقية الحسابات.',
+        features: ['توثيق حسابات السوشيال ميديا', 'حماية بيانات المستخدم', 'واجهة سهلة الاستخدام', 'تنبيهات فورية']
       },
       p4: {
         title: 'متجر حمزة اعمرني',
@@ -1674,14 +1674,14 @@ export const projectsPage = {
         features: ['Conversion instantanée', 'Interface moderne', 'Support multi-mesures', 'Haute performance']
       },
       p2: {
-        title: 'Sigma Web Project',
-        description: 'Une plateforme logicielle avancée fournissant des solutions numériques intelligentes.',
-        features: ['Design réactif', 'Performance rapide', 'Expérience utilisateur améliorée', 'Technologies modernes']
+        title: 'Sigma Store',
+        description: 'Une boutique en ligne moderne de vêtements et de mode, offrant une expérience de shopping unique et intuitive.',
+        features: ['Shopping mode & vêtements', 'Performance rapide', 'Expérience utilisateur améliorée', 'Technologies modernes']
       },
       p3: {
-        title: 'Rana Verification System',
-        description: 'Une application spécialisée pour les services de vérification et de sécurité numérique.',
-        features: ['Système de vérification sécurisé', 'Protection des données', 'Interface facile à utiliser', 'Alertes instantanées']
+        title: 'Rana Verification',
+        description: 'Site spécialisé dans la certification des comptes de réseaux sociaux et les services de sécurité numérique.',
+        features: ['Vérification réseaux sociaux', 'Protection des données', 'Interface facile à utiliser', 'Alertes instantanées']
       },
       p4: {
         title: 'Store Hamza Amirni',
@@ -1717,14 +1717,14 @@ export const projectsPage = {
         features: ['Instant unit conversion', 'Simple & modern UI', 'Multi-measurement support', 'High performance']
       },
       p2: {
-        title: 'Sigma Web Project',
-        description: 'An advanced software platform providing smart digital solutions, designed for tech-focused user needs.',
-        features: ['Fully responsive design', 'Fast loading & performance', 'Enhanced user experience', 'Modern web tech']
+        title: 'Sigma Store',
+        description: 'A modern e-commerce clothing and fashion store, offering a unique shopping experience with easy ordering.',
+        features: ['Fashion & Clothing shopping', 'Fast loading & performance', 'Enhanced user experience', 'Modern web tech']
       },
       p3: {
-        title: 'Rana Verification System',
-        description: 'A specialized application for digital verification and security services, simplifying identity checks.',
-        features: ['Secure verification system', 'Data protection', 'Easy to use interface', 'Instant alerts']
+        title: 'Rana Verification',
+        description: 'A website specialized in social media account verification and digital security services.',
+        features: ['Social Media verification', 'Data protection', 'Easy to use interface', 'Instant alerts']
       },
       p4: {
         title: 'Hamza Amirni Store',
