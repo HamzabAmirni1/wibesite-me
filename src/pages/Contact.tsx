@@ -18,8 +18,37 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(t('contactPage.successMessage', language));
-    setFormData({ name: '', email: '', subject: '', priority: '', message: '' });
+    
+    if (!formData.name || !formData.email || !formData.subject || !formData.priority || !formData.message) {
+      alert(t('contactPage.requiredText', language));
+      return;
+    }
+
+    const email = "hamzaamirni451@gmail.com";
+    const subjectText = `[${formData.priority}] ${formData.subject} - From ${formData.name}`;
+    
+    // Create a clean body for the email
+    const bodyText = `
+${language === 'ar' ? 'رسالة جديدة من الموقع' : language === 'fr' ? 'Nouveau message du site' : 'New message from website'}
+----------------------------
+${language === 'ar' ? 'الاسم:' : 'Name:'} ${formData.name}
+${language === 'ar' ? 'البريد:' : 'Email:'} ${formData.email}
+${language === 'ar' ? 'الموضوع:' : 'Subject:'} ${formData.subject}
+${language === 'ar' ? 'الأهمية:' : 'Priority:'} ${formData.priority}
+----------------------------
+${language === 'ar' ? 'الرسالة:' : 'Message:'}
+${formData.message}
+    `.trim();
+
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+    
+    // Open email client
+    window.location.href = mailtoUrl;
+
+    // Optional: Reset form after a small delay
+    setTimeout(() => {
+      setFormData({ name: '', email: '', subject: '', priority: '', message: '' });
+    }, 1000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
