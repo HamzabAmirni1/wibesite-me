@@ -151,12 +151,12 @@ const SkillItem: React.FC<SkillItemProps> = ({ skill, index, active }) => {
         {/* Animated fill */}
         <motion.div
           className={`relative h-2.5 rounded-full bg-gradient-to-r ${color}`}
-          initial={{ width: 0 }}
-          animate={active ? { width: `${skill.level}%` } : { width: 0 }}
+          initial={{ width: "0%" }}
+          animate={active ? { width: `${skill.level}%` } : { width: "0%" }}
           transition={{
-            duration: 1.2,
-            delay: 0.25 + index * 0.08,
-            ease: [0.22, 1, 0.36, 1],
+            duration: 1.5,
+            delay: 0.2 + index * 0.1,
+            ease: [0.34, 1.56, 0.64, 1], // Spring-like bounce ease
           }}
         >
           {/* Glow on the fill */}
