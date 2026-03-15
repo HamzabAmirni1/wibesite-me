@@ -1626,9 +1626,9 @@ export const projectsPage = {
     },
     projects: {
       p1: {
-        title: 'أداة تحويل الوحدات (Hamza Converter)',
-        description: 'أداة ويب متكاملة لتحويل العملات والوحدات والقياسات بسهولة وسرعة، مع واجهة مستخدم بديهية.',
-        features: ['تحويل فوري للوحدات', 'واجهة بسيطة وعصرية', 'دعم مختلف أنواع القياسات', 'سرعة في الأداء']
+        title: 'أداة تحويل الملفات (Hamza Converter)',
+        description: 'أداة ويب قوية لتحويل صيغ الملفات بسهولة، مثل تحويل PDF إلى PowerPoint وغيرها من الصيغ المختلفة بسرعة ودقة.',
+        features: ['تحويل الملفات (PDF, PPT, إلخ)', 'واجهة بسيطة وعصرية', 'تحويل سريع وآمن', 'دعم مختلف الصيغ']
       },
       p2: {
         title: 'متجر سيجما (Sigma Store)',
@@ -1670,8 +1670,8 @@ export const projectsPage = {
     projects: {
       p1: {
         title: 'Hamza Converter',
-        description: 'Un outil web complet pour une conversion facile et rapide des devises et des unités avec une interface intuitive.',
-        features: ['Conversion instantanée', 'Interface moderne', 'Support multi-mesures', 'Haute performance']
+        description: 'Un outil web puissant pour convertir facilement les formats de fichiers, comme le passage de PDF à PowerPoint et d\'autres formats avec rapidité.',
+        features: ['Conversion de fichiers (PDF, PPT, etc.)', 'Interface moderne', 'Rapide et sécurisé', 'Support multi-formats']
       },
       p2: {
         title: 'Sigma Store',
@@ -1713,8 +1713,8 @@ export const projectsPage = {
     projects: {
       p1: {
         title: 'Hamza Converter',
-        description: 'A comprehensive web tool for easy and fast conversion of currencies, units, and measurements with an intuitive UI.',
-        features: ['Instant unit conversion', 'Simple & modern UI', 'Multi-measurement support', 'High performance']
+        description: 'A powerful web tool to easily convert file formats, such as converting PDF to PowerPoint and other various formats quickly and accurately.',
+        features: ['File conversion (PDF, PPT, etc.)', 'Simple & modern UI', 'Fast & secure conversion', 'Multi-format support']
       },
       p2: {
         title: 'Sigma Store',
