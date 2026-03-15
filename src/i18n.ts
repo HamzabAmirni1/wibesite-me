@@ -1637,8 +1637,8 @@ export const projectsPage = {
       },
       p3: {
         title: 'نظام رنا للتحقق (Rana Verification)',
-        description: 'موقع متخصص في توثيق حسابات التواصل الاجتماعي وتقديم خدمات الأمان الرقمي لضمان مصداقية الحسابات.',
-        features: ['توثيق حسابات السوشيال ميديا', 'حماية بيانات المستخدم', 'واجهة سهلة الاستخدام', 'تنبيهات فورية']
+        description: 'موقع متخصص في توثيق حسابات التواصل الاجتماعي وتقديم خدمات الحصول على علامة التحقق الزرقاء (Verify) لضمان مصداقية حساباتك.',
+        features: ['توثيق الحسابات بالعلامة الزرقاء', 'حماية بيانات المستخدم', 'واجهة سهلة الاستخدام', 'تنبيهات فورية']
       },
       p4: {
         title: 'متجر حمزة اعمرني',
@@ -1680,8 +1680,8 @@ export const projectsPage = {
       },
       p3: {
         title: 'Rana Verification',
-        description: 'Site spécialisé dans la certification des comptes de réseaux sociaux et les services de sécurité numérique.',
-        features: ['Vérification réseaux sociaux', 'Protection des données', 'Interface facile à utiliser', 'Alertes instantanées']
+        description: 'Site spécialisé dans la certification des comptes de réseaux sociaux et les services pour obtenir le badge de vérification bleu (Verify).',
+        features: ['Vérification (Badge bleu)', 'Protection des données', 'Interface facile à utiliser', 'Alertes instantanées']
       },
       p4: {
         title: 'Store Hamza Amirni',
@@ -1723,8 +1723,8 @@ export const projectsPage = {
       },
       p3: {
         title: 'Rana Verification',
-        description: 'A website specialized in social media account verification and digital security services.',
-        features: ['Social Media verification', 'Data protection', 'Easy to use interface', 'Instant alerts']
+        description: 'A website specialized in social media account verification and services to obtain the blue verification badge (Verify).',
+        features: ['Social Media Verification (Blue Badge)', 'Data protection', 'Easy to use interface', 'Instant alerts']
       },
       p4: {
         title: 'Hamza Amirni Store',
