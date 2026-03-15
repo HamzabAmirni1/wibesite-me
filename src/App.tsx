@@ -152,15 +152,25 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Inject Adsterra Script Globally
+  // Inject Global Ad Scripts (Adsterra & Monetag)
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://pl28923874.effectivegatecpm.com/03/da/4d/03da4d1a716e55a766e4056c58122a93.js";
-    script.async = true;
-    document.head.appendChild(script);
+    // Adsterra Global
+    const adsterraScript = document.createElement("script");
+    adsterraScript.src = "https://pl28923874.effectivegatecpm.com/03/da/4d/03da4d1a716e55a766e4056c58122a93.js";
+    adsterraScript.async = true;
+    document.head.appendChild(adsterraScript);
+
+    // Monetag (nap5k)
+    const monetagScript = document.createElement('script');
+    monetagScript.dataset.zone = '10735849';
+    monetagScript.src = 'https://nap5k.com/tag.min.js';
+    document.body.appendChild(monetagScript);
 
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(adsterraScript);
+      if (document.body.contains(monetagScript)) {
+        document.body.removeChild(monetagScript);
+      }
     };
   }, []);
 
