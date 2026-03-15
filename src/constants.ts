@@ -47,13 +47,13 @@ export const navLinks = [
   { id: "home", title: "الصفحة الرئيسية", icon: Home },
   { id: "services", title: "خدماتنا", icon: Briefcase },
   { id: "projects", title: "مشاريعي", icon: FolderGit },
-  { id: "about", title: "عني", icon: User },
-  { id: "gaza", title: "المقالات", icon: Newspaper },
+  { id: "bots", title: "البوتات", icon: Bot },
   { id: "apps", title: "التطبيقات", icon: AppWindow },
+  { id: "about", title: "عني", icon: User },
   { id: "chat", title: "تحدث معي", icon: MessageSquare },
   { id: "programming", title: "البرمجة", icon: Code },
   { id: "videos", title: "الفيديوهات", icon: Youtube },
-  { id: "bots", title: "البوتات", icon: Bot },
+  { id: "gaza", title: "المقالات", icon: Newspaper },
   { id: "tools", title: "أدوات مفيدة", icon: Wrench },
 ];
 
