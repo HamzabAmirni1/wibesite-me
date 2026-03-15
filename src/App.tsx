@@ -152,6 +152,18 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Inject Adsterra Script Globally
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://pl28923874.effectivegatecpm.com/03/da/4d/03da4d1a716e55a766e4056c58122a93.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   // Sync section with URL hash for browser back/forward buttons
   useEffect(() => {
     const handleHashChange = () => {
