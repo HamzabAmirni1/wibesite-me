@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'مبدع رقمي ومهندس حلول برمجية',
-    fr: 'Créateur Digital & Ingénieur de Solutions Logicielles',
-    en: 'Digital Artisan & Software Solutions Engineer',
+    ar: 'مبدع رقمي ومطور حلول برمجية',
+    fr: 'Créateur Digital & Développeur de Solutions Logicielles',
+    en: 'Digital Artisan & Software Solutions Developer',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
