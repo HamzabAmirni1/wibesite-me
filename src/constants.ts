@@ -166,7 +166,7 @@ export const myApps = [
 export const whatsappChannels = [
   {
     name: "تواصل معي مباشرة",
-    url: "https://api.whatsapp.com/send/?phone=212708869993&text&type=phone_number&app_absent=0",
+    url: "https://api.whatsapp.com/send/?phone=212624855939&text&type=phone_number&app_absent=0",
     IconComponent: SiWhatsapp,
     translationKey: "directContact",
   },
