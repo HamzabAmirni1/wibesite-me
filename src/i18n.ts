@@ -1632,8 +1632,8 @@ export const projectsPage = {
       },
       p2: {
         title: 'متجر سيجما (Sigma Store)',
-        description: 'متجر إلكتروني عصري لبيع الملابس والأزياء، يوفر تجربة تسوق فريدة مع عرض مميز للمنتجات وسهولة في الطلب.',
-        features: ['تسوق ملابس وأزياء', 'أداء عالي وتحميل سريع', 'تجربة مستخدم محسنة', 'تقنيات ويب حديثة']
+        description: 'متجر إلكتروني عصري متخصص في بيع الملابس الرجالية والأزياء، يوفر تشكيلة واسعة من الملابس الرجالية بجودة عالية وتجربة تسوق سهلة.',
+        features: ['تسوق ملابس رجالية', 'أداء عالي وتحميل سريع', 'تجربة مستخدم محسنة', 'تقنيات ويب حديثة']
       },
       p3: {
         title: 'نظام رنا للتحقق (Rana Verification)',
@@ -1675,8 +1675,8 @@ export const projectsPage = {
       },
       p2: {
         title: 'Sigma Store',
-        description: 'Une boutique en ligne moderne de vêtements et de mode, offrant une expérience de shopping unique et intuitive.',
-        features: ['Shopping mode & vêtements', 'Performance rapide', 'Expérience utilisateur améliorée', 'Technologies modernes']
+        description: 'Une boutique en ligne moderne spécialisée dans les vêtements pour hommes et la mode masculine, offrant une large gamme de produits de qualité.',
+        features: ['Vêtements pour hommes', 'Performance rapide', 'Expérience utilisateur améliorée', 'Technologies modernes']
       },
       p3: {
         title: 'Rana Verification',
@@ -1718,8 +1718,8 @@ export const projectsPage = {
       },
       p2: {
         title: 'Sigma Store',
-        description: 'A modern e-commerce clothing and fashion store, offering a unique shopping experience with easy ordering.',
-        features: ['Fashion & Clothing shopping', 'Fast loading & performance', 'Enhanced user experience', 'Modern web tech']
+        description: 'A modern e-commerce store specialized in men\'s clothing and masculine fashion, offering a wide range of quality products and easy shopping.',
+        features: ['Men\'s fashion shopping', 'Fast loading & performance', 'Enhanced user experience', 'Modern web tech']
       },
       p3: {
         title: 'Rana Verification',

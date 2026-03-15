@@ -47,8 +47,8 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p2.title', language),
       category: t('projectsPage.categories.ecommerce', language),
       description: t('projectsPage.projects.p2.description', language),
-      image: '/images/projects/sigma.png',
-      technologies: ['React', 'Fashion Store', 'Clothing'],
+      image: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?q=80&w=800&auto=format&fit=crop',
+      technologies: ['React', 'Men\'s Fashion', 'Clothing'],
       features: t('projectsPage.projects.p2.features', language),
       liveUrl: 'https://sigma0001.netlify.app/',
       color: 'from-pink-500 to-rose-500'
