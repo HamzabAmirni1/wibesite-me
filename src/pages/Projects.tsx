@@ -36,11 +36,10 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p1.title', language),
       category: t('projectsPage.categories.app', language),
       description: t('projectsPage.projects.p1.description', language),
-      image: 'https://images.unsplash.com/photo-1614036417651-efe591214972?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1568043210943-0e8aac4b9734?q=80&w=800&auto=format&fit=crop',
       technologies: ['React', 'File Converter', 'PDF to PPT'],
       features: t('projectsPage.projects.p1.features', language),
       liveUrl: 'https://hamzaconverter.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
       color: 'from-blue-500 to-indigo-500'
     },
     {
@@ -48,11 +47,10 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p2.title', language),
       category: t('projectsPage.categories.ecommerce', language),
       description: t('projectsPage.projects.p2.description', language),
-      image: 'https://images.unsplash.com/photo-1441984519613-245a047fa40d?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1441984519613-245a047fa40d?q=80&w=800&auto=format&fit=crop',
       technologies: ['React', 'Fashion Store', 'Clothing'],
       features: t('projectsPage.projects.p2.features', language),
       liveUrl: 'https://sigma0001.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
       color: 'from-pink-500 to-rose-500'
     },
     {
@@ -60,11 +58,10 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p3.title', language),
       category: t('projectsPage.categories.web', language),
       description: t('projectsPage.projects.p3.description', language),
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop',
       technologies: ['Social Media', 'Verification', 'Security'],
       features: t('projectsPage.projects.p3.features', language),
       liveUrl: 'https://rana-verification.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
       color: 'from-blue-600 to-cyan-500'
     },
     {
@@ -72,11 +69,10 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p4.title', language),
       category: t('projectsPage.categories.ecommerce', language),
       description: t('projectsPage.projects.p4.description', language),
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
       technologies: ['React', 'Digital Store', 'Netlify'],
       features: t('projectsPage.projects.p4.features', language),
       liveUrl: 'https://storehamzaamirni.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
       color: 'from-orange-400 to-red-500'
     },
     {
@@ -84,11 +80,10 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p5.title', language),
       category: t('projectsPage.categories.app', language),
       description: t('projectsPage.projects.p5.description', language),
-      image: 'https://images.unsplash.com/photo-1554224155-16974a4275c9?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1554224155-810e0996c2e4?q=80&w=800&auto=format&fit=crop',
       technologies: ['JavaScript', 'Financial Tools', 'Netlify'],
       features: t('projectsPage.projects.p5.features', language),
       liveUrl: 'https://hsabi.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
       color: 'from-green-400 to-blue-500'
     },
     {
@@ -96,11 +91,10 @@ const Projects: React.FC = () => {
       title: t('projectsPage.projects.p6.title', language),
       category: t('projectsPage.categories.app', language),
       description: t('projectsPage.projects.p6.description', language),
-      image: 'https://images.unsplash.com/photo-1584281729155-3c9933072618?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1597933534024-1736d5d60da1?q=80&w=800&auto=format&fit=crop',
       technologies: ['React', 'Islamic App', 'Quran'],
       features: t('projectsPage.projects.p6.features', language),
       liveUrl: 'https://qurankarimapp.netlify.app/',
-      githubUrl: 'https://github.com/HamzabAmirni1',
       color: 'from-emerald-500 to-teal-600'
     }
   ];
@@ -179,16 +173,12 @@ const Projects: React.FC = () => {
                 <div className="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
                   <a
                     href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 py-2 rounded-lg bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <ExternalLink className="w-4 h-4" />
                     {t('projectsPage.preview', language)}
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="py-2 px-4 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <Github className="w-4 h-4" />
                   </a>
                 </div>
               </div>
