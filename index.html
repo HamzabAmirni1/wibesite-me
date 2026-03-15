@@ -142,6 +142,13 @@
       function showInstallBanner() {
         if (document.getElementById('pwa-install-banner')) return;
 
+        const lang = document.documentElement.lang || 'ar';
+        const content = {
+          ar: { title: 'تثبيت التطبيق', desc: 'ثبته في هاتفك لسهولة الوصول', btn: 'تثبيت' },
+          fr: { title: 'Installer l\'appli', desc: 'Installez-la pour un accès rapide', btn: 'Installer' },
+          en: { title: 'Install App', desc: 'Install on your phone for easy access', btn: 'Install' }
+        }[lang] || content.en;
+
         const banner = document.createElement('div');
         banner.id = 'pwa-install-banner';
         banner.style.cssText = `
@@ -165,11 +172,11 @@
         `;
 
         banner.innerHTML = `
-          <div style="flex-grow: 1">
-            <div style="font-weight: bold; font-size: 14px">تثبيت التطبيق | Install App</div>
-            <div style="font-size: 12px; opacity: 0.9">ثبته في هاتفك لسهولة الوصول</div>
+          <div style="flex-grow: 1; text-align: ${lang === 'ar' ? 'right' : 'left'}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}">
+            <div style="font-weight: bold; font-size: 14px">${content.title}</div>
+            <div style="font-size: 12px; opacity: 0.9">${content.desc}</div>
           </div>
-          <button id="pwa-install-btn" style="background: white; color: #4f46e5; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px">تثبيت</button>
+          <button id="pwa-install-btn" style="background: white; color: #4f46e5; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 13px">${content.btn}</button>
           <button id="pwa-close-btn" style="background: transparent; color: white; border: none; font-size: 20px; cursor: pointer; padding: 0 5px">&times;</button>
         `;
 

@@ -751,14 +751,6 @@ const Home: React.FC = () => {
         <CallToAction />
       </AnimatedSection>
 
-      {/* ── Bottom Ad ── */}
-      <AnimatedSection delay={0.05}>
-        <AdsterraAd 
-          adId="a96b7e218b00a3ca41f2b09671463d09" 
-          adUrl="https://pl28923812.effectivegatecpm.com/a96b7e218b00a3ca41f2b09671463d09/invoke.js" 
-        />
-      </AnimatedSection>
-
       {/* ── WhatsApp Links ── */}
       <AnimatedSection delay={0.05}>
         <WhatsappChannelLinks />
