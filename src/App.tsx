@@ -152,25 +152,30 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Inject Global Ad Scripts (Adsterra & Monetag)
+  // Inject Global Ad Scripts (Adsterra & Monetag Specific Non-Intrusive)
   useEffect(() => {
-    // Adsterra Global
+    // 1. Adsterra Global (Native Support)
     const adsterraScript = document.createElement("script");
     adsterraScript.src = "https://pl28923874.effectivegatecpm.com/03/da/4d/03da4d1a716e55a766e4056c58122a93.js";
     adsterraScript.async = true;
     document.head.appendChild(adsterraScript);
 
-    // Monetag (nap5k)
-    const monetagScript = document.createElement('script');
-    monetagScript.dataset.zone = '10735849';
-    monetagScript.src = 'https://nap5k.com/tag.min.js';
-    document.body.appendChild(monetagScript);
+    // 2. Monetag - In-Page Push (Clean Zone)
+    const monetagInPagePush = document.createElement('script');
+    monetagInPagePush.dataset.zone = '10735871';
+    monetagInPagePush.src = 'https://nap5k.com/tag.min.js';
+    document.body.appendChild(monetagInPagePush);
+
+    // 3. Monetag - Vignette Banner (Safe Display)
+    const monetagVignette = document.createElement('script');
+    monetagVignette.dataset.zone = '10735874';
+    monetagVignette.src = 'https://gizokraijaw.net/vignette.min.js';
+    document.body.appendChild(monetagVignette);
 
     return () => {
       document.head.removeChild(adsterraScript);
-      if (document.body.contains(monetagScript)) {
-        document.body.removeChild(monetagScript);
-      }
+      if (document.body.contains(monetagInPagePush)) document.body.removeChild(monetagInPagePush);
+      if (document.body.contains(monetagVignette)) document.body.removeChild(monetagVignette);
     };
   }, []);
 
