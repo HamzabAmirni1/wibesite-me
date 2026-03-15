@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Card from '../components/Card';
 import {
   Newspaper, Calendar, User, ArrowRight,
-  BookOpen, TrendingUp, X, Tag, Search, Filter
+  BookOpen, TrendingUp, Tag, Search, Filter
 } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -299,121 +299,146 @@ const FeaturedArticle: React.FC<{ article: any; onClick: () => void }> = ({ arti
   );
 };
 
-/* ─── Article Modal ─────────────────────────────────────────────────────────── */
-const ArticleModal: React.FC<{ article: any; onClose: () => void }> = ({ article, onClose }) => {
+/* ─── Article Detail View ─────────────────────────────────────────────────── */
+const ArticleView: React.FC<{ article: any; onBack: () => void }> = ({ article, onBack }) => {
   const { language } = useLanguage();
   const formatDate = useFormatDate(language);
 
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/65 backdrop-blur-sm z-[100]
-                 flex items-center justify-center p-3 sm:p-5"
-      onClick={onClose}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      className="space-y-8"
     >
-      <motion.div
-        initial={{ scale: 0.9, y: 24, opacity: 0 }}
-        animate={{ scale: 1, y: 0, opacity: 1 }}
-        exit={{ scale: 0.9, y: 24, opacity: 0 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-        className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-3xl
-                   max-h-[92vh] overflow-hidden shadow-2xl flex flex-col"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Hero image */}
-        <div className="relative flex-shrink-0 overflow-hidden" style={{ height: '200px' }}>
-          {article.color && (
-            <div className={`absolute inset-0 bg-gradient-to-t ${article.color} opacity-50 mix-blend-multiply z-10`} />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+      {/* Navigation Header */}
+      <div className="flex items-center justify-between mb-2">
+        <motion.button
+          onClick={onBack}
+          className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-all font-black group"
+          whileHover={{ x: language === 'ar' ? 5 : -5 }}
+        >
+          <div className="w-12 h-12 rounded-2xl bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center group-hover:shadow-primary/20 group-hover:scale-110 transition-all border border-gray-100 dark:border-white/5">
+             <ArrowRight className={cn("w-6 h-6", language !== 'ar' ? "rotate-180" : "")} />
+          </div>
+          <span className="text-sm uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            {language === 'ar' ? 'العودة للمقالات' : language === 'fr' ? 'Retour aux articles' : 'Back to Articles'}
+          </span>
+        </motion.button>
+      </div>
+
+      <Card className="overflow-hidden border-2 border-primary/10 dark:border-white/5 shadow-2xl bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl">
+        {/* Banner Image */}
+        <div className="relative h-[280px] sm:h-[450px] group overflow-hidden">
           <img
             src={article.image}
             alt={article.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-1000"
           />
-
-          {/* Close button */}
-          <motion.button
-            onClick={onClose}
-            className="absolute top-3 left-3 z-20 bg-white/90 dark:bg-gray-800/90
-                       hover:bg-white dark:hover:bg-gray-800 p-2 rounded-full
-                       transition-colors duration-200 shadow-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.92 }}
-          >
-            <X className="w-5 h-5 text-gray-700 dark:text-gray-200" />
-          </motion.button>
-
-          {/* Category */}
-          <div className="absolute bottom-3 right-3 z-20">
-            <span className="bg-white/92 dark:bg-gray-800/90 backdrop-blur-sm
-                             text-primary dark:text-blue-300 text-xs font-bold
-                             px-3 py-1.5 rounded-full shadow-md">
-              {article.category}
-            </span>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+          
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-12 space-y-4">
+             <motion.span 
+               initial={{ opacity: 0, y: 10 }}
+               animate={{ opacity: 1, y: 0 }}
+               className="px-4 py-1.5 bg-primary/90 text-white text-[10px] font-black rounded-full uppercase tracking-tighter inline-block backdrop-blur-md shadow-lg"
+             >
+                {article.category}
+             </motion.span>
+             <motion.h1 
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.1 }}
+               className="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tight"
+             >
+                {article.title}
+             </motion.h1>
           </div>
         </div>
 
-        {/* Scrollable content */}
-        <div className="overflow-y-auto flex-1 p-5 sm:p-8 custom-scrollbar">
-          {/* Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800
-                         dark:text-white mb-4 leading-snug">
-            {article.title}
-          </h1>
-
-          {/* Meta */}
-          <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500
-                          dark:text-gray-400 mb-5 pb-5 border-b border-gray-100 dark:border-gray-700">
-            {article.author && (
-              <div className="flex items-center gap-1.5">
-                <User className="w-4 h-4" />
-                <span>{article.author}</span>
+        <div className="p-6 sm:p-12 space-y-10">
+           {/* Meta Info Bar */}
+           <div className="flex flex-wrap items-center gap-8 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-100 dark:border-white/5 pb-8">
+              <div className="flex items-center gap-3">
+                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <User className="w-5 h-5" />
+                 </div>
+                 <div className="flex flex-col">
+                    <span className="text-[10px] uppercase tracking-widest font-black text-gray-400">Author</span>
+                    <span className="font-bold text-gray-900 dark:text-white">{article.author || 'حمزة اعمرني'}</span>
+                 </div>
               </div>
-            )}
-            <div className="flex items-center gap-1.5">
-              <Calendar className="w-4 h-4" />
-              <span>{formatDate(article.date)}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <BookOpen className="w-4 h-4" />
-              <span>{article.readTime || '5 دقائق'}</span>
-            </div>
-          </div>
+              <div className="flex items-center gap-3">
+                 <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                    <Calendar className="w-5 h-5" />
+                 </div>
+                 <div className="flex flex-col">
+                    <span className="text-[10px] uppercase tracking-widest font-black text-gray-400">Published</span>
+                    <span className="font-bold text-gray-900 dark:text-white">{formatDate(article.date)}</span>
+                 </div>
+              </div>
+              <div className="flex items-center gap-3">
+                 <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500">
+                    <BookOpen className="w-5 h-5" />
+                 </div>
+                 <div className="flex flex-col">
+                    <span className="text-[10px] uppercase tracking-widest font-black text-gray-400">Reading Time</span>
+                    <span className="font-bold text-gray-900 dark:text-white">{article.readTime || '10 min'}</span>
+                 </div>
+              </div>
+           </div>
 
-          {/* Share */}
-          <div className="mb-5 pb-5 border-b border-gray-100 dark:border-gray-700">
-            <ShareButtons title={article.title} />
-          </div>
+           {/* Content Body */}
+           <div 
+             className="prose prose-lg sm:prose-xl max-w-none dark:prose-invert
+                        prose-headings:font-black prose-headings:text-gray-900 dark:prose-headings:text-white
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+                        prose-strong:text-primary dark:prose-strong:text-blue-400
+                        prose-img:rounded-3xl prose-img:shadow-2xl prose-img:border-4 prose-img:border-white dark:prose-img:border-gray-800
+                        prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:p-6 prose-blockquote:rounded-r-2xl prose-blockquote:italic"
+             dangerouslySetInnerHTML={{ __html: article.content }} 
+           />
 
-          {/* Body */}
-          <div className="prose prose-sm sm:prose-base max-w-none dark:prose-invert
-                          prose-headings:text-gray-800 dark:prose-headings:text-white
-                          prose-p:text-gray-600 dark:prose-p:text-gray-300
-                          prose-a:text-primary hover:prose-a:text-secondary
-                          prose-strong:text-gray-900 dark:prose-strong:text-white
-                          prose-ul:list-disc prose-ul:pl-5
-                          prose-ol:list-decimal prose-ol:pl-5
-                          prose-pre:overflow-x-auto prose-pre:rounded-xl">
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
-          </div>
-
-          {/* Close footer */}
-          <div className="mt-8 pt-5 border-t border-gray-100 dark:border-gray-700">
-            <button
-              onClick={onClose}
-              className="w-full px-6 py-3 bg-gray-100 dark:bg-gray-800
-                         text-gray-700 dark:text-gray-300
-                         hover:bg-gray-200 dark:hover:bg-gray-700
-                         rounded-xl font-semibold transition-all duration-200"
-            >
-              {language === 'ar' ? 'إغلاق' : language === 'fr' ? 'Fermer' : 'Close'}
-            </button>
-          </div>
+           {/* Premium Share Section */}
+           <div className="pt-12 border-t border-gray-100 dark:border-white/5">
+              <Card className="bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 border-none p-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                   <div className="text-center md:text-left">
+                      <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
+                         {language === 'ar' ? 'هل وجدت هذا المقال مفيداً؟' : 'Found this article useful?'}
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400 font-medium">
+                         {language === 'ar' ? 'ساهم في نشر المعرفة وشارك المقال مع أصدقائك' : 'Spread the word and share this content with your network.'}
+                      </p>
+                   </div>
+                   <div className="shrink-0 bg-white dark:bg-gray-800 p-2 rounded-2xl shadow-xl">
+                      <ShareButtons title={article.title} />
+                   </div>
+                </div>
+              </Card>
+           </div>
         </div>
-      </motion.div>
+      </Card>
+
+      {/* Recommended CTA */}
+      <CallToAction />
+      
+      {/* Bottom Back Button */}
+      <div className="flex justify-center pt-8">
+        <motion.button
+          onClick={onBack}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-10 py-4 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-2xl font-black shadow-lg hover:shadow-xl transition-all flex items-center gap-3 border border-gray-200 dark:border-white/5"
+        >
+          <ArrowRight className={cn("w-5 h-5", language !== 'ar' ? "rotate-180" : "")} />
+          {language === 'ar' ? 'إغلاق والعودة' : 'Close and Return'}
+        </motion.button>
+      </div>
     </motion.div>
   );
 };
@@ -535,169 +560,172 @@ const Articles: React.FC = () => {
   const restArticles = filteredArticles.slice(1);
 
   return (
-    <>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="space-y-10 pb-12"
-      >
-        {/* ── Hero ── */}
-        <motion.div variants={itemVariants}>
-          <Card className="text-center bg-gradient-to-br from-primary/5 via-white/50 to-secondary/5
-                           dark:from-primary/10 dark:via-gray-800/60 dark:to-secondary/10
-                           border-2 border-primary/10 dark:border-primary/20 overflow-hidden relative">
-            <motion.div
-              className="absolute -top-16 -right-16 w-60 h-60 rounded-full bg-primary/10 blur-3xl pointer-events-none"
-              animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }}
-              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-            />
-            <motion.div
-              className="absolute -bottom-16 -left-16 w-60 h-60 rounded-full bg-secondary/10 blur-3xl pointer-events-none"
-              animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.6, 0.3] }}
-              transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-            />
-            <div className="relative z-10 space-y-4 py-2">
+    <AnimatePresence mode="wait">
+      {selectedArticle ? (
+        <ArticleView 
+          key="article-view" 
+          article={selectedArticle} 
+          onBack={closeArticle} 
+        />
+      ) : (
+        <motion.div
+          key="articles-list"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit={{ opacity: 0, x: -20, transition: { duration: 0.2 } }}
+          className="space-y-10 pb-12"
+        >
+          {/* ── Hero ── */}
+          <motion.div variants={itemVariants}>
+            <Card className="text-center bg-gradient-to-br from-primary/5 via-white/50 to-secondary/5
+                             dark:from-primary/10 dark:via-gray-800/60 dark:to-secondary/10
+                             border-2 border-primary/10 dark:border-primary/20 overflow-hidden relative">
               <motion.div
-                className="inline-block p-4 bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-xl shadow-primary/30"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', repeatDelay: 2 }}
-              >
-                <Newspaper className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
-              </motion.div>
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-black bg-clip-text text-transparent
-                             bg-gradient-to-r from-primary to-secondary leading-tight">
-                {t('articlesPageFull.hero.title', language) || 'المقالات'}
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-dark-color/70 dark:text-gray-300
-                            max-w-2xl mx-auto leading-relaxed">
-                {t('articlesPageFull.hero.description', language) || 'مقالات تقنية وبرمجية مفيدة'}
-              </p>
+                className="absolute -top-16 -right-16 w-60 h-60 rounded-full bg-primary/10 blur-3xl pointer-events-none"
+                animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+              />
+              <motion.div
+                className="absolute -bottom-16 -left-16 w-60 h-60 rounded-full bg-secondary/10 blur-3xl pointer-events-none"
+                animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+              />
+              <div className="relative z-10 space-y-4 py-2">
+                <motion.div
+                  className="inline-block p-4 bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-xl shadow-primary/30"
+                  animate={{ rotate: [0, 5, -5, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', repeatDelay: 2 }}
+                >
+                  <Newspaper className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                </motion.div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black bg-clip-text text-transparent
+                               bg-gradient-to-r from-primary to-secondary leading-tight">
+                  {t('articlesPageFull.hero.title', language) || 'المقالات'}
+                </h1>
+                <p className="text-sm sm:text-base md:text-lg text-dark-color/70 dark:text-gray-300
+                              max-w-2xl mx-auto leading-relaxed">
+                  {t('articlesPageFull.hero.description', language) || 'مقالات تقنية وبرمجية مفيدة'}
+                </p>
+              </div>
+            </Card>
+          </motion.div>
+
+          {/* ── Stats ── */}
+          <motion.div variants={itemVariants}>
+            <div className="grid grid-cols-3 gap-3 sm:gap-6">
+              {stats.map((s, i) => (
+                <StatCard key={s.labelKey} {...s} delay={i * 0.1} />
+              ))}
             </div>
-          </Card>
-        </motion.div>
+          </motion.div>
 
-        {/* ── Stats ── */}
-        <motion.div variants={itemVariants}>
-          <div className="grid grid-cols-3 gap-3 sm:gap-6">
-            {stats.map((s, i) => (
-              <StatCard key={s.labelKey} {...s} delay={i * 0.1} />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* ── Search + Filter ── */}
-        <motion.div variants={itemVariants} className="space-y-4">
-          {/* Search input */}
-          <div className="relative">
-            <Search
-              className="absolute top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
-              style={{ [language === 'ar' ? 'right' : 'left']: '14px' }}
-            />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={
-                (t('articlesPageFull.search.placeholder', language) as string) || 'ابحث عن مقال...'
-              }
-              className={cn(
-                'w-full py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700',
-                'rounded-xl text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400',
-                'focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50',
-                'transition-all duration-200',
-                language === 'ar' ? 'pr-10 pl-4 text-right' : 'pl-10 pr-4',
-              )}
-              dir={language === 'ar' ? 'rtl' : 'ltr'}
-            />
-          </div>
-
-          {/* Category filter pills */}
-          <div className="flex flex-wrap gap-2">
-            <motion.button
-              key="all"
-              onClick={() => setSelectedCategory(allLabel)}
-              className={cn(
-                'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200',
-                selectedCategory === allLabel
-                  ? 'bg-primary text-white shadow-md shadow-primary/30'
-                  : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600',
-              )}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Filter className="w-3 h-3" />
-              {allLabel}
-            </motion.button>
-            {categories.map((cat) => (
-              <motion.button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
+          {/* ── Search + Filter ── */}
+          <motion.div variants={itemVariants} className="space-y-4">
+            {/* Search input */}
+            <div className="relative">
+              <Search
+                className="absolute top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                style={{ [language === 'ar' ? 'right' : 'left']: '14px' }}
+              />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder={
+                  (t('articlesPageFull.search.placeholder', language) as string) || 'ابحث عن مقال...'
+                }
                 className={cn(
-                  'px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200',
-                  selectedCategory === cat
+                  'w-full py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700',
+                  'rounded-xl text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400',
+                  'focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/50',
+                  'transition-all duration-200',
+                  language === 'ar' ? 'pr-10 pl-4 text-right' : 'pl-10 pr-4',
+                )}
+                dir={language === 'ar' ? 'rtl' : 'ltr'}
+              />
+            </div>
+
+            {/* Category filter pills */}
+            <div className="flex flex-wrap gap-2">
+              <motion.button
+                key="all"
+                onClick={() => setSelectedCategory(allLabel)}
+                className={cn(
+                  'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200',
+                  selectedCategory === allLabel
                     ? 'bg-primary text-white shadow-md shadow-primary/30'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600',
                 )}
                 whileTap={{ scale: 0.95 }}
               >
-                {cat}
+                <Filter className="w-3 h-3" />
+                {allLabel}
               </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* ── Featured Article ── */}
-        {featuredArticle && (
-          <motion.div variants={itemVariants}>
-            <FeaturedArticle article={featuredArticle} onClick={() => openArticle(featuredArticle)} />
-          </motion.div>
-        )}
-
-        {/* ── Articles Grid ── */}
-        {restArticles.length > 0 && (
-          <motion.div variants={itemVariants}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-              {restArticles.map((article: any, i: number) => (
-                <ArticleCard
-                  key={article.id}
-                  article={article}
-                  index={i}
-                  onClick={() => openArticle(article)}
-                />
+              {categories.map((cat) => (
+                <motion.button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={cn(
+                    'px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200',
+                    selectedCategory === cat
+                      ? 'bg-primary text-white shadow-md shadow-primary/30'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600',
+                  )}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {cat}
+                </motion.button>
               ))}
             </div>
           </motion.div>
-        )}
 
-        {/* ── Empty state ── */}
-        {filteredArticles.length === 0 && (
-          <motion.div
-            variants={itemVariants}
-            className="text-center py-16 text-gray-500 dark:text-gray-400"
-          >
-            <Search className="w-12 h-12 mx-auto mb-4 opacity-30" />
-            <p className="text-lg font-semibold">
-              {t('articlesPageFull.search.noResults', language) || 'لم يتم العثور على مقالات'}
-            </p>
+          {/* ── Featured Article ── */}
+          {featuredArticle && (
+            <motion.div variants={itemVariants}>
+              <FeaturedArticle article={featuredArticle} onClick={() => openArticle(featuredArticle)} />
+            </motion.div>
+          )}
+
+          {/* ── Articles Grid ── */}
+          {restArticles.length > 0 && (
+            <motion.div variants={itemVariants}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                {restArticles.map((article: any, i: number) => (
+                  <ArticleCard
+                    key={article.id}
+                    article={article}
+                    index={i}
+                    onClick={() => openArticle(article)}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* ── Empty state ── */}
+          {filteredArticles.length === 0 && (
+            <motion.div
+              variants={itemVariants}
+              className="text-center py-16 text-gray-500 dark:text-gray-400"
+            >
+              <Search className="w-12 h-12 mx-auto mb-4 opacity-30" />
+              <p className="text-lg font-semibold">
+                {t('articlesPageFull.search.noResults', language) || 'لم يتم العثور على مقالات'}
+              </p>
+            </motion.div>
+          )}
+
+          {/* ── WhatsApp & CTA ── */}
+          <motion.div variants={itemVariants}>
+            <WhatsappChannelLinks />
           </motion.div>
-        )}
-
-        {/* ── WhatsApp & CTA ── */}
-        <motion.div variants={itemVariants}>
-          <WhatsappChannelLinks />
+          <motion.div variants={itemVariants}>
+            <CallToAction />
+          </motion.div>
         </motion.div>
-        <motion.div variants={itemVariants}>
-          <CallToAction />
-        </motion.div>
-      </motion.div>
-
-      {/* ── Article Modal ── */}
-      <AnimatePresence>
-        {selectedArticle && (
-          <ArticleModal article={selectedArticle} onClose={closeArticle} />
-        )}
-      </AnimatePresence>
-    </>
+      )}
+    </AnimatePresence>
   );
 };
 

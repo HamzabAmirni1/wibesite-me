@@ -426,9 +426,9 @@ export const aboutPage = {
     en: 'Hamza Amirni',
   },
   role: {
-    ar: 'مطور روبوتات وخبير ويب',
-    fr: 'Développeur de Bots et Expert Web',
-    en: 'Freelance Bot Developer & Web Expert',
+    ar: 'مبدع رقمي ومهندس حلول برمجية',
+    fr: 'Créateur Digital & Ingénieur de Solutions Logicielles',
+    en: 'Digital Artisan & Software Solutions Engineer',
   },
   welcome: {
     ar: 'مرحباً، أنا ',
@@ -448,25 +448,25 @@ export const aboutPage = {
   story: {
     title: { ar: 'قصتي ورؤيتي', fr: 'Mon Histoire & Ma Vision', en: 'My Story & Vision' },
     p1: {
-      ar: 'بدأت رحلتي في عالم البرمجة بشغف بسيط لمعرفة كيف تعمل الأشياء خلف الكواليس. تطور هذا الشغف ليصبح مسيرة مهنية ممتعة مليئة بالتحديات والإنجازات.',
-      fr: 'Mon voyage dans le monde de la programmation a commencé par une simple passion pour comprendre comment les choses fonctionnent dans les coulisses. Cette passion s\'est transformée en une carrière agréable, pleine de défis et de réussites.',
-      en: 'My journey into the world of programming started with a simple passion for knowing how things work behind the scenes. This passion evolved into an enjoyable career full of challenges and achievements.',
+      ar: 'بدأت رحلتي في عالم الأكواد بشغف عميق لتحويل الأفكار المعقدة إلى واقع رقمي بسيط وفعال. ما بدأ كاستطلاع في كيفية عمل الويب أصبح اليوم التزاماً مهنياً ببناء تجارب مستخدم استثنائية.',
+      fr: 'Mon voyage dans le code a commencé par un désir profond de transformer des idées complexes en réalités numériques simples et efficaces. Ce qui a débuté comme une curiosité est devenu un engagement professionnel à créer des expériences utilisateur exceptionnelles.',
+      en: 'My journey into code began with a deep passion for transforming complex ideas into simple, efficient digital realities. What started as curiosity about how the web works has evolved into a professional commitment to building exceptional user experiences.',
     },
     p2: {
-      ar: 'أؤمن بأن التكنولوجيا هي أداة قوية لتحسين حياة الناس وحل المشكلات المعقدة. لذلك، أسعى دائماً لتعلم كل ما هو جديد ومشاركة معرفتي مع الآخرين من خلال صناعة المحتوى التقني.',
-      fr: 'Je crois que la technologie est un outil puissant pour améliorer la vie des gens et résoudre des problèmes complexes. C\'est pourquoi je cherche toujours à apprendre tout ce qui est nouveau et à partager mes connaissances avec les autres à travers la création de contenu technique.',
-      en: 'I believe that technology is a powerful tool for improving people\'s lives and solving complex problems. Therefore, I always strive to learn everything new and share my knowledge with others through technical content creation.',
+      ar: 'أنا لا أقوم فقط بكتابة الكود؛ بل أهتم بهندسة الأداء وتصميم الحلول التي تدوم. من تطوير بوتات الدردشة الذكية إلى بناء منصات التجارة الإلكترونية السريعة، أركز دائماً على القيمة المضافة التي يحصل عليها العميل والزائر.',
+      fr: 'Je ne me contente pas d\'écrire du code ; je conçois des solutions performantes et durables. De la création de bots intelligents au développement de plateformes e-commerce rapides, je me concentre toujours sur la valeur ajoutée pour l\'utilisateur final.',
+      en: 'I don\'t just write code; I engineer performance and design solutions that last. From developing intelligent chatbots to building high-speed e-commerce platforms, my focus is always on the added value for the user.',
     },
     p3: {
-      ar: 'رؤيتي هي بناء مجتمع تقني عربي قوي ومبدع، والمساهمة في تطوير مشاريع تترك أثراً إيجابياً في العالم.',
-      fr: 'Ma vision est de construire une communauté technique arabe forte et créative, et de contribuer au développement de projets qui laissent un impact positif dans le monde.',
-      en: 'My vision is to build a strong and creative Arabic technical community, and to contribute to the development of projects that leave a positive impact on the world.',
+      ar: 'هدفي هو دفع حدود الممكن في الويب المغربي والعالمي، ومشاركة هذه الرحلة مع مجتمعي التقني لتبادل المعرفة والابتكار معاً.',
+      fr: 'Mon objectif est de repousser les limites du possible sur le web, en partageant ce parcours avec ma communauté technique pour innover ensemble.',
+      en: 'My goal is to push the boundaries of what\'s possible on the web, sharing this journey with my technical community to innovate and grow together.',
     },
   },
   description: {
-    ar: 'أهلاً وسهلاً! أنا حمزة اعمرني، مطور ويب متخصص أمتلك خبرة واسعة في البرمجيات والتقنيات. أعمل في تطوير الويب والتطبيقات والبرمجيات الحديثة. أحب التعلم المستمر وتطوير المهارات في البرمجة والتصميم والتكنولوجيا. إذا كان لديك أي استفسار أو رغبة في التعاون، فلا تتردد في التواصل. 🔥',
-    fr: 'Bonjour et bienvenue ! Je suis Hamza Amirni, développeur web spécialisé avec une solide expérience dans les logiciels et les technologies. Je travaille sur le développement web, les applications et les technologies modernes. J’apprécie l’apprentissage continu et le développement de compétences en programmation, design et technologie. Si vous avez des questions ou souhaitez collaborer, contactez‑moi. 🔥',
-    en: 'Hello and welcome! I’m Hamza Amirni, a professional web developer with extensive experience in software and modern technologies. I work on web development, applications and modern tech. I enjoy continuous learning and improving skills in programming, design and technology. If you have any questions or would like to collaborate, feel free to get in touch. 🔥',
+    ar: 'مرحباً بك! أنا حمزة اعمرني، مبرمج شغوف ببناء حلول رقمية مبتكرة وعالية الأداء. أتخصص في تطوير واجهات الويب العصرية، بناء البوتات الذكية، وتحسين تجربة المستخدم لتكون أكثر سلاسة وجذباً. هدفي دائماً هو تحويل رؤيتك إلى واقع برمجي ملموس يتفوق على التوقعات. 🚀',
+    fr: 'Bienvenue ! Je suis Hamza Amirni, un développeur passionné par la création de solutions numériques innovantes et performantes. Je me spécialise dans le développement web moderne, la conception de bots intelligents et l\'optimisation de l\'expérience utilisateur. Mon but est de transformer votre vision en une réalité digitale qui dépasse vos attentes. 🚀',
+    en: 'Welcome! I’m Hamza Amirni, a developer passionate about building innovative and high-performance digital solutions. I specialize in modern web development, intelligent bot creation, and user experience optimization. My mission is to turn your vision into a digital reality that exceeds expectations. 🚀',
   },
   values: [
     { title: { ar: 'الجودة والتميز', fr: 'Qualité & Excellence', en: 'Quality & Excellence' }, description: { ar: 'أسعى دائماً لتقديم أفضل جودة ممكنة في كل سطر كود أكتبه.', fr: 'Je m\'efforce toujours de fournir la meilleure qualité possible dans chaque ligne de code que j\'écris.', en: 'I always strive to deliver the best possible quality in every line of code I write.' } },

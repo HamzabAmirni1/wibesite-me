@@ -8,7 +8,7 @@ import { useNavigation } from '../contexts/NavigationContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
 import { cn } from '../lib/utils';
-import { Code, Database, Layout, Server, Smartphone, Star, Award, Users, Coffee, Target, Heart, Zap } from 'lucide-react';
+import { Code, Database, Layout, Server, Smartphone, Star, Award, Users, Coffee, Target, Heart, Zap, MessageSquare } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -78,62 +78,91 @@ const About: React.FC = () => {
     >
       {/* Hero Section */}
       <motion.div variants={itemVariants}>
-        <Card className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:bg-gray-800/50 dark:border-white/10">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary" />
-          <div className="flex flex-col md:flex-row items-center gap-8 p-4">
+        <Card className="relative overflow-hidden bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border-2 border-primary/10 shadow-2xl">
+          {/* Animated Background Element */}
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700" />
+          
+          <div className="flex flex-col md:flex-row items-center gap-10 p-6 md:p-10 relative z-10">
             <motion.div
-              className="relative group"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              className="relative group shrink-0"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-              <div className="relative w-48 h-48 rounded-full bg-white dark:bg-gray-800 p-1 shadow-xl">
-                <div className="w-full h-full rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden border-4 border-white dark:border-gray-800">
-                  <span className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">HA</span>
-                  {/* يمكنك استبدال هذا بصورتك الشخصية */}
-                  {/* <img src="/path/to/your/image.jpg" alt="Hamza" className="w-full h-full object-cover" /> */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary via-indigo-500 to-secondary rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+              <div className="relative w-56 h-56 rounded-3xl bg-white dark:bg-gray-800 p-1.5 shadow-2xl border border-white/20 overflow-hidden group">
+                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center overflow-hidden border-2 border-primary/5">
+                   <div className="relative">
+                      <Code className="w-24 h-24 text-primary/20 absolute -top-4 -left-4 rotate-12" />
+                      <span className="text-7xl font-black bg-clip-text text-transparent bg-gradient-to-br from-primary via-indigo-600 to-secondary relative z-10">HA</span>
+                   </div>
                 </div>
+                {/* Decorative overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="absolute -bottom-2 -right-2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg">
-                <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse" />
-              </div>
+              
+              {/* Floating Badge */}
+              <motion.div 
+                className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-700 p-3 rounded-2xl shadow-xl border border-primary/10 flex items-center gap-2"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                <span className="text-xs font-bold text-gray-700 dark:text-gray-200 uppercase tracking-wider">Available for work</span>
+              </motion.div>
             </motion.div>
 
             <div className={cn(
-              "flex-1 space-y-4",
+              "flex-1 space-y-6",
               language === 'ar' ? 'text-center md:text-right' : 'text-center md:text-left'
             )}>
-              <h1 className="text-4xl md:text-5xl font-bold text-dark-color dark:text-white">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary dark:text-blue-400 text-sm font-bold tracking-wide uppercase mb-2">
                 {t('aboutPage.welcome', language)}
-                <span className="text-primary dark:text-blue-400">{t('aboutPage.name', language)}</span> 👋
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">
+                {language === 'ar' ? '' : "I'm "}<span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{t('aboutPage.name', language)}</span> 👋
               </h1>
-              <h2 className="text-2xl text-gray-600 dark:text-blue-300 font-medium">
-                🚀 {t('aboutPage.role', language)}
+              
+              <h2 className="text-xl md:text-2xl text-gray-600 dark:text-blue-200/80 font-medium flex items-center gap-3 justify-center md:justify-start">
+                <Zap className="w-6 h-6 text-yellow-500 fill-yellow-500" />
+                {t('aboutPage.role', language)}
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+              
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
                 {t('aboutPage.description', language)}
               </p>
+              
               <div className={cn(
-                "flex flex-wrap gap-4 pt-4",
-                language === 'ar' ? 'justify-center md:justify-start' : 'justify-center md:justify-start'
+                "flex flex-wrap gap-4 pt-6",
+                language === 'ar' ? 'justify-center md:justify-start flex-row-reverse' : 'justify-center md:justify-start'
               )}>
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(99 102 241 / 0.4)" }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setActiveSection('contact')}
-                  className="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                  className="px-10 py-4 bg-gradient-to-r from-primary to-indigo-600 text-white rounded-2xl font-black shadow-xl transition-all duration-300 flex items-center gap-2 group"
                 >
+                  <MessageSquare className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                   {t('aboutPage.buttons.contact', language)}
-                </button>
-                <button
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05, backgroundColor: "rgba(99, 102, 241, 0.05)" }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setActiveSection('projects')}
-                  className="px-8 py-3 bg-white text-primary border-2 border-primary/20 rounded-xl font-bold hover:bg-primary/5 transition-all duration-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600"
+                  className="px-10 py-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-primary dark:text-white border-2 border-primary/20 dark:border-white/10 rounded-2xl font-black transition-all duration-300 flex items-center gap-2"
                 >
+                  <Code className="w-5 h-5" />
                   {t('aboutPage.buttons.projects', language)}
-                </button>
+                </motion.button>
               </div>
+              
               <div className={cn(
-                "pt-6 flex",
-                language === 'ar' ? 'justify-center md:justify-start' : 'justify-center md:justify-start'
+                "pt-8 border-t border-gray-100 dark:border-white/5 flex items-center gap-6",
+                language === 'ar' ? 'justify-center md:justify-start flex-row-reverse' : 'justify-center md:justify-start'
               )}>
+                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">{language === 'ar' ? 'تابعني:' : 'Follow My Journey:'}</span>
                 <SocialLinks />
               </div>
             </div>
@@ -143,17 +172,26 @@ const About: React.FC = () => {
 
       {/* Stats Section */}
       <motion.div variants={itemVariants}>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <Card key={index} className="text-center p-6 hover:shadow-xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700">
-              <div className={`w-12 h-12 mx-auto rounded-xl bg-white dark:bg-gray-700 shadow-sm flex items-center justify-center mb-4 ${stat.color}`}>
-                <stat.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-1">{stat.value}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-                {stat.label}
-              </p>
-            </Card>
+            <motion.div
+              key={index}
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Card className="relative overflow-hidden group p-8 text-center bg-white dark:bg-gray-800 border border-gray-100 dark:border-white/5 shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className={`w-16 h-16 mx-auto rounded-2xl bg-gray-50 dark:bg-gray-700/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 ${stat.color}`}>
+                  <stat.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-4xl font-black text-gray-900 dark:text-white mb-2 tracking-tight">
+                  {stat.value}
+                </h3>
+                <p className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
+                  {stat.label}
+                </p>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </motion.div>
