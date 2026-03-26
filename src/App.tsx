@@ -145,7 +145,7 @@ const App: React.FC = () => {
       </AnimatePresence>
 
       <motion.div
-        className={cn("flex min-h-screen bg-light-color-dark/30", "dark:bg-black")}
+        className={cn("flex min-h-screen bg-transparent", "dark:bg-transparent")}
         initial={{ opacity: isIntroFinished ? 1 : 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: isIntroFinished ? 0 : 3.8 }}

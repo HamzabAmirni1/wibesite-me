@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes gradientMesh {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(-45deg, #f8fafc, #e0e7ff, #f3e8ff, #f8fafc);
+  background-size: 400% 400%;
+  animation: gradientMesh 15s ease infinite;
+  background-attachment: fixed;
   @apply font-sans;
 }
 
 .dark body {
-  background: #000000;
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #020617, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientMesh 15s ease infinite;
+  background-attachment: fixed;
 }
 
 /* Custom Scrollbar for Webkit browsers */

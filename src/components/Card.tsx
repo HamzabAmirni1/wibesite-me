@@ -12,8 +12,8 @@ const Card: React.FC<CardProps> = ({ children, className, disableHoverEffect = f
   return (
     <motion.div
       className={cn(
-        "bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-lg border border-border-color-light dark:border-white/10 relative overflow-hidden w-full group transition-shadow duration-300",
-        !disableHoverEffect && "hover:shadow-xl",
+        "bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.1)] border border-white/40 dark:border-white/10 relative overflow-hidden w-full group transition-all duration-500",
+        !disableHoverEffect && "hover:shadow-[0_8px_30px_rgb(79,70,229,0.15)] hover:border-primary/30 dark:hover:border-primary/50",
         className
       )}
       whileHover={!disableHoverEffect ? { y: -8 } : {}}
