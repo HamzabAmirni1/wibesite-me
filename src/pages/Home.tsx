@@ -47,18 +47,7 @@ const Home: React.FC = () => {
         <ProfileSection />
       </motion.div>
 
-      {/* Banner Ad */}
-      <motion.div variants={itemVariants}>
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-4xl mx-auto rounded-2xl border-2 border-dashed border-primary/40 bg-white/70 dark:bg-gray-800/50 shadow-sm overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-              alt={t('homePage.services.adAlt', language)}
-              className="w-full h-32 sm:h-40 object-cover dark:opacity-80"
-            />
-          </div>
-        </div>
-      </motion.div>
+
 
       <motion.div variants={itemVariants}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
