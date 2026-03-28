@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt } from 'lucide-react';
+import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard } from 'lucide-react';
 import Card from '../components/Card';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -25,6 +25,23 @@ const itemVariants = {
 };
 
 const projects = [
+  {
+    id: 0,
+    title: 'Brasti – إدارة المبيعات والمخزون',
+    titleFr: 'Brasti – Gestion de Stock',
+    titleEn: 'Brasti – Stock Management',
+    category: 'تطبيق ويب',
+    categoryEn: 'Dashboard App',
+    categoryFr: 'Tableau de bord',
+    description: 'منصة احترافية متكاملة لإدارة المخزون والمبيعات مع إحصائيات دقيقة وتقارير وتصميم عصري.',
+    descriptionEn: 'A comprehensive professional platform for inventory and sales management with accurate statistics and modern design.',
+    descriptionFr: 'Une plateforme professionnelle complète pour la gestion des stocks et des ventes avec des statistiques et un design moderne.',
+    technologies: ['React', 'Tailwind', 'AI Chatbot'],
+    liveUrl: 'https://brasti.netlify.app/',
+    color: 'from-amber-400 to-yellow-600',
+    icon: LayoutDashboard,
+    badge: '📊',
+  },
   {
     id: 1,
     title: 'حسابي – إدارة الميزانية',
