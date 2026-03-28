@@ -185,7 +185,7 @@ const About: React.FC = () => {
                 <motion.div
                   className="h-full bg-gradient-to-r from-primary to-secondary rounded-full relative"
                   initial={{ width: 0 }}
-                  whileInView={{ width: \`\${skill.level}%\` }}
+                  whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, delay: 0.1 * index, type: "spring", damping: 20 }}
                 >
