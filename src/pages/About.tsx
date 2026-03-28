@@ -8,7 +8,7 @@ import { useNavigation } from '../contexts/NavigationContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
 import { cn } from '../lib/utils';
-import { Code, Database, Layout, Server, Smartphone, Star, Award, Users, Coffee, Target, Heart, Zap, Send, Sparkles } from 'lucide-react';
+import { Code, Database, Layout, Server, Smartphone, Star, Award, Users, Coffee, Target, Heart, Zap, Send, Sparkles, ArrowRight } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
