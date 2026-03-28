@@ -11,7 +11,7 @@ import { NavigationContext } from './contexts/NavigationContext';
 import { usePerformance } from './hooks/usePerformance';
 import { useLanguage } from './contexts/LanguageContext';
 import { t } from './i18n';
-import { Menu, X, ArrowUp, Search } from 'lucide-react';
+import { Menu, Search, X, MessageSquare, MonitorPlay, Code2, Rocket, Briefcase, Zap, Moon, Sun } from 'lucide-react';
 import { cn } from './lib/utils';
 import DarkModeToggle from './components/DarkModeToggle';
 
@@ -65,6 +65,30 @@ const App: React.FC = () => {
 
   // Initialize performance optimizations
   usePerformance();
+
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      setIsDark(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setIsDark(false);
+    }
+  }, []);
+
+  const toggleDark = () => {
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+      setIsDark(true);
+    }
+  };
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -212,6 +236,15 @@ const App: React.FC = () => {
           setActiveSection={handleSetSection}
           onSearchClick={() => setSearchOpen(true)}
         />
+
+        {/* Floating Dark Mode Toggle */}
+        <button
+          onClick={toggleDark}
+          className="fixed bottom-24 right-4 lg:bottom-8 lg:right-8 z-50 p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200 dark:border-gray-700 hover:scale-110 active:scale-95 transition-all text-gray-800 dark:text-white"
+          title="Toggle Dark Mode"
+        >
+          {isDark ? <Sun className="w-6 h-6 text-yellow-500" /> : <Moon className="w-6 h-6 text-indigo-500" />}
+        </button>
 
         {/* Floating Social Icons */}
         <FloatingSocials />

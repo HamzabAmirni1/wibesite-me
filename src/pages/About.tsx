@@ -34,10 +34,10 @@ const About: React.FC = () => {
   const { language } = useLanguage();
 
   const stats = [
-    { icon: Award, value: '+5', label: t('aboutPage.stats.0', language), color: 'text-yellow-500' },
-    { icon: Target, value: '+50', label: t('aboutPage.stats.1', language), color: 'text-green-500' },
-    { icon: Users, value: '+30', label: t('aboutPage.stats.2', language), color: 'text-blue-500' },
-    { icon: Coffee, value: '+1000', label: t('aboutPage.stats.3', language), color: 'text-amber-700' },
+    { icon: Award, value: '5+', label: language === 'ar' ? 'مشاريع متكاملة' : language === 'fr' ? 'Projets Complétés' : 'Projects Completed', color: 'text-yellow-500' },
+    { icon: Target, value: '100%', label: language === 'ar' ? 'رضا العملاء' : language === 'fr' ? 'Satisfaction Client' : 'Client Satisfaction', color: 'text-green-500' },
+    { icon: Zap, value: '24/7', label: language === 'ar' ? 'دعم مستمر' : language === 'fr' ? 'Support Continu' : 'Support & Comm.', color: 'text-blue-500' },
+    { icon: Users, value: '+30', label: t('aboutPage.stats.2', language), color: 'text-amber-700' },
   ];
 
   const skills = [
@@ -74,7 +74,8 @@ const About: React.FC = () => {
       className="space-y-12 pb-12"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Hero Section - Clean & Professional */}
       <motion.div variants={itemVariants} className="pt-8">
@@ -239,8 +240,9 @@ const About: React.FC = () => {
                         <motion.div
                           className={`h-full ${skill.color}`}
                           initial={{ width: 0 }}
-                          animate={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.5, delay: 0.2 + index * 0.15, type: 'spring' }}
                         />
                       </div>
                     </div>

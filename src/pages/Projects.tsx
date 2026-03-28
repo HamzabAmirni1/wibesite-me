@@ -158,7 +158,8 @@ const Projects: React.FC = () => {
       className="space-y-12 pb-12"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Hero */}
       <motion.div variants={itemVariants} className="text-center space-y-4">
@@ -217,7 +218,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex-1 flex flex-col gap-3">
+                <div className="p-5 flex-1 flex flex-col gap-3 relative overflow-hidden">
                   <h3 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary transition-colors">
                     {getTitle(project)}
                   </h3>
@@ -225,25 +226,36 @@ const Projects: React.FC = () => {
                     {getDescription(project)}
                   </p>
 
-                  {/* Tech badges */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-md font-medium">
+                  <div className="flex flex-wrap gap-1.5 opacity-100 group-hover:opacity-0 transition-opacity">
+                    {project.technologies.slice(0, 3).map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-[10px] rounded-md font-medium">
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  {/* Action */}
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`mt-2 w-full py-2.5 rounded-xl bg-gradient-to-r ${project.color} text-white text-sm font-bold text-center flex items-center justify-center gap-2 hover:shadow-lg hover:opacity-90 transition-all duration-300`}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    {language === 'ar' ? 'زيارة المشروع' : language === 'fr' ? 'Voir le Projet' : 'Visit Project'}
-                  </a>
+                  {/* Hover Overlay containing Technologies array */}
+                  <div className="absolute inset-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4 translate-y-4 group-hover:translate-y-0">
+                     <p className="font-extrabold mb-4 text-sm uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                      {language === 'ar' ? 'التقنيات المستخدمة' : language === 'fr' ? 'Technologies Utilisées' : 'Technologies Used'}
+                     </p>
+                     <div className="flex flex-wrap justify-center gap-2 mb-6">
+                       {project.technologies.map((tech, idx) => (
+                         <span key={idx} className="px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary dark:text-blue-400 font-bold rounded-lg text-xs shadow-sm hover:scale-110 transition-transform cursor-default">
+                           {tech}
+                         </span>
+                       ))}
+                     </div>
+                     <a
+                       href={project.liveUrl}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className={`w-full py-3 rounded-xl bg-gradient-to-r ${project.color} text-white font-bold inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}
+                     >
+                       <Globe className="w-5 h-5 animate-pulse" />
+                       {language === 'ar' ? 'تصفح المشروع الآن 🚀' : language === 'fr' ? 'Explorer le Projet 🚀' : 'Explore Project 🚀'}
+                     </a>
+                  </div>
                 </div>
               </Card>
             </motion.div>
