@@ -11,7 +11,7 @@ import { NavigationContext } from './contexts/NavigationContext';
 import { usePerformance } from './hooks/usePerformance';
 import { useLanguage } from './contexts/LanguageContext';
 import { t } from './i18n';
-import { Menu, Search, X, MessageSquare, MonitorPlay, Code2, Rocket, Briefcase, Zap, Moon, Sun } from 'lucide-react';
+import { Menu, Search, X, MessageSquare, MonitorPlay, Code2, Rocket, Briefcase, Zap, Moon, Sun, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
 import DarkModeToggle from './components/DarkModeToggle';
 
