@@ -20,8 +20,8 @@ export default {
           light: '#374151',
         },
         'light-color': {
-          DEFAULT: '#f8fafc',
-          dark: '#e2e8f0',
+          DEFAULT: '#ffffff',
+          dark: '#f8fafc',
         },
         'border-color': {
           DEFAULT: '#e5e7eb',
