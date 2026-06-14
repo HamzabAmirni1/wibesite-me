@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
+import VideoWaveCanvas from '../components/VideoWaveCanvas';
 import { Youtube, Play, Eye, ThumbsUp, Clock } from 'lucide-react';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import CallToAction from '../components/CallToAction';
@@ -181,17 +182,27 @@ const Videos: React.FC = () => {
     >
       {/* Hero Section */}
       <motion.div variants={itemVariants}>
-        <Card className="text-center bg-gradient-to-br from-red-50 to-pink-50 border-2 border-red-100 dark:from-red-950/20 dark:to-pink-950/20 dark:border-red-900/30">
-          <div className="space-y-4">
-            <div className="inline-block p-4 bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl">
-              <Youtube className="w-12 h-12 text-white" />
+        <Card className="bg-gradient-to-br from-red-50 to-pink-50 border-2 border-red-100 dark:from-red-950/20 dark:to-pink-950/20 dark:border-red-900/30 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left: Text */}
+            <div className="space-y-4 text-center lg:text-left">
+              <div className="inline-block p-4 bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl">
+                <Youtube className="w-12 h-12 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-pink-600 pb-3">
+                {t('videosPage.hero.title', language)}
+              </h1>
+              <p className="text-lg text-dark-color/70 leading-relaxed dark:text-gray-300">
+                {t('videosPage.hero.description', language)}
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-pink-600 pb-3">
-              {t('videosPage.hero.title', language)}
-            </h1>
-            <p className="text-lg text-dark-color/70 max-w-3xl mx-auto leading-relaxed dark:text-gray-300">
-              {t('videosPage.hero.description', language)}
-            </p>
+            {/* Right: Animated Waveform */}
+            <div className="relative h-[240px] lg:h-[280px] rounded-2xl overflow-hidden border border-red-200/60 dark:border-red-900/40 bg-gradient-to-br from-gray-950 to-red-950/40 shadow-[0_0_40px_rgba(239,68,68,0.25)]">
+              <VideoWaveCanvas />
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest text-white/40 pointer-events-none">
+                🎬 Live Animation
+              </div>
+            </div>
           </div>
         </Card>
       </motion.div>

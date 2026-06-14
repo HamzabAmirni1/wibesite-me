@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SocialLinks from '../components/SocialLinks';
+import CodeSimulator from '../components/CodeSimulator';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import CallToAction from '../components/CallToAction';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -71,46 +72,59 @@ const About: React.FC = () => {
       viewport={{ once: true, amount: 0.05 }}
     >
       {/* 1. Centered Hero Section */}
-      <motion.div variants={fadeUpVariants} className="text-center pt-16">
-        <div className="relative inline-block mb-10 group">
-          <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
-          <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-to-tr from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 shadow-xl flex items-center justify-center overflow-hidden">
-             <span className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">HA</span>
+      <motion.div variants={fadeUpVariants} className="pt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Left: Profile identity */}
+          <div className="text-center lg:text-left">
+            <div className="relative inline-block mb-8 group">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
+              <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-to-tr from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 shadow-xl flex items-center justify-center overflow-hidden">
+                 <span className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">HA</span>
+              </div>
+              <div className="absolute -bottom-2 -right-2 bg-white dark:bg-gray-900 rounded-full p-2 border border-gray-100 dark:border-gray-800 shadow-sm transition-transform group-hover:scale-110">
+                 <div className="w-4 h-4 rounded-full bg-green-500 animate-pulse" />
+              </div>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
+              {t('aboutPage.name', language)}
+            </h1>
+            
+            <p className="text-xl md:text-2xl font-medium text-primary mb-8">
+              {t('aboutPage.role', language)}
+            </p>
+
+            <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-10">
+              {t('aboutPage.description', language)}
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <button 
+                onClick={() => setActiveSection('contact')}
+                className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-bold shadow-lg shadow-primary/30 transition-all hover:-translate-y-1"
+              >
+                {t('aboutPage.buttons.contact', language)}
+              </button>
+              <button 
+                onClick={() => setActiveSection('projects')}
+                className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-full font-bold shadow-sm transition-all hover:-translate-y-1"
+              >
+                {t('aboutPage.buttons.projects', language)}
+              </button>
+            </div>
+
+            <div className="mt-10 flex justify-center lg:justify-start">
+               <SocialLinks />
+            </div>
           </div>
-          <div className="absolute -bottom-2 -right-2 bg-white dark:bg-gray-900 rounded-full p-2 border border-gray-100 dark:border-gray-800 shadow-sm transition-transform group-hover:scale-110">
-             <div className="w-4 h-4 rounded-full bg-green-500 animate-pulse" />
+
+          {/* Right: CodeSimulator */}
+          <div className="relative h-[320px] lg:h-[420px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 bg-gradient-to-br from-gray-950 to-indigo-950/60 shadow-[0_0_40px_rgba(99,102,241,0.3)]">
+            <CodeSimulator />
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest text-white/40 pointer-events-none">
+              💻 Live Code
+            </div>
           </div>
-        </div>
-
-        <h1 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
-          {t('aboutPage.name', language)}
-        </h1>
-        
-        <p className="text-xl md:text-2xl font-medium text-primary mb-8 px-4">
-          {t('aboutPage.role', language)}
-        </p>
-
-        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-10 px-4">
-          {t('aboutPage.description', language)}
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button 
-            onClick={() => setActiveSection('contact')}
-            className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-bold shadow-lg shadow-primary/30 transition-all hover:-translate-y-1"
-          >
-            {t('aboutPage.buttons.contact', language)}
-          </button>
-          <button 
-            onClick={() => setActiveSection('projects')}
-            className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-full font-bold shadow-sm transition-all hover:-translate-y-1"
-          >
-            {t('aboutPage.buttons.projects', language)}
-          </button>
-        </div>
-
-        <div className="mt-12 flex justify-center">
-           <SocialLinks />
         </div>
       </motion.div>
 
