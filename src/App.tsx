@@ -202,7 +202,7 @@ const App: React.FC = () => {
         </main>
 
         {/* Top Actions for Mobile & Desktop */}
-        <div className="fixed top-4 right-4 z-50 flex gap-2">
+        <div className="fixed top-4 right-4 z-50 flex gap-2 top-actions-container">
           <DarkModeToggle isDark={isDark} onToggle={toggleDark} />
           <button
             className="bg-white/70 backdrop-blur-sm p-3 rounded-full shadow-lg text-primary hover:bg-primary hover:text-white transition-all duration-300"
@@ -236,7 +236,7 @@ const App: React.FC = () => {
         {/* Floating Dark Mode Toggle */}
         <button
           onClick={toggleDark}
-          className="fixed bottom-24 right-4 lg:bottom-8 lg:right-8 z-50 p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200 dark:border-gray-700 hover:scale-110 active:scale-95 transition-all text-gray-800 dark:text-white"
+          className="fixed bottom-24 right-4 lg:bottom-8 lg:right-8 z-50 p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200 dark:border-gray-700 hover:scale-110 active:scale-95 transition-all text-gray-800 dark:text-white floating-dark-toggle"
           title="Toggle Dark Mode"
         >
           {isDark ? <Sun className="w-6 h-6 text-yellow-500" /> : <Moon className="w-6 h-6 text-indigo-500" />}
@@ -250,7 +250,7 @@ const App: React.FC = () => {
           {showToTop && (
             <motion.button
               onClick={scrollToTop}
-              className="fixed bottom-24 lg:bottom-6 left-6 z-50 bg-gradient-to-br from-primary to-secondary text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center"
+              className="fixed bottom-24 lg:bottom-6 left-6 z-50 bg-gradient-to-br from-primary to-secondary text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center scroll-to-top-button"
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}

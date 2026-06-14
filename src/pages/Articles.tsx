@@ -65,14 +65,23 @@ const Articles: React.FC = () => {
     });
   }, [searchQuery, selectedCategory, localizedArticles, language]);
 
+  React.useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.body.classList.remove('modal-open');
+    };
+  }, []);
+
   const openArticle = (article: any) => {
     setSelectedArticle(article);
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
   };
 
   const closeArticle = () => {
     setSelectedArticle(null);
     document.body.style.overflow = 'auto';
+    document.body.classList.remove('modal-open');
   };
 
   const formatDate = (dateStr: string) => {
@@ -320,13 +329,13 @@ const Articles: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-start justify-center bg-gray-50 dark:bg-black w-full h-full overflow-hidden"
+            className="fixed inset-y-0 right-0 left-0 lg:left-72 z-50 flex items-start justify-center bg-gray-50 dark:bg-black overflow-hidden"
           >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 30 }}
-              className="w-full h-full overflow-y-auto flex flex-col bg-white dark:bg-gray-900 lg:ml-72 relative"
+              className="w-full h-full overflow-y-auto flex flex-col bg-white dark:bg-gray-900 relative"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Elegant Modern Header */}
@@ -413,8 +422,8 @@ const Articles: React.FC = () => {
                   prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-[1.8] prose-p:font-medium
                   prose-a:text-primary hover:prose-a:text-secondary prose-a:no-underline hover:prose-a:underline
                   prose-strong:text-gray-900 dark:prose-strong:text-white 
-                  prose-ul:list-disc prose-ul:pl-5 prose-ul:space-y-2
-                  prose-ol:list-decimal prose-ol:pl-5
+                  prose-ul:list-disc prose-ul:ps-5 prose-ul:space-y-2
+                  prose-ol:list-decimal prose-ol:ps-5
                   prose-pre:bg-[#1e1e1e] prose-pre:text-[#d4d4d4] prose-pre:p-6 prose-pre:rounded-2xl prose-pre:shadow-xl prose-pre:border prose-pre:border-gray-800
                   prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
                   prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:pb-4 prose-h2:border-gray-100 dark:prose-h2:border-gray-800
