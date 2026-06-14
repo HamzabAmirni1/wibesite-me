@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../components/Card';
-import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles } from 'lucide-react';
+import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles, Search, Bot, X } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -73,8 +73,97 @@ const apps = [
   }
 ];
 
+// ---- Recommended external apps data ----
+const recommendedApps = [
+  {
+    id: 'pocketpal',
+    name: 'PocketPal AI',
+    developer: 'LLM Ventures',
+    rating: 3.3,
+    downloads: '1M+',
+    // Official icon from Google Play CDN
+    logo: 'https://play-lh.googleusercontent.com/EBzIDELzC7xp3kuGUCl1t6jEiSOWIGiO7MbElTbJ5rjsX1gy1r1c8r3y0aTFkh4W=s180',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.pocketpalai',
+    accentColor: 'amber',
+    gradientBar: 'from-yellow-400 via-amber-500 to-orange-500',
+    btnGradient: 'from-yellow-500 to-amber-600',
+    shadowColor: 'shadow-amber-500/30',
+    borderColor: 'border-amber-200/60 dark:border-amber-700/40 hover:border-amber-400 dark:hover:border-amber-500',
+    badgeBg: 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 border-amber-300 dark:border-amber-600',
+    zapColor: 'text-amber-500',
+    // Search keywords for smart filter
+    keywords: ['pocketpal', 'pocket', 'pal', 'llm', 'offline', 'ai', 'local', 'llama', 'phi', 'gemma', 'chatbot', 'chat', 'بوكيت', 'اوفلاين', 'ذكاء', 'دردشة'],
+    desc: {
+      ar: 'تطبيق ذكاء اصطناعي يشتغل مباشرة على هاتفك بدون إنترنت — تقدر تحمّل نماذج LLM مختلفة وتدردش معاهم offline. مزيان بزاف للي بغا يجرّب AI على الموبايل.',
+      fr: "Une app IA qui tourne entièrement sur votre téléphone SANS Internet. Téléchargez différents modèles LLM et discutez avec eux en mode offline. Idéal pour explorer l'IA locale sur mobile.",
+      en: 'An AI app that runs entirely on your phone with NO Internet. Download various LLM models and chat with them fully offline. Great for exploring local AI on mobile.'
+    },
+    features: {
+      ar: ['يشتغل بدون إنترنت 100%', 'نماذج متعددة: Llama, Phi, Gemma...', 'خاص وآمن — بياناتك فهاتفك فقط', 'مجاني بالكامل'],
+      fr: ['Fonctionne 100% sans Internet', 'Modèles variés : Llama, Phi, Gemma...', 'Privé et sécurisé — données sur votre téléphone', 'Entièrement gratuit'],
+      en: ['Works 100% offline', 'Multiple models: Llama, Phi, Gemma...', 'Private & secure — data stays on device', 'Completely free']
+    }
+  },
+  {
+    id: 'googleedge',
+    name: 'Google AI Edge Gallery',
+    developer: 'Google',
+    rating: null,
+    ratingLabel: { ar: 'وصول مبكر', fr: 'Accès anticipé', en: 'Early Access' },
+    downloads: '1M+',
+    // Official icon from Google Play CDN
+    logo: 'https://play-lh.googleusercontent.com/G4I_LKRV6VCJiEz5BUoJrdcW2WN7s_u5QNKXZ1Pr8Nz9iGnFVzBkJO4LqBzFH9aSQ=s180',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery&hl=fr&pli=1',
+    accentColor: 'blue',
+    gradientBar: 'from-blue-400 via-indigo-500 to-purple-600',
+    btnGradient: 'from-blue-500 to-indigo-600',
+    shadowColor: 'shadow-blue-500/30',
+    borderColor: 'border-blue-200/60 dark:border-blue-700/40 hover:border-blue-400 dark:hover:border-blue-500',
+    badgeBg: 'bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-600',
+    zapColor: 'text-blue-500',
+    keywords: ['google', 'edge', 'gallery', 'gemma', 'ai', 'on-device', 'experimental', 'mcp', 'جوجل', 'غاليري', 'ذكاء', 'تجريبي'],
+    desc: {
+      ar: 'تطبيق تجريبي من Google — تقدر تجرّب نماذج Gemma وغيرها مباشرة على جهازك بدون إنترنت. مثالي للمطورين ولكل من يبغا يكشف على مستقبل AI على الحافة.',
+      fr: "Une app expérimentale de Google — explorez Gemma et d'autres modèles directement sur votre appareil, sans Internet. Idéale pour les développeurs et les curieux de l'IA embarquée.",
+      en: 'An experimental app by Google — explore Gemma and other models directly on your device, no Internet needed. Perfect for developers curious about on-device AI.'
+    },
+    features: {
+      ar: ['نماذج Google Gemma على جهازك', 'وصول مبكر — ميزات جديدة باستمرار', 'اتصالات MCP تجريبية', 'من Google مباشرة — موثوق 100%'],
+      fr: ['Modèles Google Gemma sur votre appareil', 'Accès anticipé — nouvelles fonctionnalités régulières', 'Connexions MCP expérimentales', 'Directement de Google — 100% fiable'],
+      en: ['Google Gemma models on your device', 'Early access — new features regularly', 'Experimental MCP connections', 'Directly from Google — 100% trusted']
+    }
+  }
+];
+
 const Apps: React.FC = () => {
   const { language } = useLanguage();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
+
+  // AI-powered smart search — filters by name, developer, keywords, description
+  const filteredRecommended = useMemo(() => {
+    const q = searchQuery.toLowerCase().trim();
+    if (!q) return recommendedApps;
+    return recommendedApps.filter(app => {
+      const haystack = [
+        app.name,
+        app.developer,
+        ...app.keywords,
+        app.desc[language as 'ar' | 'fr' | 'en'],
+        ...app.features[language as 'ar' | 'fr' | 'en']
+      ].join(' ').toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [searchQuery, language]);
+
+  const handleImgError = (id: string) => {
+    setImgErrors(prev => ({ ...prev, [id]: true }));
+  };
+
+  const placeholderIcon: Record<string, string> = {
+    pocketpal: '🤖',
+    googleedge: '🧠'
+  };
 
   return (
     <motion.div
@@ -214,7 +303,7 @@ const Apps: React.FC = () => {
         </div>
 
         {/* Disclaimer banner */}
-        <div className="mb-6 flex items-start gap-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/40 rounded-xl p-4">
+        <div className="mb-5 flex items-start gap-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/40 rounded-xl p-4">
           <span className="text-2xl flex-shrink-0">⚠️</span>
           <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
             {language === 'ar'
@@ -225,154 +314,167 @@ const Apps: React.FC = () => {
           </p>
         </div>
 
-        {/* Recommended Apps Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          {/* PocketPal AI */}
-          <motion.div
-            variants={itemVariants}
-            whileHover={{ y: -4 }}
-            className="group"
-          >
-            <Card className="h-full flex flex-col overflow-hidden border-2 border-amber-200/60 dark:border-amber-700/40 hover:border-amber-400 dark:hover:border-amber-500 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 dark:bg-gray-800">
-              {/* Top gradient bar */}
-              <div className="h-2 w-full bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-t-xl" />
-
-              <div className="p-6 flex flex-col gap-4 flex-1">
-                {/* App Header */}
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30 flex-shrink-0">
-                    <span className="text-3xl">🤖</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">PocketPal AI</h3>
-                      <span className="text-xs font-semibold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 px-2 py-0.5 rounded-full border border-amber-300 dark:border-amber-600">LLM Ventures</span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-1 text-sm text-gray-500 dark:text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                        <span className="font-medium">3.3</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        <span>1M+</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
-                  {language === 'ar'
-                    ? 'تطبيق ذكاء اصطناعي يشتغل مباشرة على هاتفك بدون إنترنت — تقدر تحمّل نماذج LLM مختلفة وتدردش معاهم offline. مزيان بزاف للي بغا يجرّب AI على الموبايل.'
-                    : language === 'fr'
-                    ? "Une app IA qui tourne entièrement sur votre téléphone SANS Internet. Téléchargez différents modèles LLM et discutez avec eux en mode offline. Idéal pour explorer l'IA locale sur mobile."
-                    : 'An AI app that runs entirely on your phone with NO Internet. Download various LLM models and chat with them fully offline. Great for exploring local AI on mobile.'}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-1.5">
-                  {(language === 'ar'
-                    ? ['يشتغل بدون إنترنت 100%', 'نماذج متعددة: Llama, Phi, Gemma...', 'خاص وآمن — بياناتك فهاتفك فقط', 'مجاني بالكامل']
-                    : language === 'fr'
-                    ? ['Fonctionne 100% sans Internet', 'Modèles variés : Llama, Phi, Gemma...', 'Privé et sécurisé — données sur votre téléphone', 'Entièrement gratuit']
-                    : ['Works 100% offline', 'Multiple models: Llama, Phi, Gemma...', 'Private & secure — data stays on device', 'Completely free']
-                  ).map((feat, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                      <Zap className="w-3 h-3 text-amber-500 flex-shrink-0" />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Play Store Button */}
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.pocketpalai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 text-white font-semibold hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  {language === 'ar' ? 'حمّل من Google Play' : language === 'fr' ? 'Télécharger sur Google Play' : 'Get on Google Play'}
-                </a>
+        {/* ---- AI Smart Search Bar ---- */}
+        <div className="mb-6">
+          <div className="relative group">
+            {/* Glow effect */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-400 via-orange-400 to-purple-500 rounded-2xl opacity-0 group-focus-within:opacity-60 blur transition-opacity duration-300" />
+            <div className="relative flex items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-2xl overflow-hidden shadow-sm group-focus-within:shadow-lg transition-all duration-300">
+              {/* AI icon badge */}
+              <div className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-r border-gray-200 dark:border-gray-600 flex-shrink-0">
+                <Bot className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                <span className="text-xs font-bold text-amber-700 dark:text-amber-400 hidden sm:block">AI Search</span>
               </div>
-            </Card>
-          </motion.div>
-
-          {/* Google AI Edge Gallery */}
-          <motion.div
-            variants={itemVariants}
-            whileHover={{ y: -4 }}
-            className="group"
-          >
-            <Card className="h-full flex flex-col overflow-hidden border-2 border-blue-200/60 dark:border-blue-700/40 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 dark:bg-gray-800">
-              {/* Top gradient bar */}
-              <div className="h-2 w-full bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 rounded-t-xl" />
-
-              <div className="p-6 flex flex-col gap-4 flex-1">
-                {/* App Header */}
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30 flex-shrink-0">
-                    <span className="text-3xl">🧠</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">Google AI Edge Gallery</h3>
-                      <span className="text-xs font-semibold bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded-full border border-blue-300 dark:border-blue-600">Google</span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-1 text-sm text-gray-500 dark:text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-blue-500 fill-current" />
-                        <span className="font-medium">{language === 'ar' ? 'وصول مبكر' : language === 'fr' ? 'Accès anticipé' : 'Early Access'}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        <span>1M+</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
-                  {language === 'ar'
-                    ? 'تطبيق تجريبي من Google — تقدر تجرّب نماذج Gemma وغيرها مباشرة على جهازك بدون إنترنت. مثالي للمطورين ولكل من يبغا يكشف على مستقبل AI على الحافة.'
+              {/* Input */}
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                placeholder={
+                  language === 'ar'
+                    ? 'بحث بالاسم، الوصف، أو الميزة... (pocketpal، offline، gemma...)'
                     : language === 'fr'
-                    ? "Une app expérimentale de Google — explorez Gemma et d'autres modèles directement sur votre appareil, sans Internet. Idéale pour les développeurs et les curieux de l'IA embarquée."
-                    : 'An experimental app by Google — explore Gemma and other models directly on your device, no Internet needed. Perfect for developers curious about on-device AI.'}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-1.5">
-                  {(language === 'ar'
-                    ? ['نماذج Google Gemma على جهازك', 'وصول مبكر — ميزات جديدة باستمرار', 'AI وصول MCP تجريبي', 'من Google مباشرة — موثوق 100%']
-                    : language === 'fr'
-                    ? ['Modèles Google Gemma sur votre appareil', 'Accès anticipé — nouvelles fonctionnalités régulières', 'Connexions MCP expérimentales', 'Directement de Google — 100% fiable']
-                    : ['Google Gemma models on your device', 'Early access — new features regularly', 'Experimental MCP connections', 'Directly from Google — 100% trusted']
-                  ).map((feat, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                      <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Play Store Button */}
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery&hl=fr&pli=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  {language === 'ar' ? 'حمّل من Google Play' : language === 'fr' ? 'Télécharger sur Google Play' : 'Get on Google Play'}
-                </a>
+                    ? 'Rechercher par nom, description, fonctionnalité... (pocketpal, offline, gemma...)'
+                    : 'Search by name, description, feature... (pocketpal, offline, gemma...)'
+                }
+                className="flex-1 px-4 py-3 bg-transparent text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 outline-none"
+              />
+              {/* Search icon / clear button */}
+              <div className="px-4 flex-shrink-0">
+                {searchQuery ? (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <Search className="w-4 h-4 text-gray-400" />
+                )}
               </div>
-            </Card>
-          </motion.div>
-
+            </div>
+          </div>
+          {/* AI hint */}
+          {searchQuery && (
+            <motion.p
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-2 text-xs text-gray-500 dark:text-gray-400 px-1 flex items-center gap-1"
+            >
+              <Bot className="w-3 h-3 text-amber-500" />
+              {filteredRecommended.length === 0
+                ? (language === 'ar' ? 'ما لقينا شي — جرب كلمة أخرى' : language === 'fr' ? 'Aucun résultat — essayez un autre mot' : 'No results — try another keyword')
+                : (language === 'ar' ? `وجدنا ${filteredRecommended.length} تطبيق` : language === 'fr' ? `${filteredRecommended.length} app(s) trouvée(s)` : `${filteredRecommended.length} app(s) found`)}
+            </motion.p>
+          )}
         </div>
+
+        {/* Recommended Apps Cards */}
+        <AnimatePresence mode="popLayout">
+          {filteredRecommended.length === 0 ? (
+            <motion.div
+              key="empty"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="text-center py-16 text-gray-400 dark:text-gray-500"
+            >
+              <Search className="w-12 h-12 mx-auto mb-3 opacity-40" />
+              <p className="text-sm">
+                {language === 'ar' ? 'ما كاين شي نتيجة لـ "' + searchQuery + '"' : language === 'fr' ? `Aucune app pour "${searchQuery}"` : `No app matches "${searchQuery}"`}
+              </p>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="grid"
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {filteredRecommended.map((app) => (
+                <motion.div
+                  key={app.id}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  whileHover={{ y: -4 }}
+                  className="group"
+                >
+                  <Card className={`h-full flex flex-col overflow-hidden border-2 ${app.borderColor} hover:shadow-2xl transition-all duration-300 dark:bg-gray-800`}>
+                    {/* Top gradient bar */}
+                    <div className={`h-2 w-full bg-gradient-to-r ${app.gradientBar} rounded-t-xl`} />
+
+                    <div className="p-6 flex flex-col gap-4 flex-1">
+                      {/* App Header with real logo */}
+                      <div className="flex items-center gap-4">
+                        <div className={`w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg ${app.shadowColor} flex-shrink-0 bg-white dark:bg-gray-700`}>
+                          {imgErrors[app.id] ? (
+                            <span className="text-3xl">{placeholderIcon[app.id]}</span>
+                          ) : (
+                            <img
+                              src={app.logo}
+                              alt={`${app.name} logo`}
+                              className="w-full h-full object-cover"
+                              onError={() => handleImgError(app.id)}
+                              loading="lazy"
+                            />
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">{app.name}</h3>
+                            <span className={`text-xs font-semibold px-2 py-0.5 rounded-full border ${app.badgeBg}`}>
+                              {app.developer}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3 mt-1 text-sm text-gray-500 dark:text-gray-400">
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                              <span className="font-medium">
+                                {app.rating
+                                  ? app.rating
+                                  : (app.ratingLabel as any)[language]}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Users className="w-4 h-4" />
+                              <span>{app.downloads}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
+                        {(app.desc as any)[language]}
+                      </p>
+
+                      {/* Features */}
+                      <ul className="space-y-1.5">
+                        {((app.features as any)[language] as string[]).map((feat: string, i: number) => (
+                          <li key={i} className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                            <Zap className={`w-3 h-3 ${app.zapColor} flex-shrink-0`} />
+                            {feat}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Google Play Button */}
+                      <a
+                        href={app.playUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r ${app.btnGradient} text-white font-semibold hover:shadow-lg hover:${app.shadowColor} hover:scale-105 active:scale-95 transition-all duration-300`}
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        {language === 'ar' ? 'حمّل من Google Play' : language === 'fr' ? 'Télécharger sur Google Play' : 'Get on Google Play'}
+                      </a>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
 
       {/* Coming Soon Section */}
