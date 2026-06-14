@@ -81,8 +81,8 @@ const recommendedApps = [
     developer: 'LLM Ventures',
     rating: 3.3,
     downloads: '1M+',
-    // Official icon from Google Play CDN
-    logo: 'https://play-lh.googleusercontent.com/EBzIDELzC7xp3kuGUCl1t6jEiSOWIGiO7MbElTbJ5rjsX1gy1r1c8r3y0aTFkh4W=s180',
+    // Official icon hosted locally
+    logo: '/pocketpal-logo.jpg',
     playUrl: 'https://play.google.com/store/apps/details?id=com.pocketpalai',
     appStoreUrl: 'https://apps.apple.com/us/app/pocketpal-ai/id6502579498',
     accentColor: 'amber',
@@ -112,8 +112,8 @@ const recommendedApps = [
     rating: null,
     ratingLabel: { ar: 'وصول مبكر', fr: 'Accès anticipé', en: 'Early Access' },
     downloads: '1M+',
-    // Official icon from Google Play CDN
-    logo: 'https://play-lh.googleusercontent.com/G4I_LKRV6VCJiEz5BUoJrdcW2WN7s_u5QNKXZ1Pr8Nz9iGnFVzBkJO4LqBzFH9aSQ=s180',
+    // Official icon hosted locally
+    logo: '/googleedge-logo.jpg',
     playUrl: 'https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery&hl=fr&pli=1',
     appStoreUrl: 'https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337',
     accentColor: 'blue',
