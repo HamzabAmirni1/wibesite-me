@@ -203,7 +203,7 @@ const App: React.FC = () => {
 
         {/* Top Actions for Mobile & Desktop */}
         <div className="fixed top-4 right-4 z-50 flex gap-2">
-          <DarkModeToggle />
+          <DarkModeToggle isDark={isDark} onToggle={toggleDark} />
           <button
             className="bg-white/70 backdrop-blur-sm p-3 rounded-full shadow-lg text-primary hover:bg-primary hover:text-white transition-all duration-300"
             onClick={() => setSearchOpen(true)}
