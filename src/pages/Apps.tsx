@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../components/Card';
+import PhoneMockup3D from '../components/PhoneMockup3D';
 import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles, Search, Bot, X, Tablet } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -176,17 +177,22 @@ const Apps: React.FC = () => {
     >
       {/* Hero Section */}
       <motion.div variants={itemVariants}>
-        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
-          <div className="space-y-4">
-            <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
-              <Smartphone className="w-12 h-12 text-white" />
+        <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20 overflow-hidden" disableHoverEffect={true}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-2 sm:p-4">
+            <div className="space-y-4 text-center lg:text-start lg:pr-4">
+              <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+                <Smartphone className="w-12 h-12 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
+                {t('appsPage.hero.title', language)}
+              </h1>
+              <p className="text-lg text-dark-color/70 leading-relaxed dark:text-gray-300">
+                {t('appsPage.hero.description', language)}
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
-              {t('appsPage.hero.title', language)}
-            </h1>
-            <p className="text-lg text-dark-color/70 max-w-3xl mx-auto leading-relaxed dark:text-gray-300">
-              {t('appsPage.hero.description', language)}
-            </p>
+            <div className="flex justify-center items-center py-4">
+              <PhoneMockup3D />
+            </div>
           </div>
         </Card>
       </motion.div>

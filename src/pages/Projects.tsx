@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen } from 'lucide-react';
 import Card from '../components/Card';
+import Card3D from '../components/Card3D';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -253,69 +254,70 @@ const Projects: React.FC = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="group"
-              whileHover={{ y: -6 }}
+              className="h-full"
             >
-              <Card className="h-full flex flex-col overflow-hidden hover:shadow-2xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700">
+              <Card3D className="h-full">
+                <Card disableHoverEffect={true} className="h-full flex flex-col overflow-hidden hover:shadow-2xl transition-all duration-300 dark:bg-gray-800 dark:border-gray-700">
 
-                {/* Gradient Header */}
-                <div className={`relative h-44 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_white_0%,_transparent_70%)]" />
-                  <div className="text-center z-10">
-                    <div className="text-5xl mb-2">{project.badge}</div>
-                    <Icon className="w-10 h-10 text-white/80 mx-auto" />
-                  </div>
-                  <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
-                    {getCategory(project)}
-                  </div>
-                  {/* Live badge */}
-                  <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-green-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                    <span className="w-2 h-2 bg-white rounded-full animate-pulse inline-block" />
-                    Live
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5 flex-1 flex flex-col gap-3 relative overflow-hidden">
-                  <h3 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary transition-colors">
-                    {getTitle(project)}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">
-                    {getDescription(project)}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5 opacity-100 group-hover:opacity-0 transition-opacity">
-                    {project.technologies.slice(0, 3).map((tech, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-[10px] rounded-md font-medium">
-                        {tech}
-                      </span>
-                    ))}
+                  {/* Gradient Header */}
+                  <div className={`relative h-44 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_white_0%,_transparent_70%)]" />
+                    <div className="text-center z-10">
+                      <div className="text-5xl mb-2">{project.badge}</div>
+                      <Icon className="w-10 h-10 text-white/80 mx-auto" />
+                    </div>
+                    <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
+                      {getCategory(project)}
+                    </div>
+                    {/* Live badge */}
+                    <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-green-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      <span className="w-2 h-2 bg-white rounded-full animate-pulse inline-block" />
+                      Live
+                    </div>
                   </div>
 
-                  {/* Hover Overlay containing Technologies array */}
-                  <div className="absolute inset-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4 translate-y-4 group-hover:translate-y-0">
-                     <p className="font-extrabold mb-4 text-sm uppercase tracking-wider text-gray-400 dark:text-gray-500">
-                      {language === 'ar' ? 'التقنيات المستخدمة' : language === 'fr' ? 'Technologies Utilisées' : 'Technologies Used'}
-                     </p>
-                     <div className="flex flex-wrap justify-center gap-2 mb-6">
-                       {project.technologies.map((tech, idx) => (
-                         <span key={idx} className="px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary dark:text-blue-400 font-bold rounded-lg text-xs shadow-sm hover:scale-110 transition-transform cursor-default">
-                           {tech}
-                         </span>
-                       ))}
-                     </div>
-                     <a
-                       href={project.liveUrl}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className={`w-full py-3 rounded-xl bg-gradient-to-r ${project.color} text-white font-bold inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}
-                     >
-                       <Globe className="w-5 h-5 animate-pulse" />
-                       {language === 'ar' ? 'تصفح المشروع الآن 🚀' : language === 'fr' ? 'Explorer le Projet 🚀' : 'Explore Project 🚀'}
-                     </a>
+                  {/* Content */}
+                  <div className="p-5 flex-1 flex flex-col gap-3 relative overflow-hidden">
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary transition-colors">
+                      {getTitle(project)}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed flex-1">
+                      {getDescription(project)}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1.5 opacity-100 group-hover:opacity-0 transition-opacity">
+                      {project.technologies.slice(0, 3).map((tech, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-[10px] rounded-md font-medium">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Hover Overlay containing Technologies array */}
+                    <div className="absolute inset-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 p-4 translate-y-4 group-hover:translate-y-0">
+                       <p className="font-extrabold mb-4 text-sm uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                        {language === 'ar' ? 'التقنيات المستخدمة' : language === 'fr' ? 'Technologies Utilisées' : 'Technologies Used'}
+                       </p>
+                       <div className="flex flex-wrap justify-center gap-2 mb-6">
+                         {project.technologies.map((tech, idx) => (
+                           <span key={idx} className="px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary dark:text-blue-400 font-bold rounded-lg text-xs shadow-sm hover:scale-110 transition-transform cursor-default">
+                             {tech}
+                           </span>
+                         ))}
+                       </div>
+                       <a
+                         href={project.liveUrl}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className={`w-full py-3 rounded-xl bg-gradient-to-r ${project.color} text-white font-bold inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-2xl hover:scale-105 transition-all`}
+                       >
+                         <Globe className="w-5 h-5 animate-pulse" />
+                         {language === 'ar' ? 'تصفح المشروع الآن 🚀' : language === 'fr' ? 'Explorer le Projet 🚀' : 'Explore Project 🚀'}
+                       </a>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </Card3D>
             </motion.div>
           );
         })}

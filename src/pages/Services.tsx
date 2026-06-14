@@ -13,6 +13,7 @@ import {
   Briefcase,
 } from "lucide-react";
 import Card from "../components/Card";
+import Card3D from "../components/Card3D";
 import { useNavigation } from "../contexts/NavigationContext";
 import { useLanguage } from "../contexts/LanguageContext";
 import { t } from "../i18n";
@@ -124,56 +125,60 @@ const Services: React.FC = () => {
           <motion.div
             key={service.id}
             variants={itemVariants}
-            className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+            className="h-full"
           >
-            {/* Image Header */}
-            <div className="h-48 overflow-hidden relative">
-              <div
-                className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-60 mix-blend-multiply z-10`}
-              />
-              <img
-                src={service.image}
-                alt={t(`servicesPage.items.${service.key}.title`, language)}
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 dark:opacity-80"
-              />
-              <div className="absolute bottom-4 right-4 z-20 bg-white/90 dark:bg-gray-800/90 p-2 rounded-lg backdrop-blur-sm shadow-sm">
-                <service.icon className={`w-6 h-6 text-gray-800 dark:text-gray-200`} />
+            <Card3D className="h-full">
+              <div className="group relative h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                {/* Image Header */}
+                <div className="h-48 overflow-hidden relative">
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-60 mix-blend-multiply z-10`}
+                  />
+                  <img
+                    src={service.image}
+                    alt={t(`servicesPage.items.${service.key}.title`, language)}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 dark:opacity-80"
+                  />
+                  <div className="absolute bottom-4 right-4 z-20 bg-white/90 dark:bg-gray-800/90 p-2 rounded-lg backdrop-blur-sm shadow-sm">
+                    <service.icon className={`w-6 h-6 text-gray-800 dark:text-gray-200`} />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">
+                    {t(`servicesPage.items.${service.key}.title`, language)}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed h-12 overflow-hidden">
+                    {t(`servicesPage.items.${service.key}.desc`, language)}
+                  </p>
+
+                  {/* Details List */}
+                  <ul className="space-y-2 pt-2">
+                    {(t(`servicesPage.items.${service.key}.details`, language) as string[]).map((detail, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-xs text-gray-500 dark:text-gray-400"
+                      >
+                        <CheckCircle className="w-3 h-3 text-green-500 ml-2 flex-shrink-0" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Action Button */}
+                  <div className="pt-4">
+                    <button
+                      onClick={() => setActiveSection("contact")}
+                      className="w-full py-2.5 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-sm hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-md"
+                    >
+                      {t("servicesPage.request", language)}
+                      <ArrowRight className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {/* Content */}
-            <div className="p-6 space-y-4">
-              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">
-                {t(`servicesPage.items.${service.key}.title`, language)}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed h-12 overflow-hidden">
-                {t(`servicesPage.items.${service.key}.desc`, language)}
-              </p>
-
-              {/* Details List */}
-              <ul className="space-y-2 pt-2">
-                {(t(`servicesPage.items.${service.key}.details`, language) as string[]).map((detail, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center text-xs text-gray-500 dark:text-gray-400"
-                  >
-                    <CheckCircle className="w-3 h-3 text-green-500 ml-2 flex-shrink-0" />
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Action Button */}
-              <div className="pt-4">
-                <button
-                  onClick={() => setActiveSection("contact")}
-                  className="w-full py-2.5 rounded-xl bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 font-medium text-sm hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-md"
-                >
-                  {t("servicesPage.request", language)}
-                  <ArrowRight className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
-                </button>
-              </div>
-            </div>
+            </Card3D>
           </motion.div>
         ))}
       </div>

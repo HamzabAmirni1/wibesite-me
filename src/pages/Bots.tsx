@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
+import CyberNetworkCanvas from '../components/CyberNetworkCanvas';
 import { Bot, MessageSquare, Zap, Shield, Clock, Star, ExternalLink, Sparkles } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -248,8 +249,9 @@ const Bots: React.FC = () => {
     >
       {/* Hero Section */}
       <motion.div variants={itemVariants}>
-        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
-          <div className="space-y-4">
+        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20 relative overflow-hidden" disableHoverEffect={true}>
+          <CyberNetworkCanvas />
+          <div className="space-y-4 relative z-10">
             <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
               <Bot className="w-12 h-12 text-white" />
             </div>

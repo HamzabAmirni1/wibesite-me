@@ -108,7 +108,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ vKey, thumbnail, videoId, duratio
   const category = t(`videosPage.categories.${catKey}`, language);
 
   return (
-    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group dark:bg-gray-800 dark:border-gray-700">
+    <Card disableHoverEffect={true} className="overflow-hidden border border-white/40 dark:border-white/10 hover:shadow-[0_0_25px_rgba(239,68,68,0.45)] hover:border-red-500/80 dark:hover:border-red-500/60 hover:-translate-y-2 transform transition-all duration-500 group dark:bg-gray-800">
       <div className="relative">
         {!isPlaying ? (
           <>
