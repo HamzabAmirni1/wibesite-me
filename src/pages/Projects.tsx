@@ -28,6 +28,23 @@ const itemVariants = {
 
 const projects = [
   {
+    id: -1,
+    title: 'موقعي الشخصي – حمزة اعمرني',
+    titleFr: 'Mon Portfolio – Hamza Amirni',
+    titleEn: 'My Portfolio – Hamza Amirni',
+    category: 'موقع شخصي',
+    categoryEn: 'Personal Portfolio',
+    categoryFr: 'Portfolio Personnel',
+    description: 'موقعي الشخصي الاحترافي يعرض مشاريعي وخدماتي ومهاراتي، مع دعم ثلاث لغات، وضع ليلي، ومحرك بحث ذكي وتصميم متطور.',
+    descriptionEn: 'My professional personal website showcasing my projects, services and skills, with 3-language support, dark mode, smart search and premium design.',
+    descriptionFr: 'Mon site personnel professionnel présentant mes projets, services et compétences, avec support 3 langues, mode sombre et design premium.',
+    technologies: ['React', 'TypeScript', 'Tailwind', 'Vite', 'Framer Motion'],
+    liveUrl: 'https://hamzaamirnifit.netlify.app/',
+    color: 'from-indigo-500 to-purple-600',
+    icon: Globe,
+    badge: '🌐',
+  },
+  {
     id: 0,
     title: 'Brasti – إدارة المبيعات والمخزون',
     titleFr: 'Brasti – Gestion de Stock',
@@ -242,7 +259,7 @@ const Projects: React.FC = () => {
       <motion.div variants={itemVariants}>
         <div className="grid grid-cols-3 gap-4 text-center">
           {[
-            { num: '9+', label: language === 'ar' ? 'مشاريع حية' : language === 'fr' ? 'Projets Actifs' : 'Live Projects' },
+            { num: '10+', label: language === 'ar' ? 'مشاريع حية' : language === 'fr' ? 'Projets Actifs' : 'Live Projects' },
             { num: '100%', label: language === 'ar' ? 'مشاريع حقيقية' : language === 'fr' ? 'Projets Réels' : 'Real Projects' },
             { num: '∞', label: language === 'ar' ? 'تطوير مستمر' : language === 'fr' ? 'En Développement' : 'Ongoing Dev' },
           ].map((s, i) => (
@@ -277,11 +294,18 @@ const Projects: React.FC = () => {
                     <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
                       {getCategory(project)}
                     </div>
-                    {/* Live badge */}
-                    <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-green-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                      <span className="w-2 h-2 bg-white rounded-full animate-pulse inline-block" />
-                      Live
-                    </div>
+                    {/* Featured badge for portfolio */}
+                    {project.id === -1 ? (
+                      <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-yellow-400/90 text-yellow-900 text-xs font-bold px-2.5 py-1 rounded-full">
+                        <span className="w-2 h-2 bg-yellow-900 rounded-full animate-pulse inline-block" />
+                        My Site
+                      </div>
+                    ) : (
+                      <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-green-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                        <span className="w-2 h-2 bg-white rounded-full animate-pulse inline-block" />
+                        Live
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
