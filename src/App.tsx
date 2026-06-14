@@ -14,6 +14,7 @@ import { t } from './i18n';
 import { Menu, Search, X, MessageSquare, MonitorPlay, Code2, Rocket, Briefcase, Zap, Moon, Sun, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
 import DarkModeToggle from './components/DarkModeToggle';
+import Background3D from './components/Background3D';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -164,6 +165,7 @@ const App: React.FC = () => {
 
   return (
     <NavigationContext.Provider value={navigationContextValue}>
+      <Background3D />
       <AnimatePresence>
         {showIntro && <IntroAnimation onAnimationComplete={handleIntroComplete} />}
       </AnimatePresence>
