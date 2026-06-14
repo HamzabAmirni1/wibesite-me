@@ -131,7 +131,7 @@ const Home: React.FC = () => {
         <Card>
           <div className="space-y-10">
             <section className="space-y-4 text-center">
-              <h2 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+              <h2 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
                 {t('homePage.services.header', language)}
               </h2>
               <p className="text-lg text-dark-color/80 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">

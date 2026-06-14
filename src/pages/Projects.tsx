@@ -214,7 +214,7 @@ const Projects: React.FC = () => {
     >
       {/* Hero */}
       <motion.div variants={itemVariants} className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-2">
+        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
           {t('projectsPage.title', language)}
         </h1>
         <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">

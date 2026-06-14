@@ -125,7 +125,7 @@ const Programming: React.FC = () => {
             <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
               <Code2 className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
               {t('programmingPage.hero.title', language)}
             </h1>
             <p className="text-lg text-dark-color/70 max-w-3xl mx-auto leading-relaxed dark:text-gray-300">

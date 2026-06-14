@@ -266,7 +266,7 @@ const Testimonials: React.FC = () => {
           <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
         </motion.div>
 
-        <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] pb-2">
+        <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] pb-3">
           {headingText.title}
         </h1>
         <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
