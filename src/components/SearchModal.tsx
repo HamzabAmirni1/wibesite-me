@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Newspaper, Bot, Wrench, Code, ArrowRight } from 'lucide-react';
+import { Search, X, Newspaper, Bot, Wrench, Code, ArrowRight, ThumbsUp, Smartphone } from 'lucide-react';
 import { articlesData } from '../data/articles';
 import {
     socialLinks,
@@ -55,6 +55,51 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
         };
 
         const allResults: any[] = [];
+
+        // 0. Search in Recommended External Apps (PocketPal AI, Google AI Edge Gallery)
+        const recommendedAppsData = [
+          {
+            id: 'pocketpal',
+            name: 'PocketPal AI',
+            developer: 'LLM Ventures',
+            playUrl: 'https://play.google.com/store/apps/details?id=com.pocketpalai',
+            appStoreUrl: 'https://apps.apple.com/us/app/pocketpal-ai/id6502579498',
+            keywords: ['pocketpal', 'pocket', 'pal', 'llm', 'offline', 'ai', 'local', 'llama', 'phi', 'gemma', 'chatbot', 'chat', 'بوكيت', 'اوفلاين', 'ذكاء', 'دردشة', 'intelligence', 'artificielle', 'modele', 'modèle'],
+            desc_ar: 'تطبيق ذكاء اصطناعي يشتغل بدون إنترنت على هاتفك — نماذج LLM offline',
+            desc_fr: 'App IA qui tourne sans Internet — modèles LLM offline sur votre téléphone',
+            desc_en: 'AI app running fully offline — LLM models on your phone'
+          },
+          {
+            id: 'googleedge',
+            name: 'Google AI Edge Gallery',
+            developer: 'Google',
+            playUrl: 'https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery',
+            appStoreUrl: 'https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337',
+            keywords: ['google', 'edge', 'gallery', 'gemma', 'ai', 'on-device', 'experimental', 'mcp', 'جوجل', 'غاليري', 'ذكاء', 'تجريبي', 'gemma4', 'on device', 'agent', 'thinking'],
+            desc_ar: 'تطبيق تجريبي من Google — نماذج Gemma على جهازك بدون إنترنت',
+            desc_fr: 'App expérimentale Google — modèles Gemma directement sur votre appareil',
+            desc_en: 'Experimental Google app — run Gemma models on-device, no Internet'
+          }
+        ];
+
+        const catRecommended = language === 'ar' ? 'تطبيق موصى به' : language === 'fr' ? 'App recommandée' : 'Recommended App';
+        recommendedAppsData.forEach(app => {
+          const desc = language === 'ar' ? app.desc_ar : language === 'fr' ? app.desc_fr : app.desc_en;
+          const haystack = [app.name, app.developer, desc, ...app.keywords].join(' ').toLowerCase();
+          if (haystack.includes(q) || app.keywords.some(kw => kw.includes(q) || q.includes(kw))) {
+            allResults.push({
+              id: app.id,
+              title: app.name,
+              subtitle: desc,
+              type: 'recommended',
+              category: catRecommended,
+              section: 'apps',
+              icon: Smartphone,
+              external: app.playUrl,
+              isRecommended: true
+            });
+          }
+        });
 
         // 1. Search in Articles
         const translatedArticles = t('articlesPageFull.data', language) as any[];
@@ -265,18 +310,37 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, setActiveSec
                                             className="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all group rtl:text-right ltr:text-left"
                                             dir={language === 'ar' ? 'rtl' : 'ltr'}
                                         >
+                                            {/* Icon */}
                                             <div className={cn(
                                                 "w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0",
-                                                result.type === 'article' ? "bg-primary/10 text-primary" : "bg-secondary/10 text-secondary"
+                                                result.isRecommended
+                                                  ? "bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400"
+                                                  : result.type === 'article'
+                                                  ? "bg-primary/10 text-primary"
+                                                  : "bg-secondary/10 text-secondary"
                                             )}>
-                                                {result.type === 'article' ? <Newspaper className="w-5 h-5" /> : (result.icon ? <result.icon className="w-5 h-5" /> : <Search className="w-5 h-5" />)}
+                                                {result.type === 'article'
+                                                  ? <Newspaper className="w-5 h-5" />
+                                                  : result.isRecommended
+                                                  ? <ThumbsUp className="w-5 h-5" />
+                                                  : (result.icon ? <result.icon className="w-5 h-5" /> : <Search className="w-5 h-5" />)}
                                             </div>
-                                            <div className="flex-1 rtl:text-right ltr:text-left">
-                                                <h4 className="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
-                                                    {result.title}
-                                                </h4>
+                                            {/* Text */}
+                                            <div className="flex-1 rtl:text-right ltr:text-left min-w-0">
+                                                <div className="flex items-center gap-2 flex-wrap">
+                                                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
+                                                      {result.title}
+                                                  </h4>
+                                                  {result.isRecommended && (
+                                                    <span className="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 px-1.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-600 flex-shrink-0">
+                                                      {language === 'ar' ? '⭐ موصى به' : language === 'fr' ? '⭐ Recommandée' : '⭐ Recommended'}
+                                                    </span>
+                                                  )}
+                                                </div>
                                                 <p className="text-xs text-gray-500 line-clamp-1">
-                                                    {t(`searchModal.categories.${result.type}`, language) || result.category}
+                                                    {result.isRecommended && result.subtitle
+                                                      ? result.subtitle
+                                                      : t(`searchModal.categories.${result.type}`, language) || result.category}
                                                 </p>
                                             </div>
                                             <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-primary transform rotate-180" />
