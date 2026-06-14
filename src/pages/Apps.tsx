@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../components/Card';
-import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles, Search, Bot, X } from 'lucide-react';
+import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles, Search, Bot, X, Tablet } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -84,6 +84,7 @@ const recommendedApps = [
     // Official icon from Google Play CDN
     logo: 'https://play-lh.googleusercontent.com/EBzIDELzC7xp3kuGUCl1t6jEiSOWIGiO7MbElTbJ5rjsX1gy1r1c8r3y0aTFkh4W=s180',
     playUrl: 'https://play.google.com/store/apps/details?id=com.pocketpalai',
+    appStoreUrl: 'https://apps.apple.com/us/app/pocketpal-ai/id6502579498',
     accentColor: 'amber',
     gradientBar: 'from-yellow-400 via-amber-500 to-orange-500',
     btnGradient: 'from-yellow-500 to-amber-600',
@@ -114,6 +115,7 @@ const recommendedApps = [
     // Official icon from Google Play CDN
     logo: 'https://play-lh.googleusercontent.com/G4I_LKRV6VCJiEz5BUoJrdcW2WN7s_u5QNKXZ1Pr8Nz9iGnFVzBkJO4LqBzFH9aSQ=s180',
     playUrl: 'https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery&hl=fr&pli=1',
+    appStoreUrl: 'https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337',
     accentColor: 'blue',
     gradientBar: 'from-blue-400 via-indigo-500 to-purple-600',
     btnGradient: 'from-blue-500 to-indigo-600',
@@ -458,16 +460,43 @@ const Apps: React.FC = () => {
                         ))}
                       </ul>
 
-                      {/* Google Play Button */}
-                      <a
-                        href={app.playUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r ${app.btnGradient} text-white font-semibold hover:shadow-lg hover:${app.shadowColor} hover:scale-105 active:scale-95 transition-all duration-300`}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        {language === 'ar' ? 'حمّل من Google Play' : language === 'fr' ? 'Télécharger sur Google Play' : 'Get on Google Play'}
-                      </a>
+                      {/* Download Buttons — Google Play + App Store */}
+                      <div className="grid grid-cols-2 gap-3">
+                        {/* Google Play */}
+                        <a
+                          href={app.playUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-xl bg-gradient-to-br ${app.btnGradient} text-white font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 group/btn`}
+                        >
+                          <div className="flex items-center gap-1.5">
+                            <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M3.18 23.76a2.5 2.5 0 0 1-1.18-2.19V2.43A2.5 2.5 0 0 1 3.18.24l12.4 11.76L3.18 23.76zm16.63-8.03L5.8 24l10.76-10.2 3.25 1.93zm0-7.46-3.25 1.93L5.8 0l14.01 8.27zM5.8 0l13.6 8.08-3.25 1.93L5.8 0zm0 24-3.62-2.14V2.14L5.8 0l10.35 9.81L5.8 24z"/>
+                            </svg>
+                            <span className="text-xs font-bold leading-tight">Google Play</span>
+                          </div>
+                          <span className="text-[10px] opacity-80">
+                            {language === 'ar' ? 'أندرويد' : 'Android'}
+                          </span>
+                        </a>
+                        {/* App Store */}
+                        <a
+                          href={(app as any).appStoreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex flex-col items-center justify-center gap-1 py-3 px-2 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800 text-white font-semibold hover:shadow-lg hover:shadow-gray-800/30 hover:scale-105 active:scale-95 transition-all duration-300"
+                        >
+                          <div className="flex items-center gap-1.5">
+                            <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.08.05c-.22.14-2.18 1.37-2.16 3.87.03 3.02 2.65 4 2.68 4.01l-.08.25zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            <span className="text-xs font-bold leading-tight">App Store</span>
+                          </div>
+                          <span className="text-[10px] opacity-80">
+                            {language === 'ar' ? 'آيفون' : 'iPhone'}
+                          </span>
+                        </a>
+                      </div>
                     </div>
                   </Card>
                 </motion.div>
