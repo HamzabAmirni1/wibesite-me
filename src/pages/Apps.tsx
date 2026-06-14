@@ -309,7 +309,7 @@ const Apps: React.FC = () => {
           <span className="text-2xl flex-shrink-0">⚠️</span>
           <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
             {language === 'ar'
-              ? 'هاد التطبيقات مشيين ديالي — هي تطبيقات خارجية أنا ناصح بها فقط. مصنعتهاش وما عندي علاقة بالمطورين ديالهم.'
+              ? 'هذه التطبيقات ليست من تطويري — هي تطبيقات خارجية أرشحها للفائدة فقط. لم أقم ببرمجتها ولا تربطني أي علاقة بمطوريها.'
               : language === 'fr'
               ? "Ces apps ne sont PAS les miennes — ce sont des applications externes que je recommande personnellement. Je ne les ai pas créées et je n'ai aucun lien avec leurs développeurs."
               : 'These apps are NOT mine — they are external apps I personally recommend. I did not create them and have no affiliation with their developers.'}
