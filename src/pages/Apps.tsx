@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import { Download, Star, Users, Smartphone, Globe, Zap } from 'lucide-react';
+import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -194,6 +194,186 @@ const Apps: React.FC = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* ===== Recommended External Apps Section ===== */}
+      <motion.div variants={itemVariants}>
+        {/* Section Header */}
+        <div className="relative mb-8">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-dashed border-amber-300/50 dark:border-amber-500/30" />
+          </div>
+          <div className="relative flex justify-center">
+            <div className="flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 rounded-2xl shadow-lg shadow-amber-500/30">
+              <ThumbsUp className="w-5 h-5 text-white" />
+              <span className="text-white font-bold text-lg">
+                {language === 'ar' ? 'تطبيقات أنصح بها 🤝' : language === 'fr' ? 'Apps que je recommande 🤝' : 'Apps I Recommend 🤝'}
+              </span>
+              <Sparkles className="w-5 h-5 text-white/80" />
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer banner */}
+        <div className="mb-6 flex items-start gap-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/40 rounded-xl p-4">
+          <span className="text-2xl flex-shrink-0">⚠️</span>
+          <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
+            {language === 'ar'
+              ? 'هاد التطبيقات مشيين ديالي — هي تطبيقات خارجية أنا ناصح بها فقط. مصنعتهاش وما عندي علاقة بالمطورين ديالهم.'
+              : language === 'fr'
+              ? "Ces apps ne sont PAS les miennes — ce sont des applications externes que je recommande personnellement. Je ne les ai pas créées et je n'ai aucun lien avec leurs développeurs."
+              : 'These apps are NOT mine — they are external apps I personally recommend. I did not create them and have no affiliation with their developers.'}
+          </p>
+        </div>
+
+        {/* Recommended Apps Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* PocketPal AI */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ y: -4 }}
+            className="group"
+          >
+            <Card className="h-full flex flex-col overflow-hidden border-2 border-amber-200/60 dark:border-amber-700/40 hover:border-amber-400 dark:hover:border-amber-500 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 dark:bg-gray-800">
+              {/* Top gradient bar */}
+              <div className="h-2 w-full bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-t-xl" />
+
+              <div className="p-6 flex flex-col gap-4 flex-1">
+                {/* App Header */}
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30 flex-shrink-0">
+                    <span className="text-3xl">🤖</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">PocketPal AI</h3>
+                      <span className="text-xs font-semibold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 px-2 py-0.5 rounded-full border border-amber-300 dark:border-amber-600">LLM Ventures</span>
+                    </div>
+                    <div className="flex items-center gap-3 mt-1 text-sm text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                        <span className="font-medium">3.3</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        <span>1M+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
+                  {language === 'ar'
+                    ? 'تطبيق ذكاء اصطناعي يشتغل مباشرة على هاتفك بدون إنترنت — تقدر تحمّل نماذج LLM مختلفة وتدردش معاهم offline. مزيان بزاف للي بغا يجرّب AI على الموبايل.'
+                    : language === 'fr'
+                    ? "Une app IA qui tourne entièrement sur votre téléphone SANS Internet. Téléchargez différents modèles LLM et discutez avec eux en mode offline. Idéal pour explorer l'IA locale sur mobile."
+                    : 'An AI app that runs entirely on your phone with NO Internet. Download various LLM models and chat with them fully offline. Great for exploring local AI on mobile.'}
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-1.5">
+                  {(language === 'ar'
+                    ? ['يشتغل بدون إنترنت 100%', 'نماذج متعددة: Llama, Phi, Gemma...', 'خاص وآمن — بياناتك فهاتفك فقط', 'مجاني بالكامل']
+                    : language === 'fr'
+                    ? ['Fonctionne 100% sans Internet', 'Modèles variés : Llama, Phi, Gemma...', 'Privé et sécurisé — données sur votre téléphone', 'Entièrement gratuit']
+                    : ['Works 100% offline', 'Multiple models: Llama, Phi, Gemma...', 'Private & secure — data stays on device', 'Completely free']
+                  ).map((feat, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                      <Zap className="w-3 h-3 text-amber-500 flex-shrink-0" />
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Play Store Button */}
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.pocketpalai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 text-white font-semibold hover:shadow-lg hover:shadow-amber-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  {language === 'ar' ? 'حمّل من Google Play' : language === 'fr' ? 'Télécharger sur Google Play' : 'Get on Google Play'}
+                </a>
+              </div>
+            </Card>
+          </motion.div>
+
+          {/* Google AI Edge Gallery */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ y: -4 }}
+            className="group"
+          >
+            <Card className="h-full flex flex-col overflow-hidden border-2 border-blue-200/60 dark:border-blue-700/40 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 dark:bg-gray-800">
+              {/* Top gradient bar */}
+              <div className="h-2 w-full bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 rounded-t-xl" />
+
+              <div className="p-6 flex flex-col gap-4 flex-1">
+                {/* App Header */}
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30 flex-shrink-0">
+                    <span className="text-3xl">🧠</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">Google AI Edge Gallery</h3>
+                      <span className="text-xs font-semibold bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded-full border border-blue-300 dark:border-blue-600">Google</span>
+                    </div>
+                    <div className="flex items-center gap-3 mt-1 text-sm text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-blue-500 fill-current" />
+                        <span className="font-medium">{language === 'ar' ? 'وصول مبكر' : language === 'fr' ? 'Accès anticipé' : 'Early Access'}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        <span>1M+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
+                  {language === 'ar'
+                    ? 'تطبيق تجريبي من Google — تقدر تجرّب نماذج Gemma وغيرها مباشرة على جهازك بدون إنترنت. مثالي للمطورين ولكل من يبغا يكشف على مستقبل AI على الحافة.'
+                    : language === 'fr'
+                    ? "Une app expérimentale de Google — explorez Gemma et d'autres modèles directement sur votre appareil, sans Internet. Idéale pour les développeurs et les curieux de l'IA embarquée."
+                    : 'An experimental app by Google — explore Gemma and other models directly on your device, no Internet needed. Perfect for developers curious about on-device AI.'}
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-1.5">
+                  {(language === 'ar'
+                    ? ['نماذج Google Gemma على جهازك', 'وصول مبكر — ميزات جديدة باستمرار', 'AI وصول MCP تجريبي', 'من Google مباشرة — موثوق 100%']
+                    : language === 'fr'
+                    ? ['Modèles Google Gemma sur votre appareil', 'Accès anticipé — nouvelles fonctionnalités régulières', 'Connexions MCP expérimentales', 'Directement de Google — 100% fiable']
+                    : ['Google Gemma models on your device', 'Early access — new features regularly', 'Experimental MCP connections', 'Directly from Google — 100% trusted']
+                  ).map((feat, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                      <Zap className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Play Store Button */}
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery&hl=fr&pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  {language === 'ar' ? 'حمّل من Google Play' : language === 'fr' ? 'Télécharger sur Google Play' : 'Get on Google Play'}
+                </a>
+              </div>
+            </Card>
+          </motion.div>
+
+        </div>
+      </motion.div>
 
       {/* Coming Soon Section */}
       <motion.div variants={itemVariants}>
