@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen } from 'lucide-react';
+import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen, Dumbbell } from 'lucide-react';
 import Card from '../components/Card';
 import Card3D from '../components/Card3D';
 import HeroVisual from '../components/HeroVisual';
@@ -29,20 +29,20 @@ const itemVariants = {
 const projects = [
   {
     id: -1,
-    title: 'موقعي الشخصي – حمزة اعمرني',
-    titleFr: 'Mon Portfolio – Hamza Amirni',
-    titleEn: 'My Portfolio – Hamza Amirni',
-    category: 'موقع شخصي',
-    categoryEn: 'Personal Portfolio',
-    categoryFr: 'Portfolio Personnel',
-    description: 'موقعي الشخصي الاحترافي يعرض مشاريعي وخدماتي ومهاراتي، مع دعم ثلاث لغات، وضع ليلي، ومحرك بحث ذكي وتصميم متطور.',
-    descriptionEn: 'My professional personal website showcasing my projects, services and skills, with 3-language support, dark mode, smart search and premium design.',
-    descriptionFr: 'Mon site personnel professionnel présentant mes projets, services et compétences, avec support 3 langues, mode sombre et design premium.',
-    technologies: ['React', 'TypeScript', 'Tailwind', 'Vite', 'Framer Motion'],
+    title: 'Workout.cool – تطبيق اللياقة البدنية والتمارين',
+    titleFr: 'Workout.cool – Application Fitness & Musculation',
+    titleEn: 'Workout.cool – Fitness & Workout Application',
+    category: 'تطبيق ويب',
+    categoryEn: 'Fitness Web App',
+    categoryFr: 'App de Fitness',
+    description: 'تطبيق تفاعلي ذكي لتصميم وتخصيص حصص التمارين الرياضية بناءً على المعدات المتاحة والمجموعات العضلية المستهدفة.',
+    descriptionEn: 'An interactive application to design and customize workout sessions based on available equipment and targeted muscle groups.',
+    descriptionFr: 'Une application interactive pour concevoir et personnaliser des séances d\'entraînement en fonction de l\'équipement disponible et des groupes musculaires ciblés.',
+    technologies: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
     liveUrl: 'https://hamzaamirnifit.netlify.app/',
-    color: 'from-indigo-500 to-purple-600',
-    icon: Globe,
-    badge: '🌐',
+    color: 'from-orange-500 to-red-600',
+    icon: Dumbbell,
+    badge: '🏋️‍♂️',
   },
   {
     id: 0,
@@ -294,18 +294,11 @@ const Projects: React.FC = () => {
                     <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
                       {getCategory(project)}
                     </div>
-                    {/* Featured badge for portfolio */}
-                    {project.id === -1 ? (
-                      <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-yellow-400/90 text-yellow-900 text-xs font-bold px-2.5 py-1 rounded-full">
-                        <span className="w-2 h-2 bg-yellow-900 rounded-full animate-pulse inline-block" />
-                        My Site
-                      </div>
-                    ) : (
-                      <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-green-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                        <span className="w-2 h-2 bg-white rounded-full animate-pulse inline-block" />
-                        Live
-                      </div>
-                    )}
+                    {/* Live badge */}
+                    <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-green-500/90 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                      <span className="w-2 h-2 bg-white rounded-full animate-pulse inline-block" />
+                      Live
+                    </div>
                   </div>
 
                   {/* Content */}
