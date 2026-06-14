@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Card from '../components/Card';
 import { toolsContent } from '../constants';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
-import { Search } from 'lucide-react';
+import { Search, Wrench } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
@@ -90,9 +90,18 @@ const Tools: React.FC = () => {
       className="space-y-8"
     >
       <motion.div variants={itemVariants}>
-        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
-          <h1 className="text-4xl font-bold text-dark-color dark:text-white">{t('toolsPageComprehensive.title', language) || toolsContent.title}</h1>
-          <p className="text-lg text-dark-color/70 mt-4 dark:text-gray-300">{t('toolsPageComprehensive.description', language) || toolsContent.description}</p>
+        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
+          <div className="space-y-4">
+            <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+              <Wrench className="w-12 h-12 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
+              {t('toolsPageComprehensive.title', language) || toolsContent.title}
+            </h1>
+            <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {t('toolsPageComprehensive.description', language) || toolsContent.description}
+            </p>
+          </div>
         </Card>
       </motion.div>
 

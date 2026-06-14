@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain } from 'lucide-react';
+import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen } from 'lucide-react';
 import Card from '../components/Card';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -213,13 +213,20 @@ const Projects: React.FC = () => {
       viewport={{ once: true, amount: 0.1 }}
     >
       {/* Hero */}
-      <motion.div variants={itemVariants} className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
-          {t('projectsPage.title', language)}
-        </h1>
-        <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          {t('projectsPage.description', language)}
-        </p>
+      <motion.div variants={itemVariants}>
+        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
+          <div className="space-y-4">
+            <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+              <FolderOpen className="w-12 h-12 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
+              {t('projectsPage.title', language)}
+            </h1>
+            <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {t('projectsPage.description', language)}
+            </p>
+          </div>
+        </Card>
       </motion.div>
 
       {/* Stats bar */}

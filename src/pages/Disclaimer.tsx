@@ -26,14 +26,18 @@ const Disclaimer: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="text-center bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200">
-        <div className="flex items-center justify-center mb-4">
-          <AlertTriangle className="w-12 h-12 text-orange-500" />
+      <Card className="text-center bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200 dark:from-orange-950/20 dark:to-red-950/20 dark:border-orange-900/30">
+        <div className="space-y-4">
+          <div className="inline-block p-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl">
+            <AlertTriangle className="w-12 h-12 text-white" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500 pb-3">
+            {t('disclaimerPageComprehensive.title', language)}
+          </h1>
+          <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            {t('disclaimerPageComprehensive.description', language)}
+          </p>
         </div>
-        <h1 className="text-4xl font-bold text-dark-color mb-4">⚠️ {t('disclaimerPageComprehensive.title', language)}</h1>
-        <p className="text-lg text-dark-color/70 max-w-2xl mx-auto">
-          {t('disclaimerPageComprehensive.description', language)}
-        </p>
       </Card>
 
       <div className="grid grid-cols-1 gap-6">

@@ -10,7 +10,9 @@ import {
   ArrowRight,
   CheckCircle,
   MessageCircle,
+  Briefcase,
 } from "lucide-react";
+import Card from "../components/Card";
 import { useNavigation } from "../contexts/NavigationContext";
 import { useLanguage } from "../contexts/LanguageContext";
 import { t } from "../i18n";
@@ -100,13 +102,20 @@ const Services: React.FC = () => {
       animate="visible"
     >
       {/* Hero Section */}
-      <motion.div variants={itemVariants} className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
-          {t("servicesPage.hero.title", language)}
-        </h1>
-        <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          {t("servicesPage.hero.description", language)}
-        </p>
+      <motion.div variants={itemVariants}>
+        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
+          <div className="space-y-4">
+            <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+              <Briefcase className="w-12 h-12 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
+              {t("servicesPage.hero.title", language)}
+            </h1>
+            <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {t("servicesPage.hero.description", language)}
+            </p>
+          </div>
+        </Card>
       </motion.div>
 
       {/* Services Grid */}
