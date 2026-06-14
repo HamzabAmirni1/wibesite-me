@@ -52,6 +52,15 @@ export const Background3D: React.FC = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 select-none">
+      {/* 0. Subtle Dotted Grid Background */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.12] dark:opacity-[0.06] transition-opacity duration-1000"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 1.2px, transparent 1.2px)',
+          backgroundSize: '28px 28px'
+        }}
+      />
+
       {/* 1. Large Blurry Ambient Mesh Blobs */}
       <div className="absolute inset-0 z-0 opacity-40 dark:opacity-30 transition-opacity duration-1000">
         {/* Blob 1: Pink/Purple */}
@@ -103,82 +112,122 @@ export const Background3D: React.FC = () => {
         />
       </div>
 
-      {/* 2. Glassmorphic 3D Shapes with Parallax */}
+      {/* 2. Glassmorphic Geometric Outline Shapes with Parallax */}
       <div className="absolute inset-0 z-10">
         
-        {/* Shape 1: Large Glossy Sphere (Far Depth) */}
+        {/* Shape 1: Curved 4-pointed Sparkle (Far Depth) */}
         <motion.div
           style={{ x: offsetFarX, y: offsetFarY }}
           className="absolute top-[18%] left-[8%] z-[1]"
         >
           <motion.div
-            animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="w-36 h-36 rounded-full bg-gradient-to-br from-white/15 to-white/5 border border-white/20 dark:from-white/5 dark:to-white/0 dark:border-white/10 shadow-[inset_10px_10px_20px_rgba(255,255,255,0.15),_inset_-10px_-10px_20px_rgba(0,0,0,0.1),_8px_16px_32px_rgba(0,0,0,0.08)] backdrop-blur-md"
-          />
+            animate={{ y: [0, -12, 0], rotate: [0, 90, 0] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+            className="w-16 h-16 flex items-center justify-center bg-white/5 dark:bg-white/0 border border-white/10 dark:border-white/5 rounded-xl backdrop-blur-[2px] shadow-sm text-primary/10 dark:text-blue-500/10"
+          >
+            <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+              <path 
+                d="M24 0c0 13.255-10.745 24-24 24 13.255 0 24 10.745 24 24 0-13.255 10.745-24 24-24-13.255 0-24-10.745-24-24z" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+              />
+            </svg>
+          </motion.div>
         </motion.div>
 
-        {/* Shape 2: Glossy Glass Donut (Mid Depth) */}
+        {/* Shape 2: Outline Hexagon (Mid Depth) */}
         <motion.div
           style={{ x: offsetMidX, y: offsetMidY }}
           className="absolute top-[32%] right-[12%] z-[3]"
         >
           <motion.div
-            animate={{ y: [0, 20, 0], rotate: [0, 15, 0] }}
-            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="w-28 h-28 rounded-full border-[22px] border-white/15 dark:border-white/10 bg-transparent shadow-[inset_4px_4px_8px_rgba(255,255,255,0.1),_8px_16px_32px_rgba(0,0,0,0.06)] backdrop-blur-[4px] relative"
+            animate={{ y: [0, 15, 0], rotate: [0, 60, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="w-16 h-16 flex items-center justify-center bg-white/5 dark:bg-white/0 border border-white/10 dark:border-white/5 rounded-xl backdrop-blur-[2px] shadow-sm text-secondary/15 dark:text-purple-500/15"
           >
-            {/* Gloss highlight overlay */}
-            <div className="absolute inset-0 rounded-full border border-white/20 dark:border-white/5 pointer-events-none" />
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+              <path 
+                d="M24 4 L41 14 L41 34 L24 44 L7 34 L7 14 Z" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+              />
+            </svg>
           </motion.div>
         </motion.div>
 
-        {/* Shape 3: Translucent Capsule (Close Depth) */}
+        {/* Shape 3: Outline Triangle (Close Depth) */}
         <motion.div
           style={{ x: offsetCloseX, y: offsetCloseY }}
           className="absolute bottom-[28%] left-[18%] z-[5]"
         >
           <motion.div
-            animate={{ y: [0, -25, 0], rotate: [45, 55, 45] }}
+            animate={{ y: [0, -18, 0], rotate: [45, 75, 45] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="w-14 h-28 rounded-full bg-gradient-to-br from-white/20 to-white/5 border border-white/30 dark:from-white/10 dark:to-white/0 dark:border-white/10 shadow-[inset_8px_8px_16px_rgba(255,255,255,0.2),_8px_16px_32px_rgba(0,0,0,0.1)] backdrop-blur-sm"
-          />
+            className="w-14 h-14 flex items-center justify-center bg-white/5 dark:bg-white/0 border border-white/10 dark:border-white/5 rounded-xl backdrop-blur-[2px] shadow-sm text-accent/15 dark:text-cyan-500/15"
+          >
+            <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
+              <path 
+                d="M24 6 L42 38 L6 38 Z" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+              />
+            </svg>
+          </motion.div>
         </motion.div>
 
-        {/* Shape 4: Mid-size Sphere (Mid Depth) */}
+        {/* Shape 4: Concentric Rings (Mid Depth) */}
         <motion.div
           style={{ x: offsetMidX, y: offsetMidY }}
           className="absolute bottom-[16%] right-[22%] z-[2]"
         >
           <motion.div
-            animate={{ y: [0, -18, 0], rotate: [0, -8, 0] }}
-            transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="w-24 h-24 rounded-full bg-gradient-to-br from-white/15 to-white/2 border border-white/25 dark:from-white/5 dark:to-white/0 dark:border-white/10 shadow-[inset_6px_6px_12px_rgba(255,255,255,0.15),_inset_-6px_-6px_12px_rgba(0,0,0,0.08),_6px_12px_24px_rgba(0,0,0,0.06)] backdrop-blur-[6px]"
-          />
+            animate={{ y: [0, -14, 0], rotate: [0, -45, 0] }}
+            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+            className="w-16 h-16 flex items-center justify-center bg-white/5 dark:bg-white/0 border border-white/10 dark:border-white/5 rounded-xl backdrop-blur-[2px] shadow-sm text-primary/10 dark:text-indigo-500/10"
+          >
+            <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="24" cy="24" r="10" stroke="currentColor" strokeWidth="1.0" strokeDasharray="3 3" />
+            </svg>
+          </motion.div>
         </motion.div>
 
-        {/* Shape 5: Small Floating Ring (Close Depth) */}
+        {/* Shape 5: Floating Crosses (Close Depth) */}
         <motion.div
           style={{ x: offsetCloseX, y: offsetCloseY }}
           className="absolute top-[55%] left-[32%] z-[4]"
         >
           <motion.div
-            animate={{ y: [0, 22, 0], rotate: [0, -360, 0] }}
-            transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
-            className="w-16 h-16 rounded-full border-[10px] border-white/20 dark:border-white/10 bg-transparent shadow-[inset_2px_2px_4px_rgba(255,255,255,0.15),_4px_8px_16px_rgba(0,0,0,0.08)] backdrop-blur-[3px]"
-          />
+            animate={{ y: [0, 18, 0], rotate: [0, 180, 0] }}
+            transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+            className="w-12 h-12 flex items-center justify-center bg-white/5 dark:bg-white/0 border border-white/10 dark:border-white/5 rounded-lg backdrop-blur-[2px] shadow-sm text-secondary/15 dark:text-purple-500/15"
+          >
+            <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
+              <path d="M24 12 v24 M12 24 h24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </motion.div>
         </motion.div>
 
-        {/* Shape 6: Tiny Orbiting Sphere (Far Depth) */}
+        {/* Shape 6: Small Sparkle (Far Depth) */}
         <motion.div
           style={{ x: offsetFarX, y: offsetFarY }}
           className="absolute top-[48%] right-[35%] z-[1]"
         >
           <motion.div
-            animate={{ y: [0, -12, 0], scale: [1, 1.15, 1] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="w-12 h-12 rounded-full bg-gradient-to-br from-white/20 to-white/5 border border-white/20 dark:from-white/5 dark:to-white/0 dark:border-white/10 shadow-[inset_4px_4px_8px_rgba(255,255,255,0.2),_4px_8px_16px_rgba(0,0,0,0.05)] backdrop-blur-[2px]"
-          />
+            animate={{ y: [0, -10, 0], scale: [1, 1.2, 1] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="w-10 h-10 flex items-center justify-center bg-white/5 dark:bg-white/0 border border-white/10 dark:border-white/5 rounded-lg backdrop-blur-[1px] shadow-sm text-accent/15 dark:text-cyan-500/15"
+          >
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none">
+              <path 
+                d="M24 0c0 13.255-10.745 24-24 24 13.255 0 24 10.745 24 24 0-13.255 10.745-24 24-24-13.255 0-24-10.745-24-24z" 
+                fill="currentColor"
+              />
+            </svg>
+          </motion.div>
         </motion.div>
       </div>
 
