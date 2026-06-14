@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Card from "../components/Card";
 import Card3D from "../components/Card3D";
+import HeroVisual from "../components/HeroVisual";
 import { useNavigation } from "../contexts/NavigationContext";
 import { useLanguage } from "../contexts/LanguageContext";
 import { t } from "../i18n";
@@ -104,17 +105,22 @@ const Services: React.FC = () => {
     >
       {/* Hero Section */}
       <motion.div variants={itemVariants}>
-        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
-          <div className="space-y-4">
-            <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
-              <Briefcase className="w-12 h-12 text-white" />
+        <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4 text-center lg:text-left">
+              <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+                <Briefcase className="w-12 h-12 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
+                {t("servicesPage.hero.title", language)}
+              </h1>
+              <p className="text-lg text-dark-color/70 dark:text-gray-300 leading-relaxed">
+                {t("servicesPage.hero.description", language)}
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
-              {t("servicesPage.hero.title", language)}
-            </h1>
-            <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              {t("servicesPage.hero.description", language)}
-            </p>
+            <div className="h-[260px] lg:h-[300px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 shadow-[0_0_40px_rgba(99,102,241,0.25)]">
+              <HeroVisual type="services" />
+            </div>
           </div>
         </Card>
       </motion.div>

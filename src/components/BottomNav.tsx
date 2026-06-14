@@ -13,7 +13,7 @@ interface BottomNavProps {
 }
 
 // Show specific important links for mobile bottom nav
-const bottomNavIds = ['home', 'apps', 'services', 'bots'];
+const bottomNavIds = ['home', 'apps', 'services', 'projects'];
 const bottomNavLinks = navLinks.filter(link => bottomNavIds.includes(link.id));
 
 const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSection, onSearchClick }) => {

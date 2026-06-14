@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../components/Card';
-import PhoneMockup3D from '../components/PhoneMockup3D';
+import HeroVisual from '../components/HeroVisual';
 import { Download, Star, Users, Smartphone, Globe, Zap, ThumbsUp, ExternalLink, Sparkles, Search, Bot, X, Tablet } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
@@ -190,8 +190,8 @@ const Apps: React.FC = () => {
                 {t('appsPage.hero.description', language)}
               </p>
             </div>
-            <div className="flex justify-center items-center py-4">
-              <PhoneMockup3D />
+            <div className="h-[260px] lg:h-[320px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 shadow-[0_0_40px_rgba(99,102,241,0.3)]">
+              <HeroVisual type="phone" />
             </div>
           </div>
         </Card>

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import CyberNetworkCanvas from '../components/CyberNetworkCanvas';
+import HeroVisual from '../components/HeroVisual';
 import { toolsContent } from '../constants';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { Search, Wrench } from 'lucide-react';
@@ -107,10 +107,7 @@ const Tools: React.FC = () => {
             </div>
             {/* Right: Animated Network */}
             <div className="relative h-[240px] lg:h-[280px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 bg-gradient-to-br from-indigo-950/60 to-cyan-950/60 shadow-[0_0_40px_rgba(99,102,241,0.25)]">
-              <CyberNetworkCanvas />
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest text-white/40 pointer-events-none">
-                🕸️ Live Network
-              </div>
+              <HeroVisual type="network" />
             </div>
           </div>
         </Card>

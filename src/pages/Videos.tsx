@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import VideoWaveCanvas from '../components/VideoWaveCanvas';
+import HeroVisual from '../components/HeroVisual';
 import { Youtube, Play, Eye, ThumbsUp, Clock } from 'lucide-react';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import CallToAction from '../components/CallToAction';
@@ -198,10 +198,7 @@ const Videos: React.FC = () => {
             </div>
             {/* Right: Animated Waveform */}
             <div className="relative h-[240px] lg:h-[280px] rounded-2xl overflow-hidden border border-red-200/60 dark:border-red-900/40 bg-gradient-to-br from-gray-950 to-red-950/40 shadow-[0_0_40px_rgba(239,68,68,0.25)]">
-              <VideoWaveCanvas />
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest text-white/40 pointer-events-none">
-                🎬 Live Animation
-              </div>
+              <HeroVisual type="waveform" />
             </div>
           </div>
         </Card>

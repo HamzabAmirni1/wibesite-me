@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen } from 'lucide-react';
 import Card from '../components/Card';
 import Card3D from '../components/Card3D';
-import CarViewer3D from '../components/CarViewer3D';
+import HeroVisual from '../components/HeroVisual';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -230,13 +230,9 @@ const Projects: React.FC = () => {
                 {t('projectsPage.description', language)}
               </p>
             </div>
-            {/* Right: Interactive 3D Car */}
-            <div className="relative h-[280px] lg:h-[340px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 bg-gradient-to-br from-indigo-950/60 to-purple-950/60 backdrop-blur-sm shadow-[0_0_40px_rgba(99,102,241,0.3)]">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(99,102,241,0.15)_0%,_transparent_70%)]" />
-              <CarViewer3D />
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest text-white/50 pointer-events-none">
-                🖱️ Drag to rotate
-              </div>
+            {/* Right: Car Visual */}
+            <div className="h-[280px] lg:h-[340px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 shadow-[0_0_40px_rgba(99,102,241,0.3)]">
+              <HeroVisual type="car" />
             </div>
           </div>
         </Card>

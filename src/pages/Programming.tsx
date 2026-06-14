@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
-import CodeSimulator from '../components/CodeSimulator';
+import HeroVisual from '../components/HeroVisual';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { CheckCircle, Code2, Laptop, BookOpen, Zap, Target, Award } from 'lucide-react';
 import CallToAction from '../components/CallToAction';
@@ -134,8 +134,8 @@ const Programming: React.FC = () => {
                 {t('programmingPage.hero.description', language)}
               </p>
             </div>
-            <div className="flex justify-center items-center py-4">
-              <CodeSimulator />
+            <div className="h-[260px] lg:h-[320px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 shadow-[0_0_40px_rgba(99,102,241,0.3)]">
+              <HeroVisual type="code" />
             </div>
           </div>
         </Card>
