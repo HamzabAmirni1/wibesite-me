@@ -67,28 +67,22 @@ const App: React.FC = () => {
   // Initialize performance optimizations
   usePerformance();
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    // Only use user's explicit preference — NOT system preference
+    return localStorage.getItem('darkMode') === 'true';
+  });
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (isDark) {
       document.documentElement.classList.add('dark');
-      setIsDark(true);
     } else {
       document.documentElement.classList.remove('dark');
-      setIsDark(false);
     }
-  }, []);
+    localStorage.setItem('darkMode', isDark.toString());
+  }, [isDark]);
 
   const toggleDark = () => {
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-      setIsDark(false);
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-      setIsDark(true);
-    }
+    setIsDark(prev => !prev);
   };
 
   useEffect(() => {

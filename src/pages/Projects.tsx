@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen } from 'lucide-react';
 import Card from '../components/Card';
 import Card3D from '../components/Card3D';
+import CarViewer3D from '../components/CarViewer3D';
 import CallToAction from '../components/CallToAction';
 import WhatsappChannelLinks from '../components/WhatsappChannelLinks';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -215,17 +216,28 @@ const Projects: React.FC = () => {
     >
       {/* Hero */}
       <motion.div variants={itemVariants}>
-        <Card className="text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20">
-          <div className="space-y-4">
-            <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
-              <FolderOpen className="w-12 h-12 text-white" />
+        <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/10 dark:from-primary/10 dark:to-secondary/10 dark:border-primary/20 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left: Text Content */}
+            <div className="space-y-4 text-center lg:text-left">
+              <div className="inline-block p-4 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+                <FolderOpen className="w-12 h-12 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
+                {t('projectsPage.title', language)}
+              </h1>
+              <p className="text-lg text-dark-color/70 dark:text-gray-300 leading-relaxed">
+                {t('projectsPage.description', language)}
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary pb-3">
-              {t('projectsPage.title', language)}
-            </h1>
-            <p className="text-lg text-dark-color/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              {t('projectsPage.description', language)}
-            </p>
+            {/* Right: Interactive 3D Car */}
+            <div className="relative h-[280px] lg:h-[340px] rounded-2xl overflow-hidden border border-primary/20 dark:border-primary/30 bg-gradient-to-br from-indigo-950/60 to-purple-950/60 backdrop-blur-sm shadow-[0_0_40px_rgba(99,102,241,0.3)]">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(99,102,241,0.15)_0%,_transparent_70%)]" />
+              <CarViewer3D />
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest text-white/50 pointer-events-none">
+                🖱️ Drag to rotate
+              </div>
+            </div>
           </div>
         </Card>
       </motion.div>
