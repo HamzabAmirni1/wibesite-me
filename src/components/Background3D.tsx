@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import ThreeBackground from './ThreeBackground';
 
 export const Background3D: React.FC = () => {
   const mouseX = useMotionValue(0);
@@ -52,6 +53,9 @@ export const Background3D: React.FC = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 select-none">
+      {/* Three.js Interactive Constellation Background */}
+      <ThreeBackground />
+      
       {/* 0. Subtle Dotted Grid Background */}
       <div 
         className="absolute inset-0 z-0 opacity-[0.12] dark:opacity-[0.06] transition-opacity duration-1000"
