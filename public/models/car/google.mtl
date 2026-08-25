@@ -1,0 +1,25 @@
+newmtl windows
+Ka 0.172549 0.172549 0.172549
+  Kd 0.03 0.03 0.03
+Ks 0 0 0
+Ns 127
+newmtl black
+Ka 0.2 0.2 0.2
+  Kd 0.05 0.05 0.05
+Ks 0 0 0
+Ns 127
+newmtl metal
+Ka 0.8 0.8 0.8
+  Kd 0.61 0.61 0.61
+Ks 0 0 0
+Ns 127
+newmtl light
+Ka 0.8 0.8 0.8
+  Kd 1.00 1.00 1.00
+Ks 0 0 0
+Ns 127
+newmtl paint
+Ka 0.121569 0.121569 0.121569
+  Kd 0.61 0.08 0.00
+Ks 0 0 0
+Ns 127

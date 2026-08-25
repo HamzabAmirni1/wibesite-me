@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientMesh {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  background: linear-gradient(-45deg, #ffffff, #fdfdfd, #f8fafc, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientMesh 15s ease infinite;
+  background-attachment: fixed;
+  @apply font-sans;
+}
+
+.dark body {
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #020617, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientMesh 15s ease infinite;
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar for Webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+/* Intro Animation Gradient */
+@keyframes animated-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.intro-gradient {
+  background: linear-gradient(-45deg, #1f2937, #3730a3, #4f46e5, #1f2937);
+  background-size: 400% 400%;
+  animation: animated-gradient 15s ease infinite;
+}
+
+/* Hide floating actions when a modal is open */
+body.modal-open .top-actions-container,
+body.modal-open .floating-dark-toggle,
+body.modal-open .floating-socials-container,
+body.modal-open .scroll-to-top-button {
+  display: none !important;
+}

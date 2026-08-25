@@ -1,0 +1,29 @@
+{
+    "name": "Hamza Amirni | Portfolio & Blog",
+    "short_name": "Hamza.A",
+    "description": "Portofolio and Technical Blog of Hamza Amirni, Full-Stack Developer.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#4f46e5",
+    "theme_color": "#3b82f6",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/hamza-logo.svg",
+            "sizes": "192x192 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/hamza-logo.svg",
+            "sizes": "192x192 512x512",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        }
+    ],
+    "categories": [
+        "education",
+        "developer",
+        "business"
+    ]
+}

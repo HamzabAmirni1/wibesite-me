@@ -1,0 +1,165 @@
+# حمزة اعمرني - موقع شخصي متخصص
+
+موقع شامل لمشاركة الخبرة والشغف في عالم البرمجة والتقنية وتطوير الذات.
+
+## الميزات الرئيسية
+
+✨ **محتوى أصلي مفصّل**
+- 6+ مقالات برمجية شاملة
+- دروس تفاعلية في البرمجة
+- شروحات معرفية إسلامية
+- نصائح إنتاجية وتطوير ذات
+
+📱 **تصميم استجيابي**
+- دعم كامل للعربية (RTL)
+- دعم الإنجليزية والفرنسية
+- تصميم جميل وحديث
+- واجهة سهلة الاستخدام
+
+🚀 **تحسينات الأداء**
+- ضغط الصور وتخزين مؤقت
+- تحميل كسول (Lazy Loading)
+- CDN للملفات الثابتة
+- سرعة تحميل محسّنة
+
+🔍 **تحسينات SEO**
+- خريطة موقع (Sitemap)
+- JSON-LD Schema Markup
+- Meta tags محسّنة
+- Open Graph و Twitter Cards
+
+📊 **تحليلات وأدوات**
+- Google Analytics 4 (متطلب: إضافة الـ ID)
+- Google Search Console (متطلب: التحقق)
+- روابط اجتماعية نشطة
+
+## البدء السريع
+
+### المتطلبات
+- Node.js 18+
+- npm أو yarn
+
+### التثبيت والتشغيل
+
+```bash
+# 1. استنساخ المشروع
+git clone <repository-url>
+cd wibesite-me
+
+# 2. تثبيت المكتبات
+npm install
+
+# 3. تشغيل في بيئة التطوير
+npm run dev
+
+# 4. بناء للإنتاج
+npm run build
+
+# 5. معاينة الإنتاج محلياً
+npm run preview
+```
+
+## البنية الأساسية
+
+```
+src/
+├── pages/           # صفحات التطبيق الرئيسية
+├── components/      # مكونات React قابلة لإعادة الاستخدام
+├── contexts/        # إدارة الحالة (Language, Navigation)
+├── hooks/           # React Hooks المخصصة
+├── styles/          # ملفات CSS
+├── lib/             # دوال مساعدة
+├── i18n.ts          # ملف الترجمات
+└── constants.ts     # بيانات ثابتة (مقالات، تطبيقات، إلخ)
+```
+
+## المقالات المتاحة
+
+1. **تصميم الويب الحديث** - أفضل الممارسات والاتجاهات
+2. **نصائح الإنتاجية** - 10 نصائح لزيادة الإنتاجية
+3. **الأذكار والاستغفار** - معرفة إسلامية عميقة
+4. **حل مشكلة حظر واتساب** - دليل شامل
+5. **البدء في البرمجة** - خطوات عملية للمبتدئين
+6. **JavaScript المتقدم** - Promises و Async/Await
+
+## الأدوات المستخدمة
+
+- **Frontend**: React + TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **Icons**: Lucide React, React Icons
+- **Build Tool**: Vite
+- **Deployment**: Netlify
+
+## تحسينات SEO المهمة
+
+### 1. Google Analytics
+في `index.html`، استبدل `G-XXXXXXXXXX` بـ Measurement ID الخاص بك:
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_ID"></script>
+```
+
+### 2. Google Search Console
+استبدل `XXXXXXXXXXXXXXXXXXXXXXXXX` بـ verification code من Google:
+```html
+<meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+```
+
+### 3. خريطة الموقع
+الملف موجود في `/public/sitemap.xml` ومسجل في `robots.txt`
+
+## الميزات الإضافية
+
+- 🌙 دعم الوضع المظلم (اختياري)
+- 🎨 تخصيص الألوان سهل
+- 📧 نموذج اتصال وظيفي
+- 💬 روابط WhatsApp و Telegram و Facebook
+- 🎬 فيديوهات YouTube مضمنة
+- 🎮 ألعاب وأدوات خارجية
+
+## التطوير
+
+```bash
+# لعرض الأخطاء
+npm run lint
+
+# لإصلاح الأخطاء تلقائياً
+npm run lint -- --fix
+
+# بناء الإصدار الأخيرة
+npm run build
+
+# معاينة الإنتاج
+npm run preview
+```
+
+## النشر على Netlify
+
+الموقع مرتبط بـ Netlify تلقائياً. عند push إلى main:
+1. يتم بناء الموقع تلقائياً
+2. يتم نشره مباشرة
+3. شهادة SSL تُضاف تلقائياً
+
+## المساهمة والتطوير
+
+سعيد بأي اقتراحات أو تحسينات! يمكنك:
+- فتح Issue للمشاكل
+- عمل Pull Request للتحسينات
+- الاتصال عبر روابط التواصل في الموقع
+
+## الترخيص
+
+جميع محتويات المشروع محفوظة الحقوق لـ حمزة اعمرني
+
+## معلومات التواصل
+
+- 📧 البريد: hamzaamirni@example.com
+- 💬 WhatsApp: +212624855939
+- 🔗 Facebook: facebook.com/6kqzuj3y4e
+- 📸 Instagram: @hamza_amirni_01
+- 🎥 YouTube: @Hamzaamirni01
+- 📱 Telegram: @hamzaamirni
+
+---
+
+**آخر تحديث**: 17 نوفمبر 2025
