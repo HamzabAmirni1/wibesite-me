@@ -269,7 +269,58 @@ const Bots: React.FC = () => {
         </Card>
       </motion.div>
 
-      {/* Features Grid */}
+      {/* ── WhatsApp Bot Management Panel Banner ── */}
+      <motion.div variants={itemVariants}>
+        <a
+          href="https://gestionbothamzaamirni01.koyeb.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
+        >
+          <div className="relative overflow-hidden rounded-2xl border-2 border-green-400/40 dark:border-green-500/30 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-green-500/20 p-6 sm:p-8">
+            {/* Glowing background blobs */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+
+            <div className="relative flex flex-col sm:flex-row items-center justify-between gap-6">
+              {/* Left: icon + text */}
+              <div className="flex items-center gap-5 text-white">
+                <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <SiWhatsapp className="w-9 h-9 text-white" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-green-100/80 mb-1">
+                    {language === 'ar' ? '🔧 لوحة التحكم' : language === 'fr' ? '🔧 Panneau de Gestion' : '🔧 Management Panel'}
+                  </p>
+                  <h2 className="text-xl sm:text-2xl font-extrabold leading-tight">
+                    {language === 'ar'
+                      ? 'ربط بوت واتساب الخاص بك'
+                      : language === 'fr'
+                        ? 'Connecter votre Bot WhatsApp'
+                        : 'Link Your WhatsApp Bot'}
+                  </h2>
+                  <p className="text-sm text-green-100/80 mt-1 max-w-md">
+                    {language === 'ar'
+                      ? 'اربط رقم واتساب جديد بالبوت الخاص بك عبر Pairing Code أو مسح QR — بسهولة وأمان'
+                      : language === 'fr'
+                        ? 'Liez un nouveau numéro WhatsApp à votre bot via Pairing Code ou QR — simple et sécurisé'
+                        : 'Link a new WhatsApp number to your bot via Pairing Code or QR scan — easy & secure'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: CTA button */}
+              <div className="flex-shrink-0">
+                <div className="flex items-center gap-2 bg-white text-green-700 font-bold px-6 py-3 rounded-xl shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 text-base whitespace-nowrap">
+                  <ExternalLink className="w-5 h-5" />
+                  {language === 'ar' ? 'افتح لوحة التحكم' : language === 'fr' ? 'Ouvrir le panneau' : 'Open Panel'}
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </motion.div>
+
       <motion.div variants={itemVariants}>
         <h2 className="text-3xl font-bold text-center text-dark-color dark:text-gray-100 mb-8">
           {t('botsPageFull.featuresTitle', language)}
