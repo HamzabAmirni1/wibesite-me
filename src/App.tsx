@@ -11,7 +11,7 @@ import { NavigationContext } from './contexts/NavigationContext';
 import { usePerformance } from './hooks/usePerformance';
 import { useLanguage } from './contexts/LanguageContext';
 import { t } from './i18n';
-import { Menu, Search, X, MessageSquare, MonitorPlay, Code2, Rocket, Briefcase, Zap, Moon, Sun, ArrowUp } from 'lucide-react';
+import { Menu, Search, X, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
 import DarkModeToggle from './components/DarkModeToggle';
 import Background3D from './components/Background3D';
@@ -204,20 +204,46 @@ const App: React.FC = () => {
         {/* Top Actions for Mobile & Desktop */}
         <div className="fixed top-4 right-4 z-50 flex gap-2 top-actions-container">
           <DarkModeToggle isDark={isDark} onToggle={toggleDark} />
+          {/* Search Button – 3D glass style */}
           <button
-            className="bg-white/70 backdrop-blur-sm p-3 rounded-full shadow-lg text-primary hover:bg-primary hover:text-white transition-all duration-300"
             onClick={() => setSearchOpen(true)}
             aria-label="Search"
+            className={cn(
+              "relative flex items-center justify-center w-10 h-10 rounded-full cursor-pointer select-none",
+              "transition-all duration-300 active:scale-90 active:translate-y-[2px]",
+              isDark
+                ? "bg-slate-800 border border-white/10 shadow-[0_0_12px_rgba(59,130,246,0.2),0_4px_10px_rgba(0,0,0,0.5)] text-blue-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+                : "bg-white border border-blue-100 shadow-[0_0_12px_rgba(29,78,216,0.15),0_4px_10px_rgba(0,0,0,0.1)] text-primary hover:shadow-[0_0_20px_rgba(29,78,216,0.25)]"
+            )}
           >
-            <Search className="w-6 h-6" />
+            {/* depth layer */}
+            <span className={cn(
+              "absolute inset-0 rounded-full -z-10 translate-y-[3px]",
+              isDark ? "bg-blue-900/50" : "bg-blue-100/80"
+            )} style={{ filter: 'blur(1px)' }} />
+            <Search className="w-5 h-5" />
           </button>
+
+          {/* Hamburger – 3D glass style (mobile only) */}
           <button
-            className="lg:hidden bg-white/70 backdrop-blur-sm p-3 rounded-full shadow-lg text-primary hover:bg-primary hover:text-white transition-all duration-300"
+            className={cn(
+              "lg:hidden relative flex items-center justify-center w-10 h-10 rounded-full cursor-pointer select-none",
+              "transition-all duration-300 active:scale-90 active:translate-y-[2px]",
+              isDark
+                ? "bg-slate-800 border border-white/10 shadow-[0_0_12px_rgba(59,130,246,0.2),0_4px_10px_rgba(0,0,0,0.5)] text-blue-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.35)]"
+                : "bg-white border border-blue-100 shadow-[0_0_12px_rgba(29,78,216,0.15),0_4px_10px_rgba(0,0,0,0.1)] text-primary hover:shadow-[0_0_20px_rgba(29,78,216,0.25)]"
+            )}
             onClick={() => setSidebarOpen(!isSidebarOpen)}
           >
-            {isSidebarOpen ? <X /> : <Menu />}
+            <span className={cn(
+              "absolute inset-0 rounded-full -z-10 translate-y-[3px]",
+              isDark ? "bg-blue-900/50" : "bg-blue-100/80"
+            )} style={{ filter: 'blur(1px)' }} />
+            {isSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
+
+        {/* Floating Dark Mode Toggle – removed (handled by top bar) */}
 
         {/* Search Modal */}
         <SearchModal
@@ -232,15 +258,6 @@ const App: React.FC = () => {
           setActiveSection={handleSetSection}
           onSearchClick={() => setSearchOpen(true)}
         />
-
-        {/* Floating Dark Mode Toggle */}
-        <button
-          onClick={toggleDark}
-          className="fixed bottom-24 right-4 lg:bottom-8 lg:right-8 z-50 p-3 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200 dark:border-gray-700 hover:scale-110 active:scale-95 transition-all text-gray-800 dark:text-white floating-dark-toggle"
-          title="Toggle Dark Mode"
-        >
-          {isDark ? <Sun className="w-6 h-6 text-yellow-500" /> : <Moon className="w-6 h-6 text-indigo-500" />}
-        </button>
 
         {/* Floating Social Icons */}
         <FloatingSocials />
