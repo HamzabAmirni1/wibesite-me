@@ -7,7 +7,7 @@ export const Background3D: React.FC = memo(() => {
       <div 
         className="absolute inset-0 z-0 opacity-40 dark:opacity-20"
         style={{
-          backgroundImage: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, rgba(29, 78, 216, 0.12) 1px, transparent 1px)',
           backgroundSize: '24px 24px'
         }}
       />

@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(-45deg, #ffffff, #fdfdfd, #f8fafc, #ffffff);
+  background: linear-gradient(-45deg, #ffffff, #eff6ff, #f0f9ff, #ffffff);
   background-size: 400% 400%;
   animation: gradientMesh 15s ease infinite;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
 }
 
 .dark body {
-  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #020617, #0f172a);
+  background: linear-gradient(-45deg, #0f172a, #1e3a5f, #0c1a3a, #0f172a);
   background-size: 400% 400%;
   animation: gradientMesh 15s ease infinite;
   background-attachment: fixed;
@@ -64,7 +64,7 @@ body {
 }
 
 .intro-gradient {
-  background: linear-gradient(-45deg, #1f2937, #3730a3, #4f46e5, #1f2937);
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #1d4ed8, #0f172a);
   background-size: 400% 400%;
   animation: animated-gradient 15s ease infinite;
 }
