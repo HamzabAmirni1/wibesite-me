@@ -13,115 +13,16 @@ body {
   background-size: 400% 400%;
   animation: gradientMesh 15s ease infinite;
   background-attachment: fixed;
+  color: #1f2937;
   @apply font-sans;
 }
 
 .dark body {
-  background: linear-gradient(-45deg, #0f172a, #1e3a5f, #0c1a3a, #0f172a);
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0c1527, #0f172a);
   background-size: 400% 400%;
   animation: gradientMesh 15s ease infinite;
   background-attachment: fixed;
-}
-
-/* ═══════════════════════════════════════════════
-   GLOBAL DARK MODE — covers ALL elements
-   ═══════════════════════════════════════════════ */
-
-/* Base text & background */
-.dark * {
-  border-color: rgba(255,255,255,0.08);
-}
-
-.dark body,
-.dark #root {
-  color: #e2e8f0;
-}
-
-/* Cards & white boxes */
-.dark .bg-white,
-.dark [class*="bg-white"] {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
-}
-
-.dark .bg-gray-50 { background-color: #1e293b !important; }
-.dark .bg-gray-100 { background-color: #263045 !important; }
-.dark .bg-gray-200 { background-color: #2d3a50 !important; }
-
-/* Text colors */
-.dark .text-gray-800,
-.dark .text-gray-900,
-.dark .text-dark-color {
-  color: #e2e8f0 !important;
-}
-.dark .text-gray-700 { color: #cbd5e1 !important; }
-.dark .text-gray-600 { color: #94a3b8 !important; }
-.dark .text-gray-500 { color: #64748b !important; }
-.dark .text-gray-400 { color: #475569 !important; }
-
-/* Borders */
-.dark .border-gray-200 { border-color: rgba(255,255,255,0.08) !important; }
-.dark .border-gray-100 { border-color: rgba(255,255,255,0.06) !important; }
-.dark .border-border-color { border-color: rgba(255,255,255,0.08) !important; }
-
-/* Inputs & forms */
-.dark input,
-.dark textarea,
-.dark select {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
-  border-color: rgba(255,255,255,0.12) !important;
-}
-
-.dark input::placeholder,
-.dark textarea::placeholder {
-  color: #475569 !important;
-}
-
-/* Article cards & content */
-.dark .rounded-2xl.shadow-lg,
-.dark .rounded-2xl.shadow-xl,
-.dark article {
-  background-color: #1e293b !important;
-  color: #cbd5e1 !important;
-}
-
-/* Prose content in dark mode */
-.dark .prose {
-  color: #cbd5e1 !important;
-}
-.dark .prose h1,
-.dark .prose h2,
-.dark .prose h3,
-.dark .prose h4 {
-  color: #e2e8f0 !important;
-}
-.dark .prose p,
-.dark .prose li {
-  color: #94a3b8 !important;
-}
-
-/* Tag badges */
-.dark .bg-gray-200.text-gray-700 {
-  background-color: #334155 !important;
-  color: #94a3b8 !important;
-}
-
-/* Search bars */
-.dark .bg-white.rounded-2xl {
-  background-color: #1e293b !important;
-}
-
-/* Scrollbar in dark mode */
-:root {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(59,130,246,0.3) transparent;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(59,130,246,0.3) !important;
-}
-.dark ::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.2) !important;
+  color: #f1f5f9;
 }
 
 /* Custom Scrollbar for Webkit browsers */
@@ -135,18 +36,18 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(59, 130, 246, 0.4);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(59, 130, 246, 0.6);
 }
 
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+  scrollbar-color: rgba(59, 130, 246, 0.4) rgba(255, 255, 255, 0.1);
 }
 
 /* Intro Animation Gradient */

@@ -164,11 +164,8 @@ const App: React.FC = () => {
         {showIntro && <IntroAnimation onAnimationComplete={handleIntroComplete} />}
       </AnimatePresence>
 
-      <motion.div
+      <div
         className={cn("flex min-h-screen bg-transparent", "dark:bg-transparent")}
-        initial={{ opacity: isIntroFinished ? 1 : 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: isIntroFinished ? 0 : 3.8 }}
       >
         <Sidebar
           activeSection={activeSection}
@@ -283,7 +280,7 @@ const App: React.FC = () => {
 
         {/* Network Status */}
         <NetworkStatus />
-      </motion.div>
+      </div>
     </NavigationContext.Provider>
   );
 };
