@@ -17,7 +17,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onReadMore }) => {
   
   return (
     <motion.div 
-      className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-2xl"
+      className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-2xl dark:border dark:border-white/10"
       whileHover={{ y: -5 }}
     >
       <div className="overflow-hidden relative">

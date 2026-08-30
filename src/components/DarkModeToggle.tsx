@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface DarkModeToggleProps {
@@ -37,74 +38,49 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({ isDark: propIsDark, onT
     <motion.button
       onClick={handleToggle}
       aria-label="Toggle dark mode"
-      whileTap={{ scale: 0.88, y: 2 }}
-      whileHover={{ scale: 1.06 }}
+      whileTap={{ scale: 0.92 }}
+      whileHover={{ scale: 1.05 }}
       transition={{ type: 'spring', stiffness: 400, damping: 20 }}
       className={`
-        relative flex items-center gap-2 px-4 py-2 rounded-full select-none cursor-pointer
-        transition-colors duration-500
+        relative flex items-center gap-2 px-3 py-2 rounded-full select-none cursor-pointer
+        transition-all duration-300 shadow-lg
         ${isDark
-          ? 'bg-[#0f172a] border border-indigo-500/30 shadow-[0_0_16px_rgba(99,102,241,0.35),0_4px_12px_rgba(0,0,0,0.6)] text-indigo-300'
-          : 'bg-white border border-yellow-300/60 shadow-[0_0_16px_rgba(251,191,36,0.30),0_4px_12px_rgba(0,0,0,0.12)] text-yellow-500'
+          ? 'bg-gray-800 border border-gray-700 text-gray-200'
+          : 'bg-white border border-gray-200 text-gray-700'
         }
       `}
-      style={{
-        perspective: '600px',
-        transformStyle: 'preserve-3d',
-      }}
     >
-      {/* 3D bottom-edge depth layer */}
-      <span
-        className={`
-          absolute inset-0 rounded-full -z-10 translate-y-[3px]
-          ${isDark ? 'bg-indigo-900/60' : 'bg-yellow-200/80'}
-        `}
-        style={{ filter: 'blur(1px)' }}
-      />
-
-      {/* Animated icon */}
+      {/* Animated icon swap */}
       <AnimatePresence mode="wait">
         {isDark ? (
-          <motion.span
+          <motion.div
             key="moon"
-            initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
-            animate={{ opacity: 1, rotate: 0, scale: 1 }}
-            exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
-            transition={{ duration: 0.25 }}
-            className="flex items-center justify-center text-lg"
+            initial={{ opacity: 0, rotate: -30 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: 30 }}
+            transition={{ duration: 0.2 }}
           >
-            🌙
-          </motion.span>
+            <Moon className="w-5 h-5 text-blue-300" />
+          </motion.div>
         ) : (
-          <motion.span
+          <motion.div
             key="sun"
-            initial={{ opacity: 0, rotate: 90, scale: 0.5 }}
-            animate={{ opacity: 1, rotate: 0, scale: 1 }}
-            exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
-            transition={{ duration: 0.25 }}
-            className="flex items-center justify-center text-lg"
+            initial={{ opacity: 0, rotate: 30 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: -30 }}
+            transition={{ duration: 0.2 }}
           >
-            ☀️
-          </motion.span>
+            <Sun className="w-5 h-5 text-amber-400" />
+          </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Label */}
-      <span className="hidden md:block text-xs font-extrabold uppercase tracking-widest">
+      {/* Label – desktop only */}
+      <span className="hidden md:block text-xs font-bold uppercase tracking-widest">
         {isDark ? 'Dark' : 'Light'}
       </span>
-
-      {/* Glow pulse ring */}
-      <motion.span
-        className={`absolute inset-0 rounded-full pointer-events-none
-          ${isDark ? 'bg-indigo-400/10' : 'bg-yellow-300/20'}
-        `}
-        animate={{ scale: [1, 1.15, 1], opacity: [0.6, 0, 0.6] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-      />
     </motion.button>
   );
 };
 
 export default DarkModeToggle;
-

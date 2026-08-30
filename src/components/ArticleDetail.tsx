@@ -22,7 +22,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onBack }) => {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden dark:border dark:border-white/10">
                 <div className="p-6">
                     <button onClick={onBack} className="flex items-center gap-2 text-primary font-bold mb-6 hover:underline">
                         <ArrowRight size={20} />
@@ -33,8 +33,8 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onBack }) => {
                 <div className="p-6 sm:p-10">
                     <div className="mb-6">
                         <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold">{article.category}</span>
-                        <h1 className="text-3xl md:text-4xl font-bold text-dark-color mt-4">{article.title}</h1>
-                        <div className="flex items-center gap-6 text-sm text-gray-500 mt-4 flex-wrap">
+                        <h1 className="text-3xl md:text-4xl font-bold text-dark-color dark:text-gray-100 mt-4">{article.title}</h1>
+                        <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400 mt-4 flex-wrap">
                             <div className="flex items-center gap-2">
                                 <User size={16} />
                                 <span>{article.author}</span>
@@ -46,13 +46,13 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onBack }) => {
                         </div>
                     </div>
                     
-                    <article className="prose prose-lg max-w-none prose-a:text-primary prose-a:font-semibold hover:prose-a:underline prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-ol:text-dark-color/90 prose-ul:text-dark-color/90" dangerouslySetInnerHTML={{ __html: article.content }} />
+                    <article className="prose prose-lg max-w-none dark:prose-invert prose-a:text-primary prose-a:font-semibold hover:prose-a:underline prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-ol:text-dark-color/90 prose-ul:text-dark-color/90" dangerouslySetInnerHTML={{ __html: article.content }} />
 
-                    <div className="mt-10 pt-6 border-t border-border-color">
-                        <h4 className="font-bold text-lg mb-3">{t('articlesPageTranslations.tags', language)}</h4>
+                    <div className="mt-10 pt-6 border-t border-border-color dark:border-white/10">
+                        <h4 className="font-bold text-lg mb-3 dark:text-gray-200">{t('articlesPageTranslations.tags', language)}</h4>
                         <div className="flex flex-wrap gap-2">
                             {article.tags.map(tag => (
-                                <span key={tag} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                                <span key={tag} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm flex items-center gap-1">
                                     <Tag size={14} /> {tag}
                                 </span>
                             ))}
