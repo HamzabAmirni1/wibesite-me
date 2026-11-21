@@ -4,7 +4,7 @@ import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n';
-import { Search } from 'lucide-react';
+import { Search, Bot, Sparkles } from 'lucide-react';
 
 interface SidebarProps {
   activeSection: string;
@@ -90,6 +90,22 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, setActiveSection, isOp
           >
             <Search className="w-5 h-5" />
             {t('commonTexts.search', language)}
+          </motion.button>
+
+          <motion.button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-amirni-ai'))}
+            className="flex items-center justify-between p-3 rounded-xl font-bold text-base transition-all duration-300 text-white bg-gradient-to-r from-purple-500/40 via-pink-500/30 to-indigo-500/40 border border-white/30 hover:border-white/60 shadow-lg hover:scale-105"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 0.03 }}
+          >
+            <div className="flex items-center gap-3">
+              <Bot className="w-5 h-5 text-yellow-300 animate-pulse" />
+              <span>Amirni AI</span>
+            </div>
+            <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider text-yellow-300">
+              AI
+            </span>
           </motion.button>
 
           {navLinks.map((link, index) => (

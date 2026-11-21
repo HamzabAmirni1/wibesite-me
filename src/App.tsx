@@ -15,6 +15,7 @@ import { Menu, Search, X, ArrowUp } from 'lucide-react';
 import { cn } from './lib/utils';
 import DarkModeToggle from './components/DarkModeToggle';
 import Background3D from './components/Background3D';
+import AmirniAI from './components/AmirniAI';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -258,6 +259,9 @@ const App: React.FC = () => {
 
         {/* Floating Social Icons */}
         <FloatingSocials />
+
+        {/* Amirni AI Assistant */}
+        <AmirniAI />
 
         {/* Scroll to Top Button */}
         <AnimatePresence>
