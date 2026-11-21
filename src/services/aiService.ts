@@ -80,6 +80,10 @@ export function detectActionButtons(userText: string, aiText: string): ActionBut
   const actions: ActionButton[] = [];
   const text = (userText + ' ' + aiText).toLowerCase();
 
+  const arabicCount = (aiText.match(/[\u0600-\u06FF]/g) || []).length;
+  const latinCount = (aiText.match(/[a-zA-Z]/g) || []).length;
+  const isEn = latinCount > arabicCount;
+
   // 1. Extract explicit [BTN:...] tags from AI response
   const btnTagRegex = /\[BTN:(url|section):([^|\]]+)\|([^\]]+)\]/g;
   let btnMatch;
@@ -111,8 +115,8 @@ export function detectActionButtons(userText: string, aiText: string): ActionBut
     if (linkTitle.length > 1 && !linkTitle.toLowerCase().includes('http')) {
       if (linkUrl.startsWith('http')) {
         actions.push({
-          label: linkTitle.toLowerCase().includes('fatifloral')
-            ? '🌸 زيارة متجر Fatifloral'
+          label: linkUrl.includes('fatifloral')
+            ? (isEn ? '🌸 Visit Fatifloral Store' : '🌸 زيارة متجر Fatifloral')
             : `🔗 ${linkTitle}`,
           url: linkUrl,
           icon: 'ExternalLink'
@@ -127,29 +131,29 @@ export function detectActionButtons(userText: string, aiText: string): ActionBut
     }
   }
 
-  // 2. Fatifloral detection
+  // 3. Fatifloral detection
   if (text.includes('fatifloral') || text.includes('ورد') || text.includes('زهور') || text.includes('fleur') || text.includes('flower')) {
     if (!actions.some(a => a.url?.includes('fatifloral'))) {
       actions.push({
-        label: '🌸 زيارة متجر Fatifloral',
+        label: isEn ? '🌸 Visit Fatifloral Store' : '🌸 زيارة متجر Fatifloral',
         url: 'https://fatifloral.netlify.app/#catalogue',
         icon: 'ExternalLink'
       });
     }
     if (!actions.some(a => a.section === 'projects')) {
       actions.push({
-        label: '🚀 قسم المشاريع',
+        label: isEn ? '🚀 View Projects' : '🚀 قسم المشاريع',
         section: 'projects',
         icon: 'FolderOpen'
       });
     }
   }
 
-  // 3. Projects general
+  // 4. Projects general
   if (text.includes('مشروع') || text.includes('مشاريع') || text.includes('projet') || text.includes('project')) {
     if (!actions.some(a => a.section === 'projects')) {
       actions.push({
-        label: '🚀 تصفح المشاريع',
+        label: isEn ? '🚀 Browse Projects' : '🚀 تصفح المشاريع',
         section: 'projects',
         icon: 'FolderOpen'
       });
@@ -159,7 +163,7 @@ export function detectActionButtons(userText: string, aiText: string): ActionBut
   // Specific project direct links if mentioned
   if (text.includes('brasti') && !actions.some(a => a.url?.includes('brasti'))) {
     actions.push({
-      label: '📊 منصة Brasti',
+      label: isEn ? '📊 Brasti Dashboard' : '📊 منصة Brasti',
       url: 'https://brasti.netlify.app/',
       icon: 'ExternalLink'
     });
@@ -167,76 +171,76 @@ export function detectActionButtons(userText: string, aiText: string): ActionBut
 
   if ((text.includes('hsabi') || text.includes('حسابي')) && !actions.some(a => a.url?.includes('hsabi'))) {
     actions.push({
-      label: '💰 تطبيق حسابي',
+      label: isEn ? '💰 Hsabi App' : '💰 تطبيق حسابي',
       url: 'https://hsabi.netlify.app/',
       icon: 'ExternalLink'
     });
   }
 
-  if ((text.includes('workout') || text.includes('رياضة') || text.includes('لياقة')) && !actions.some(a => a.url?.includes('hamzaamirnifit'))) {
+  if ((text.includes('workout') || text.includes('رياضة') || text.includes('fitness')) && !actions.some(a => a.url?.includes('hamzaamirnifit'))) {
     actions.push({
-      label: '🏋️‍♂️ تطبيق Workout.cool',
+      label: isEn ? '🏋️‍♂️ Workout.cool App' : '🏋️‍♂️ تطبيق Workout.cool',
       url: 'https://hamzaamirnifit.netlify.app/',
       icon: 'ExternalLink'
     });
   }
 
-  // 4. Apps
+  // 5. Apps
   if (text.includes('تطبيق') || text.includes('تطبيقات') || text.includes('app') || text.includes('apk') || text.includes('bac') || text.includes('تحميل')) {
     if (!actions.some(a => a.section === 'apps')) {
       actions.push({
-        label: '📱 تصفح التطبيقات',
+        label: isEn ? '📱 Mobile Apps' : '📱 تصفح التطبيقات',
         section: 'apps',
         icon: 'Smartphone'
       });
     }
   }
 
-  // 5. Services & Pricing
-  if (text.includes('خدم') || text.includes('ثمن') || text.includes('سعر') || text.includes('service') || text.includes('prix') || text.includes('price') || text.includes('صاوب') || text.includes('تصميم') || text.includes('ديفلوب')) {
+  // 6. Services & Pricing
+  if (text.includes('خدم') || text.includes('service') || text.includes('prix') || text.includes('price')) {
     if (!actions.some(a => a.section === 'services')) {
       actions.push({
-        label: '💼 عرض الخدمات',
+        label: isEn ? '💼 Services' : '💼 عرض الخدمات',
         section: 'services',
         icon: 'Briefcase'
       });
     }
     if (!actions.some(a => a.section === 'contact')) {
       actions.push({
-        label: '💬 تواصل عبر واتساب',
+        label: isEn ? '💬 WhatsApp Contact' : '💬 تواصل عبر واتساب',
         section: 'contact',
         icon: 'MessageCircle'
       });
     }
   }
 
-  // 6. Contact
-  if (text.includes('تواصل') || text.includes('اتصل') || text.includes('contact') || text.includes('whatsapp') || text.includes('واتساب') || text.includes('نمرة') || text.includes('email') || text.includes('ايميل')) {
+  // 7. Contact
+  if (text.includes('تواصل') || text.includes('اتصل') || text.includes('contact') || text.includes('whatsapp') || text.includes('واتساب') || text.includes('email')) {
     if (!actions.some(a => a.section === 'contact')) {
       actions.push({
-        label: '📬 تواصل مع حمزة',
+        label: isEn ? '📬 Contact Hamza' : '📬 تواصل مع حمزة',
         section: 'contact',
         icon: 'Mail'
       });
     }
   }
 
-  // 7. About Hamza / CV
-  if (text.includes('شكون') || text.includes('من أنت') || text.includes('من هو') || text.includes('qui est') || text.includes('about') || text.includes('cv') || text.includes('سيرة')) {
+  // 8. About Hamza
+  if (text.includes('شكون') || text.includes('من أنت') || text.includes('about') || text.includes('who are you') || text.includes('hamza')) {
     if (!actions.some(a => a.section === 'about')) {
       actions.push({
-        label: '👤 نبذة عن حمزة',
+        label: isEn ? '👤 About Hamza' : '👤 نبذة عن حمزة',
         section: 'about',
         icon: 'User'
       });
     }
   }
 
-  // 8. Programming & Tutorials
-  if (text.includes('برمج') || text.includes('تعلم') || text.includes('كود') || text.includes('course') || text.includes('program') || text.includes('react') || text.includes('python')) {
+  // 9. Programming
+  if (text.includes('برمج') || text.includes('تعلم') || text.includes('code') || text.includes('learn') || text.includes('program')) {
     if (!actions.some(a => a.section === 'programming')) {
       actions.push({
-        label: '💻 دروس البرمجة',
+        label: isEn ? '💻 Coding Tutorials' : '💻 دروس البرمجة',
         section: 'programming',
         icon: 'Code'
       });
