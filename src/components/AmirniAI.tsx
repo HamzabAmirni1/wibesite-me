@@ -22,40 +22,123 @@ import { askAmirniAI, ActionButton, ChatMessage } from '../services/aiService';
 import { useNavigation } from '../contexts/NavigationContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const QUICK_PROMPTS = [
-  { label: '🌸 متجر Fatifloral', prompt: 'شرح ليا على مشروع Fatifloral' },
-  { label: '🚀 المشاريع الحية', prompt: 'شنو هما أهم المشاريع لي صاوب حمزة؟' },
-  { label: '💼 الخدمات المتاحة', prompt: 'شنو هما الخدمات لي كيقدم حمزة اعمرني؟' },
-  { label: '📱 تطبيقات الهواتف', prompt: 'شنو هما التطبيقات لي كاينين فالسيت؟' },
-  { label: '📬 التواصل مع حمزة', prompt: 'كيفاش نقدر نتواصل مع حمزة مباشرة؟' },
-];
+const UI_CONFIG = {
+  ar: {
+    title: 'Amirni AI',
+    subtitle: 'المساعد الذكي لموقع حمزة اعمرني',
+    welcome:
+      'سلام عليكم! 👋 أنا **Amirni AI** المساعد الذكي لموقع حمزة اعمرني.\n\nسولني على أي حاجة فالسيت: المشاريع (بحال **Fatifloral**)، التطبيقات، الخدمات، دروس البرمجة، أو طرق التواصل وغادي نوجهك مباشرة!',
+    welcomeActions: [
+      { label: '🌸 متجر Fatifloral', url: 'https://fatifloral.netlify.app/#catalogue', icon: 'ExternalLink' },
+      { label: '🚀 تصفح المشاريع', section: 'projects', icon: 'FolderOpen' },
+      { label: '📬 تواصل مع حمزة', section: 'contact', icon: 'Mail' }
+    ],
+    placeholder: 'سولني على أي حاجة فالسيت...',
+    thinking: 'جاري التفكير...',
+    directAccess: 'أزرار الوصول المباشر السريع:',
+    badge: 'سول Amirni AI ✨',
+    resetNotice: 'تم مسح المحادثة. تقدر تسولني دابا على أي حاجة فالسيت! ✨',
+    prompts: [
+      { label: '🌸 متجر Fatifloral', prompt: 'شرح ليا على مشروع Fatifloral' },
+      { label: '🚀 المشاريع الحية', prompt: 'شنو هما أهم المشاريع لي صاوب حمزة؟' },
+      { label: '💼 الخدمات المتاحة', prompt: 'شنو هما الخدمات لي كيقدم حمزة اعمرني؟' },
+      { label: '📱 تطبيقات الهواتف', prompt: 'شنو هما التطبيقات لي كاينين فالسيت؟' },
+      { label: '📬 التواصل مع حمزة', prompt: 'كيفاش نقدر نتواصل مع حمزة مباشرة؟' }
+    ]
+  },
+  en: {
+    title: 'Amirni AI',
+    subtitle: 'Official AI Assistant for Hamza Amirni',
+    welcome:
+      'Hello! 👋 I am **Amirni AI**, Hamza Amirni\'s official AI assistant.\n\nAsk me anything about projects (like **Fatifloral**), mobile apps, services, coding tutorials, or contact details, and I will guide you directly!',
+    welcomeActions: [
+      { label: '🌸 Fatifloral Store', url: 'https://fatifloral.netlify.app/#catalogue', icon: 'ExternalLink' },
+      { label: '🚀 Browse Projects', section: 'projects', icon: 'FolderOpen' },
+      { label: '📬 Contact Hamza', section: 'contact', icon: 'Mail' }
+    ],
+    placeholder: 'Ask anything about the site...',
+    thinking: 'Thinking...',
+    directAccess: 'Direct Access & Navigation:',
+    badge: 'Ask Amirni AI ✨',
+    resetNotice: 'Conversation cleared. Feel free to ask anything about the site! ✨',
+    prompts: [
+      { label: '🌸 Fatifloral Store', prompt: 'Tell me about the Fatifloral project' },
+      { label: '🚀 Live Projects', prompt: 'What are the main projects developed by Hamza?' },
+      { label: '💼 Available Services', prompt: 'What services does Hamza Amirni provide?' },
+      { label: '📱 Mobile Apps', prompt: 'What mobile apps are available on the website?' },
+      { label: '📬 Contact Hamza', prompt: 'How can I get in touch with Hamza?' }
+    ]
+  },
+  fr: {
+    title: 'Amirni AI',
+    subtitle: 'Assistant IA officiel de Hamza Amirni',
+    welcome:
+      'Bonjour ! 👋 Je suis **Amirni AI**, l\'assistant intelligent officiel du site de Hamza Amirni.\n\nPosez-moi des questions sur les projets (comme **Fatifloral**), les applications, les services ou le contact, et je vous guiderai directement !',
+    welcomeActions: [
+      { label: '🌸 Boutique Fatifloral', url: 'https://fatifloral.netlify.app/#catalogue', icon: 'ExternalLink' },
+      { label: '🚀 Voir les Projets', section: 'projects', icon: 'FolderOpen' },
+      { label: '📬 Contacter Hamza', section: 'contact', icon: 'Mail' }
+    ],
+    placeholder: 'Posez une question sur le site...',
+    thinking: 'Réflexion en cours...',
+    directAccess: 'Accès Direct & Navigation :',
+    badge: 'Demander à Amirni AI ✨',
+    resetNotice: 'Conversation réinitialisée. N\'hésitez pas à poser vos questions ! ✨',
+    prompts: [
+      { label: '🌸 Boutique Fatifloral', prompt: 'Présente-moi le projet Fatifloral' },
+      { label: '🚀 Projets Récents', prompt: 'Quels sont les principaux projets créés par Hamza ?' },
+      { label: '💼 Services Proposés', prompt: 'Quels services informatiques propose Hamza ?' },
+      { label: '📱 Applications Mobiles', prompt: 'Quelles applications mobiles sont disponibles ?' },
+      { label: '📬 Contacter Hamza', prompt: 'Comment puis-je contacter Hamza directement ?' }
+    ]
+  }
+};
+
+// Check if a piece of text contains Arabic characters
+const isArabicText = (txt: string): boolean => {
+  return /[\u0600-\u06FF]/.test(txt);
+};
 
 export const AmirniAI: React.FC = () => {
+  const { setActiveSection } = useNavigation();
+  const { language } = useLanguage();
+
+  const currentUI = UI_CONFIG[language as keyof typeof UI_CONFIG] || UI_CONFIG.en;
+
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>(() => {
-    return [
-      {
-        id: 'welcome',
-        role: 'assistant',
-        content:
-          'سلام عليكم! 👋 أنا **Amirni AI** المساعد الذكي لموقع حمزة اعمرني.\n\nسولني على أي حاجة فالسيت: المشاريع (بحال **Fatifloral**)، التطبيقات، الخدمات، دروس البرمجة، أو طرق التواصل وغادي نوجهك مباشرة!',
-        actions: [
-          { label: '🌸 مشروع Fatifloral', url: 'https://fatifloral.netlify.app/#catalogue', icon: 'ExternalLink' },
-          { label: '🚀 تصفح المشاريع', section: 'projects', icon: 'FolderOpen' },
-          { label: '📬 تواصل مع حمزة', section: 'contact', icon: 'Mail' }
-        ],
-        timestamp: new Date()
-      }
-    ];
-  });
+  const [messages, setMessages] = useState<ChatMessage[]>(() => [
+    {
+      id: 'welcome',
+      role: 'assistant',
+      content: currentUI.welcome,
+      actions: currentUI.welcomeActions,
+      timestamp: new Date()
+    }
+  ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hasUnread, setHasUnread] = useState(true);
 
-  const { setActiveSection } = useNavigation();
-  const { language } = useLanguage();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Update welcome message if language changes and only welcome exists
+  useEffect(() => {
+    setMessages(prev => {
+      if (prev.length === 1 && prev[0].id === 'welcome') {
+        return [
+          {
+            id: 'welcome',
+            role: 'assistant',
+            content: currentUI.welcome,
+            actions: currentUI.welcomeActions,
+            timestamp: new Date()
+          }
+        ];
+      }
+      return prev;
+    });
+  }, [language]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -65,9 +148,14 @@ export const AmirniAI: React.FC = () => {
     if (isOpen) {
       scrollToBottom();
       setHasUnread(false);
-      setTimeout(() => inputRef.current?.focus(), 300);
+      const t1 = setTimeout(scrollToBottom, 100);
+      const t2 = setTimeout(scrollToBottom, 350);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
     }
-  }, [isOpen, messages]);
+  }, [isOpen, messages, isLoading]);
 
   useEffect(() => {
     const handleOpen = () => setIsOpen(true);
@@ -81,7 +169,7 @@ export const AmirniAI: React.FC = () => {
     } else if (action.section) {
       setActiveSection(action.section);
       window.location.hash = `#${action.section}`;
-      // On mobile, keep it smooth
+      // On small screens, close the chat so the user sees the page
       if (window.innerWidth < 768) {
         setIsOpen(false);
       }
@@ -154,10 +242,13 @@ export const AmirniAI: React.FC = () => {
         {
           id: (Date.now() + 1).toString(),
           role: 'assistant',
-          content: 'سمح ليا، وقع مشكل فالاتصال. تقدر تعاود تطرح السؤال ديالك أو تصفح أقسام الموقع مباشرة عبر الأزرار أسفله.',
+          content:
+            language === 'ar'
+              ? 'وقع مشكل بسيط فالاتصال. تقدر تصفح أقسام الموقع عبر الأزرار أسفله:'
+              : 'Connection issue. You can navigate the site using the buttons below:',
           actions: [
-            { label: '🚀 المشاريع', section: 'projects', icon: 'FolderOpen' },
-            { label: '📬 تواصل مع حمزة', section: 'contact', icon: 'Mail' }
+            { label: '🚀 المشاريع (Projects)', section: 'projects', icon: 'FolderOpen' },
+            { label: '📬 تواصل مع حمزة (Contact)', section: 'contact', icon: 'Mail' }
           ],
           timestamp: new Date()
         }
@@ -172,24 +263,68 @@ export const AmirniAI: React.FC = () => {
       {
         id: 'welcome-' + Date.now(),
         role: 'assistant',
-        content:
-          'تم مسح المحادثة. تقدر تسولني دابا على أي حاجة فالسيت أو تختار وحدة من الاقتراحات السريعة! ✨',
-        actions: [
-          { label: '🌸 مشروع Fatifloral', url: 'https://fatifloral.netlify.app/#catalogue', icon: 'ExternalLink' },
-          { label: '🚀 تصفح المشاريع', section: 'projects', icon: 'FolderOpen' }
-        ],
+        content: currentUI.resetNotice,
+        actions: currentUI.welcomeActions,
         timestamp: new Date()
       }
     ]);
   };
 
-  // Simple Markdown renderer for bold, lists, and newlines
-  const renderFormattedText = (txt: string) => {
-    const lines = txt.split('\n');
+  // Rich Markdown parser: turns links [Title](URL) into buttons, formats lists and bold text
+  const renderFormattedText = (rawTxt: string, isArabic: boolean) => {
+    // 1. Remove [BTN:...] tags from prose since they render in the action bar
+    let clean = rawTxt.replace(/\[BTN:(url|section):[^\]]+\]/g, '');
+
+    // 2. Fix broken or multiline link syntax like :[Name]\n(url) or [Name] (url)
+    clean = clean
+      .replace(/:\s*\[([^\]]+)\]\s*\n?\s*\(([^)]+)\)/g, ' [$1]($2) ')
+      .replace(/\[([^\]]+)\]\s*\n\s*\(([^)]+)\)/g, ' [$1]($2) ');
+
+    const lines = clean.split('\n');
+
     return lines.map((line, idx) => {
-      // Bold handling: **text**
-      const parts = line.split(/(\*\*.*?\*\*)/g);
-      const renderedLine = parts.map((part, pIdx) => {
+      let trimmed = line.trim();
+      const isBullet = trimmed.startsWith('* ') || trimmed.startsWith('- ') || trimmed.startsWith('• ');
+      if (isBullet) {
+        trimmed = trimmed.replace(/^[*•-]\s+/, '');
+      }
+
+      // Tokenize by markdown link [text](url) or bold **text**
+      const tokenRegex = /(\[[^\]]+\]\([^\s)]+\)|\*\*[^*]+\*\*)/g;
+      const parts = trimmed.split(tokenRegex);
+
+      const renderedParts = parts.map((part, pIdx) => {
+        // Markdown link [Label](url)
+        const linkMatch = part.match(/^\[([^\]]+)\]\(([^\s)]+)\)$/);
+        if (linkMatch) {
+          const label = linkMatch[1].replace(/[:*]/g, '').trim();
+          const url = linkMatch[2].trim();
+          const isFatifloral = url.toLowerCase().includes('fatifloral');
+          const isInternal = url.startsWith('#') || (!url.startsWith('http') && !url.includes('.'));
+          const targetSection = url.replace('#', '');
+
+          return (
+            <button
+              key={pIdx}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (isInternal) {
+                  setActiveSection(targetSection);
+                  window.location.hash = `#${targetSection}`;
+                } else {
+                  window.open(url, '_blank', 'noopener,noreferrer');
+                }
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1 my-1 mx-1 rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer bg-gradient-to-r from-primary to-indigo-600 text-white hover:opacity-90 active:scale-95"
+            >
+              {isFatifloral ? '🌸' : isInternal ? <FolderOpen className="w-3.5 h-3.5" /> : <ExternalLink className="w-3.5 h-3.5" />}
+              <span>{isFatifloral ? 'زيارة متجر Fatifloral' : label}</span>
+            </button>
+          );
+        }
+
+        // Bold **text**
         if (part.startsWith('**') && part.endsWith('**')) {
           return (
             <strong key={pIdx} className="font-bold text-primary dark:text-blue-400">
@@ -197,20 +332,26 @@ export const AmirniAI: React.FC = () => {
             </strong>
           );
         }
+
         return part;
       });
 
-      if (line.trim().startsWith('- ') || line.trim().startsWith('• ')) {
+      if (isBullet) {
         return (
-          <li key={idx} className="ml-4 list-disc my-1">
-            {renderedLine}
+          <li key={idx} className={`${isArabic ? 'mr-2' : 'ml-2'} list-none flex items-start gap-2 my-1.5 leading-relaxed`}>
+            <span className="w-1.5 h-1.5 rounded-full bg-primary dark:bg-blue-400 mt-2 flex-shrink-0" />
+            <div className="flex-1">{renderedParts}</div>
           </li>
         );
       }
 
+      if (trimmed === '') {
+        return <div key={idx} className="h-1.5" />;
+      }
+
       return (
-        <p key={idx} className={line.trim() === '' ? 'h-2' : 'my-1 leading-relaxed'}>
-          {renderedLine}
+        <p key={idx} className="my-1.5 leading-relaxed">
+          {renderedParts}
         </p>
       );
     });
@@ -230,7 +371,7 @@ export const AmirniAI: React.FC = () => {
           >
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-xs font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              {language === 'ar' ? 'سول Amirni AI ✨' : language === 'fr' ? 'Demander à Amirni AI ✨' : 'Ask Amirni AI ✨'}
+              {currentUI.badge}
             </span>
           </motion.div>
         )}
@@ -242,7 +383,6 @@ export const AmirniAI: React.FC = () => {
           whileTap={{ scale: 0.92 }}
           className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-2xl cursor-pointer text-white overflow-hidden bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 border-2 border-white/30 group"
         >
-          {/* Pulsing ring */}
           <span className="absolute inset-0 rounded-full bg-pink-500/30 animate-ping group-hover:block" />
           {isOpen ? (
             <ChevronDown className="w-6 h-6 z-10 transition-transform duration-300" />
@@ -275,15 +415,11 @@ export const AmirniAI: React.FC = () => {
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <h3 className="font-bold text-base tracking-wide">Amirni AI</h3>
+                    <h3 className="font-bold text-base tracking-wide">{currentUI.title}</h3>
                     <Sparkles className="w-4 h-4 text-yellow-300" />
                   </div>
                   <p className="text-[11px] text-white/80">
-                    {language === 'ar'
-                      ? 'المساعد الذكي لموقع حمزة اعمرني'
-                      : language === 'fr'
-                      ? 'Assistant IA officiel'
-                      : 'Official AI Assistant'}
+                    {currentUI.subtitle}
                   </p>
                 </div>
               </div>
@@ -291,15 +427,15 @@ export const AmirniAI: React.FC = () => {
               <div className="flex items-center gap-1 relative z-10">
                 <button
                   onClick={handleReset}
-                  title="مسح المحادثة"
-                  className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                  title="Reset"
+                  className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                 >
                   <RotateCcw className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
-                  title="إغلاق"
-                  className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                  title="Close"
+                  className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -308,46 +444,56 @@ export const AmirniAI: React.FC = () => {
 
             {/* Messages Scroll Area */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar text-sm">
-              {messages.map((msg) => (
-                <div
-                  key={msg.id}
-                  className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}
-                >
+              {messages.map((msg) => {
+                const isArabic = isArabicText(msg.content);
+                return (
                   <div
-                    className={`max-w-[85%] rounded-2xl p-3.5 shadow-sm ${
-                      msg.role === 'user'
-                        ? 'bg-gradient-to-r from-primary to-indigo-600 text-white rounded-br-none'
-                        : 'bg-slate-100 dark:bg-slate-800/90 text-slate-800 dark:text-gray-100 border border-slate-200/80 dark:border-slate-700/60 rounded-bl-none'
-                    }`}
+                    key={msg.id}
+                    className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}
                   >
-                    <div className="text-[13.5px] leading-relaxed">
-                      {renderFormattedText(msg.content)}
+                    <div
+                      dir={isArabic ? 'rtl' : 'ltr'}
+                      className={`max-w-[88%] rounded-2xl p-4 shadow-sm ${isArabic ? 'text-right' : 'text-left'} ${
+                        msg.role === 'user'
+                          ? 'bg-gradient-to-r from-primary to-indigo-600 text-white rounded-br-none'
+                          : 'bg-slate-100 dark:bg-slate-800/90 text-slate-800 dark:text-gray-100 border border-slate-200/80 dark:border-slate-700/60 rounded-bl-none'
+                      }`}
+                    >
+                      <div className="text-[13.5px] leading-relaxed">
+                        {renderFormattedText(msg.content, isArabic)}
+                      </div>
+
+                      {/* Direct Navigation Action Buttons (ACC) */}
+                      {msg.actions && msg.actions.length > 0 && (
+                        <div className="mt-3 pt-3 border-t border-slate-200/80 dark:border-slate-700/70">
+                          <div className="text-[11px] font-bold text-primary dark:text-blue-400 mb-2 flex items-center gap-1.5">
+                            <Sparkles className="w-3.5 h-3.5 text-yellow-500 animate-spin" style={{ animationDuration: '8s' }} />
+                            <span>{currentUI.directAccess}</span>
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {msg.actions.map((act, aIdx) => (
+                              <motion.button
+                                key={aIdx}
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => handleActionClick(act)}
+                                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold shadow-md transition-all duration-200 cursor-pointer bg-gradient-to-r from-primary via-indigo-600 to-secondary text-white hover:shadow-lg active:scale-95"
+                              >
+                                {getActionIcon(act.icon)}
+                                <span>{act.label}</span>
+                              </motion.button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
+
+                    <span className="text-[10px] text-gray-400 dark:text-gray-500 mt-1 px-1">
+                      {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    </span>
                   </div>
-
-                  {/* Direct Navigation Action Buttons (ACC) */}
-                  {msg.actions && msg.actions.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-2 max-w-[90%]">
-                      {msg.actions.map((act, aIdx) => (
-                        <motion.button
-                          key={aIdx}
-                          whileHover={{ scale: 1.04, y: -2 }}
-                          whileTap={{ scale: 0.95 }}
-                          onClick={() => handleActionClick(act)}
-                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-sm transition-all duration-200 border bg-gradient-to-r from-primary/10 via-secondary/10 to-indigo-500/10 text-primary dark:text-indigo-400 border-primary/20 dark:border-indigo-500/30 hover:border-primary/50 hover:shadow-md cursor-pointer"
-                        >
-                          {getActionIcon(act.icon)}
-                          <span>{act.label}</span>
-                        </motion.button>
-                      ))}
-                    </div>
-                  )}
-
-                  <span className="text-[10px] text-gray-400 dark:text-gray-500 mt-1 px-1">
-                    {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                  </span>
-                </div>
-              ))}
+                );
+              })}
 
               {/* Typing indicator */}
               {isLoading && (
@@ -359,21 +505,24 @@ export const AmirniAI: React.FC = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: '0ms' }} />
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: '150ms' }} />
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: '300ms' }} />
-                    <span className="text-[11px] mr-2 text-primary font-medium">جاري التفكير...</span>
+                    <span className="text-[11px] mr-2 text-primary font-medium">{currentUI.thinking}</span>
                   </div>
                 </div>
               )}
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Quick Prompts Bar */}
-            <div className="px-4 py-2 border-t border-slate-100 dark:border-slate-800/80 bg-slate-50/70 dark:bg-slate-900/50 flex gap-1.5 overflow-x-auto no-scrollbar flex-shrink-0">
-              {QUICK_PROMPTS.map((qp, i) => (
+            {/* Quick Prompts Bar (Scrollbar completely hidden) */}
+            <div
+              className="px-4 py-2 border-t border-slate-100 dark:border-slate-800/80 bg-slate-50/70 dark:bg-slate-900/50 flex gap-1.5 overflow-x-auto flex-shrink-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {currentUI.prompts.map((qp, i) => (
                 <button
                   key={i}
                   disabled={isLoading}
                   onClick={() => handleSend(qp.prompt)}
-                  className="whitespace-nowrap px-3 py-1 rounded-full text-[11px] font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 hover:border-primary/50 hover:text-primary dark:hover:text-blue-400 transition-colors shadow-2xs"
+                  className="whitespace-nowrap px-3 py-1 rounded-full text-[11px] font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 hover:border-primary/50 hover:text-primary dark:hover:text-blue-400 transition-colors shadow-2xs cursor-pointer"
                 >
                   {qp.label}
                 </button>
@@ -393,14 +542,9 @@ export const AmirniAI: React.FC = () => {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder={
-                  language === 'ar'
-                    ? 'سولني على أي حاجة فالسيت...'
-                    : language === 'fr'
-                    ? 'Posez une question sur le site...'
-                    : 'Ask anything about the site...'
-                }
+                placeholder={currentUI.placeholder}
                 disabled={isLoading}
+                dir={isArabicText(input) ? 'rtl' : 'ltr'}
                 className="flex-1 px-4 py-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800/90 text-slate-900 dark:text-white placeholder-slate-400 text-sm border border-transparent focus:border-primary/40 focus:bg-white dark:focus:bg-slate-800 focus:outline-none transition-all"
               />
               <motion.button

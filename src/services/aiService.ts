@@ -17,11 +17,25 @@ export interface ChatMessage {
 
 const SITE_SYSTEM_PROMPT = `
 أنت "Amirni AI" (ذكاء اعمرني الاصطناعي)، المساعد الذكي الرسمي لموقع المطور والتقني المغربي حمزة اعمرني (Hamza Amirni).
-مهمتك: مساعدة زوار الموقع والإجابة عن كل أسئلتهم بذكاء، لطف، واحترافية، وتوجيههم مباشرة لأقسام الموقع المناسبة.
+مهمتك: مساعدة زوار الموقع والإجابة عن كل أسئلتهم بذكاء، لطف، واحترافية، وتوجيههم مباشرة لأقسام الموقع ومشاريع حمزة.
 
-اللغة:
-- تحدث بنفس لغة المستخدم (الدارجة المغربية بطلاقة، العربية الفصحى، الفرنسية، أو الإنجليزية).
-- كن ودوداً، مختصراً، ومباشراً في إجاباتك.
+قواعد اللغة الحتمية (CRITICAL LANGUAGE RULES):
+1. English: If the user writes in English, reply in English.
+2. Français: Si l'utilisateur écrit en français, réponds en français.
+3. العربية والدارجة المغربية: إذا كتب المستخدم بالعربية أو الدارجة، أو بحروف لاتينية (Arabizi / Darija مثل: "salam", "chkun", "bhal haka", "brit", "fin", "site", "projet") -> أجب دائماً بالدارجة المغربية المفهومة أو العربية الواضحة والودودة!
+
+قواعد تنسيق الروابط والأزرار (CRITICAL FORMATTING):
+- لا تكتب الروابط بين أقواس مشوهة مثل :[اسم](رابط) أو تكسر الأسطر.
+- اذكر اسم المشروع بخط عريض مثل **Fatifloral** أو **Brasti** أو **Workout.cool**.
+- في نهاية كل رد يخص مشروعاً أو قسماً، أضف وسوم الأزرار بهذا الشكل الدقيق:
+  [BTN:url:https://fatifloral.netlify.app/#catalogue|🌸 زيارة متجر Fatifloral]
+  [BTN:section:projects|🚀 تصفح المشاريع]
+  [BTN:section:apps|📱 تصفح التطبيقات]
+  [BTN:section:services|💼 عرض الخدمات]
+  [BTN:section:contact|📬 صفحة التواصل]
+  [BTN:section:about|👤 نبذة عن حمزة]
+  [BTN:section:programming|💻 دروس البرمجة]
+- أجب باختصار وترتيب (بين 2 إلى 4 نقاط كحد أقصى) لتناسب نافذة المحادثة.
 
 معلومات عن حمزة اعمرني ومحتوى الموقع:
 1. نبذة عن حمزة (قسم about):
@@ -29,7 +43,7 @@ const SITE_SYSTEM_PROMPT = `
    - شغوف بمشاركة المعرفة ومساعدة الشباب في تعلم البرمجة والتقنية.
 
 2. المشاريع المعروضة في الموقع (قسم projects):
-   - Fatifloral (جديد ومميز): متجر إلكتروني وبوتيك فاخر لباقات الورد وتنسيقات الأعراس والمناسبات مع سلة طلبات وطلب واتساب مباشر (رابط: https://fatifloral.netlify.app/#catalogue).
+   - Fatifloral (جديد ومميز): متجر وبوتيك إلكتروني فاخر لباقات الورد وتنسيقات الأعراس والمناسبات مع سلة طلبات وطلب واتساب مباشر (رابط: https://fatifloral.netlify.app/#catalogue).
    - Workout.cool: تطبيق ويب رياضي لتخصيص حصص التمارين وكمال الأجسام (https://hamzaamirnifit.netlify.app/).
    - Brasti: منصة إدارة المبيعات والمخزون مع إحصائيات متقدمة (https://brasti.netlify.app/).
    - Hsabi (حسابي): نظام ذكي لإدارة الميزانية والمصاريف الشخصية (https://hsabi.netlify.app/).
@@ -60,60 +74,143 @@ const SITE_SYSTEM_PROMPT = `
 
 7. التواصل مع حمزة (قسم contact):
    - إمكانية التواصل مباشرة عبر واتساب، إنستغرام، فيسبوك، تيليجرام، أو البريد الإلكتروني (hamzaamirni@gmail.com).
-
-إرشادات هامة:
-- عندما يسألك الزائر عن أي مشروع أو خدمة أو قسم، اشرح له باختصار واقترح عليه زيارة القسم المناسب.
-- شجع الزوار دائماً على تجربة المشاريع والتواصل مع حمزة عند الحاجة لخدمات أو استفسارات برمجية.
 `;
 
 export function detectActionButtons(userText: string, aiText: string): ActionButton[] {
   const actions: ActionButton[] = [];
   const text = (userText + ' ' + aiText).toLowerCase();
 
-  // Fatifloral
+  // 1. Extract explicit [BTN:...] tags from AI response
+  const btnTagRegex = /\[BTN:(url|section):([^|\]]+)\|([^\]]+)\]/g;
+  let btnMatch;
+  while ((btnMatch = btnTagRegex.exec(aiText)) !== null) {
+    const type = btnMatch[1];
+    const target = btnMatch[2].trim();
+    const label = btnMatch[3].trim();
+    if (type === 'url') {
+      actions.push({
+        label,
+        url: target,
+        icon: target.includes('fatifloral') ? 'Flower2' : 'ExternalLink'
+      });
+    } else {
+      actions.push({
+        label,
+        section: target,
+        icon: 'FolderOpen'
+      });
+    }
+  }
+
+  // 2. Extract markdown links from AI response if present
+  const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|#[a-z0-9_-]+)\)/g;
+  let match;
+  while ((match = linkRegex.exec(aiText)) !== null) {
+    const linkTitle = match[1].replace(/[:*]/g, '').trim();
+    const linkUrl = match[2].trim();
+    if (linkTitle.length > 1 && !linkTitle.toLowerCase().includes('http')) {
+      if (linkUrl.startsWith('http')) {
+        actions.push({
+          label: linkTitle.toLowerCase().includes('fatifloral')
+            ? '🌸 زيارة متجر Fatifloral'
+            : `🔗 ${linkTitle}`,
+          url: linkUrl,
+          icon: 'ExternalLink'
+        });
+      } else if (linkUrl.startsWith('#')) {
+        actions.push({
+          label: `📍 ${linkTitle}`,
+          section: linkUrl.replace('#', ''),
+          icon: 'FolderOpen'
+        });
+      }
+    }
+  }
+
+  // 2. Fatifloral detection
   if (text.includes('fatifloral') || text.includes('ورد') || text.includes('زهور') || text.includes('fleur') || text.includes('flower')) {
+    if (!actions.some(a => a.url?.includes('fatifloral'))) {
+      actions.push({
+        label: '🌸 زيارة متجر Fatifloral',
+        url: 'https://fatifloral.netlify.app/#catalogue',
+        icon: 'ExternalLink'
+      });
+    }
+    if (!actions.some(a => a.section === 'projects')) {
+      actions.push({
+        label: '🚀 قسم المشاريع',
+        section: 'projects',
+        icon: 'FolderOpen'
+      });
+    }
+  }
+
+  // 3. Projects general
+  if (text.includes('مشروع') || text.includes('مشاريع') || text.includes('projet') || text.includes('project')) {
+    if (!actions.some(a => a.section === 'projects')) {
+      actions.push({
+        label: '🚀 تصفح المشاريع',
+        section: 'projects',
+        icon: 'FolderOpen'
+      });
+    }
+  }
+
+  // Specific project direct links if mentioned
+  if (text.includes('brasti') && !actions.some(a => a.url?.includes('brasti'))) {
     actions.push({
-      label: '🌸 زيارة متجر Fatifloral',
-      url: 'https://fatifloral.netlify.app/#catalogue',
+      label: '📊 منصة Brasti',
+      url: 'https://brasti.netlify.app/',
       icon: 'ExternalLink'
     });
+  }
+
+  if ((text.includes('hsabi') || text.includes('حسابي')) && !actions.some(a => a.url?.includes('hsabi'))) {
     actions.push({
-      label: '🚀 قسم المشاريع',
-      section: 'projects',
-      icon: 'FolderOpen'
-    });
-  } else if (text.includes('مشروع') || text.includes('مشاريع') || text.includes('projet') || text.includes('project') || text.includes('brasti') || text.includes('workout') || text.includes('hsabi') || text.includes('sigma') || text.includes('quran')) {
-    actions.push({
-      label: '🚀 تصفح المشاريع',
-      section: 'projects',
-      icon: 'FolderOpen'
+      label: '💰 تطبيق حسابي',
+      url: 'https://hsabi.netlify.app/',
+      icon: 'ExternalLink'
     });
   }
 
-  // Apps
+  if ((text.includes('workout') || text.includes('رياضة') || text.includes('لياقة')) && !actions.some(a => a.url?.includes('hamzaamirnifit'))) {
+    actions.push({
+      label: '🏋️‍♂️ تطبيق Workout.cool',
+      url: 'https://hamzaamirnifit.netlify.app/',
+      icon: 'ExternalLink'
+    });
+  }
+
+  // 4. Apps
   if (text.includes('تطبيق') || text.includes('تطبيقات') || text.includes('app') || text.includes('apk') || text.includes('bac') || text.includes('تحميل')) {
-    actions.push({
-      label: '📱 تصفح التطبيقات',
-      section: 'apps',
-      icon: 'Smartphone'
-    });
+    if (!actions.some(a => a.section === 'apps')) {
+      actions.push({
+        label: '📱 تصفح التطبيقات',
+        section: 'apps',
+        icon: 'Smartphone'
+      });
+    }
   }
 
-  // Services & Pricing
+  // 5. Services & Pricing
   if (text.includes('خدم') || text.includes('ثمن') || text.includes('سعر') || text.includes('service') || text.includes('prix') || text.includes('price') || text.includes('صاوب') || text.includes('تصميم') || text.includes('ديفلوب')) {
-    actions.push({
-      label: '💼 عرض الخدمات',
-      section: 'services',
-      icon: 'Briefcase'
-    });
-    actions.push({
-      label: '💬 تواصل عبر واتساب',
-      section: 'contact',
-      icon: 'MessageCircle'
-    });
+    if (!actions.some(a => a.section === 'services')) {
+      actions.push({
+        label: '💼 عرض الخدمات',
+        section: 'services',
+        icon: 'Briefcase'
+      });
+    }
+    if (!actions.some(a => a.section === 'contact')) {
+      actions.push({
+        label: '💬 تواصل عبر واتساب',
+        section: 'contact',
+        icon: 'MessageCircle'
+      });
+    }
   }
 
-  // Contact
+  // 6. Contact
   if (text.includes('تواصل') || text.includes('اتصل') || text.includes('contact') || text.includes('whatsapp') || text.includes('واتساب') || text.includes('نمرة') || text.includes('email') || text.includes('ايميل')) {
     if (!actions.some(a => a.section === 'contact')) {
       actions.push({
@@ -124,22 +221,26 @@ export function detectActionButtons(userText: string, aiText: string): ActionBut
     }
   }
 
-  // About Hamza / CV
+  // 7. About Hamza / CV
   if (text.includes('شكون') || text.includes('من أنت') || text.includes('من هو') || text.includes('qui est') || text.includes('about') || text.includes('cv') || text.includes('سيرة')) {
-    actions.push({
-      label: '👤 نبذة عن حمزة',
-      section: 'about',
-      icon: 'User'
-    });
+    if (!actions.some(a => a.section === 'about')) {
+      actions.push({
+        label: '👤 نبذة عن حمزة',
+        section: 'about',
+        icon: 'User'
+      });
+    }
   }
 
-  // Programming & Tutorials
+  // 8. Programming & Tutorials
   if (text.includes('برمج') || text.includes('تعلم') || text.includes('كود') || text.includes('course') || text.includes('program') || text.includes('react') || text.includes('python')) {
-    actions.push({
-      label: '💻 دروس البرمجة',
-      section: 'programming',
-      icon: 'Code'
-    });
+    if (!actions.some(a => a.section === 'programming')) {
+      actions.push({
+        label: '💻 دروس البرمجة',
+        section: 'programming',
+        icon: 'Code'
+      });
+    }
   }
 
   // Bots
