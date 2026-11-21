@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen, Dumbbell } from 'lucide-react';
+import { ExternalLink, Globe, ShoppingBag, BookOpen, Wrench, ShieldCheck, Shirt, LayoutDashboard, FileText, Calculator, Brain, FolderOpen, Dumbbell, Flower2 } from 'lucide-react';
 import Card from '../components/Card';
 import Card3D from '../components/Card3D';
 import HeroVisual from '../components/HeroVisual';
@@ -27,6 +27,23 @@ const itemVariants = {
 };
 
 const projects = [
+  {
+    id: -2,
+    title: 'Fatifloral – متجر وبوتيك الزهور الفاخرة',
+    titleFr: 'Fatifloral – Artisan Fleuriste & Créations Florales de Luxe',
+    titleEn: 'Fatifloral – Luxury Florist & Floral Boutique',
+    category: 'متجر إلكتروني',
+    categoryEn: 'E-commerce Store',
+    categoryFr: 'Boutique E-commerce',
+    description: 'متجر إلكتروني راقٍ ومتكامل لعرض وتوصيل باقات الورد الفاخرة وتنسيقات الأعراس والمناسبات، مع سلة تسوق وإمكانية الطلب الفوري عبر واتساب.',
+    descriptionEn: 'An elegant e-commerce platform for ordering and delivering luxury flower bouquets and event arrangements across Morocco, featuring an interactive cart and direct WhatsApp ordering.',
+    descriptionFr: 'Une boutique en ligne élégante pour commander et faire livrer des bouquets de fleurs et créations florales de luxe, avec panier d\'achat et commande directe WhatsApp.',
+    technologies: ['JavaScript', 'Firebase', 'Firestore', 'CSS3', 'WhatsApp API'],
+    liveUrl: 'https://fatifloral.netlify.app/#catalogue',
+    color: 'from-rose-500 to-pink-600',
+    icon: Flower2,
+    badge: '🌸',
+  },
   {
     id: -1,
     title: 'Workout.cool – تطبيق اللياقة البدنية والتمارين',
