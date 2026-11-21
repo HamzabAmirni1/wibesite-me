@@ -211,6 +211,70 @@ export const AmirniAI: React.FC = () => {
     }
   };
 
+  const getLocalizedActionLabel = (act: ActionButton, lang: string): string => {
+    const isEn = lang === 'en';
+    const isFr = lang === 'fr';
+
+    if (act.url?.includes('fatifloral')) {
+      if (isEn) return '🌸 Visit Fatifloral Store';
+      if (isFr) return '🌸 Boutique Fatifloral';
+      return '🌸 زيارة متجر Fatifloral';
+    }
+    if (act.url?.includes('brasti')) {
+      if (isEn) return '📊 Brasti Platform';
+      if (isFr) return '📊 Plateforme Brasti';
+      return '📊 منصة Brasti';
+    }
+    if (act.url?.includes('hsabi')) {
+      if (isEn) return '💰 Hsabi App';
+      if (isFr) return '💰 Application Hsabi';
+      return '💰 تطبيق حسابي';
+    }
+    if (act.url?.includes('hamzaamirnifit') || act.url?.includes('workout')) {
+      if (isEn) return '🏋️‍♂️ Workout.cool App';
+      if (isFr) return '🏋️‍♂️ App Workout.cool';
+      return '🏋️‍♂️ تطبيق Workout.cool';
+    }
+
+    if (act.section === 'projects') {
+      if (isEn) return '🚀 View Projects';
+      if (isFr) return '🚀 Voir les Projets';
+      return '🚀 تصفح المشاريع';
+    }
+    if (act.section === 'apps') {
+      if (isEn) return '📱 Mobile Apps';
+      if (isFr) return '📱 Applications Mobiles';
+      return '📱 تصفح التطبيقات';
+    }
+    if (act.section === 'services') {
+      if (isEn) return '💼 Our Services';
+      if (isFr) return '💼 Nos Services';
+      return '💼 عرض الخدمات';
+    }
+    if (act.section === 'contact') {
+      if (isEn) return '📬 Contact Hamza';
+      if (isFr) return '📬 Contacter Hamza';
+      return '📬 صفحة التواصل';
+    }
+    if (act.section === 'about') {
+      if (isEn) return '👤 About Hamza';
+      if (isFr) return '👤 À Propos de Hamza';
+      return '👤 نبذة عن حمزة';
+    }
+    if (act.section === 'programming') {
+      if (isEn) return '💻 Coding Tutorials';
+      if (isFr) return '💻 Cours de Programmation';
+      return '💻 دروس البرمجة';
+    }
+    if (act.section === 'bots') {
+      if (isEn) return '🤖 Smart Bots';
+      if (isFr) return '🤖 Bots Intelligents';
+      return '🤖 البوتات الذكية';
+    }
+
+    return act.label;
+  };
+
   const handleSend = async (userPrompt?: string) => {
     const textToSend = (userPrompt || input).trim();
     if (!textToSend || isLoading) return;
@@ -459,6 +523,7 @@ export const AmirniAI: React.FC = () => {
             <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar text-sm">
               {messages.map((msg) => {
                 const isArabic = isMainlyArabic(msg.content);
+                const effectiveLang = isArabic ? 'ar' : (language === 'ar' ? 'en' : language);
                 return (
                   <div
                     key={msg.id}
@@ -481,7 +546,13 @@ export const AmirniAI: React.FC = () => {
                         <div className="mt-3 pt-3 border-t border-slate-200/80 dark:border-slate-700/70">
                           <div className="text-[11px] font-bold text-primary dark:text-blue-400 mb-2 flex items-center gap-1.5">
                             <Sparkles className="w-3.5 h-3.5 text-yellow-500 animate-spin" style={{ animationDuration: '8s' }} />
-                            <span>{currentUI.directAccess}</span>
+                            <span>
+                              {isArabic
+                                ? 'أزرار الوصول المباشر السريع:'
+                                : effectiveLang === 'fr'
+                                ? 'Accès Direct & Navigation :'
+                                : 'Direct Access & Navigation:'}
+                            </span>
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {msg.actions.map((act, aIdx) => (
@@ -493,7 +564,7 @@ export const AmirniAI: React.FC = () => {
                                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold shadow-md transition-all duration-200 cursor-pointer bg-gradient-to-r from-primary via-indigo-600 to-secondary text-white hover:shadow-lg active:scale-95"
                               >
                                 {getActionIcon(act.icon)}
-                                <span>{act.label}</span>
+                                <span>{getLocalizedActionLabel(act, effectiveLang)}</span>
                               </motion.button>
                             ))}
                           </div>
